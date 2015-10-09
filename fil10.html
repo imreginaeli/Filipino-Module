@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Panitikang Asyano</title>
+		<link href="images/logo.png" rel="icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			html, body{
+				width: 100%;
+				height: 100%;
+				font-family: 'Open Sans', sans-serif;
+			}
+			h1{
+				font-size: 24px;
+			}
+			
+			.trivia {
+			font-size: 12px; text-transform: none; font-weight:normal;
+			}
+			
+			h2{
+				font-size: 20px;
+			}
+			
+			h3{
+				font-size: 18px;
+			}
+			
+			h4{
+				font-size: 16px;
+			}
+			
+			h5{
+				font-size: 14px;
+			}
+			
+			h6{
+				font-size: 12;
+			}
+			
+			#banner{
+				background: rgb(87, 187, 137);
+				height: auto;
+				width: 100%;
+				color: white;
+			}
+			
+			.btn-primary {
+				color: #2e6da4;
+				background-color: white;
+				border-color: #2e6da4;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				font-size: 12px;
+			}
+			
+			p {
+				text-indent: 50px;
+				text-align: center;
+				font-size: 12px;
+			}
+			
+			li{
+				font-size: 12px;
+			}
+			
+			.content{
+				margin-left: auto;
+				margin-right: auto:
+				display: auto;
+			}
+			
+			.alammoba{
+				border: 2px solid black;
+				padding: 5px;
+				text-indent: 0px;
+			}
+			
+			.accordTitle{
+				background-color: #2e6da4;
+				color: white;
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0px 10px 3px rgb(77, 166, 122);
+				background-color: rgb(87, 187, 137);
+			}
+			
+			.accordTitle:hover{
+				background-color: white;
+				color: rgb(87, 187, 137);
+			}
+			
+			button{
+				width: 90%;
+				height: auto;
+			}
+			
+			#footer{
+				background: rgb(87, 187, 137);
+				height: auto;
+				color: white;
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				}
+
+			#footerglyph{
+				font-size: 1.5em;
+				text-align:center;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				text-indent: 0px;
+			}
+			
+			#accordion{
+				margin-bottom: auto;
+				margin-left: auto;
+				display: block;
+				}
+			.sampleP{
+				text-indent: 0px;
+			}
+			
+			.subtitle{
+				font-size: 12px;
+			}
+			
+			#lastBtn{
+				margin-bottom: 60px;
+			}
+			
+			#mod3{
+				margin-bottom: 70px;
+			}
+			
+			.go-top {
+				position: fixed;
+				bottom: 2em;
+				right: 2em;
+				text-decoration: none;
+				color: white;
+				font-size: 12px;
+				padding: 1em;
+				display: none;
+				background-color: gray;
+				border-radius: 5px;
+				margin-bottom: 30px;
+			}
+			
+			.modal-header {
+				min-height: 16.43px;
+				padding: 15px;
+				border-bottom: 1px solid #e5e5e5;
+				background: rgb(87, 187, 137);
+				color: white;
+			}
+			.titleS{
+				color: #fff;
+				background: rgba(0, 0, 0, 0.5);
+				padding: 20px 15px;
+				font-size: 18px;
+				border: none;
+				text-transform: uppercase;
+				margin-left: margin;
+				width: 100%;
+				border-radius: 5px;
+				text-align: center;
+			}
+			
+			@media (max-width: 768px)
+			{
+				.flag{
+				    width: 100%;
+					margin-left: auto;
+					margin-right: auto;
+					display: block;
+					height: 200px;
+					border-radius: 0px;
+					color: rgb(87, 187, 137);
+					font-size: 22px;
+					font-weight: bold;
+					border: none;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+			}
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$('body').css('display', 'none');
+				$('body').fadeIn(500);
+				$('#mod1div, #mod2div, #mod3div').hide();
+				$('#mod1').click(function(){
+					$('#mod1div').slideToggle(500);
+					$('#mod2div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#mod2').click(function(){
+					$('#mod2div').slideToggle(500);
+					$('#mod1div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#mod3').click(function(){
+					$('#mod3div').slideToggle(500);
+					$('#mod1div').slideUp(500);
+					$('#mod2div').slideUp(500);
+				});
+				
+				$('#limod1').click(function(){
+					$('#mod1div').slideDown(500);
+					$('#mod2div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#limod2').click(function(){
+					$('#mod2div').slideDown(500);
+					$('#mod1div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#limod3').click(function(){
+					$('#mod3div').slideDown(500);
+					$('#mod1div').slideUp(500);
+					$('#mod2div').slideUp(500);
+				});
+				
+				$('#footerinfo').hide(500);
+		
+				$('#footerglyph').click(function(){
+					$('#footerinfo').slideToggle(500);
+				});
+				
+				// Show or hide the sticky footer button
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 200) {
+						$('.go-top').fadeIn(200);
+					} else {
+						$('.go-top').fadeOut(200);
+					}
+				});
+				
+				// Animate the scroll to top
+				$('.go-top').click(function(event) {
+					event.preventDefault();
+					
+					$('html, body').animate({scrollTop: 0}, 300);
+				});
+				
+				$(function() {
+				  $('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					  var target = $(this.hash);
+					  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					  if (target.length) {
+						$('html,body').animate({
+						  scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					  }
+					}
+				  });
+				});	
+				
+				function newpage() {
+					window.location = newLocation;
+				}
+				
+				$('#btnBack').click(function(){
+					event.preventDefault();
+					newLocation = 'main.html';
+					$('body').fadeOut(500, newpage);
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-inverse" id="banner">
+		  <div class="container">
+			<div class="navbar-header">
+				<button class="btn" id="btnBack" style="width: auto; color: white; float: left; background-color: transparent; background-image: none; border: 1px solid transparent; margin-top: 8px;"><span class="glyphicon glyphicon-arrow-left"></span></button>
+			  <p style="text-indent: 0px;text-align: center;font-size: 20px;margin-top: 10px;">Filipino 10: Modyul para sa Mag-aaral</p>
+			</div>
+		  </div>
+		</nav>
+		
+		<div class="container">
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle" data-toggle="modal" data-target="#10aralin11" id="aralin31" style="margin-top: 0px; text-align: center">Aralin 1.1:<br><span class="subtitle">Klasikong Mitolohiya mula sa Rome, Italy</span></h3>
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle" data-toggle="modal" data-target="#10aralin12" style="text-align: center">Aralin 1.2: <br><span class="subtitle">Alegorya ng Yungib</h3>
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle"  data-toggle="modal" data-target="#10aralin13" style="text-align: center">Aralin 1.3:<br><span class="subtitle"> “Ang Tusong Katiwala” mula sa Bagong Tipan</h3>
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle"  data-toggle="modal" data-target="#10aralin14" style="text-align: center">Aralin 1.4:<br><span class="subtitle">"Ang Kwintas"</h3>
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle" data-toggle="modal" data-target="#10aralin15" id="lastBtn" style="text-align: center">Aralin 1.5:<br><span class="subtitle">Ang Kuba ng Notre Dame</h3>
+		</div>
+			<a href="#" class="go-top"><span class="glyphicon glyphicon-arrow-up" style="font-size: 1em;"></span></a>
+		<div class="container" id="footer">
+				<p><span class="glyphicon glyphicon-info-sign" id="footerglyph"></span></p>
+					<h6 class="text-center" id="footerinfo">Department of Education -Instructional Materials Council Secretariat (DepEd-IMCS) <br><span class="glyphicon glyphicon-phone" id="phone"></span> (02) 634 - 1054 or 634 - 107 <br><span class="glyphicon glyphicon-envelope" id="mail"></span> imcsetd@yahoo.com </h6></h6>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="10aralin11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title text-center" id="myModalLabel">Aralin 1.1</h4>
+				<h4 class="modal-title" id="myModalLabel">Aralin 1.1: Maikling Kuwento ng Singapore</h4>
+			  </div>
+			  <div class="modal-body">
+					<h3 class="text-center">Cupid at Psyche</h3>
+					<h5 class="text-center">Isinalin sa Ingles ni Edith Hamilton </h5>
+					<h5 class="text-center">Isinalin sa Filipino ni Vilma C. Ambat</h5>	
+					
+					<p class="text-justify">
+					Noong unang panahon, may hari na may tatlong magagandang anak na babae. Ang pinakamaganda sa tatlo  
+					ang bunsong si Psyche. Labis siyang hinahangaan at sinasamba ng kalalakihan. Sinasabi nilang kahit si Venus, ang diyosa ng kagandahan, 
+					ay hindi makapapantay sa ganda nito. Nalimot na rin ng kalalakihan na magbigay ng  alay at magpuri sa diyosa. Gayundin, ang kaniyang 
+					templo ay wala nang mga alay, naging marumi, at unti-unti nang nasisira. Lahat ng papuri’t karangalang dapat sa kaniya ay napunta na lahat 
+					sa isang mortal. Nagalit si Venus at inutusan niya si Cupid, ang kaniyang anak upang paibigin si Psyche sa isang nakatatakot na nilalang. 
+					Hindi na niya naisip ang maaaring maidulot ng kagandahan ng dalaga sa kaniyang anak. Agad tumalima si Cupid at hinanap ang nasabing babae. 
+					Umibig siya kay Psyche nang nasilayan niya ang kagandahan ng dalaga. Tila ba napana niya ang kaniyang sariling puso.<br> <br>
+					
+					Nang makauwi si Cupid, inilihim niya sa kaniyang ina ang nangyari. Labis namang nagtitiwala si 
+					Venus at hindi na rin nito inusisa ang anak. Nanabik ang diyosa ng kagandahan sa 
+					kahihinatnan ng buhay ni Psyche.<br><br>
+					
+					Gayunman, hindi naganap ang inaasahan ni Venus. Hindi umibig si Psyche sa isang nakatatakot na nilalang o kahit kanino. 
+					Ang isa pang nakapagtataka ay walang umiibig sa kaniya. Kontento nang pagmasdan at sambahin siya ng mga lalaki subalit 
+					hindi ang ibigin siya. Ang kaniyang dalawang kapatid na malayo ang hitsura sa taglay niyang kagandahan ay nakapag-asawa
+					na ng hari at namumuhay nang masaya sa kani-kaniyang palasyo. Naging malungkot si Psyche sa kaniyang pag-iisa. Tila walang 
+					nais magmahal sa kaniya<br><br>
+					
+					
+					Nabahala ang magulang ni Psyche. Naglakbay ang haring ama ni Psyche upang humingi ng tulong kay Apollo. 
+					Hiniling niyang payuhan siya ni Apollo kung paano makahahanap ng mabuting lalaking iibig sa kaniyang anak.
+					Lingid sa kaalaman ng hari naunang humingi ng tulong si Cupid kay Apollo. Sinabi niya  ang kaniyang sitwasyon 
+					at nagmakaawang tulungan siya. Kaya sinabi ni Apollo sa hari na makapangangasawa si Psyche ng isang nakakatakot
+					na nilalang. Pinayuhan niya ang hari na bihisan ng pamburol si Psyche, dalhin siya sa tuktok ng bundok at iwan nang mag-isa.
+					Doon ay susunduin siya ng kaniyang mapapangasawa na isang halimaw, isang ahas na may pakpak. <br><br>
+					
+					
+					Labis na kalumbayan ang baon ng hari sa kaniyang pagbabalik sa palasyo subalit agad pa rin siyang tumalima sa payo ni Apollo.
+					Ipinag-utos niyang bihisan si Psyche ng pinakamaganda niyang damit. Pagkatapos mabihisan si Psyche, ipinabuhat ng hari ang anak
+					na parang ihahatid sa kaniyang libingan papunta sa tuktok ng bundok. Habang naglalakbay sila, nagluluksa ang lahat sa maaaring
+					mangyari kay Psyche. Sa kabila naman ng mabigat na sitwasyon, buong tapang na hinarap ng dalaga ang kaniyang kapalaran.
+					“Dapat noon pa ay iniyakan na ninyo ako. Ang taglay kong kagandahan ang sanhi ng panibugho ng langit,” sumbat niya sa kaniyang ama.
+					Pagkatapos nito ay pinaalis na ni Psyche ang kaniyang mga kasama at sinabing masaya niyang haharapin ang kaniyang katapusan<br><br>
+					
+					
+					Naghintay si Psyche habang unti-unting nilalamon ng dilim ang buong bundok. Takot na takot siya sapagkat hindi niya alam kung 
+					ano ang naghihintay sa kaniya. Patuloy siyang tumatangis at nanginginig sa takot hanggang sa dumating ang malambing na ihip ng
+					hangin ni Zephyr. Inilipad siya nito at inilapag sa isang damuhang parang na kasinlambot ng kama at pinahalimuyak ng mababangong
+					bulaklak. Napakapayapa ng lugar na tila nawala ang lahat ng kaniyang kalungkutan. Nakatulog siya sa kapayapaan ng gabi. Nang
+					magising si Psyche sa tabi ng ilog, natanaw niya sa pampang nito ang isang mansiyon na parang ipinatayo para sa mga diyos. 
+					Nagmasid-masid siya at labis ang kaniyang pagkamangha sa kagandahan nito. Yari sa pilak at ginto ang mga haligi, at ang sahig
+					ay napalamutian ng mga hiyas. Nag-aalinlangan niyang buksan ang pinto subalit may tinig na nangusap sa kaniya. “Pumasok ka,para sa iyo ang 
+					mansiyong ito. Maligo ka, magbihis, at ihahanda namin ang piging para sa iyo. Kami ang iyong mga alipin,” wika ng mga tinig.<br><br>
+					
+					Nalibang si Psyche sa mansiyon, kumain siya ng masasarap na pagkain. Buong araw siyang inaliw ng mga musika ng
+					lira at ng mga awitin ng koro na hindi niya nakikita. Maliban sa mga tinig na kaniyang mga kasama, nag-iisa siya
+					sa mansiyon. Subalit sa hindi maipaliwanag na dahilan,
+					batid niyang sa pagsapit ng gabi ay darating ang kaniyang mapapangasawa. Lumipas ang maghapon nang hindi niya 
+					namamalayan. Pagsapit ng gabi nangyari nga ang inaasahan niya. Naramdaman niya ang pagdating ng lalaki. Tulad ng
+					mga tinig hindi niya ito nakikita. Bumulong ang lalaki sa kaniyang tainga. Nang marinig niya ang tinig ng lalaki,
+					nawala ang lahat ng takot na kaniyang nararamdaman.
+					Sa kaniyang paniniwala, hindi halimaw ang lalaki kundi isang mangingibig at asawang matagal na niyang hinihintay. <br><br>
+					
+					
+					Isang gabi ay kinausap siya nang masinsinan ng lalaki. Binalaan siyang may panganib na darating sa pamamagitan ng dalawa niyang kapatid. 
+					“Darating ang iyong mga kapatid upang magluksa sa lugar kung saan ka nila iniwan,” wika ng asawa. “Subalit huwag na huwag kang magpapakita 
+					sa kanila sapagkat magbubunga
+					ito ng matinding kalungkutan sa akin at kasiraan sa iyo,” habilin ng lalaki. Nangako naman si Psyche na tatalima sa kagustuhan ng asawa<br><br>
+					
+					Kinabukasan, narinig ni Psyche ang panangis ng kaniyang mga kapatid. Labis na naantig ang kaniyang damdamin sa kanilang
+					pagluluksa. Nais niyang ibsan ang kanilang kalungkutan at patahanin sila sa pag-iyak. Hanggang sa maging siya ay umiiyak
+					na rin. Kinagabihan ay inabutan pa siya ng kaniyang asawa na umiiyak. Sinabi ng lalaki na maaari na niyang makita ang kaniyang
+					mga kapatid subalit mahigpit pa rin ang kaniyang babala. “Sige gawin mo ang iyong nais subalit parang hinahanap mo ang sarili
+					mong kapahamakan,” wika ng lalaki. Pinayuhan siya nang masinsinan na huwag siyang pabubuyo kaninuman na subuking sulyapan ang mukha ng lalaki. Kung mangyayari ito, magdurusa si Psyche sa pagkakawalay sa kaniya. “Nanaisin kong mamatay nang isandaang beses kaysa mabuhay nang wala ka sa aking piling. Pagbigyan mo
+					lang ang kaligayahan kong muling makapiling ang aking mga kapatid,” buong pagmamakaawang hiling ni Psyche.
+					Malungkot na sumang-ayon ang lalaki. <br><br>
+					
+					Kinaumagahan, inihatid ng ihip ng hangin ni Zephyr ang dalawang kapatid ni Psyche. Hindi magkamayaw sa iyakan at yakapan ang
+					magkakapatid. Walang mapagsidlan ang nag-uumapaw nilang kaligayahan. Nang pumasok na sila sa mansiyon labis na pagkamangha ang 
+					naramdaman ng magkapatid. Sila ay nakatira sa palasyo subalit walang kasingganda ang mansiyon na ito. Nag-usisa sila kung sino
+					ang napangasawa ni Psyche. Tulad ng kaniyang ipinangako inilihim ni Psyche ang tunay na pagkatao ng asawa. Nang matapos na ang 
+					pagdalaw ng kaniyang mga kapatid, dumakot si Psyche ng mga ginto at hiyas upang ibigay sa kaniyang mga kapatid. Ipinahatid niyang
+					muli ang mga kapatid kay Zephyr. Labis na pangingimbulo ang naramdaman ng mga ate ni Psyche sa kaniya. Ang kanilang kayamanan 
+					ay hindi maihahambing sa kayamanang kanilang nakita sa tahanan ni Psyche.
+					Binalot nang labis na inggit ang kanilang puso na  humantong sa pagpaplano nila ng ikapapahamak ng kanilang bunsong kapatid.<br><br>
+					
+					
+					Noong gabi ring iyon, muling kinausap ng lalaki si Psyche. Nagmakaawa siyang huwag na muling patuluyin sa kanilang tahanan ang
+					kaniyang mga kapatid. “Tandaan mong hindi mo na ako makikitang muli kapag binali mo ang iyong pangako,” masidhing paalala ng
+					kaniyang asawa. “Bawal na kitang makita, pati ba naman ang mga mahal kong kapatid?”
+					pagmamaktol na sumbat ni Pysche. Muling pinagbigyan ng lalaki ang asawa na makita ang kaniyang mga kapatid.<br><br>
+					
+					
+					
+					Kinabukasan, muling dumalaw ang dalawang kapatid na may nabuo nang malagim na balak sa kanilang bunsong kapatid.
+					Nag-usisa sila nang nag-usisa hanggang malito na si Psyche sa kaniyang mga pagsisinungaling. Napilitan siyang sabihin
+					ang katotohanang bawal niyang makita ang mukha ng kaniyang asawa at hindi niya alam ang anyo nito. Ikinumpisal ng magkapatid
+					na alam na nila noon pa na ang asawa ni Psyche ay isang halimaw batay sa sinabi ng orakulo ni Apollo. Nagsisisi sila kung
+					bakit nila ito inilihim kay Psyche. Binuyo nila si Psyche na dapat na niyang malaman ang katotohanan bago mahuli ang lahat.
+					Mabait lamang daw ang kaniyang asawa ngayon subalit darating ang araw na siya ay kakainin nito.Takot ang nangibabaw sa puso
+					ni Psyche sa halip na pagmamahal. Ngayon lamang niya napagtagni-tagni ang katanungan sa kaniyang isip. Kaya pala pinagbabawalan
+					siyang makita ang hitsura ng kaniyang asawa sapagkat halimaw ito. At kung hindi man ito halimaw, bakit ito hindi nagpapakita sa
+					liwanag? Magkahalong takot at pagkalito ang naramdaman ni Psyche. Humingi siya ng payo sa kaniyang kapatid. Isinagawa na ng
+					nakatatandang mga kapatid ang masama nilang balak. Pinayuhan nila si Psyche na magtago ng punyal at lampara sa kaniyang silid.
+					Kapag natutulog na ang kaniyang asawa sindihan niya ang lampara at buong tapang niyang itarak ang punyal sa dibdib ng asawa.
+					Humingi lamang daw si Psyche ng tulong at nasa di kalayuan lamang ang dalawa. Kapag napatay na ni Psyche ang asawa sasamahan
+					siya ng kaniyang mga kapatid sa pagtakas. Iniwan nila si Psyche na litong-lito. Mahal na mahal niya ang kaniyang
+					asawa subalit paano kung halimaw nga ito? Nabuo ang isang desisyon sa kaniya. Kailangan niyang makita ang hitsura ng kaniyang asawa<br><br>
+					
+					 Sa wakas, nang mahimbing nang natutulog ang lalaki, patiyad na naglakad si Psyche patungo sa pinaglagyan niya ng punyal at
+					 lampara. Kinuha niya ang mga ito. Sinindihan niya ang lampara. Dahan-dahan siyang lumapit sa kaniyang asawa. Laking ginhawa 
+					 at kaligayahan ang nag-uumapaw sa kaniyang puso nang masilayan niya sa unang pagkakataon ang hitsura ng kaniyang asawa. Hindi
+					 halimaw ang kaniyang nakita kundi pinakaguwapong nilalang sa mundo. Nang madapuan ng liwanag ang kagandahan ng lalaki ay tila
+					 ba mas lalong tumingkad ang liwanag ng lampara. Sa labis na kahihiyan at kawalan ng pagtitiwala, lumuhod siya at binalak na
+					 saksakin ang sarili. Nang akma na niyang itatarak ang punyal sa kaniyang dibdib, nanginig ang kaniyang kamay, at nahulog ang
+					 punyal. Ang panginginig ng kaniyang kamay ay kapwa nagligtas at nagtaksil sa kaniya. Sa pagnanais niyang pagmasdan pa ang
+					 kaguwapuhan ng kaniyang asawa, inilapit niya ang lampara at natuluan ng mainit na langis ang balikat nito. Nagising ang lalaki
+					 at natuklasan ang kaniyang pagtataksil. Lumisan ang lalaki nang hindi nagsasalita.<br><br>
+					 
+					 
+					 
+					 Sinundan ni Psyche ang asawa subalit paglabas niya, hindi na niya nakita ang lalaki. Narinig na lamang niya ang tinig ng asawa.
+					 Ipinaliwanag nito kung sino siyang  talaga. “ Hindi mabubuhay ang pag-ibig kung walang tiwala,” wika niya bago tuluyang lumipad
+					 papalayo. “Si Cupid, ang diyos ng pag-ibig!” ang naisip ni Psyche. “ Siya ang asawa ko. Ako na isang hamak lamang ay hindi
+					 tumupad sa aking pangako sa kaniya. Mawawala na nga ba siya sa akin nang tuluyan?” wika niya sa kaniyang sarili. Inipon niya
+					 ang lahat ng nalalabi niyang lakas at nagwikang “Ibubuhos ko ang bawat patak ng aking buhay upang hanapin siya. Kung wala na
+					 siyang natitirang 
+					 pagmamahal sa akin, maipakikita ko sa kaniya kung gaano ko siya kamahal.” At sinimulan ni Psyche ang kaniyang paglalakbay.<br>
+					
+					Sa kabilang banda, umuwi si Cupid sa kaniyang ina upang pagalingin ang kaniyang sugat. Isinalaysay niya sa kaniyang ina
+					ang nangyari. Nagpupuyos sa galit si Venus at lalong sumidhi ang pagseselos niya kay Psyche.
+					Iniwan niya si Cupid nang hindi man lang tinulungang gamutin ang sugat nito. Determinado si Venus na ipakita
+					kay Psyche kung paano magalit ang isang diyosa kapag hindi nasiyahan sa isang mortal. <br><br>
+					
+					
+					Patuloy na naglakbay si Psyche at pinipilit na makuha ang panig ng mga diyos. Siya ay palagiang nag-aalay ng marubdob na
+					panalangin sa mga diyos subalit wala sa kanila ang nais maging kaaway si Venus. Nararamdaman ni Psyche na wala siyang pag-asa
+					sa lupa o sa langit man. Kaya minabuti niyang magtungo sa kaharian ni Venus at ialay ang kaniyang sarili na maging isang alipin.
+					Sa ganitong paraan ay umaasa siyang lalambot din ang puso ni Venus
+					at huhupa rin ang kaniyang galit. Nagbabakasakali rin siyang naroon sa kaniyang ina si Cupid. Sinimulan na niya ang paglalakbay.<br><br>
+					
+					
+					Nang dumating si Psyche sa palasyo ni Venus, humalakhak nang malakas ang diyosa. Pakutya niyang tinanong si Psyche,
+					“Nagpunta ka ba rito upang maghanap ng mapapangasawa? Tiyak kong ang dati mong asawa ay wala nang pakialam sa iyo, 
+					sapagkat muntik na siyang mamatay dahil sa natamong sugat mula sa kumukulong langis na dulot mo. Isa kang kasumpa-sumpang
+					nilalang. Kailanman ay hindi ka magkakaroon ng asawa kung hindi ka daraan sa butas ng karayom.” Sinabi ng diyosa na tutulungan
+					niya si Psyche sa pagsasanay. Ibinuhos niya sa harap ni Psyche ang isang malaking lalagyan na puno ng iba’t ibang uri ng maliliit na butong
+					pinaghalo-halo niya. Inutusan niya si Pysche na bago dumilim dapat ay napagsama-sama na niya ang magkakauring buto. 
+					Agad lumisan ang diyosa. <br><br>
+					
+					
+					 Tinitigan lamang ni Psyche ang malaking tumpok ng mga buto. Napakaimposible ng ipinagagawa sa kaniya ng diyosa.
+					 Nasa ganitong pagmumuni si Psyche nang pagmasdan siya ng mga langgam. Kung ang mga mortal at imortal ay hindi naaawa sa
+					 kaniya, hindi ang maliliit na nilalang. Nagtawag ang mga langgam ng kanilang mga kasama at sinimulan ang pagbubukod-bukod
+					 ng mga buto. Agad natapos ang gawain. Pagdating ni Venus, hindi siya nasiyahan sa kaniyang nakita. Sinabi niyang hindi pa 
+					 tapos ang mga pagsubok ni Psyche. Binigyan niya si Psyche ng matigas na tinapay. Sinabi rin ng diyosa na sa sahig siya matutulog.
+					 Inisip ng diyosa na kung pahihirapan at gugutumin niya si Psyche mauubos rin ang nakaiinis nitong ganda. Samantala, tiniyak ni Venus  na 
+					 hindi makalalabas si Cupid sa kaniyang silid habang pinahihilom nito ang kaniyang sugat. Nasisiyahan si Venus sa magandang takbo ng mga pangyayari.<br><br>
+					
+					Kinaumagahan, isang mapanganib na pagsubok ang ipinagawa ni Venus kay Psyche. Pinakukuha niya si Psyche ng gintong balahibo 
+					ng mga tupa sa tabi ng ilog. Ang mga tupa ay mababangis at mapanganib. Nang marating ni Psyche ang ilog, natutukso siyang tumalon
+					at magpalunod na lamang upang matapos na ang kaniyang paghihirap. Nakarinig siya ng tinig mula sa halamang nasa tabi ng ilog.
+					“Huwag kang magpapakamatay. Hindi naman ganoon kahirap ang ipinagagawa sa iyo. Kailangan mo lang maghintay ng tamang panahon
+					upang makakuha ng gintong balahibo ng tupa. Pagsapit ng hapon ang lahat ng tupa mula sa malalabay na halamanan ay magtutungo dito sa ilog upang magpahinga. Magtungo ka sa halamanan at doon ka kumuha ng mga gintong balahibong nasabit sa mga sanga.”
+					Sinunod ni Psyche ang payo ng halamang nasa tabi ng ilog. Umuwi siya sa kaharian ni Venus na dala ang mga gintong balahibo 
+					ng tupa. <br><br>
+					
+					
+					
+					“May tumulong sa iyo!” sumbat ni Venus kay Psyche. “Hindi mo ginagawa nang mag-isa ang mga pinagagawa ko sa iyo.
+					Hindi bale, bibigyan kita ng pagkakataong patunayan na sadyang mapagkunwari kang may mabuting puso at magaling.” 
+					Itinuro ni Venus sa malayo 
+					ang itim na tubig ng talon. Binigyan niya si Psyche ng prasko at pupunuin ito ng itim na tubig. Nagtungo si Psyche
+					sa ilog ng Styx. Nakita niyang malalim ang bangin at mabato. Tanging may pakpak lamang ang maaaring makaigib ng tubig.
+					Sa lahat ng kaniyang pagsubok, ito na ang pinakamapanganib. Tulad ng inaasahan may tumulong kay Psyche.
+					Isang agila ang dumagit sa praskong tangan ni Psyche at lumipad malapit sa talon. Pagbalik ng agila, puno na ng itim na
+					tubig ang prasko<br><br>
+					
+					Hindi pa rin sumusuko si Venus sa pagpapahirap kay Psyche. Ayaw niyang magmukhang tanga sa harap ng madla.
+					Ipinagpatuloy niya ang pagpapahirap sa kawawang  mortal. Binigyan niya si Psyche ng isang kahon na paglalagyan
+					niya ng kagandahang kukunin ni Psyche mula kay Proserpine, ang reyna sa ilalim ng lupa. Inutos ni Venus na sabihin
+					ni Psyche na kailangan niya ito sapagkat napagod siya sa pag-aalaga ng kaniyang anak na maysakit. Katulad ng mga nauna
+					agad tumalima si Psyche. Dala ang kahon, tinalunton niya ang daan papunta sa kaharian ni Hades. Tinulungan siya ng isang
+					tore na nagbigay sa kaniya ng detalyadong hakbang patungo sa kaharian sa ilalim ng lupa. Una, kailangan niyang pumasok sa
+					isang butas na lagusan patungo sa ilalim ng lupa sa tabi ng ilog ng kamatayan. Kailangan niyang sumakay sa isang bangkang
+					ang bangkero ay si Charon. Kailangan niyang bayaran ng pera si Charon upang siya ay makatawid. Makikita na niya ang lansangan patungo sa palasyo. Sa pintuan ng palasyo may 
+					nagbabantay na isang asong tatlong ulo. Kapag binigyan ng cake ang aso ito ay magiging maamo at papayag nang magpapasok sa palasyo. <br><br>
+					
+					Nagawa lahat ni Psyche ang ipinaliwanag ng tore. Pinaunlakan din ni Proserpine ang kahilingan ni Venus. Agad nakabalik si Psyche nang mas mabilis pa kaysa kaniyang pagbaba. Gayunman, nasubok muli ang karupukan ni Psyche. Sa paghahangad niya ng karagdagang kagandahan upang umibig muli si Cupid sa kaniya, natukso siyang kumuha ng kaunting ganda sa loob ng kahon. Nang buksan niya ito, tila walang laman subalit nakadama siya ng matinding panghihina at agad nakatulog.<br>
+					
+					Sa mga panahong ito ay magaling na si Cupid. Sabik na siyang makita ang kaniyang asawa subalit ibinilanggo siya ng kaniyang ina.
+					Mahirap bihagin ang pagmamahal. Kaya humanap si Cupid ng paraan upang makatakas. Nakita niya ang bukas na bintana at doon siya nakatakas.
+					Nahanap niya agad si Psyche malapit sa palasyo. Agad niyang pinawi ang pagtulog ng asawa at agad sinilid ang gayuma sa kahon. Bahagya niyang tinusok ng kaniyang busog si Psyche upang magising. Pinagalitan niyang muli ang kaniyang asawa dahil sa pagiging mausisa nito  na humantong muli sa kaniyang  kapahamakan. 
+					Sinabi niyang magtungo si Psyche sa kaniyang ina at ibigay ang kahon. Dito na magtatapos  ang pagpapahirap ng kaniyang ina. <br><br>
+					
+					Masayang nagtungo si Psyche sa palasyo samantalang si Cupid naman ay lumipad patungo sa kaharian ni Jupiter, 
+					ang diyos ng mga diyos at tao. Hiniling niya na tiyaking hindi na sila gagambalain ng kaniyang ina. Pumayag si Jupiter.
+					Nagpatawag si Jupiter ng pagpupulong ng mga diyos at diyosa kasama na si Venus. Ipinahayag niya sa lahat na  si Cupid at Psyche
+					ay pormal nang ikinasal at wala nang dapat gumambala sa kanila maging si Venus. Dinala ni Mercury si Psyche sa kaharian ng mga
+					diyos. Dito iniabot ni Jupiter kay Psyche ang ambrosia , ang pagkain ng mga diyos upang maging imortal. Naging panatag na rin si
+					Venus na maging manugang si Psyche sapagkat isa na itong diyosa. 
+					At kung maninirahan na ang manugang sa kaharian ng mga diyos, hindi na muling makagagambala si Psyche sa pagsamba ng tao 
+					kay Venus. <br>
+					Ang pag-ibig (Cupid), at kaluluwa (Psyche) ay nagkatagpo sa likod ng mapapait na pagsubok sa kanilang pagsasama ay hindi na mabubuwag kailanman.<br><br>
+					</p><hr>
+					<h3 class="text-center">Nagkaroon ng Anak sina Wigan at Bugan</h3>
+					<h5 class="text-center">Muling isinalaysay sa Ingles ni: Maria Luisa B. Aguilar-Cariño </h5>
+					<h5 class="text-center">Isinalin ni: Vilma C. Ambat</h5>	
+					<p class="text-justify">
+					“Hay, ano ang saysay ng buhay?” naibulalas ni Bugan sa kaniyang asawang si Wigan. “Hindi man lang tayo magkaroon ng anak; mukhang hindi pinakikinggan ng mga diyos ang ating mga panalangin!” <br><br>
+					Sumang-ayon naman si Wigan, “Oo, tama ka! Pero halika muna, mag-momma tayo at saka natin isipin kung ano ang dapat nating gawin.”<br><br>
+					Matagal na nag-isip ang mag-asawa hanggang nakapagdesisiyon si Bugan na magtungo sa tahanan ng mga diyos sa silangan. “Dito ka lang, Wigan, pupuntahan ko ang mga diyos na sina Ngilin, Bumakker, Bolang at ang diyos ng mga hayop.” <br><br>
+					
+					
+					Sinimulan ni Bugan ang kaniyang paglalakbay. Pumunta siya sa Ibyong, dumaan sa Poitan, nagtungo siya sa silangan papuntang Nahbah, Baninan.
+					Tumawid siya sa ilog ng Kinakin at narating niya ang lawa sa Ayangan. Nakakita siya ng igat sa lawa. Tinanong siya nito “Saan ka pupunta Bugan?” 
+					Sumagot si Bugan, “Pupunta ako ng Silangan para maghanap ng lalamon sa akin, sapagkat hindi kami magkaroon ng anak ni Wigan.”
+					Tumawa ang igat. “Huwag kang malungkot, Bugan,” wika ng nito. “Sige magtungo ka sa silangan at makipagkita ka sa mga diyos.” <br><br>
+					
+					
+					Ipinagpatuloy ni Bugan ang kaniyang paglalakbay patungo sa lugar ng mga diyos. Narating niya ang lawa sa Lagud. Nakita niya roon
+					ang isang buwaya. “Tao, bakit ka naririto?” pag-uusisa ng buwaya. “Ako si Bugan ng Kiyangan, at naghahanap ako ng lalamon sa akin.
+					Wala kaming anak ng aking asawa,” sagot ni Bugan. Humikab ang buwaya at nagsabing, “ Hindi kita maaaring kainin sapagka’t 
+					napakaganda mo.” Ipinagpatuloy muli ni Bugan ang kanyang paglalakbay at nakarating sa tahanan ng kinatatakutang pating. 
+					Nilabanan niya ang pangangatog ng kaniyang tuhod. Hinarap niya ang pating at nagwika “Pakiusap, kainin mo na ako. 
+					Kaming mag-asawa ay walang anak. Ayaw ko nang mabuhay pa kung hindi ako magkakaroon ng anak.” Sumagot ang pating,
+					“Isang malaking kahihiyan kapag kinain kita. Napakaganda mo.  Halika muna sa aking tahanan at kumain; 
+					bago mo ipagpatuloy ang iyong paglalakbay.”<br><br>
+					
+					
+					
+					Pagkatapos saluhan ang pating sa hapag-kainan, muling naglakad patungong silangan si Bugan. Sa wakas ay narating niya ang 
+					tahanan ng mga diyos na sina Ngilin, Bumabakker, at iba pang mga diyos. Labis siyang napagod kaya humiga siya sa lusong
+					na nasa labas ng bahay.
+					Doon hinintay ang mga diyos. Lingid sa kaniyang kaalaman, nasa loob lamang ng bahay si Bumabbaker.<br><br>
+					
+					“May naamoy akong tao,” sabi ni Bumabbaker. Lumabas siya ng bahay upang hanapin ang pinanggagalingan ng amoy. Nakita niya ang isang magandang babae na nakaupo sa kanyang lusong.
+					“Ano’ng ginagawa mo dito, Bugan?” tanong niya habang  kinikilala kung si Bugan nga iyon.<br><br>
+					“Naku, nagpunta ako rito upang mamatay, sapagkat hindi pa rin kami nagkakaroon ng anak ni Wigan pagkalipas ng ilang taon,” wika ni Bugan. <br><br>
+					“Kahibangan,” wika ni Bumabbaker habang tumatawa. “Halika, hanapin natin si Ngilin at kung nasaan pa ang iba,” wika ni Bumabbaker.<br><br>
+					Nalugod ang mga diyos na makita si Bugan. Nagbigay sila ng regalong baboy, manok at kalabaw. “Sasama kami sa iyo pabalik sa Kiyangan. Doon ka namin tuturuan ng ritwal na Bu-ad upang mabiyayaan ka ng mga anak, masaganang ani at pamumuhay.”<br><br>
+					Inihatid ng mga diyos si Bugan kay Wigan. Tinuruan nila ang mag-asawa ng  panalanging dapat nilang sambitin sa pagsasagawa ng ritwal na Bu-ad. Isinagawa ni Wigan at Bugan ang ritwal at pinasalamatan ang kanilang mga diyos. 
+					Pagkalipas ng ilang buwan, walang mapagsidlan ng kaligayahan ang mag-asawa dahil sa buhay na tumitibok sa sinapupunan ni Bugan.<br><br>
+					
+					</p>
+					<hr>
+					<p class="alammoba text-justify"><strong>Alam mo ba na..</strong><br>ang salitang mitolohiya ay nangangahulugang agham o pag-aaral ng mga mito/ myth at alamat? Tumutukoy rin ito sa kalipunan ng mga mito mula sa isang pangkat ng tao sa isang lugar na naglalahad ng kasaysayan ng mga diyos-diyusan noong unang panahon na sinasamba, dinarakila at pinipintakasi ng mga sinaunang tao. <br><br> Ang salitang mito/myth ay galing sa salitang Latin na mythos at mula sa Greek na muthos, na ang kahulugan ay kuwento. Ang muthos ay halaw pa sa mu, na ang ibig sabihin ay paglikha ng tunog sa bibig. Sa Klasikal na Mitolohiya ang mito/myth ay representasyon ng marubdob na pangarap at takot ng mga sinaunang tao. Nakatutulong ito upang maunawaan ng mga sinaunang tao ang misteryo ng pagkakalikha ng mundo, ng tao, ng mga katangian ng iba pang mga nilalang. Ipinaliliwanag rin dito ang nakatatakot na puwersa ng kalikasan sa daigdig – tulad ng pagpapalit ng panahon, kidlat, baha, kamatayan, at apoy. Ito ay naglalahad ng ibang daigdig tulad ng langit at ilalim ng lupa. Hindi man ito kapani-paniwalang kuwento ng mga diyos, diyosa, at mga bayani, tinuturing itong sagrado at pinaniniwalaang totoong naganap. Karaniwang may kaugnayan ito sa teolohiya at ritwal. <br><br> Sa Pilipinas naman, ang mito ay kinabibilangan ng mga kuwentong-bayang naglalahad ng tungkol sa mga anito, diyos at diyosa, mga kakaibang nilalang, at sa mga pagkagunaw ng daigdig noon. Maaaring matagpuan ang mga mitong ito sa mga kuwentong – bayan at epiko ng mga pangkat-etniko sa kasalukuyan. Mayaman sa ganitong uri ng panitikan ang mga naninirahan sa bulubundukin ng Luzon, Visayas, at Mindanao.<br><br>  May kuwento tungkol sa pagkagunaw ng daigdig ang mga Ifugao. Inilarawan sa kanilang epikong “ Alim” kung paano nagunaw ang daigdig. Ayon dito, nagkaroon ng malaking pagbaha sa mundo at ang tanging nakaligtas ay ang magkapatid na sina Bugan (babae), at Wigan (lalaki). Sa kanila nagmula ang bagong henerasyon ng mga tao sa  mundo.</p>
+			</div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		<div class="modal fade" id="10aralin12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-center" id="myModalLabel">Aralin 1.4</h4>
+						<center><h4 class="modal-title" id="myModalLabel">Ang Alegorya ng Yungib </h4>
+						<h4 class="modal-title" id="myModalLabel">ni Plato</h4>
+						<h4 class="modal-title" id="myModalLabel">(Isinalin sa Filipino ni Willita A. Enrijo) </h4></center>
+					</div>
+					<div class="modal-body">
+						<p class="text-justify">
+						At ngayon, sinasabi ko na hayaan mong ipakita ko ang isang anyo na dapat mabatid o hindi mabatid 
+						tungkol sa ating kalikasan: Pagmasdan! May mga taong naninirahan sa yungib na may lagusan patungo sa liwanag na umaabot sa kabuuan nito.
+						Sila’y naroroon mula pagkabata, at ang kanilang mga binti at leeg ay nakakadena kung kaya’t hindi sila makagalaw, hadlang ito sa pagkilos pati ng kanilang mga ulo . Sa di kalayuan, sa taas at likod nila ay may apoy na nagliliyab,  sa pagitan ng apoy at mga bilanggo may daang papataas. 
+						Kung ang paningin mo ay dadako sa mababang pader nito, maihahalintulad ito sa isang tabing na pinagtatanghalan ng mga puppet.
+						<br>
+						<br>Nasilayan Ko<br><br>
+						At nasilayan mo rin ba  ang mga taong dumadaan sa pagitan ng mga dingding  na  
+						may dala- dalang mga monumento  at larawan ng mga hayop na likha sa kahoy at bato? Ang iba sa kanila ay nagsasalita,
+						ang iba ay tahimik. Naipakita  mo sa akin ang kakaiba nilang imahe. Sila nga  ay kakaibang mga bilanggo.<br>
+						
+						Katulad natin, ang tugon ko,  na ang tangi nilang  nakikita  ay pawang  sarili nilang mga anino? <br>
+						
+						Totoo, ang sabi niya, paano nila makikita ang ano man kung hindi sila pinahihintulutang gumalaw maging ang kanilang mga ulo? 
+						At may mga bagay na dapat lamang dalhin sa paraang dapat lamang makita ng mga anino? Oo, sabi niya. At kung nakaya nilang hindi
+						sumang-ayon sa isa’t isa, 
+						hindi ba nila ipinalalagay na sila ay tumutukoy ng  kung ano pa man para sa kanila? <br>
+						<br>Tunay nga.<br><br>
+						 At sa higit pang pagpapalagay na ang mga bilanggo ay may alingawngaw  mula sa ibang dako, hindi ba nila natitiyak na 
+						 baka guniguni lamang ito ng isang dumaan at may ipinagpapalagay tungkol sa pinagmumulan ng tinig? <br>
+						 Walang tanong-tanong, ang tugon.<br>
+						 Sa kanila, ang sabi ko, ang katotohanan ay walang kahulugan kundi ang anino ng mga imahe.
+						 Iyan ang tiyak. Ngayon, balikan muli natin kung ano ang likas na magaganap kung sakaling ang mga
+						 bilanggo ay maging malaya at di maaabuso sa kanilang pagkakamali. Sa una, kung ang isa sa kanila
+						 ay mapalalaya at biglang tumayo, lumingon, lumakad at tumingin patungo sa liwanag. Magdurusa sa sobrang sakit. Ito mismo ang magpapalungkot sa kaniya. Gayundin hindi niya makikita ang dati niyang kalagayan sapagkat ang tanging nakikita  niya ay mga anino lamang. Pagkatapos isaisip,  tinuran ng isa na ang kaniyang nakita noong una ay guniguni lamang,
+						 ngunit ngayon, siya ay papalapit na sa pagkatao. Nakikita niya, mayroon na siyang  maliwanag na pananaw- ano ang magiging tugon niya? <br>
+						
+						O kaya’y, maaari mong isipin na ang kaniyang guro ay nagtuturo ng mga bagay na dapat niya lamang kilalanin. 
+						Hindi ba siya nagugulumihanan? 
+						Hindi kaya siya mahumaling na ang anino na kaniyang nakita  noong una ay mas tunay kaysa mga bagay na 
+						nakikita niya sa kasalukuyan?<br>
+						
+						<br>Malayong katotohanan. <br>
+						
+						
+						At kung siya ay napilitang tumingin nang diretso sa liwanag, wala ba siyang  nararamdamang sakit upang siya’y magkubli sa nakikitang bagay? Kaniya bang aakalain na siya ay nasa katotohanang mas maliwanag  kaysa  mga bagay na nakikita sa kasalukuyan? <Br>
+						
+						<br>Totoo, ang sabi niya. <br><br>
+						
+						At kung ipinalalagay pang muli na siya ay atubiling hinila pataas sa matarik 
+						at bako-bakong daan hanggang sapilitan siyang makarating sa harap mismo ng araw,
+						hindi ba siya mahihirapan at magagalit? Kapag nilapitan niya ang liwanag, ang kaniyang
+						mga mata ay maaaring masilaw at hindi niya magagawang
+						makita ang mga bagay-bagay sa kasalukuyan - ang katotohanan.<br>
+						
+						<br>Hindi muna sa kasalukuyan, sabi niya.<br><br>
+						
+						Kailangang mahirati ang kaniyang paningin sa dakong itaas ng mundo. At makita niya nang
+						maliwanag ang mga anino, kasunod ay ang repleksiyon ng tao at  iba pang bagay sa tubig, at ang mismong mga bagay. Pagkatapos, tititig siya sa liwanag ng buwan at mga bituin, at sa maningning na kalangitan; at kaniyang makikita ang ulap at
+						mga bituin sa gabi nang mas maningning kaysa liwanag  ng araw na hatid ng umaga.<br>
+						<br>Tiyak<br><br>
+						
+						Higit sa lahat, magkakaroon siya ng kakayahang makita  ang araw, hindi lamang ang repleksiyon niya sa tubig kundi makikita niya  ang sarili sa kinaroroonan, at hindi sa iba pa man, at siya ay makapagninilay-nilay kung sino siya.<br>
+						<br>Tiyak<br><br>
+						
+						At siya ay makararating sa pagtatalo na siya mismo ay naglaan ng panahon. At ang gumagabay sa lahat ng ito ay yaong nakikita sa mundo, na naging dahilan upang siya at ang kaniyang kapwa ay masanay sa pagtitig. <br>
+						
+						Maliwanag, sabi niya, una niyang makikita ang liwanag pagkatapos ang dahilan tungkol sa kaniyang sarili. At kung maalala niya ang dating tahanan, at ang karunungan sa yungib pati ang mga kapuwa bilanggo,
+						hindi ba niya maipalalagay na mapaliligaya niya ang sarili sa pagbabago at kaawaan na lamang sila? <br>
+						
+						<br>Tiyak at Tumpak<br>
+						
+						At kung sila ay nasanay na sa pagtanggap ng mga karangalan sa kung sino sa kanila ang mabilis na makapuna sa
+						pagdaan ng mga anino at makapagsabi kung sino ang nakaranas niyon dati? Kung sinuman ang makapagpapasiya nang
+						mahusay para sa kinabukasan, sa iyo bang palagay sino ang makapag-iingat sa tinatawag na dangal
+						at kaluwalhatian? O kaya’y kainggitan ba ang may taglay nito? Hindi ba niya babanggitin ang tinuran ni Homer.<br>
+						
+						
+						“Mas mabuting maging mahirap na alipin ng dukhang panginoon.”
+						At matututuhang tiisin ang mga bagay kaysa isaisip ang kanilang ginagawa at mamuhay katulad ng kanilang gawi? <br>
+						Oo, ang sabi niya. Sa palagay ko ay pipiliin niyang magtiis kaysa aliwin ang mga huwad na akala at mabuhay sa kahabag-habag na kalagayan. <br>
+						<br>Para makatiyak, sabi niya. <br><br>
+						At kung mayroon mang paligsahan, at kailangan niyang makipagtagisan sa pagsukat sa mga anino kasama ang mga bilanggo na 
+						kailanman ay di nakalaya mula sa yungib. Sa sandaling ang paningin ay nananatiling mahina, at bago ito maging matatag 
+						(may dapat isaalang – alang sa panahon na kakailanganin upang makamit ang bagong kalagayan ng paningin) hindi ba siya
+						katawa-tawa? Sasabihin ng tao sa kaniya na ang pagpunta at pagdating niya nang wala ang mga paningin ay mas mabuti na
+						hindi na lamang isaisip ang pag-unlad. At kung sinuman ang sumubok na palayain ang iba at gabayan  patungo sa liwanag;
+						hayaang  hulihin ang nagkasala at dalhin  nila  sa  kamatayan.<br>
+						Walang tanong, ang sabi niya. <br>
+						Ito ang kabuuan ng alegorya, ang sabi ko; maaari mong dagdagan mahal kong Glaucon  ang mga dating katuwiran.
+						Ang bilangguan ay mundo ng paningin, ang ilaw ng apoy ay ang araw. Hindi mo ako mamamali kung ipakakahulugan 
+						mo na ang paglalakbay papataas ay maging  pag-ahon ng kaluluwa patungo sa intelektuwal na mundo batay sa mahina 
+						kong paniniwala.  Aking ipinahahayag, ito ay batid ng Diyos maging tama man o mali. Ngunit tunay man o huwad, ang
+						aking opinyon sa mundo ng karunungan ay ito, ang ideya ng kabutihan ay nananatili sa huli at matatagpuan lamang nang
+						may pagpupunyagi; at kapag ito’y natagpuan, ang lahat ng bagay na maganda at tama sa daigdig at ang pangunahing pinagmumulan  ng dahilan at katotohanan ay yaong sinumang may kapangyarihang kumilos nang may katuwiran sa publiko o pribadong buhay. 
+						Samakatuwid kailangan na ang kaniyang mga mata  ay may matibay na tuon para sa mga bagay na ito 
+						<br><br>
+
+						Sumasang-ayon ako, sabi niya, hanggat may kakayahan akong maunawaan ka.<br><br>
+
+						At ang sabi ko, huwag kang magtaka sa iba na may magandang pananaw na ayaw man lang magbahagi  para sa kapakanan ng tao; para sa kanilang kaluluwa sa itaas ng mundo ay madali lamang kung saan sila’y naghahangad na manirahan; 
+						magiging likas ang kanilang paghahangad, kung ang ating alegorya ay  mapagkakatiwalaan. <br>
+						
+						<br> Oo, tunay na likas.<br><br>
+						 At mayroon bang bagay na nakapagtataka sa mga taong nakadaan mula sa banal na pagninilay-nilay patungo 
+						 sa makasalanan nilang kalagayan o gumawa ng labag sa kagandahang-asal? Samantala, habang ang kaniyang mga mata
+						 ay kumukurap bago siya mahirati sa kadiliman, siya ay mapipilitang lumaban sa korte o sa ibang lugar, tungkol sa
+						 anino ng imahe ng katarungan at  magpupunyaging maunawaan nang ganap ang katarungan. <br>
+						<br> Anuman, ngunit kamangha-mangha ang kaniyang tugon.<br><br>
+						 Sinuman ang  may wastong pag-iisip ay mababatid na ang pagkalito ng mga paningin ay dalawang uri 
+						 o nanggaling sa dalawang dahilan, maaaring mula sa paglabas ng liwanag o patungo sa liwanag. Kapag 
+						 nakita niya na sinuman na may pananaw na magulo at mahina ay masasabing hindi pa handang humalakhak.
+						 Una niyang itatanong kung ang kaluluwa ba ng tao ay maghahatid nang maliwanag na buhay? 
+						 O kaya’y maglalapit mula  kadiliman patungo sa araw na labis na nakasisilaw? At kaniyang bibilangin 
+						 ang maligayang kalagayan niya, at siya ay maaawa sa iba, o kung nasa isipan man niyang pagtawanan 
+						 ang kaluluwa na nanggaling mula ilalim patungo sa liwanag, mayroon pang mga dahilan bukod dito kaysa mga
+						 halakhak na bumati sa kaniya at bumalik mula sa itaas ng liwanag patungo sa yungib.<br><br> Iyan, ang sabi niya na dapat itangi. <br><br>
+						 Matapos mong mabasa ang akda, tiyak na nalaman mo ang pananaw o kaisipan ni Plato sa halaga ng pagkakaugnay ng kapaligiran sa karunungang tinataglay ng tao at ano ang pagkakaiba nito sa sariling kaisipan. Ngayon, alam kong handa ka nang isagawa ang mga gawain na makatutulong sa iyo upang masagot ang tanong na: Paano makatutulong ang sanaysay na magkaroon ng kamalayan sa kultura at kaugalian ng isang bansa upang makabuo ng sariling pananaw?
+						 
+						</p><hr>
+						
+						<center><h4 class="modal-title" id="myModalLabel">Ang Ningning at Ang Liwanag  </h4>
+						<h4 class="modal-title" id="myModalLabel">(Mula sa Liwanag at Dilim) </h4>
+						<h4 class="modal-title" id="myModalLabel">ni Emilio Jacinto  </h4></center>
+						
+						<p class="text-justify">
+						Ang ningning ay nakasisilaw at nakasisira sa paningin. Ang liwanag ay kinakailangan ng mata, upang mapagwari ang buong katunayan ng mga bagay-bagay.<br><br>
+						Ang bubog kung tinatamaan ng nag-aapoy ng sikat na araw ay nagniningning; ngunit sumusugat sa kamay ng nagaganyak na dumampot.<br><br> Ang ningning ay maraya.<br> <br>Ating hanapin ang liwanag; tayo’y huwag mabighani sa ningning. <br><br>
+						Sa katunayan ng masamang kaugalian: Nagdaraan ang isang karuaheng maningning na hinihila ng kabayong matulin. Tayo’y magpupugay at ang isasaloob ay mahal na tao ang nakalulan. Datapua’y marahil naman ay isang magnanakaw, marahil sa isang malalim ng kaniyang ipinatatanghal na kamahalan at mga hiyas na tinataglay ay natatago ang isang sukaban.<br><br>
+						Nagdaraan ang isang maralita na nagkakanghihirap sa pinapasan. Tayo’y napapangiti, at isasaloob.<br><br>
+						Saan kaya ninakaw? Datapua’y maliwanag nating nakikita sa pawis ng kaniyang noo at sa hapo ng kaniyang katawan na siya’y nabubuhay sa sipag kapagalang tunay.<br><br>
+						Ay! Sa ating naging ugali ay lubhang nangapit ang pagsamba sa ningning at pagtakwil sa liwanag. Ito nga ang dahilan kung kaya ang mga loob na inaakay ng kapalaluan at ng kasakiman ay nagpupumilit na lumitaw na maningning, lalonglalong na nga ang mga pinuno na pinagkatiwalaan ng ikagiginhawa ng kanilang mga sakop at walang ibang nasa kundi ang mamalagi sa kapangyarihan
+						sukdang ikainis at ikamatay ng bayan na nagbibigay sa kanila ng kapangyarihan.<br> <br>
+						Tayo’y mapagsampalataya sa ningning, huwag nating pagtakhan ang ibig mabuhay sa dugo ng ating mga ugat at magbalat-kayong maningning.<br><br>
+						Ay! Kung ang ating dinudulugan at hinahainan na puspos na galang ay ang maliwanag, ang magandang asal at matapat na loob, walang magpapaningning pagka’t di natin pahahalagahan. At ang mga isip at akalang ano pa man ay hindi hihiwalay sa maliwanag na banal na landas ng katuwiran.<br><br>
+						Ang kaliluhan at ang katampalasanan ay humahanap ng ningning upang hindi mapagmalas ng mga matang tumatanghal ang kanilang kapangitan; nguni’t ang   kagalingan at ang pag-ibig na dalisay ay hubad sa ningning, mahinhin, at maliwanag na mapatatanaw sa paningin.<br><br>
+						Ang mahabang panahong lumipas ay isang labis na nagpapatunay ng  katotohanan nito.<br><br> Mapalad ang araw ng liwanag!<br><br>
+						Ay! Ang Anak ng Bayan, ang kapatid ko, ay matututo kaya na kumuha ng  halimbawa at lakas sa pinagdaanang mga hirap at binatang mga kaapihan?  <br><br>
+						- Mula sa Panitikan ng Pilipinas nina Panganiban at Panganiban, 1998 
+						
+						</p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="modal fade" id="10aralin13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-center" id="myModalLabel">Aralin 1.3</h4>
+						<h4 class="modal-title text-center" id="myModalLabel">Ang Tusong Katiwala </h4>
+						<h4 class="modal-title text-center" id="myModalLabel">(Lukas 16:1-15)<br> Philippine Bible Society </h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-justify">
+						1) Nagsalita uli si Hesus sa kaniyang mga alagad, “May taong mayaman na may isang katiwala. May nagsumbong sa kaniyang nilulustay nito ang kaniyang ari-arian. 2) Kaya’t ipinatawag niya ang katiwala at tinanong, ‘Ano ba itong naririnig ko tungkol sa iyo? Ihanda mo ang ulat ng iyong pangangasiwa sapagkat tatanggalin na kita sa iyong tungkulin.’ 3) Sinabi ng katiwala sa kanyang sarili, ‘Ano ang gagawin ko? Aalisin na ako ng aking amo sa pangangasiwa. Hindi ko kayang magbungkal ng lupa; nahihiya naman akong magpalimos. 4) Alam ko na ang  aking gagawin! Maalis man ako sa pangangasiwa ay may tatanggap naman sa akin sa kanilang tahanan.<br><br>
+						5) Isa-isa niyang tinawag ang mga may utang sa kaniyang amo. Tinanong niya ang una, ‘Magkano ang utang mo sa aking amo?’ 6) Sumagot ito, ‘Isandaang tapayang  langis po.’ ‘Heto ang kasulatan ng iyong pagkakautang. Dali! Maupo ka’t palitan mo, gawin mong limampu,’ sabi ng katiwala. 7) At tinanong naman niya ang isa, ‘Ikaw, gaano ang utang mo?’ Sumagot ito, ‘Isandaang kabang trigo po.’ ‘Heto ang kasulatan ng iyong pagkakautang,’ sabi niya. ‘Isulat mo, walumpu.’ 8) Pinuri ng amo ang tusong katiwala dahil sa katalinuhang ipinamalas nito. Sapagkat ang mga makasanlibutan ay mas mahusay gumawa ng paraan kaysa mga maka-Diyos sa paggamit ng mga bagay ng mundong ito.<br><br>
+						9) At nagpatuloy si Hesus sa pagsasalita, “Kaya’t sinasabi ko sa inyo, gamitin ninyo ang kayamanan ng mundong ito sa paggawa ng mabuti sa inyong mga kapwa upang kung maubos na iyon ay tanggapin naman kayo sa tahanang walang hanggan. 10) Ang mapagkakatiwalaan sa maliit na bagay ay mapagkakatiwalaan din sa malaking bagay; ang mandaraya sa maliit na bagay ay mandaraya rin sa malaking bagay. 11) Kaya kung hindi kayo mapagkakatiwalaan sa mga kayamanan ng mundong ito, sino ang magtitiwala sa inyo ng tunay na kayamanan? 12) At kung hindi kayo mapagkakatiwalaan sa kayamanan ng iba, sino ang magbibigay sa inyo ng talagang para sa inyo?<br><br>
+						13) “Walang aliping maaaring maglingkod nang sabay sa dalawang panginoon sapagkat kamumuhian niya ang isa at iibigin ang ikalawa, paglilingkuran nang tapat ang isa at hahamakin ang ikalawa. Hindi kayo maaaring maglingkod ng sabay sa Diyos at sa kayamanan.” 14) Nang marinig ito ng mga Pariseo, kinutya nila si Jesus sapagkat sakim sila sa salapi. 15) Kaya’t sinabi niya sa kanila, “Nagpapanggap kayong matuwid sa harap ng mga tao, ngunit alam ng Diyos ang nilalaman ng inyong mga puso. Sapagkat ang itinuturing na mahalaga ng mga tao ay kasuklam-suklam sa paningin ng Diyos.<br><br>
+						</p>
+						<p class="alammoba text-justify"><strong>Alam mo ba na..</strong><br>ang parabula ay maikling salaysay na nagtuturo ng kinikilalang pamantayang moral na karaniwang batayan ng mga kuwento ay nasa Banal na Kasulatan? Realistiko ang banghay at ang mga tauhan ay tao. Ang mga parabula ay may tonong mapagmungkahi at maaaring may sangkap ng misteryo. - Mula sa Elements of Literature nina Holt et. al. 2008. Texas, USA</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="10aralin14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-center" id="myModalLabel">Aralin 1.4</h4>
+						<h4 class="modal-title text-center" id="myModalLabel">Ang Kwintas</h4>
+						<h4 class="modal-title text-center" id="myModalLabel">ni Guy de Maupassant</h4>
+					</div>
+					<div class="modal-body">
+						<p class="alammoba text-justify"><strong>Alam mo ba na..</strong><br>ang kuwento ng tauhan ay isang uri ng kuwentong ang higit na binibigyang-halaga o diin ay kilos o galaw, ang pagsasalita at pangungusap at kaisipan ng isang tauhan? Naglalarawan ito ng iisang kakintalan sa taong inilalarawan o pinapaksa. Kumakatawan siya sa kabuuan ng kuwento sa pamamagitan ng ano mang nangingibabaw na ideya o ng mga kabuluhan sa kuwento. Nangingibabaw rito ang isang masusing pag-aaral at paglalarawan sa tunay na pagkatao ng tauhan sa katha.<br><br> Maraming paraan ang ginagamit ng may-akda sa paglalarawan ng buong  pagkatao ng tauhan. Nasasalig ito sa kaniyang panloob na anyo – ang isipan, mithiin, damdamin, at gayon din sa kaniyang panlabas na anyo – pagkilos at pananalita. Nakatutulong din sa pagpapalitan ng katauhan ang mga pag-uusap ng ibang tauhan sa kuwento tungkol sa kaniya. Ngunit sa pamamagitan na rin ng tauhan nagkakaroon ng pinakamabisang paglalarawan ng katauhan at maipakikita ito sa kaniyang reaksiyon o saloobin sa isang tiyak na pangyayari.</p>
+						<h3 class="text-center">Ang Kwintas</h3>
+						<h5 class="text-center">ni Guy de Maupassant</h5>
+						<p class="text-justify">Siya’y isa sa magaganda’t mapanghalinang babae na sa pagkakamali ng tadhana ay isinilang sa angkan ng mga tagasulat. Pumayag siyang pakasal sa isang abang tagasulat sa Kagawaran ng Instruksyon Publiko sapagkat walang paraan upang siya’y makilala, panuyuan, bigyan ng dote, at pakasalan ng isang mayaman at tanyag na lalaki. </p>
+						<p class="text-justify">Pangkaraniwan lamang ang mga isinusuot niyang damit dahil sa hindi niya kayang magsuot ng magagara. Hindi siya maligaya. Sa pakiwari niya’y alangan sa kaniya ang lalaking nakaisang-dibdib sapagkat sa mga babae ay walang pagkakaibaiba ng katayuan sa buhay. Ang ganda’t alindog ay sapat na upang maging kapantay ng sinumang hamak na babae ang isang babaing nagmula sa pinakadakilang angkan. Ang isang babaing nagbuhat sa  karaniwang angkan ay magiging kasinghalaga ng mga maharlika sa pamamagitan ng pinong asal at pag-uugali, pagkakaroon ng pangunawa sa tunay na kahulugan ng magara at makisig at kakaibang kislap ng diwa. </p>
+						<p class="text-justify">Labis ang kaniyang pagdurusa at paghihinagpis dahil may paniniwala siyang isinilang siya sa daigdig upang magtamasa ng lubos na kaligayahan sa buhay na maidudulot ng salapi. May taglay siyang alindog na hindi nababagay sa kasalukuyan niyang kalagayan. Ipinaghihinagpis niya ang karukhaan ng kaniyang lumang tahanan, ang nakaaawang anyo ng mga dingding, ang mga kurtinang sa paningin niya ay napakapangit. Malimit na sa pagmamasid niya sa babaing Briton na siyang gumaganap ng ilang abang pangangailangan niya sa buhay ay nakadarama siya ng panghihinayang at napuputos ng lumbay ang kaniyang puso kapag naiisip ang mga pangarap niya sa buhay na hindi yata magkakaroon ng katuparan. Naglalaro sa kaniyang balintataw ang anyo ng tahimik na tanggapang nasasabitan ng mamahaling kurtina, pinaliliwanag ng matatangkad na kandilerong bronse at may nagtatanod na dalawang naglalakihang bantay na dahil sa init ng pugon ay nakatulog na sa dalawang malaking silyon. Naiisip niya ang mahahabang bulwagang nagagayakan ng mga sedang tela ng unang panahon na nagsisilbing palamuti, mga mamahaling kasangkapan na ang mga hiwaga at kababalaghan ay walang kapantay na halaga, mga silid-bihisang marangya at humahalimuyak sa bango, mga taong tanyag na pinagmimithing makilala ng balana at makikisig na ginoong pinananabikang karinggan ng papuri at pinaglulunggatian  ng kababaihan. </p>
+						<p class="text-justify">Sa hapunan, sa tuwing uupo siya kaharap ang asawa sa harap ng mesang nalalatagan ng isang kayong pansapin na tatlong araw nang ginagamit ay iba ang laman ng kaniyang kaisipan. Kahit na naririnig niya ang malugod na pagsasabi ng asawa pagkabukas ng supera ng “A, ang masarap na potau-feu! Aywan nga ba kung may masarap pa riyan!” Ang nasa isip niya sa mga gayong sandali ay ang nakakainggit na masarap na hapunan, ang mga nagkikinangang kubyertos at ang marangyang kapaligiran. Kaagad na naiisip din niya ang mga malinamnam na pagkaing nakalagay sa magagandang pinggan. Naiisip din niya ang mga papuring ibinubulong sa kaniya na kunwari’y hindi niya napapansin ngunit sa katotohanan ay nakakikiliti sa kaniyang damdamin samantalang nilalasap niya ang malinamnam na mamula-mulang laman ng isda o kaya’y pakpak ng pugo. </p>
+						<p class="text-justify">Sa pakiwari niya’y iniukol siya ng tadhana na magkaroon ng mga bagay na lubhang malapit sa kaniyang puso katulad ng magagarang damit at mga hiyas ngunit wala siya ng mga iyon. Labis ang pagmimithi niyang masiyahan siya, maging kahalihalina, kaibig-ibig, maging tampulan ng papuri at pangimbuluhan ng ibang babae. </p>
+						<p class="text-justify">May isang naging kaklase siya sa kumbento na naging kaibigan niya. Mayaman iyon. Dati’y malimit niyang dalawin ang kaibigan ngunit nitong mga huling araw ay iniwasan na niyang dumalaw roon sapagkat lalo lamang tumitindi ang kapighatiang kaniyang nadarama sa kaniyang pag-uwi pagkatapos ng pagdalaw. </p>
+						<p class="text-justify">Isang gabi’y masayang dumating ang kaniyang asawa. Buong pagmamalaking iniabot sa kaniya ang hawak na malaking sobre. “Para sa iyo ito,” ang sabi sa kaniya. Kaagad niyang inabot ang sobre at nagmamadaling pinunit ang dulo nito. Nabasa niya ang nakalimbag na mga salitang: </p>
+						<p class="text-justify">“Malugod na inaanyayahan ng Ministro ng Instruksyon Publiko at ni Gng. George Ramponneau sina G. at Gng. Loisel sa isang kasayahang idaraos sa palasyo ng Ministeryo sa Lunes ng gabi, Enero 18.” </p>
+						<p class="text-justify">Sa halip na matuwa na siyang inaasahan ng lalaki ay padabog na inihagis ng kaniyang asawa sa ibabaw ng mesa ang paanyaya. Bumubulong na sinabing ano ang gagawin niya rito.</p>
+						<p class="text-justify">“Mahal, akala ko’y ikatutuwa mo ang pagkakakuha ko sa paanyaya. Nais ko lamang na malibang ka, kailanma’y hindi ka nakapaglilibang at naisip kong ito’y isang mabuting pagkakataon para sa iyo. Nagnanais makadalo ng lahat kaya’t lubha akong nahirapang makakuha ng paanyaya. Matataas na tao sa pamahalaan ang inanyayahan at dadalo. Piling-pili lamang ang mga panauhin. Hindi sila nagbigay ng maraming paanyaya sa mga tagasulat.” </p>
+						<p class="text-justify">Pagalit na pinagmasdan ng babae ang asawa at payamot na sinabing, “Ano ang isasampay ko sa aking likod?” </p>
+						<p class="text-justify">Naging pauntol-untol ang sagot ng lalaki dahil sa hindi niya kaagad naisip iyon. “Para sa akin ay maganda ang damit mong isinusuot kung pumapasok tayo sa teatro kaya maaari na iyon.” </p>
+						<p class="text-justify">Pinagsikapan ng babaing mapaglabanan ang paghihinagpis at nang huminahon na siya’y sumagot, “Wala! Wala akong damit na maisusuot kaya hindi ako makadadalo sa kasayahang iyan. Ipamigay mo na lang ang paanyaya sa isa mong kasamahan na may nakahandang damit na isusuot ang asawa.” </p>
+						<p class="text-justify">Nag-isip sumandali si Mathilde. Mabilisang gumawa siya ng pagtataya kung magkano ang maaari niyang hinging halaga sa matipid na asawa nang hindi masindak ito at tumanggi. Nag-aatubili siyang sumagot ng “Hindi ko natitiyak ang halaga, ngunit sa palagay ko’y maaari na ang apat na raang prangko.”</p>
+						<p class="text-justify">Natigilan sumandali ang lalaki at bahagyang namutla sapagkat ang natitipon niyang gayong halaga ay ipambibili niya ng isang baril na pang-ibon. Binabalak niyang mamaril ng ibon sa Kapatagan ng Nanterre sa darating na tag-araw. Sasama siya sa ilang kaibigang dati nang namamaril ng mga ibon doon.</p>
+						<p class="text-justify">Gayunpaman ay sinabi niya sa asawa, “Ayos na, ibibigay ko sa iyo ang apat na raang prangko. Bumili ka ng isang bestidong maganda.” </p>
+						<p class="text-justify">Malapit na ang araw ng sayawan ngunit waring malungkot si Mathilde, hindi siya mapalagay at tila may suliraning gumugulo sa isipan. Nakahanda na ang bestidong kaniyang gagamitin. Napansin ito ng lalaki at isang gabi’y inusisa ang asawa. “Magtapat ka sa akin, anong nangyayari sa iyo? Tatlong araw nang kakaiba ang kilos mo.” </p>
+						<p class="text-justify">Payamot na sumagot ang babae, “Mabuti pa kaya’y huwag na akong dumalo sa sayawan. Wala man lamang akong maisusuot kahit isang hiyas. Magmumukha akong kaawa-awa.” </p>
+						<p class="text-justify">“Usong-uso ang mga sariwang bulaklak sa ganitong panahon. Maaaring iyon ang isuot mo. Sapat na ang sampung prangko upang makabili ka ng dalawa o tatlong alehandriya.” </p>
+						<p class="text-justify">Waring hindi sang-ayon ang babae at ang sabi, “Hindi! Wala nang kahabaghabag na kalagayan kung hindi magmukhang maralita sa gitna ng mga babaing maykaya sa buhay.”</p>
+						<p class="text-justify">Napabulalas ang lalaki. “Napakahangal mo! Bakit hindi mo hanapin ang kaibigan mong si Madame Forestier. Humiram ka ng ilang hiyas sa kaniya. Hindi ka niya marahil tatanggihan dahil sa matalik mo siyang kaibigan.” Napasigaw sa tuwa si Mathilde, “Oo nga, hindi ko naalaala ang aking kaibigan.” </p>
+						<p class="text-justify">Nagtungo kinabukasan sa kaibigan si Mahtilde. Ipinagtapat niya rito ang kaniyang problema. Tinungo ni Madame Forestier ang taguan ng kaniyang mga hiyas at kinuha mula rito ang isang kahon. Binuksan ang kahon at pinamili ang kaibigan, “Mamili ka, mahal.” </p>
+						<p class="text-justify">Ang una niyang nakita’y ang ilang pulseras, ang sumunod ay isang kuwintas na perlas at pagkaraan ng isang krus na Benesiyanong ginto na may mahahalagang bato at talagang kahanga-hanga ang pagkakayari. Sinubok  niyang isuot ang hiyas sa harap ng salamin, nagbabantulot siya at hindi mapagpasyahan kung ang mga iyon ay isasauli o hindi. Paulit-ulit siyang nagtatanong sa kaibigan, “Wala ka na bang iba pa?”</p>
+						<p class="text-justify">“Aba, mayroon pa! Mamili ka, hindi ko alam kung alin ang ibig mo.” Walang ano-ano’y may napansin siyang isang kahong nababalot ng itim  na satin, nasa loob nito ang isang kuwintas na diyamante na lubhang kahanga-hanga. Sumasal ang tibok ng kaniyang puso at nanginginig ang mga kamay na dinampot ang kuwintas. Isinuot niya ang kuwintas sa ibabaw ng kaniyang damit na may kataasan ang pinakaleeg. Mahabang sandaling nalunod siya sa kaligayahan sa pagmamalas sa sariling alindog sa salamin. Pagkaraan ay nag-uulik-ulik siyang nagtanong, “Ipahihiram mo ba ito, ito lamang?” “Oo, mangyari pa?” Mahigpit na niyakap ni Mathilde ang kaibigan, pinupog ng halik at maligayang nagpaalam dito. </p>
+						<p class="text-justify">Sumapit ang inaasam niyang araw ng sayawan. Nagtamo ng malaking tagumpay si Madame Loisel. Nahigitan niya ang lahat ng mga babae sa ganda, sa rangya, at sa pagiging kahali-halina kaya palagi siyang nakangiti dahil sa naguumapaw sa puso ang kaligayahan. Napako sa kaniya ang paningin ng kalalakihan at gumawa sila ng paraan upang makilala si Mathilde. Ninais siyang makasayaw ng lahat ng kagawad ng gabinete. Nag-ukol sa kaniya ng pansin pati ang ministro.</p>
+						<p class="text-justify">Buong pagkahaling siyang nakipagsayaw, lasing na lasing sa kaluwalhatian ng tagumpay na tinamo sa pamumukod ng kaniyang kagandahan. Tila siya lumulutang sa ulap dahil sa paghanga ng lahat sa kaniya na napakatamis at walang katumbas sa puso ng isang babaing katulad niya.</p>
+						<p class="text-justify">Mag-iikaapat na ng madaling araw nang silang mag-asawa ay umuwi. Hatinggabi pa lamang, ang asawa niya kasama ng tatlong lalaking ang mga asawa’y nagpapakalunod din sa kaligayahan, ay nakatulog na sa isang maliit na tanggapan. </p>
+						<p class="text-justify">Ibinalabal ng asawa sa balikat ni Mathilde ang isang abang pangginaw na ginagamit ng mga karaniwang tao, isang pangginaw na nakapupusyaw sa karangyaan ng pananamit ni Mathilde. Dinamdam niya ang pagkakaroon ng abang pangginaw at ninais niyang makatalilis agad upang hindi siya maging kapansin-pansin sa ibang babaing dumalo na nagsisipagsuot ng mamahalin nilang balabal. </p>
+						<p class="text-justify">Pinigil siya ng lalaki, “Hintayin mo ako rito sandali, sisipunin ka sa labas. Tatawag ako ng sasakyan.” Ngunit hindi niya pinansin ang asawa at nagdudumali siyang nanaog sa hagdanan. Hindi sila nakakita ng sasakyan sa lansangan at sila’y nagsimulang maghanap. Tinahak nila ang daang patungo sa pampang ng ilog Seine. Kapwa sila kumikinig sa ginaw at pinanawan na ng pag-asang makakita pa ng kanilang masasakyan. Sa wakas ay nakatagpo sila sa daungan ng isa sa matatandang dokar na dahil sa ikinahihiya ang karalitaan sa liwanag ng araw ay sa pagkagat ng dilim lamang nakikita sa mga lansangan ng Paris. </p>
+						<p class="text-justify">Pagkahatid sa kanila ng matandang dokar sa kanilang tinitirhan ay malungkot silang umakyat sa hagdanan. Tapos na ang maliligayang sandali kay Mathilde. Sa lalaki naman ay wala siyang iniisip kundi kailangan niyang makasapit sa Kagawaran sa ganap na ika-10:00 ng umaga.</p>
+						<p class="text-justify">Hinubad ng babae sa harap ng salamin ang kaniyang balabal upang minsan pang malasin ang kaniyang kagandahan. Napasigaw siya nang malakas. Wala sa kaniyang leeg ang kuwintas! Nag-usisa ang asawang noon ay nangangalahati na sa pagbibihis. “Anong nangyari sa iyo? Bakit?” Parang baliw niyang binalingan ang asawa. “Wala ang kuwintas ni Madame Forestier.” Ang nabiglang lalaki’y napalundag halos sa pagtayo. “Ano! Paanong nangyari? Imposible!” </p>
+						<p class="text-justify">Hinanap ng mag-asawa ang kuwintas sa kung saan-saan, sa mga lupi ng damit ni Mathilde, sa mga lupi ng kaniyang pangginaw, sa mga bulsa at sa iba pang lugar. </p>
+						<p class="text-justify">Hindi nila natagpuan ang kuwintas. “Natitiyak mo bang nakasuot sa iyo nang umalis tayo sa sayawan?” ang tanong ng lalaki. “Oo, natitiyak ko, nahipo ko pa nang nasa pasilyo ako ng palasyo,” ang tugon ni Mathilde. “Kung iyon naman ay sa daan nawala ay di narinig sana natin ang lagapak. May palagay akong nawala sa dokar.” </p>
+						<p class="text-justify">“Marahil nga. Kinuha mo ba ang numero ng dokar?” </p>
+						<p class="text-justify">“Hindi! At ikaw, napansin mo ba?” </p>
+						<p class="text-justify">“Hindi rin.” </p>
+						<p class="text-justify">Balisang nagkatinginan ang mag-asawa. Muling nagbihis si M. Loisel. “Pagbabalikan kong lahat ng pinagdaanan natin. Baka sakaling makita ko.” Nanaog na ang lalaki. Ang babae ay naghintay sa isang silya, hindi na niya inalis ang damit na ginamit sa sayawan. Tila nawalan siya ng lakas, kahit magtungo sa kama upang matulog. Labis ang kaniyang panlulumo, nawalan siya ng sigla at nawalan ng kakayahang mag-isip ng anoman. </p>
+						<p class="text-justify">Mag-iika-7:00 na ng umaga nang bumalik ang lalaki. Nanlulupaypay siya at ibinalita sa asawa na hindi niya nakita ang kuwintas. </p>
+						<p class="text-justify">Sa harap ng gayong  nakagigimbal na pangyayari, si Mathilde ay maghapong naghihintay na sapupo ng di-matingkalang pangamba. </p>
+						<p class="text-justify">Bumalik kinagabihan ang lalaki, pagod na pagod, namumutla at nanlalalim ang mga mata; hindi niya natagpuan ang kuwintas. Pinayuhan ng lalaki ang asawa na sumulat sa kaibigan nito at sabihing nabali ang sarahan ng kuwintas at kasalukuyan pang ipinapagawa upang magkapanahon silang makapag-isip-isip. Ginawa naman ng babae ang payo ng asawa.</p>
+						<p class="text-justify">Pagkalipas ng isang linggo ay lubusan na silang pinanawan ng pag-asa. Sa maikling panahong iyon tumanda si M. Loisel nang limang taon. </p>
+						<p class="text-justify">Nagpahayag ang lalaki sa asawa na kailangang isipin nila kung paano mapapalitan ang nawalang kuwintas. Kinabukasan, ang mag-asawa’y nagtungo sa tanggapan ng alaherong nakasulat ang pangalan at direksyon sa loob ng kahon ng kuwintas. Hinanap ng alahero sa kaniyang talaan ang sinasabing kuwintas. </p>
+						<p class="text-justify">“Hindi ako ang nagbili ng kuwintas na ipinagtatanong ninyo, wala pong nanggaling sa akin kundi ang sisidlan lamang,” ang wika ng alahero kay Madame Loisel. Pinuntahan ng mag-asawa ang lahat ng mga maghihiyas upang  makakita ng katulad ng nawala na ang anyo ay buong pagsisikap na inalala samantalang kapwa sila nanlulupaypay sa pagkabigo at paghihirap ng kalooban. </p>
+						<p class="text-justify">Nakatagpo sila sa isang tindahan sa Palais Royal ng isang tuhog ng diyamanteng sa palagay nila ay katulad ng kanilang pinaghahanap na kuwintas. Nagkakahalaga ito ng apatnapung libong prangko, ngunit ibibigay na sa kanila sa halagang tatlumpu’t anim na libo. Pinakiusapan ng mag-asawa ang may-ari ng tindahan na huwag munang ipagbili ang kuwintas sa loob ng tatlong araw. Pinakiusapan din nila ang may-ari ng tindahan na kung sakaling bago magtapos ng buwan ng Pebrero ay makita nila ang nawawalang kuwintas, matapos nilang bayaran ang bagong kuwintas ay bibilhin itong muli ng may-ari ng tindahan sa halagang tatlumpu’t apat na libong prangko. </p>
+						<p class="text-justify">May namanang labingwalong libong prangko si M. Loisel sa namatay na ama. Hiniram niya ang kapupunan nito. Gayon din ang ginawa ng lalaki. Kung kanikanino siya nanghiram, lumagda sa mga kasulatan, pinasok kahit na ang mga gipit na kasunduan, kumuha  ng mga patubuan at pumatol sa lahat ng uri ng manghuhuthot. Inilagay niya ang buong buhay niya sa alanganing katayuan, nakipagsapalaran sa paglagda sa gayong hindi niya natitiyak kung matutupad o hindi ang nilagdaan at ngayo’y nanggigipuspos siya dahil sa mga hirap na maaari pa niyang sapitin, ng nakaambang pagdurusa ng pangitain ng bukas na puspos ng pagsasalat at paghihirap ng kalooban. Nang matipon nang lahat ang halagang kinakailangan ay tinungo ni M. Loisel ang tindahan ng kuwintas at ibinagsak sa mesang bilangan ng may-ari ng tindahan ng mga hiyas ang tatlumpu’t anim na libong prangko. </p>
+						<p class="text-justify">Malamig ang pagtanggap ni Madame Forestier kay Mathilde nang isauli niya ang kuwintas. Nagsalita ito sa tuyot na tinig ng “Isinauli mo sana agad ang kuwintas, baka sakaling kinailangan ko ito.” Hindi na binuksan ng kaibigan ang kahon ng kuwintas. Naisip ni Matilde na kung sakaling nahalata ng kaibigan ang pagkakapalit ng kuwintas, ano kaya ang aakalain at sasabihin nito sa kaniya? Hindi kaya iisiping siya’y magnanakaw? </p>
+						<p class="text-justify">Ngayo’y lubos na naunawaan ni Mathilde ang mamuhay sa gitna ng tunay na karalitaan. Nabigla man siya sa bagong papel na kailangan niyang gampanan ay tinanggap niya iyon at buong tatag na ginampanan. Dapat mabayaran ang napakalaki nilang pagkakautang. Pinaalis nila ang kanilang utusan, lumipat ng ibang tirahan, nagtiis sila sa pangungupahan sa isang maliit na silid sa kaituktukan ng isang bahaypaupahan.</p>
+						<p class="text-justify">Naranasan ni Mathilde ang mabibigat na gawain; ang nakayayamot na pangangasiwa sa kusina, paghuhugas ng mga pingggan, paglilinis ng mga kaldero at kawaling mamantika, paglalaba ng mga damit, mantel, serbilyeta at pamunas. Ipinapanaog niya sa lansangan ang kanilang kakaning baboy sa tuwing umaga at nagpapanhik siya ng tubig na gamit nila sa itaas. Suot niya ang pananamit ng pangkaraniwang babae, siya’y nagtutungo sa tindahan ng prutas, de lata, at sa magkakarne. Nakasabit sa isang braso ang pangnan, nakikipagtawaran siya, nilalait at ipinakikipaglaban ang kakarampot niyang pamalengke. May pagkakautang silang binabayaran nang buwanan, may pinagkakautangan silang pinakikiusapan, humihingi ng kaunti pang panahon sa pagbabayad.</p>
+						<p class="text-justify">Pagsapit ng gabi, habang maaga pa’y inaayos na ni M. Loisel ang talaang tuusan ng sinumang mangangalakal na nangangailangan ng gayong paglilingkod at sa kalaliman ng gabi sa halagang limang sentimos isang pahina na ginagawa naman niya ang mga salin ng mga katha. </p>
+						<p class="text-justify">Tumagal ng sampung taon ang ganito nilang pamumuhay na mag-asawa. Sa wakas ay nabayaran din nila ang buong pagkakautang, kasama na ang mga tubo at nagkapatong-patong na tubo ng mga tubo. </p>
+						<p class="text-justify">Mukhang matanda na ngayon si Madame Loisel. Isa na siyang tunay na babae ng mga maralitang tahanan – matipuno ang katawan, matigas ang mga laman at magaspang ang mga kamay na namumula. Nakasabog ang kaniyang buhok at patabingi ang kaniyang saya. Matinis ang kaniyang tinig. Nanlalamira ang sahig kung siya’y mag-isis. Paminsan-minsan, kung nakaalis na ang asawa patungong opisina, si Madame Loisel ay nauupo sa tabi ng bintana. Pinagbabalikan niya sa gunita ang napakasayang gabing iyon na malaon nang nakalipas. Ang kaniyang kagandahang naging tampok sa sayawan at naging dahilan upang siya’y maging tampulan ng paghanga.</p>
+						<p class="text-justify">Ano ang maaaring nangyari kung hindi nawala ang kuwintas? Sino ang nakaaalam? Tunay na ang buhay ay kakatwa at mahiwaga! Sukat ang isang maliit na bagay upang tayo’y mapahamak at mapabuti! </p>
+						<p class="text-justify">Isang araw ng Linggo, samantalang si Mathilde ay naglalakad sa Champs Elysees, nagliliwaliw naman siya pagkatapos ng isang linggong singkad ng mga gawain sa bahay ay namataan niya ang isang babaing may akay-akay na bata. Ang babae’y si Madame Forestier, bata pa rin ang anyo, maganda pa ring katulad ng dati at taglay pa rin ang panghalina. </p>
+						<p class="text-justify">Nakangiti niyang sinalubong ang kaibigan at binati. “Magandang araw sa iyo, Jeanne.” Labis na nagtaka si Madame Forestier. Hindi siya nakilala nito at pinagtakhan ang palagay sa loob na pagbati sa kaniya ng isang maralitang babae.  </p>
+						<p class="text-justify">Pauntol-untol na wika nito, “Ngunit ginang, hindi ko kayo nakikilala. Marahil ay nagkakamali kayo.”</p>
+						<p class="text-justify">“Hindi! Ako’y si Mathilde Loisel.” Napabulalas ang kaibigan. “O, kaawa-awa kong Matilde! Kay laki ng ipinagbago mo!” </p>
+						<p class="text-justify">“Oo nga, mahabang panahon ang ipinagtiis ko ng hirap mula nang huli nating pagkikita, at labis na kalungkutan ang dinanas ko… at ikaw ang dahilan ng lahat. Napamulagat si Madame Forestier, “Dahil sa akin! Paano nangyari iyon?” </p>
+						<p class="text-justify">“Naaalaala mo pa ba ang hiniram kong kuwintas na diyamanteng isinuot ko sa sayawan sa kagawaran?” </p>
+						<p class="text-justify">“Oo, ay ano?” </p>
+						<p class="text-justify">“Ano pa, naiwala ko ang kuwintas na iyon.” </p>
+						<p class="text-justify">“Anong ibig mong sabihin? Isinauli mo sa akin ang kuwintas?”</p>
+						<p class="text-justify">“Isinauli ko sa iyo ang isang kuwintas na katulad na katulad ng hiniram ko sa iyo. Sampung taon kaming nagbayad ng mga utang. Alam mo namang hindi madali sa katulad naming mahirap ang gayong bagay. Ngunit nakalipas na ang lahat ng iyon at ngayon ay galak  na galak na ako.”</p>
+						<p class="text-justify">Natigilan si Madame Forestier.</p>
+						<p class="text-justify">“Sabi mo’y bumili ka ng kuwintas na diyamante na ipinalit mo sa hiniram mo sa akin na naiwala mo?” </p>
+						<p class="text-justify">“Oo, samakatuwid ay hindi mo pala napansin. Talagang kamukhang-kamukha iyon ng hiniram ko sa iyo.” </p>
+						<p class="text-justify">Ngumiti si Matilde nang may pagmamalaki, isang ngiting puspos ng kawalangmalay katulad ng ngiti ng isang paslit. Nabagbag nang gayon na lamang ang kalooban ng kaibigan. </p>
+						<p class="text-justify">“O, kahabag-habag kong Mathilde! Ang ipinahiram kong kuwintas sa iyo ay imitasyon lamang, puwit lamang ng baso. Ang pinakamataas na maihahalaga roon marahil ay limang daang prangko. </p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+		<div class="modal fade" id="10aralin15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-center" id="myModalLabel">Aralin 1.5</h4>
+						<h4 class="modal-title text-center" id="myModalLabel">Ang Kuba ng Notre Dame</h4>
+					</div>
+					<div class="modal-body">
+						<div class="alammoba">
+							<p><strong>Alam mo ba na...</strong></p>
+							<p class="text-justify">ang nobela ay bungang- isip/ katha na nasa anyong prosa, kadalasang halos pang-  aklat ang haba na ang banghay ay inilalahad sa pamamagitan ng mga tauhan at diyalogo? Ito’y naglalahad ng isang kawil ng mga kawili-wiling pangyayari na hinabi sa isang mahusay na pagkakabalangkas. </p>
+							<p class="text-justify">Ang tatlong elemento na karaniwang matatagpuan sa isang mahusay na nobela ay 1.) isang kuwento o kasaysayan, 2.) isang pag-aaral, at 3.) paggamit ng malikhaing guniguni. </p>
+							<p class="text-justify">Pangunahing layunin ng nobela ay lumibang, bagaman sa di-tahasang paraan, ito’y maaari ring magturo, magtaguyod ng isang pagbabago sa pamumuhay o sa lipunan, o magbigay ng isang aral. </p>
+							<p class="text-justify">Mga Pangyayari- Dahil binubuo ng mga kabanata, dapat na ang mga pangyayari ay magkakaugnay. May panimula, papaunlad na mga pangyayari na magsasalaysay ng tunggalian ng nobela, kasukdulan, at kakalasan na patungo na sa wakas. </p>
+							<p class="text-justify">Paglalarawan ng Tauhan – Ang lalong mahusay na nobela ay naglalarawan ng tauhan. Ito’y ginagawa nila sa isang paraang buhay na buhay, kaya’t parang mga tunay na tauhan ang kinakaharap natin habang binabasa ang nobela. Sa kanilang bukambibig, sa kanilang mga kilos at sa mga sinasabi ng may-akda tungkol sa kanila ay natutuhan nating kilalanin at pahalagahan ang mga lalaki at babae ng isang katha na naiuugnay sa mga taong nakapaligid sa atin.</p>
+						</div>
+						<hr>
+						<h3 class="text-center">Ang Kuba ng Notre Dame(Buod)</h3>
+						<h5 class="text-center"> ni Victor Hugo</h5>
+						<h5 class="text-center"> Isinalin sa Filipino ni Wilita A. Enrijo </h5>
+						<p class="text-justify">Sa isang malawak na espasyo ng Katedral nagkikita-kita ang mamamayan upang magsaya para sa “Pagdiriwang ng Kahangalan” na isinasagawa sa loob ng isang araw taon-taon. Taong 1482 nang itanghal si Quasimodo – ang kuba ng Notre Dame bilang “Papa ng Kahangalan” dahil sa taglay niyang labis na kapangitan. Siya ang itinuturing na pinakapangit na nilalang sa Paris. Nang araw na iyon, iniluklok siya sa trono at ipinarada palibot sa ilang lugar sa Paris sa pamamagitan ng pangungutya ng mga taong naroroon na nakikibahagi sa kasiyahan. Naroroon si Pierre Gringoire, ang nagpupunyaging makata at pilosopo sa lugar. Hindi siya naging matagumpay na agawin ang kaabalahan ng mga tao sa panonood ng nasabing parada. Malaki ang kaniyang panghihinayang sapagkat wala man lang nagtangkang manood ang kaniyang inihandang palabas. Habang isinasagawa ang mga panunuya kay Quasimodo, dumating ang paring si Claude Frollo at ipinatigil ang pagdiriwang. Inutusan niya si Quasimodo na bumalik sa Notre Dame na kasama niya.</p>
+						<p class="text-justify">Sa paghahanap ng makakain, nasilayan ni Gringoire ang kagandahan ni La Esmeralda- ang dalagang mananayaw. Ipinasiya niyang sundan ang dalaga sa kaniyang pag-uwi. Habang binabagtas ni La Esmeralda ang daan, laking gulat niya nang sunggaban siya ng dalawang lalaki – sina Quasimodo at Frollo. Sinubukang tulungan ni Gringoire ang dalaga subalit hindi niya nakaya ang lakas ni Quasimodo kung kaya’t nawalan siya ng malay. Dagli namang nakatakas si Frollo. Dumating ang ilang alagad ng hari sa pangunguna ni Phoebus – ang kapitan ng mga tagapagtanggol sa kaharian. Dinakip nila si Quasimodo. Samantala, hatinggabi na nang pagpasiyahan ng pangkat ng mga pulubi at magnanakaw na bitayin si Gringoire. Lumapit si La Esmeralda sa pinuno ng pangkat at nagmungkahing huwag ituloy ang pagbitay sapagkat handa siyang magpakasal sa lalaki sa loob lamang ng apat na taon, mailigtas lamang ang buhay ni Gringoire sa kamatayan.</p>
+						<p class="text-justify">Nang sumunod na araw, si Quasimodo ay nilitis at pinarusahan sa tapat ng palasyo sa pamamagitan ng paglatigo sa kaniyang katawan. Matindi ang sakit  ng bawat latay ng latigo na ipinapalo sa kaniyang katawan. Inisip niya ang dahilan ng kaniyang pagdurusa. Ang lahat ng iyon ay kagustuhan at ayon sa kautusan ni Frollo- na kailanman ay hindi niya nagawang tutulan dahil sa utang na loob. Kasabay ng sakit na nadarama niya ay ang  matinding kirot na  nalalasap sa bawat panghahamak sa kaniya ng mga taong naroroon. Nagmakaawa siya na bigyan siya ng tubig subalit tila bingi ang mga taong nakatingin sa kaniya – na ang tanging gusto  ay lapastanganin at pagtawanan ang kaniyang kahabag-habag na kalagayan. Dumating si La Esmeralda. Lumapit ang dalaga sa kaniya na may hawak na isang  basong tubig. Pinainom siya. Samantala, sa di kalayuan ay may babaeng baliw na sumisigaw kay La Esmeralda. Tinawag  siya ng babaeng “hamak na mananayaw” at “anak ng magnanakaw.” Kilala ang babae sa tawag na Sister Gudule. Siya ay  pinaniniwalaan na dating mayaman subalit nawala ang bait nang mawala ang anak na babae, labinlimang taon na ang nakalilipas.</p>
+						<p class="text-justify">Makaraan ang ilang buwan, habang si La Esmeralda ay sumasayaw sa tapat ng Notre Dame at pinagkakaguluhan ng maraming tao, napagawi ang mga mata ni Phoebus sa mapang-akit na kagandahan ng dalaga. Nang mapuna ni La Esmeralda si Phoebus ay napaibig dito ang dalaga. Tila siya nawalan ng ulirat nang kaniyang marinig ang paanyaya ng binata na magkita sila mamayang gabi upang lubos na magkakilala. Si Frollo ay nakatanaw lamang mula sa tuktok ng Notre Dame at nakaramdam ng matinding panibugho sa nasasaksihan. Ang kaniyang matinding pagnanasa kay La Esmeralda ang nag-udyok sa kaniya na talikuran ang Panginoon at  pag-aralan ang itim na mahika. Mayroon siyang masamang balak. Nais niyang bihagin  ang dalaga at itago sa kaniyang selda sa Notre Dame. Nang sumapit ang hatinggabi, sinundan niya si Phoebus sa pakikipagtipan kay La Esmeralda. Habang masayang nag-uusap ang bagong magkakilala ay biglang may sumunggab ng saksak kay Phoebus ngunit mabilis ding naglaho ang may sala. Hinuli ng mga alagad ng hari si La Esmeralda sa pag-aakalang siya ang may kagagawan ng paglapastangan sa kapitan.</p>
+						<p class="text-justify">Matapos pahirapan sa paglilitis, sapilitang pinaako kay La Esmeralda ang kasalanang hindi niya ginawa.  Pinaratangan din siyang mangkukulam.  Siya ay nasintensiyahang bitayin sa harap ng palasyo. Dinalaw siya ni Frollo sa piitan at ipinagtapat ang pag-ibig sa kaniya. Nagmakaawa ang pari na mahalin din siya at magpakita man lang kahit kaunting awa ang dalaga subalit tinawag lamang siya ni La Esmeralda ng  tiyanak na monghe at pinaratangang mamamatay tao.  Tumanggi siya sa lahat ng alok ni Frollo.  Bago ang pagbitay,  iniharap si La Esmeralda sa maraming tao sa tapat ng Notre Dame upang kutyain. Napansin ng dalaga ang anyo ni Phoebus kaya isinigaw niya ang pangalan ng binata. Si Phoebus ay nakaligtas sa tangkang pagpatay sa kaniya. Tumalikod si Phoebus na tila walang naririnig at tinunton ang bahay ng babaeng kaniyang pakakasalan. Ilang sandali’y dumating si Quasimodo  galing sa tuktok ng Notre Dame patungo kay La Esmeralda gamit ang tali. Hinila niya paitaas ang dalaga patungo sa Katedral at tumatangis na isinigaw  ang katagang “Santuwaryo”. Si Quasimodo ay napaibig kay La Esmeralda nang araw na hatiran siya ng dalaga ng tubig sa panahong wala man lang magnasang tumulong sa kaniya. Matagal na niyang pinagplanuhan kung paano itatakas si La Esmeralda sa naging kalagayan ng dalaga. Batid ni Quasimodo na ang dalaga ay mananatiling ligtas hangga’t nasa katedral. Sa mga araw na magkasama ang dalawa, mahirap para kay La Esmeralda na titigan ang pangit na anyo ni Quasimodo. Di nagtagal, naging magkaibigan ang dalawa. </p>
+						<p class="text-justify">Lumusob sa katedral ang pangkat ng mga taong palaboy at magnanakaw – sila ang kinikilalang pamilya ni La Esmeralda . Naroon sila upang sagipin ang dalaga sapagkat narinig nila na nagbaba ng kautusan ang parliyamentaryo na paaalisin si La Esmeralda sa katedral. Samantala,  inakala naman ni Quasimodo na papatayin ng mga lumusob si La Esmeralda kaya gumawa siya ng paraan upang iligtas ang dalaga. Malaking bilang ng mga lumusob ang napatay ni Quasimodo.  Habang nagkakagulo, sinamantala ni Frollo na makalapit kay La Esmeralda. Nag-alok siya ng dalawang pagpipilian ng dalaga: ang mahalin siya o ang mabitay? Mas pinili ni La Esmeralda ang mabitay kaysa mahalin ang isang hangal na tulad ni Frollo. Iniwan ni Frollo ang dalaga na kasama si Sister Gudule. Labis ang pagkamangha ng dalawa nang mabatid nila na sila ay mag-ina. Nakilala ni Sister Gudule si La Esmeralda dahil sa kuwintas na suot ng dalaga. Ito ang kaniyang palatandaan na suot ng kaniyang anak bago mawala. Ninasa ni Sister Gudule na iligtas ang anak subalit huli na ang lahat. Nang mabatid ni Quasimodo na nawawala si La Esmeralda, tinunton niya ang tuktok ng tore at doon hinanap ang dalaga. Sa di kalayuan, napansin niya ang anyo ng dalaga. Si La Esmeralda ay nakaputing bestida at wala ng buhay. Naantig siya sa kaniyang nasaksihan. Labis na galit ang nararamdaman niya kay Frollo na noon pa man ay batid niya na may matinding pagnanasa sa dalaga. Nawala sa katinuan si Quasimodo. Nang mamataan niya si Frollo, hinila niya ito  at sa matinding lungkot na nararamdaman ay inihulog niya ito mula sa tore- ang paring kumupkop sa kaniya. Inihulog niya sa kamatayan ang taong naghatid ng pagdurusa sa babaeng kaniyang minahal – si La Esmeralda. Habang nakatitig sa wala ng buhay na katawan ng dalaga, sumigaw si Quasimodo, “walang ibang babae akong minahal.” Mula noon, hindi na muling nakita pa si Quasimodo.</p>
+						<p class="text-justify">Matapos ang ilang taon, nang matagpuan ng isang lalaking naghuhukay ng puntod ang libingan ni La Esmeralda, nasilayan niya ang hindi kapani-paniwalang katotohanan- nakayakap ang kalansay ng kuba sa katawan ng dalaga.</p>
+						<hr>
+						<h3 class="text-center">Dekada '70(Buod)</h3>
+						<h5 class="text-center">Ni Lualhati Bautista</h5>
+						<p class="text-justify">Ang panahon ng Martial Law ay nagdulot ng ibayong hirap sa mamamayang Pilipino. Isang di-makatao at di-makatarungang gobyerno na nagbibingi-bingihan sa daing ng mamamayan. Laganap sa bansa ang iba’t ibang klaseng krimen gaya ng salvaging. Magkabila ang rallies at iba pang demonstrasyon na kinabibilangan ng mga estudyanteng imbis na nag-aaral ay nakikipaglaban upang makamit ang kalayaan at ito ang lubhang bumagabag kay Amanda Bartolome, isang tipikal na maybahay, ina ng 5 anak na pulos lalaki. Ang kanyang buhay ay umikot na lang sa pagiging ina at asawa at nakuntento na siya sa pagiging ganito kahit na kakulangan ang nadarama niya para sa sarili. May mga pangarap siyang ninais din niyang matupad, itinuring niya na lang na ang katuparan ng mga pangarap ng kanyang mga anak ay katuparan na niya rin. Una, ang panganay na si Jules, may liberal na pag-iisip. Naging isang komunista, di man matatawag na isang tunay na propesyon dito na niya natagpuan ang katuparan ng kaniyang pangarap, pangarap ng isang makataong lipunan para sa anak nila ni Mara at sa iba pang kabataan naghahangad ng mabuting kinabukasan. Sumunod ay si Gani, maagang nag-asawa’t nagkaanak ngunit mabilis din silang nagkahiwalay ni Evelyn. Pagkatapos, siya’y nanirahan na sa abroad kapiling ng kaniyang bagong pamilya. Ang pangatlo si Em, pinakamatalino sa magkakapatid naging isang magaling na manunulat sa isang lingguhang pahayagan na tumutuligsa sa Martial Law.</p>
+						<p class="text-justify">Ikatlo, ang pinakamalambing na si Jason, ang kakulangan niya bilang estudyande ay matagumpay na napagtatakpan na katangian niya bilang anak. Isang araw, sa di-inaasahang pagkakataon, natagpuan ang kaniyang bangkay sa isang basurahan, hubo’t hubad, labimpito ang saksak, tagos sa baga ang iba tuhog pati puso. May marka din ng itinaling alambre sa pulso, talop halos ang siko, tastas pati hita’t, tuhog, basag pati bayag. Malagim at malupit ang pagkamatay ni Jason, salvage dahil kung bakit at kung sino ang may gawa walang makapagsabi. Ang kaso ng pagkamatay ni Jason ay hindi na nagkamit ng hustisya.</p>
+						<p class="text-justify">Pagkatapos, ang bunsong si Bingo namulat sa mundong walang katahimikan at walang katiyakan, ngayo’y magtatapos na ng kolehiyo.</p>
+						<p class="text-justify">Iba’t iba ang kinahinatnan ng buhay ng mga anak ni Amanda. Sa loob ng 27 taon ng pagiging asawa at ina, sa kaniyang palagay hindi siya ganap na umunlad bilang tao. Nagsilbi na lang siyang bantay sa paghahanap at pagkatagpo ni Julian ng katuparan niya bilang tao, sa paglaki ng kaniyang mga anak at pagtuklas ng kanilang kakayahan at kahalagahan.</p>
+						<p class="text-justify">Si Julian naman ay naging manhid at parang walang pakialam sa kakulangan nadarama ng kaniyang asawa, naging walang kibot sa mga problemang kinakaharap ng kanilang pamilya. Kaya minsan napag-isip-isip ni Amanda na makipaghiwalay na dito, sa kauna-unahang pagkakataon nagawa niyang ipaalam kay Julian ang pagkukulang niya sa kaniyang pamilya, lalo na kay Amanda. Pinigilan siya ni Julian at nangakong magbabago at kaniya namang tinupad ang pangakong iyon.</p>
+						<p class="text-justify">Paulit-ulit na binabalikan ni Amanda ang masasayang alaala ng kabataan ng kaniyang mga anak. Masarap ang maging ina habang maliliit pa ang mga anak mo, habang wala pa silang sinasaktan sa ‘yo kundi kalingkingan ng paa mo na natatapakan nila sa kasusunod at kapipilit magpakarga pero hintayin mo ang panahong kasintaas mo na siya, ‘yong panahon ng pagkakaroon niya ng sariling isip at buhay, buhay na hiwalay na sa’yo, at matitikman mo sa kamay niya ang mapapait na kamatayan habang inihahanda mo ang kasal na hindi niya gusto. Habang nagpuputukan sa tapat ng kongreso sa isang pagkakataong hindi pa siya umuuwi. Habang binabasa mo ang balitang nasugatan siya sa isang sagupaan. Habang ibinibigay nila sa’yo ang selyadong kabaong ng batang kailanma’y di mo malilimutan hinugot mula sa tiyan mo. Ito ang nadama ni Amanda nang pumunta sila sa burol ni Willy, kaibigan at kasamahan ni Jules sa NPA na napatay sa isang engkwentro. Naging mahirap para kay Amanda na tanggapin ang pagkamatay ni Jason at ang pagsali ni Jules sa NPA, hindi niya mapigilan ang sarili sa pag-aalala sa kalagayan nito na minsan pa nga ay nagdadala ng mga kasamahang sugatan sa kanilang tahanan upang ipagamot sa ina. Maging ang pagkasira ng relasyon nila Gani at Evelyn. Ang pagkakamali at mga kabiguan ng kanyang mga anak ay nagagawa niyang isisi sa sarili, iniisip niya na marahil mayroon siyang pagkakamali sa pagpapalaki sa mga ito. Natamo niya ang kaganapan ng kanyang pagkatao sa pagtulong na kaniyang ginagawa sa mga sugatang kasama na dinadala ni Jules. Pagtulong na bukal sa kanyang puso, tungkulin hindi naman iniatas sa kanya ninuman o isang obligasyon, na kahit gaano man kapanganib ay nagawa pa rin niyang gampanan.Tuloy pa rin ang laban tungo sa kalayaan, nakaalpas man tayo sa pagmamalupit ng diktador, tuloy pa rin ang laban na sinumulan pa ng ating mga ninuno at hindi ito matatapos hanggang may mga taong gahaman sa kapangyarihan. Sa madaling sabi, marami pang buhay na handang ibuwis at marami pang tulad nila Jules at Mara na handang makipaglaban upang makamtan ang kalayaan ng ating bayan. Bilang pagtatapos, natutuhan niyang pangibabawan ang kahinaa’t kahirapan. Sa mga kamay ng kaaway o sa larangan man. Magiting siyang nanindigan</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!--END OF ARALIN 3.5-->
+	</body>
+</html>

@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Panitikang Asyano</title>
+		<link href="images/logo.png" rel="icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			html, body{
+				width: 100%;
+				height: 100%;
+				font-family: 'Open Sans', sans-serif;
+			}
+			h1{
+				font-size: 24px;
+			}
+			
+			.trivia {
+			font-size: 12px; text-transform: none; font-weight:normal;
+			}
+			
+			h2{
+				font-size: 20px;
+			}
+			
+			h3{
+				font-size: 18px;
+			}
+			
+			h4{
+				font-size: 16px;
+			}
+			
+			h5{
+				font-size: 14px;
+			}
+			
+			h6{
+				font-size: 12;
+			}
+			
+			#banner{
+				background: rgb(87, 187, 137);
+				height: auto;
+				width: 100%;
+				color: white;
+			}
+			
+			.btn-primary {
+				color: #2e6da4;
+				background-color: white;
+				border-color: #2e6da4;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				font-size: 12px;
+			}
+			
+			p {
+				text-indent: 50px;
+				text-align: center;
+				font-size: 12px;
+			}
+			
+			li{
+				font-size: 12px;
+			}
+			
+			.content{
+				margin-left: auto;
+				margin-right: auto:
+				display: auto;
+			}
+			
+			.alammoba{
+				border: 2px solid black;
+				padding: 5px;
+				text-indent: 0px;
+			}
+			
+			.accordTitle{
+				background-color: #2e6da4;
+				color: white;
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0px 10px 3px rgb(77, 166, 122);
+				background-color: rgb(87, 187, 137);
+			}
+			
+			.accordTitle:hover{
+				background-color: white;
+				color: rgb(87, 187, 137);
+			}
+			
+			button{
+				width: 90%;
+				height: auto;
+			}
+			
+			#footer{
+				background: rgb(87, 187, 137);
+				height: auto;
+				color: white;
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				}
+
+			#footerglyph{
+				font-size: 1.5em;
+				text-align:center;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				text-indent: 0px;
+			}
+			
+			#accordion{
+				margin-bottom: auto;
+				margin-left: auto;
+				display: block;
+				}
+			.sampleP{
+				text-indent: 0px;
+			}
+			
+			.subtitle{
+				font-size: 12px;
+			}
+			
+			#lastBtn{
+				margin-bottom: 60px;
+				background-image: url(images/saudi.jpg);
+			}
+			
+			#mod3{
+				margin-bottom: 70px;
+			}
+			
+			#aralin31{
+				margin-top: -60px;
+				background-image: url(images/Hindu.jpg);
+			}
+			
+			.go-top {
+				position: fixed;
+				bottom: 2em;
+				right: 2em;
+				text-decoration: none;
+				color: white;
+				font-size: 12px;
+				padding: 1em;
+				display: none;
+				background-color: gray;
+				border-radius: 5px;
+				margin-bottom: 30px;
+			}
+			
+			.modal-header {
+				min-height: 16.43px;
+				padding: 15px;
+				border-bottom: 1px solid #e5e5e5;
+				background: rgb(87, 187, 137);
+				color: white;
+			}
+			
+			.flag{
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-brand {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-nav>li>a {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-toggle {
+				border-color: white;
+			}
+			
+			.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+				color: rgb(87, 187, 137);
+				background-color: white;
+			}
+			
+			#btnAralin11{
+				background-image: url(images/singapore.jpg);
+			}
+			
+			#btnAralin12{
+				background-image: url(images/thailand.jpg);
+			}
+			
+			#btnAralin13{
+				background-image: url(images/phil.jpg);
+			}
+			
+			#btnAralin14{
+				background-image: url(images/Indonesia.jpg);
+			}
+			
+			#btnAralin15{
+				background-image: url(images/phil.jpg);
+			}
+			
+			#btnAralin21{
+				background-image: url(images/Japan.jpg);
+			}
+			
+			#btnAralin22{
+				background-image: url(images/korea.jpg);
+			}
+			
+			#btnAralin23{
+				background-image: url(images/taiwan.jpg);
+			}
+			
+			#btnAralin24{
+				background-image: url(images/china.jpg);
+			}
+			
+			#btnAralin25{
+				background-image: url(images/korea.jpg);
+			}
+			
+			#btnAralin32{
+				background-image: url(images/kanluran.jpg);
+			}
+			
+			#btnAralin33{
+				background-image: url(images/Bhutan.jpg);
+			}
+			
+			#btnAralin34{
+				background-image: url(images/israel.jpg);
+			}
+			
+			.titleS{
+				color: #fff;
+				background: rgba(0, 0, 0, 0.5);
+				padding: 20px 15px;
+				font-size: 18px;
+				border: none;
+				text-transform: uppercase;
+				margin-left: margin;
+				width: 100%;
+				border-radius: 5px;
+				text-align: center;
+			}
+			
+			@media (max-width: 768px)
+			{
+				.flag{
+				    width: 100%;
+					margin-left: auto;
+					margin-right: auto;
+					display: block;
+					height: 200px;
+					border-radius: 0px;
+					color: rgb(87, 187, 137);
+					font-size: 22px;
+					font-weight: bold;
+					border: none;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+			}
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$('body').css('display', 'none');
+				$('body').fadeIn(500);
+				$('#mod1div, #mod2div, #mod3div').hide();
+				$('#mod1').click(function(){
+					$('#mod1div').slideToggle(500);
+					$('#mod2div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#mod2').click(function(){
+					$('#mod2div').slideToggle(500);
+					$('#mod1div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#mod3').click(function(){
+					$('#mod3div').slideToggle(500);
+					$('#mod1div').slideUp(500);
+					$('#mod2div').slideUp(500);
+				});
+				
+				$('#limod1').click(function(){
+					$('#mod1div').slideDown(500);
+					$('#mod2div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#limod2').click(function(){
+					$('#mod2div').slideDown(500);
+					$('#mod1div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#limod3').click(function(){
+					$('#mod3div').slideDown(500);
+					$('#mod1div').slideUp(500);
+					$('#mod2div').slideUp(500);
+				});
+				
+				$('#footerinfo').hide(500);
+		
+				$('#footerglyph').click(function(){
+					$('#footerinfo').slideToggle(500);
+				});
+				
+				// Show or hide the sticky footer button
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 200) {
+						$('.go-top').fadeIn(200);
+					} else {
+						$('.go-top').fadeOut(200);
+					}
+				});
+				
+				// Animate the scroll to top
+				$('.go-top').click(function(event) {
+					event.preventDefault();
+					
+					$('html, body').animate({scrollTop: 0}, 300);
+				});
+				
+				$(function() {
+				  $('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					  var target = $(this.hash);
+					  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					  if (target.length) {
+						$('html,body').animate({
+						  scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					  }
+					}
+				  });
+				});	
+				
+				function newpage() {
+					window.location = newLocation;
+				}
+				
+				$('#btnBack').click(function(){
+					event.preventDefault();
+					newLocation = 'main.html';
+					$('body').fadeOut(500, newpage);
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-inverse" id="banner">
+		  <div class="container">
+			<div class="navbar-header">
+				<button class="btn" id="btnBack" style="width: auto; color: white; float: left; background-color: transparent; background-image: none; border: 1px solid transparent; margin-top: 8px;"><span class="glyphicon glyphicon-arrow-left"></span></button>
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="width: 45px;">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			  </button>
+			  <p style="text-indent: 40px;text-align: center;font-size: 20px;margin-top: 10px;">Panitikang Asyano</p>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="limod1">Modyul 1: Mga Akdang Pampanitikan ng Timog-Silangang Asya <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#btnAralin11">Aralin 1.1 Maikling Kuwento ng Singapore</a></li>
+							<li><a href="#btnAralin12">Aralin 1.2 Alamat ng Thailand</a></li>
+							<li><a href="#btnAralin13">Aralin 1.3 Tula ng Pilipinas</a></li>
+							<li><a href="#btnAralin14">Aralin 1.4 Sanaysay ng Indonesia</a></li>
+							<li><a href="#btnAralin15">Aralin 1.5 Dula ng Pilipinas</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="limod2">Modyul 2: Mga Akdang Pampanitikan ng Silangang Asya <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#btnAralin21">Aralin 2.1 Tanka at Haiku ng Hapon</a></li>
+							<li><a href="#btnAralin22">Aralin 2.2 Pabula ng Korea</a></li>
+							<li><a href="#btnAralin23">Aralin 2.3 Sanaysay ng Taiwan</a></li>
+							<li><a href="#btnAralin24">Aralin 2.4 Maikling Kuwento ng Tsina</a></li>
+							<li><a href="#btnAralin25">Aralin 2.5 Pabula ng Korea</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="limod3">Modyul 3: Mga Akdang Pampanitikan ng Timog-Kanlurang Asya <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#btnAralin31">Aralin 3.1 Epiko ng Hindu</a></li>
+							<li><a href="#btnAralin32">Aralin 3.2 Parabula ng Kanlungang Asya</a></li>
+							<li><a href="#btnAralin33">Aralin 3.3 Elehiya ng Bhutan</a></li>
+							<li><a href="#btnAralin34">Aralin 3.4 Sanaysay ng Israel</a></li>
+							<li><a href="#lastBtn">Aralin 3.5 Nobela ng Saudi Arabia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		  </div>
+		</nav>
+		
+		<div class="container">
+			<div id="accordion">
+			  <h3 class="text-center accordTitle" id="mod1"><strong>MODYUL 1:</strong><br> <span class="subtitle">Mga Akdang Pampanitikan ng Timog-Silangang Asya</span></h3>
+			  <div id="mod1div">
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin11" id="btnAralin11"><p class="titleS">Aralin 1.1:<br> Maikling Kuwento ng Singapore<br><span style="font-size: 12px; text-transform: none; font-weight:normal;">Ang singapore ay isa sa mga bansang may pinakamataas na per<br> capita (gdp) sa buong daigdig. Ang kaunlarang ito sa ekonomiya<br> ay dulot ng kanyang mga iniluluwas na produkto na nakabatay sa <br>elektroniks at manufacturing. </span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin12" id="btnAralin12"><p class="titleS">Aralin 1.2:<br> Alamat ng Thailand<br><span style="font-size: 12px; text-transform: none; font-weight:normal;">Ang Thailand ay tahanan sa pinakamalaking gold Buddha sa mundo ,<br> ang pinakamalaking buwaya sakahan , ang pinakamalaking<br> restaurant, ang pinakamahabang single- span suspension bridge ,<br> at ang pinakamataas na hotel sa mundo.</span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin13" id="btnAralin13"><p class="titleS">Aralin 1.3:<br> Tula ng Pilipinas<br><span style="font-size: 12px; text-transform: none; font-weight:normal;">. Batay sa huling census ng national statistics office noon 2000,<br> tinatayang 92.3 o 9 sa 10 taong may edad ng sampung  taong gulang<br> at pataas ang literate o marunong bumasa at sumulat.</span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin14" id="btnAralin14"><p class="titleS">Aralin 1.4:<br> Sanaysay ng Indonesia<br><span style="font-size: 12px; text-transform: none; font-weight:normal;">Ang pinakamalaking lawa ng bulkan sa mundo,<br> Lake Toba ay naglalaman ng isang isla na halos bilang malaking<br> bilang Singapore.</span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin15" id="btnAralin15"><p class="titleS">Aralin 1.5:<br> Dula ng Pilipinas</p></button>
+			  </div>
+			  <h3 class="text-center accordTitle" id="mod2"><strong>MODYUL 2:</strong><br> <span class="subtitle">Mga Akdang Pampanitikan ng Silangang Asya</span></h3>
+			  <div id="mod2div">
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin21" id="btnAralin21"><p class="titleS">Aralin 2.1:<br> Tanka at Haiku ng Hapon <br><span class="trivia">Ang pinaka - binibisitang amusement park sa buong mundo<br> ay ang Tokyo Disneyland. Binuksan noong 1983,<br> bilang ng mga bumibista dito ay higit sa 17 milyong mga tao<br> sa bawat taon.<span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin22" id="btnAralin22"><p class="titleS">Aralin 2.2:<br> Pabula ng Korea <br><span class="trivia">Sa nakalipas na dekada, maraming magulang ang<br> nagpadala ng kanilang anak bilang sa ibang bansa magaral</span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin23" id="btnAralin23"><p class="titleS">Aralin 2.3:<br> Sanaysay ng Taiwan<br><span class="trivia">Taiwan nakikilahok sa Olympics bawat taon ngunit ang kanyang<br> pinakamahusay na taon ay 1977 nang ipinadala ito ng 22 na<br> atleta upang makipagkumpetensya at dumating na may 22 <br>gintong medalya para saisang iba't ibang mga sports.</span> </p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin24" id="btnAralin24"><p class="titleS">Aralin 2.4:<br> Maikling Kuwento ng Tsina <br><span class="trivia">Ang pagkain ng isda sa China ay higit tatlong beses kaysa <br> Estados Unidos. Sa China, ang average na tao ay kumakain ng <br> higit na 45 pounds ng seafood sa bawat taon.</span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin25" id="btnAralin25"><p class="titleS">Aralin 2.5:<br> Pabula ng Korea <br><span class="trivia">Kung ikaw ay nakatira sa South Korea, hindi mo na <br> kailangang umalis ng bahay upang kumain. Karamihan sa mga<br> restawran ay naghahatid ng diretso sa iyong<br> apartment sa pamamagitan ng motorsiklo. </span></p></button>
+			  </div>
+			  <h3 class="text-center accordTitle" id="mod3"><strong>MODYUL 3:</strong><br> <span class="subtitle">Mga Akdang Pampanitikan ng Timog-Kanlurang Asya</span></h3>
+			  <div id="mod3div">
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin313" id="aralin31"><p class="titleS">Aralin 3.1:<br> Epiko ng Hindu <br><span class="trivia">Ang terminong " Hinduism " kasama ang maraming<br> mga tradisyon, na kung saan ay may malapit na kaugnayan  <br> at ibahagi ang mga karaniwang tema ngunit hindi bumubuo<br> ng isang pinag-isang hanay ng mga paniniwala o gawi.</span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin32" id="btnAralin32"><p class="titleS">Aralin 3.2:<br> Parabula ng Kanlungang Asya </p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin33" id="btnAralin33"><p class="titleS">Aralin 3.3:<br> Elehiya ng Bhutan<br><span class="trivia">Bhutan ay isang demokrasya at konstitusyonal na monarkiya .<br> Ang Bhutanese monarkiya ay itinatag sa 1907. </span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin34" id="btnAralin34"><p class="titleS">Aralin 3.4:<br> Sanaysay ng Israel<br><span  class="trivia">Gumagawa ang Israel ng 93% na kanyang sariling mga<br> kinakailangan ng pagkain.</span></p></button>
+					<!-- Button trigger modal -->
+					<button class="btn btn-primary flag" data-toggle="modal" data-target="#aralin35" id="lastBtn"><p class="titleS">Aralin 3.5:<br> Nobela ng Saudi Arabia<br><span class="trivia">Ang Saudi Arabia ay ang pinakamalaking bansa sa<br> mundo nang walang isang ilog.</span> </p></button>
+			  </div>
+			</div>
+		</div>
+			<a href="#" class="go-top"><span class="glyphicon glyphicon-arrow-up" style="font-size: 1em;"></span></a>
+		<div class="container" id="footer">
+				<p><span class="glyphicon glyphicon-info-sign" id="footerglyph"></span></p>
+					<h6 class="text-center" id="footerinfo">Department of Education -Instructional Materials Council Secretariat (DepEd-IMCS) <br><span class="glyphicon glyphicon-phone" id="phone"></span> (02) 634 - 1054 or 634 - 107 <br><span class="glyphicon glyphicon-envelope" id="mail"></span> imcsetd@yahoo.com </h6></h6>
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal" id="aralin11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+				<h4 class="modal-title" id="myModalLabel">Aralin 1.1: Maikling Kuwento ng Singapore</h4>
+			  </div>
+			  <div class="modal-body">
+					<h3 class="text-center">Ang ama</h3>
+					<h5 class="text-center">(Isinalin sa Filipino ni Mauro R. Avena)</h5>
+						<div class="content">
+							<p class="text-justify">Magkahalo lagi ang takot at pananabik kapag hinihintay ng mga bata ang kanilang ama. Ang takot ay sa alaala ng isang lasing na suntok sa bibig na nagpapatulo ng dugo at nagpapamaga ng ilang araw sa labi. Ang pananabik ay sa pagkain na paminsanminsa'y inuuwi ng ama - malaking supot ng mainit na pansit na iginisa sa itlog at gulay. Ang totoo, para sa sarili lang niya ang iniuuwing pagkain ng ama, lamang ay napakarami nito upang maubos niya nang mag-isa; pagkatapos ay naroong magkagulo sa tira ang mga bata na kanina pa aali-aligid sa mesa. Kundi sa pakikialam ng ina na mabigyan ng kaniya-kaniyang parte ang lahat - kahit ito'y sansubo lang ng masarap na pagkain, sa mga pinakamatanda at malakas na bata lamang mapupunta ang lahat, at ni katiting ay walang maiiwan sa maliliit. </p>
+							<p class="text-justify">Anim lahat ang mga bata. Ang dalawang pinakamatanda ay isang lalaki, dose anyos, at isang babae, onse; matatapang ang mga ito kahit na payat, at nagagawang sila lang lagi ang maghati sa lahat ng bagay kung wala ang ina, upang tiyaking may parte rin ang maliliit. May dalawang lalaki, kambal, na nuwebe anyos, isang maliit na babae, otso anyos at isang dos anyos na paslit pa, katulad ng iba, ay maingay na naghahangad ng marapat niyang parte sa mga pinag-aagawan.</p>
+							<p class="text-justify">Natatandaan ng mga bata ang isa o dalawang okasyon na sinorpresa sila ng ama ng kaluwagang-palad nito - sadyang nag-uwi ito para sa kanila ng dalawang supot na puno ng pansit guisado, at masaya nilang pinagsaluhan ang pagkain na hirap nilang ubusin. Kahit na ang ina nila'y masayang nakiupo sa kanila't kumain ng kaunti.</p>
+							<p class="text-justify">Pero hindi na naulit ang masayang okasyong ito, at ngayo'y hindi naguuwi ng pagkain ang ama; ang katunaya'y ipinapalagay ng mga batang mapalad sila kung hindi ito umuuwing lasing at nanggugulpi ng kanilang ina. Sa kabila niyo'y umaasa pa rin sila, at kung gising pa sila pag-uwi sa gabi ng ama, naninipat ang mga matang titingnan nila kung may brown na supot na nakabitin sa tali sa mga daliri nito. Kung umuuwi itong pasigaw-sigaw at padabog-dabog, tiyak na walang pagkain, at ang mga bata'y magsisiksikan, takot na anumang ingay na gawa nila ay makainis sa ama at umakit sa malaking kamay nito upang pasuntok na dumapo sa kanilang mukha. Madalas na masapok ang mukha ng kanilang ina; madalas iyong marinig ng mga bata na humihikbi sa mga gabing tulad nito, at kinabukasan ang mga pisngi at mata niyon ay mamamaga, kaya mahihiya itong lumabas upang maglaba sa malalaking bahay na katabi nila. Sa ibang mga gabi, hindi paghikbi ang maririnig ng mga bata mula sa kanilang ina, kundi isang uri ng nagmamakaawa at ninenerbiyos na pagtawa at malakas na bulalas na pagungol mula sa kanilang ama at sila'y magtatanong kung ano ang ginagawa nito. </p>
+							<p class="text-justify">Kapag umuuwi ang ama ng mas gabi kaysa dati at mas lasing kaysa dati, may pagkakataong ilalayo ng mga bata si Mui Mui. Ang dahila'y si Mui Mui, otso anyos at sakitin at palahalinghing na parang kuting, ay madalas kainisan ng ama. Uhugin, pangiwi-ngiwi, ito ay mahilig magtuklap ng langib sa galis na nagkalat sa kaniyang mga binti, na nag-iiwan ng mapula-pulang mga patse, gayong pauli-ulit siyang pinagbabawalan ng ina. Pero ang nakakainis talaga ay ang kaniyang halinghing. Mahaba at matinis, iyon ay tumatagal ng ilang oras, habang siya ay nakaupo sa bangko sa isang sulok ng bahay, namamaluktot nang pahiga sa banig kasama ang ibang mga bata, na di-makatulog. Walang pasensiya sa kaniya ang pinakamatandang lalaki at babae, na malakas siyang irereklamo sa ina na pagagalitan naman siya sa pagod na boses; pero sa gabing naroon ang ama, napapaligiran ng bote ng beer na nakaupo sa mesa, iniingatan nilang mabuti na hindi humalinghing si Mui Mui. Alam nila na ang halinghing niyon ay parang kudkuran na nagpapangilo sa nerbiyos ng ama at ito'y nakabubulahaw na sisigaw, at kung hindi pa iyon huminto, ito'y tatayo, lalapit sa bata at hahampasin iyon nang buong lakas. Pagkatapos ay haharapin nito at papaluin din ang ibang bata na sa tingin nito, sa kabuuan, ay ang sanhi ng kaniyang kabuwisitan. </p>
+							<p class="text-justify">Noong gabing umuwi ang ama na masamang-masama ang timpla dahil nasisante sa kaniyang trabaho sa lagarian, si Mui Mui ay nasa gitna ng isang mahahabang halinghing at hindi mapatahan ng dalawang pinakamatandang bata gayung binalaan nilang papaluin ito. Walang ano-ano, ang kamao ng ama ay bumagsak sa nakangusong mukha ng bata na tumalsik sa kabila ng kuwarto, kung saan ito nanatiling walang kagalawgalaw. Mabilis na naglabasan ng bahay ang ibang mga bata sa inaasahang gulo. Nahimasmasan ng ina ang bata sa pamamagitan ng malamig na tubig. </p>
+							<p class="text-justify">Pero pagkaraan ng dalawang araw, si Mui Mui ay namatay, at ang ina lamang ang umiyak habang ang bangkay ay inihahandang ilibing sa sementeryo ng nayon may isang kilometro ang layo roon sa tabi ng gulod. Ilan sa taganayon na nakatatanda sa sakiting bata ay dumating upang makiramay. Sa ama na buong araw na nakaupong nagmumukmok ay doble ang kanilang pakikiramay dahil alam nilang nawalan ito ng trabaho. Nangolekta ng abuloy ang isang babae at pilit niya itong inilagay sa mga palad ng ama na di-kawasa, puno ng awa sa sarili, ay nagsimulang humagulgol. Ang balita tungkol sa malungkot niyang kinahinatnan ay madaling nakarating sa kaniyang amo, isang matigas ang loob pero mabait na tao, na noon di'y nagdesisyong kunin siya uli, para sa kapakanan ng kaniyang asawa at mga anak. Dala ng kagandahang-loob, ito ay nagbigay ng sariling pakikiramay, kalakip ang munting abuloy (na minabuti nitong iabot sa asawa ng lalaki imbes sa lalaki mismo). Nang makita niya ang dati niyang amo at marinig ang magaganda nitong sinabi bilang pakikiramay sa pagkamatay ng kaniyang anak, ang lalaki ay napaiyak at kinailangang muling libangin.</p>
+							<p class="text-justify">Ngayo'y naging napakalawak ang kaniyang awa sa sarili bilang isang malupit na inulilang ama na ipinaglalamay ang wala sa panahong pagkamatay ng kaniyang dugo at laman. Mula sa kaniyang awa sa sarili ay bumulwak ang wagas na pagmamahal sa patay na bata, kaya madalamhati siyang nagtatawag, "Kaawa-awa kong Mui Mui! Kaawa-awa kong anak!" Nakita niya ito sa libingan sa tabi ng gulod - payat, maputla, at napakaliit - at ang mga alon ng lungkot at awa na nagpayanig sa matipuno niyang mga balikat at brasong kayumanggi ay nakakatakot tingnan. Pinilit siyang aluin ng mga kapit-bahay, na ang iba'y lumayo na may luha sa mga mata at bubulongbulong, "Maaring lasenggo nga siya at iresponsable, pero tunay na mahal niya ang bata". </p>
+							<p class="text-justify">Tinuyo ng nagdadalamhating ama ang kaniyang mga luha at saka tumayo. Mayroong siyang naisip. Mula ngayon, magiging mabuti na siyang ama. Dinukot niya sa bulsa ang perang ibinigay ng kaniyang amo sa asawa (na kiming iniabot naman ito agad sa kaniya, tulad ng nararapat). Binilang niya ang papel-de-bangko. Isa man dito ay hindi niya gagastusin sa alak. Hindi na kailanman. Matibay ang pasiya na lumabas siya ng bahay. Pinagmasdan siya ng mga bata. Saan kayo pupunta, tanong nila. Sinundan nila ito ng tingin. Papunta ito sa bayan. Nalungkot sila, dahil tiyak nila na uuwi itong dalang muli ang mga bote ng beer.</p>
+							<p class="text-justify">Pagkalipas ng isang oras, bumalik ang ama. May bitbit itong malaking supot na may mas maliit na supot sa loob. Inilapag nito ang dala sa mesa. Hindi makapaniwala ang mga bata sa kanilang nakita, pero iyon ba'y kahon ng mga tsokolate? Tumingin silang mabuti. May supot ng ubas at isang kahon yata ng biskwit. Nagtaka ang mga bata kung ano nga ang laman niyon. Sabi ng pinakamatandang lalaki'y biskwit; nakakita na siyang maraming kahon tulad niyon sa tindahan ni Ho Chek sa bayan. Ang giit naman ng pinakamatandang babae ay kendi, 'yong katulad ng minsa'y ibinigay nila ni Lau Soh, na nakatira roon sa malaking bahay na pinaglalabhan ng nanay. Ang kambal ay nagkasiya sa pandidilat at pagngisi sa pananabik; masaya na sila ano man ang laman niyon. Kaya nagtalo at nanghula ang mga bata. Takot na hipuin ang yaman na walang senyas sa ama. Inip silang lumabas ito ng kaniyang kuwarto.</p>
+							<p class="text-justify">Di nagtagal ay lumabas ito, nakapagpalit na ng damit, at dumiretso sa mesa. Hindi dumating ang senyas na nagpapahintulot sa mga batang ilapat ang mga kamay sa pinag-iinteresang yaman. Kinuha nito ang malaking supot at muling lumabas ng bahay. Hindi matiis na mawala sa mata ang yaman na wari'y kanila na sana, nagbulingan ang dalawang pinakamatanda nang matiyak na hindi sila maririnig ng ama. "Tingnan natin kung saan siya pupunta." Nagpumilit na sumama ang kambal at ang apat ay sumunod nang malayo-layo sa ama. Sa karaniwang pagkakataon, tiyak na makikita sila nito at sisigawang bumalik sa bahay, pero ngayo'y nasa isang bagay lamang ang isip nito at hindi man lang sila napuna. </p>
+							<p class="text-justify">Dumating ito sa libingan sa tabing gulod. Kahuhukay pa lamang ng puntod na kaniyang hinintuan. Lumuhod at dinukot ang mga laman ng supot na dahan-dahang inilapag sa puntod, habang pahikbing nagsalita, "Pinakamamahal kong anak, walang maiaalay sa iyo ang iyong ama kundi ang mga ito. Sana'y tanggapin mo." Nagpatuloy itong nakipag-usap sa anak, habang nagmamasid sa pinagkukublihang mga halaman ang mga bata. Madilim na ang langit at ang maitim na ulap ay nagbabantang mapunit anumang saglit, pero patuloy sa pagdarasal at pag-iyak ang ama. Naiwan sa katawan ang basang kamisadentro. Sa isang iglap, ang kanina pang inip na inip na mga bata ay dumagsa sa yaman. Sinira ng ulan ang malaking bahagi niyon, pero sa natira sa kanilang nailigtas nagsalo-salo sila tulad sa isang piging na alam nilang 'di nila mararanasang muli. </p>
+							<p class="alammoba"><strong>Alam mo ba na..</strong><br> ang "Ang Ama" ay isang uri ng kuwentong makabanghay na nakatuon sa pagkakabuo ng mga pangyayari? Mahalagang matukoy ang pagkakasunod-sunod ng mga pangyayari at ang estilo na ginamit ng mayakda. <p>
+						</div>
+					<hr>
+					<h3 class="text-center"> Anim na Sabado ng Beyblad (Bahagi Lamang) </h3>
+					<h5 class="text-center">ni Ferdinand Pisigan Jarin </h5>
+						<div class="content">
+							<p class="text-justify">Unang Sabado ng paglabas niya nang hilingin na niyang magdiwang ng kaarawan kahit hindi pa araw. Nangumbida ako ng maraming tao kasabay ng biling  'wag kalimutan ang regalo at pagbati ng "Happy Birthday, Rebo!". Kailangang di niya malimutan ang araw na ito. Dapat pinakamasaya ang Sabadong ito sa lahat ng Sabado. Maraming-maraming laruan. Stuffed Toys, Mini-Helicopter, Walkie-Talkie, Crush Gear, Remote Controlled Cars, at higit sa lahat, ang Beyblade. Ang paborito niyang Beyblade. Maraming-maraming Beyblade. Tinanggap niya ang lahat ng ito at marami pang iba sa kaniyang kaarawan. Sa kaniyang pagtuntong sa limang taon. Kahit di totoo. Kahit hindi pa araw.</p>
+							<P class="text-justify">Ikalawang Sabado, naki-bertdey naman siya. Pagkatapos ay muling naglaro ng beyblade kasama ang mga pinsan. </p>
+							<p class="text-justify">Tatlong araw bago dumating ang ikatlong Sabado, sorpresa ko siyang dinalaw. Unti-unti na siyang nanghihina. Bihira na siyang ngumiti. Hindi na niya makuhang laruin ang beyblade bagamat ayaw niya itong bitiwan sa loob ng kaniyang kamay o di kaya'y bulsa. Ang nakapagngangalit, unti-unti na namang nalalagas ang kaniyang buhok. Subalit pinipilit pa rin niyang maging malakas bagamat talagang di na kaya ng kaniyang paang tumayo ng kahit ilang sandali man lang. Nakadudukot na rin siya ng mga matitigas na butil ng dugo sa loob ng kaniyang gilagid. </p>
+							<p class="text-justify">Sa labas ng bahay na kanilang tinitirhan, lubos kong ikinagulat nang tanungin niya ako ng; "Tay, may peya a?" (Tay, may pera ka?) Dali-dali kong hinugot at binuksan ang aking pitaka at ipinakitang mayroon itong laman. Agad akong nagtanong kung ano ang nais niya na sinagot naman niya ng agarang pagturo sa isang kalapit na tindahan. Kung mabilis man akong nakabili ng mga kending kaniyang ipinabili, mas mabilis siyang umalis agad sa tindahan at nakangiting bumalik sa aming kinauupuan. Naglalambing ang aking anak. Nang kami'y pumasok na sa loob ng bahay, naiwang nilalanggam na ang nakabukas ngunit di nagalaw na mga kendi sa aming kinaupuan. </p>
+							<p class="text-justify">Tuluyan na siyang nakalbo pagsapit ng ikatlong Sabado. Subalit di na kusang nalagas ang mga buhok. Sa kaniyang muling pagkairita, sinabunutan niya ang kanyang sarili upang tuluyang matanggal ang mga buhok. Nang araw na iyon, kinumbida ng isa kong kasama sa trabaho ang isang mascot upang bigyan ng pribadong pagtatanghal si Rebo nang walang bayad. Matapos ang pagtatanghal, bagamat di man lang siya makangiti at makatawa, kitang-kita sa kaniyang mata ang kasiyahan. Isang kasiyahang unti-unting humina at nawala. </p>
+							<p class="text-justify">Di na maikakaila ang mabilis na pagkapawi ng lakas ng aking anak pagsapit ng ikaapat na Sabado. Di na niya makuha pang ipasok ang pisi ng beyblade upang mapaikot ito. Ramdam na ang pagod at hingal sa kaniyang pagsasalita. Kaya kahit nang dalhin ko siya sa isang karnabal, isa lamang ang ninais niyang sakyan. Ang mga maliliit na helicopter na tumataas at bumababa ang tila oktupos na galamay na bakal. At sa tuwing tataas, hahanapin ako ng tingin sa baba at malungkot na ngingitian. Pagkababa, mabilis na siyang nagyayang umuwi. At pagkauwi'y humiga nang humiga at paulit-ulit na tumingin sa kawalan. </p>
+							<p class="text-justify">Huling Sabado ng Pebrero ang ikalimang Sabado. Eksaktong katapusan. Kasabay ng pagtatapos ng Pebrero ay pumanaw ang aking anak. Ilang sandali matapos ang sabay na paglaglag ng luha sa kaniyang mga mata at pagtirik ng mata, ibinuga niya ang kaniyang huling hininga. Namatay siya habang tangan ko sa aking bisig. Hinintay lamang niya ang aking pagdating. Di na kami nakapag-usap pa dahil pagpasok ko pa lang ng pintua'y pinakawalan na niya ang sunod-sunod na palahaw ng matinding sakit na di nais danasin ng kahit sino. </p>
+							<p class="text-justify">"Sige na, Bo. Salamat sa apat na taon. Mahal ka namin. Paalam." </p>
+							<p class="text-justify">Ikaanim na Sabado nang paglabas ni Rebo sa ospital. Huling Sabado na masisilayan siya ng mga nagmamahal. Wala na ang beyblade at ang mayari nito. Payapa na silang nakahimlay sa loob ng kabaong. Magkasamang tutungo sa lugar na walang sakit, walang gutom, walang hirap. Payapang magpapaikot at iikot. Maglalaro nang maglalaro. Habang kaming mga naiwan ay paglalabanan at pag-aaralang tanggapin ang kirot ng pagkalungkot.</p>
+						</div>
+					<hr>
+					<p class="alammoba text-justify">Ang mga pangatnig at transitional devices ay ginagamit sa paguugnay-ugnay ng mga pangungusap at sugnay. Sa pamamagitan nito, napagsusunod natin nang tama ang mga pangyayari sa isang kuwento ayon sa tamang gamit nito. Pangatnig ang tawag sa mga salitang naguugnay sa dalawang salita, parirala o sugnay, at transitional devices naman ang tawag sa mga kataga na nag-uugnay sa pagsusunod-sunod ng mga pangyayari (naratibo) at paglilista ng mga ideya, pangyayari at iba pa sa paglalahad.<p>
+					<p class="text-justify">Kasunod ang ilang halimbawa ng pangatnig at <i>transitional devices</i> na karaniwang ginagamit sa Filipino: </p>
+					<p class="text-justify"><b>Mga Pangatnig:</b></p>
+						<ol>
+							<li><b>subalit</b> - ginagamit lamang kung ang datapwat at ngunit ay ginamit na sa unahan ng pangungusap. </li>
+							<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+							<ul>
+								<li><b> Datapwat</b> matalino siya, wala naman siyang kaibigan. </li>
+								<li> Mahal ka niya, <b>subalit</b> hindi niya gaanong naipapakita ito. </li>
+								<li> Marami na akong natutuhan, <b>ngunit</b> tila kulang pa ito. </li>
+							</ul>
+							
+							<li><b>samantala, saka</b> -  ginagamit na pantuwang </li>
+							<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+							<ul>
+								<li> Siya ay matalino <b>saka</b> mapagbigay pa. </li>
+								<li>  Abala ang lahat, <b>samantalang</b> ikaw ay walang ginagawa. </li>
+							</ul>
+							
+							<li><b> kaya, dahil sa </b> -  ginagamit na pananhi </li>
+							<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+							<ul>
+								<li> <b>Kaya</b> hindi natututo ang tao dulot ng kaniyang kapalaluan.</li>
+								<li> Siya'y nagtagumpay <b>dahil sa</b> kaniyang pagsisikap. </li>
+							</ul>
+						</ol>
+					<p class="text-justify"><b><i>Transitional Devices:</i></b></p>
+						<ol>
+							<li><b> sa wakas, sa lahat ng ito</b> - panapos</li>
+							<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+							<ul>
+								<li><b>Sa wakas</b>, natuwa ang ama dahil sa kabaitan ng anak.</li>
+								<li><b>Sa lahat ng ito</b>, napagtanto ng mga anak na sila'y mahal na mahal ng kanilang ama.</li>
+							</ul>
+							
+							<li><b>kung gayon</b> - panlinaw</li>
+							<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+							<ul>
+								<li>Malinaw ang paalala ng ina sa kaniya, <b>kung gayon</b> kailangan niyang pagbutihin ang kaniyang pag-aaral.</li>
+							</ul>
+						</ol>
+			</div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal" id="aralin12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Aralin 1.2: Alamat ng Thailand</h4>
+			  </div>
+			  <div class="modal-body">
+					<h3 class="text-center">Ang Alamat ni Prinsesa Manorah</h3>
+					<h5 class="text-center">(Isinalin sa Filipino ni Dr. Romulo N. Peralta)</h5>
+						<div class="content">
+							<p class="text-justify">Isang alamat na pasalin-salin sa iba't ibang panahon at henerasyon mula noong panahon ng Ayutthaya at nagbigay-inspirasyon kay Haring Rama V ng Thailand.</p>
+							<p class="text-justify">Si Kinnaree Manorah ay isang prinsesa ng alamat ng Thai at ang pinakabata sa pitong anak na kinnaree ng Haring Prathum at Reynang Jantakinnaree. Siya ay nakatira sa maalamat na kaharian ng Bundok Grairat. Ang pitong kinnaree ay kalahating babae at kalahating sisne. Sila'y nakalilipad at nagagawang itago ang kani-kanilang pakpak kung kanilang nanaisin. </p>
+							<p class="text-justify">Sa loob ng kahariang Krairat (Grairat), nakatago ang kagubatan ng Himmapan kung saan din namamahay ang mga nakatatakot na nilalang na hindi kilala sa daigdig ng mga tao. Sa loob ng kagubatan, nakakubli ang maganda at kaaya-ayang lawa kung saan ang pitong kinnaree ay masayang dumadalaw lalo na sa araw ng Panarasi (kalakihan ng buwan). Sa di-kalayuan ng lawa, nakatira ang isang ermitanyo na nagsasagawa ng kaniyang meditasyon. </p>
+							<p class="text-justify">Isang araw, napadako ang isang binata habang naglalakbay sa kagubatan ng  Himmapan. Siya ay si Prahnbun. Nakita niya ang pitong kinnaree na masayang nagtatampisaw sa ilog. Namangha siya sa nakabibighaning kagandahan ni Prinsesa Manorah.  Naisip niya na kung mahuhuli niya ang prinsesa, dadalhin niya ito kay Prinsipe Suton, ang anak ng Haring Artityawong at Reyna Jantaivee ng Udon Panjah.  Tiyak na matutuwa ang prinsipe at tuluyang mapapaibig ito sa prinsesa. Ngunit naitanong niya sa sarili kung paano niya ito mahuhuli. </p>
+							<p class="text-justify">Alam ni Prahnbun na may ermitanyong nakatira sa malapit ng kagubatan. Pinuntahan niya ito upang magpatulong sa kaniyang balak. Sinabi sa kaniya ng ermitanyo na napakahirap ang manghuli ng kinnaree dahil agadagad itong lumilipad kapag tinatakot. Ngunit naisip ng ermitanyo na may isang dragon na nakatira sa pinakasulok-sulukan ng kagubatan na maaaring makatulong sa kanila. Nagpasalamat ang binata sa ermitanyo at nagmamadaling lumisan upang hanapin ang dragon. </p>
+							<p class="text-justify">Hindi natuwa ang dragon nang marinig ang balak ni Prahnbun, ngunit napapayag din itong bigyan niya si Prahnbun ng makapangyarihang lubid na siyang panghuhuli niya sa Prinsesa Manorah. Nagpasalamat ang binata at patakbong umalis na dala-dala ang makapangyarihang lubid at patagong tinungo ang ilog kung saan naglalaro ang mga kinnaree. </p>
+							<p class="text-justify">Habang abala sa paglalaro ang mga kinnaree, inihagis ni Prahnbun ang lubid at matagumpay na nahuli si Prinsesa Manorah. Ganun na lamang ang pagkaawa ng ibang mga kapatid ng prinsesa. Ngunit sila'y walang nagawa kundi agad-agad na lumipad dahil sa takot na sila rin ay paghuhulihin. </p>
+							<p class="text-justify">Itinali nang mahigpit ni Prahnbun ang pakpak ni Prinsesa Manorah upang hindi makawala at tuluyang madala pabalik sa Udon Panjah at maibigay kay Prinsipe Suton na noo'y naglalakbay rin sakay sa kabayo papunta sa kagubatan. Nakasalubong niya si Prahnbun dala-dala si Prinsesa Manorah. Agad-agad na naakit sa kagandahan ni Prinsesa Manorah ang prinsipe </p>
+							<p class="text-justify">Nang isalaysay ni Prahnbun kay Prinsipe Suton ang dahilan kung bakit niya hinuli at dinala ang prinsesa sa harap niya, nagpasalamat ang prinsipe at binayaran siya nito ng napakalaking halaga. </p>
+							<p class="text-justify">Nagbalik ang prinsipe sa kaniyang palasyo dala-dala si Prinsesa Manorah kung saan umusbong ang isang tunay na pag-ibig sa isa't isa. Nang sabihin ng prinsipe sa kaniyang inang prinsesa at amang hari ang buong pangyayari, masayang-masaya sila at agad-agad nagbalak na magsagawa ng kasal para kina Prinsipe Suton at Prisesa Manorah. </p>
+							<p class="text-justify">Bumalik sila sa palasyo ng Udon Panjah kung saan isinagawa ang kasal at tuluyang namuhay nang masaya't matiwasay habambuhay.  </p>
+							<p class="alammoba"><strong>Alam mo ba na..</strong><br>tinatalakay ng alamat o legend sa wikang Ingles ang pinagmulan ng isang bagay, lugar, pangyayari o katawagan na maaaring kathang-isip lamang o may bahid ng katotohanan? <p>
+						</div>
+					<hr>
+					<h3 class="text-center">Ang Buwang Hugis-Suklay</h3>
+					<h5 class="text-center">(Isinalin sa Filipino ni Dr. Romulo N. Peralta)</h5>
+						<div class="content">
+							<p class="text-justify">Noong unang panahon, may isang mangingisda na nagpaalam sa kaniyang asawa na lumuwas sa kabayanan upang mamili ng mga gamit sa pangingisda.</p>
+							<p class="text-justify">Nagpabili ang kaniyang asawa ng kendi para sa kaniyang anak na lalaki, at isang suklay na hugis buwan.</p>
+							<p class="text-justify">Sinabi ng kaniyang asawa na upang hindi niya makalimutan, tumingala lamang siya sa kalangitan at makikita niya ang buwang hugis-suklay.</p>
+							<p class="text-justify">Sa araw na iyon, ang buwan ay talaga namang magsisimula nang maging hugis-suklay.</p>
+							<p class="text-justify">Nagsimulang humayo ang mangingisda at matapos ang maraming araw at gabi ng paglalakbay, narating niya ang kabayanan.</p>
+							<p class="text-justify">Agad-agad niyang binili ang mga kagamitan sa pangingisda at ang kendi para sa anak. Ngunit sa kasamaang palad, nakalimutan niya ang ipinagbilin ng asawa na dapat bilhin. Naghalughog siya sa buong tindahan upang maalala lamang niya ang ipinabili ng asawa. Napansin ito ng tagapangalaga ng tindahan.</p>
+							<p class="text-justify">"Maaari ko po ba kayong tulungan?," tanong ng tagapangalaga sa mangingisda.</p>
+							<p class="text-justify">"Hinahanap ko ang ipinabibili ng aking mahal na asawa." tugon naman niya. </p>
+							<p class="text-justify">"Pampapula ho ban g labi?" </p>
+							<p class="text-justify">"Hindi." </p>
+							<p class="text-justify">"Pitaka?" </p>
+							<p class="text-justify">"Hindi rin." </p>
+							<p class="text-justify">"Unan?" </p>
+							<p class="text-justify">"Unan? Naaalala ko na! Sinabi niyang tumingala ako sa buwan." Masayang tugon ng mangingisda. (Sa orihinal na teksto, ginamit ang salitang spoon upang magkasintunog sa moon. Sa salin na ito, ginamit ng tagapagsalin ang salitang unan upang maging magkasintunog sa salitang buwan.) </p>
+							<p class="text-justify">Tumingala ang tagapangalaga at nakita ang bilog na bilog na buwan na siya ring nakita ng mangingisda sa kaniyang pagdating sa kabayanan mula sa mahabang paglalakbay. </p>
+							<p class="text-justify">"Alam ko na. Makikipagpustahan ako sa 'yo. Ito ang gusto ng asawa mong bilhin mo para sa kaniya," panghahamon ng tagabantay ng tindahan.  </p>
+							<p class="text-justify">Agad-agad na inilagay ng tagabantay ang bilog na bagay sa isang supot. Binayaran ito ng mangingisda at lumisan. </p>
+							<p class="text-justify">Sa kaniyang pagdating, nadatnan niya ang nag-aabang niyang asawa, anak, ang kaniyang ina at ama.</p>
+							<p class="text-justify">"Kumuha ka ng kendi," ang sabi niya sa kaniyang anak. </p>
+							<p class="text-justify">"Natandaan mo ba kung anong ipinabili ko sa 'yo?," ang tanong ng kaniyang asawa. </p>
+							<p class="text-justify">Masayang itinuro ng mangingisda ang lukbutan na kinalalagyan ng kaniyang binili para sa asawa.</p>
+							<p class="text-justify">"Wala naman dito ang suklay na hugis-buwan," pasigaw na sabi ng asawa.</p>
+							<p class="text-justify">Lumapit ang mangingisda sa kinalalagyan ng lukbutan, dinukot ang supot at inabot sa asawa.</p>
+							<p class="text-justify">Pinunit ng asawa ang supot at nakita ang sarili sa salamin kasabay ng panghahamak.</p>
+							<p class="text-justify">Ganoon na lamang ang pagkabigla ng mangingisda sa naging reaksiyon ng asawa. </p>
+							<p class="text-justify">"Bakit ka nagdala ng mia noi? Ito'y isang pang-aalipusta!" pasigaw ng asawa.</p>
+							<p class="text-justify">(Ang <i>mia noi</i> ay mga salitang Lao na katumbas ng pangalawang asawa na mas bata sa unang asawa. Ito'y bahagi ng lipunang Thai at Lao.) </p>
+							<p class="text-justify">Hinablot ng ina ng lalaki ang salamin at nagwika. </p>
+							<p class="text-justify">"Nakakadiri ka nga. Nagdala ka ng <i>mia noi</i>, na napakatanda na at nangungulubot pa. Paano mo ito nagagawa?" </p>
+							<p class="text-justify">Tumayo ang kaniyang anak na noo'y nakaupo malapit sa kaniyang lola at hinablot ang salamin. </p>
+							<p class="text-justify">"Lolo, tingnan ninyo. Kinuha niya ang aking kendi at kinakain pa." pagalit na sabi ng bata. </p>
+							<p class="text-justify">"Tingnan ko nga ang masamang taong ito." Hinablot ng lolo ang salamin mula sa bata. "Iniismiran pa ako ng kontrabidang ito! Sasaksakin ko nga ng aking patalim." </p>
+							<p class="text-justify">Inilapag sa sahig ng lolo ang salamin at inundayan ng saksak. </p>
+							<p class="text-justify">"Sasaksakin din niya ako!" sigaw ng lolo. </p>
+							<p class="text-justify">Nang makita ito ng lolo, siya'y galit na galit na sinaksak ang salamin at tuluyang nabasag. </p>
+							<p class="text-justify">"Ngayon ay hindi ka na makagagambala pa sa kahit sino!" ang sabi ng lolo.</p>
+						</div>
+					<hr>
+					<p class="alammoba text-justify">Ang <b>pang-abay na pamanahon</b> ay nagsasaad kung kailan ginanap, ginaganap, o gaganapin ang pangyayari o kilos. Maaaring <b>may pananda, walang pananda at nagsasaad ng dalas.</b> <p>
+					<p class="text-justify"><b>Mga Pang-abay na Pamanahon:</b></p>
+						<ol>
+							<li><b>May pananda</b> (nang, sa, noon, kung, kapag, tuwing, buhat, mula, umpisa, hanggang)</li>
+							<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+							<ul>
+								<li> <u>Kung</u> ngayon na aalis ang mangingisda, tiyak aabutan na siya ng dilim sa daan.</li>
+								<li> Kailangan niyang mangisda <u>tuwing</u> umaga upang sila'y may maulam. </li>
+								<li> Pagod na bumabalik <u>sa</u> tanghali ang mga kinnaree matapos makapagtampisaw sa lawa. </li>
+								<li> <u>Noong</u> araw na iyon ay naglakbay si Prinsipe Suton papunta sa kagubatan.</li>
+								<li> <u>Kapag</u> araw ng Panarasi, masayang dumadalaw sa kaaya-ayang lawa ang mga kinnaree.</li>
+								<li> <u>Mula</u> noon ay namuhay nang masaya't matiwasay sina Prinsipe Suton at Prinsipe Manorah. </li>
+								<li> <u>Umpisa</u> kahapon <u>hanggang</u> ikapitong araw ay walang pagod niyang nilakbay ang daan patungo sa kabayanan</li>
+							</ul>
+							
+							<li><b> Walang pananda </b> - (kahapon, kanina, ngayon, mamaya, bukas) </li>
+							<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+							<ul>
+								<li> <u>Kahapon</u> nakipagkita si Prahnbun sa ermitanyo upang humingi ng tulong. </li>
+								<li> Inabutan <u>kanina</u> ng mangingisda ang tagabantay ng tindahan. </li>
+								<li> <u>Ngayon</u> darating ang mga kinnaree sa kagubatan upang magliwaliw.</li>
+								<li> <u>Mamaya</u> na lamang kukunin ng babae ang pasalubong na dala ng kaniyang asawa.</li>
+								<li>  Makikipagkita <u>bukas</u> ng umaga si Prahnbun kay Prinsipe Suton. </li>
+							</ul>
+							
+							<li><b> Nagsasaad ng dalas </b> -(araw-araw, tuwing, taon-taon, buwan-buwan) </li>
+							<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+							<ul>
+								<li> Ang mga kinnaree ay <u>araw-araw</u> tumutungo sa lawang nasa loob ng kagubatan upang magtampisaw. </li>
+								<li> <u>Tuwing</u> umaga, ang magkakapatid na kinnaree ay masayang tinatanaw ang nagtatayugang mga puno. </li>
+								<li> Pumupunta <u>taon-taon</u> sina Prinsipe Suton at Prinsesa Manorah sa kaharian ng Bundok Grairat. </li>
+								<li> Lumuluwas <u>buwan-buwan</u> sa kabayanan ang mangingisda upang mamili ng mga kagamitan. </li>
+							</ul>
+						</ol>
+					<p class="text-justify">Natukoy mo na rin ang gamit at kahalagahan ng mga pang-abay na pamanahon sa pagsasalaysay ng alamat. Ngayon ay kailangan nating matiyak ang lawak ng iyong natutuhan.</p>
+				</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="modal" id="aralin13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Aralin 1.3: Tula ng Pilipinas</h4>
+			  </div>
+			  <div class="modal-body">
+					<!--START COPY (paragraphs)-->
+					<h3 class="text-center">KULTURA: Ang Pamana ng Nakaraan, Regalo ng Kasalukuyan, <br>at Buhay ng Kinabukasan</h3>
+					<h5 class="text-center">ni Pat V. Villafuerte</h5>
+						<div class="content">
+							<p class="text-center">NOON, ang bawat paghakbang ay isang pagtalunton,<br> isang pagtahak sa matuwid na landas upang marating ang paroroonan<br> gaano man ito kalapit, gaano man ito kalayo<br> gaano man ito kakitid, gaano man ito kalawak<br> kaunti man o marami ang mga paang humahakbang<br> mabagal man o mabilis,  pahintu-hinto man o tuloy-tuloy<br> ang bawat paghakbang ay may patutunguhan.<br> ang bawat paghakbang ay may mararating.<br> ang bawat paghakbang ay may pagsasakatuparan.</p>
+							<p class="text-center">hindi na mabilang ang paghakbang na naganap sa ating kasaysayan<br> paghakbang na pinuhunanan ng pawis, dugo at luha<br> paghakbang na kinamulatan ng maraming pagsubok,<br> pangamba at panganib<br> mula pa sa panahon ng kawalang-malay<br> hanggang sa panahon ng walang humpay na pananakop,<br> digmaan at kasarinlan<br> at hanggang sa kontemporaryong panahon ng makinasyon<br> sumibol ang kayraming kulturang sinangkutsa sa ating diwa't kamalayan<br> kulturang may ritmo ng pag-awit, may kislot ng pagsayaw,<br> may haplos ng pag-aalay, may lambing ng panunuyo<br> at tangis ng pamamaalam.<br> ito ang ating tinalunton, ito ang bunga ng ating paghakbang:<br> ang kulturang ipinamana sa atin ng nakaraan.</p>
+							<p class="text-center">NGAYON, sa panahon ng pagkamulat at maraming pagbabago,<br> binhing nakatanim ang  maraming kulturang<br> nag-uumapaw sa ating diwa<br> nagbabanyos sa ating damdamin<br> nag-aakyat sa ating kaluluwa<br> sinubok ng maraming taon<br> inalay sa mga bagong sibol ng panahon<br> anumang kulay, anumang lahi, anumang edad, anumang kasarian<br> ang kultura'y pinayayabong<br> nang may halong sigla at tuwa,<br> nang may kasalong pagsubok at paghamon<br> kulturang sinusuyod ng kapuri-puring ugali at  marangal na kilos<br> kulturang inihahain ng pagsamba't prusisyon<br> kulturang sinasalamin ang pasko't pistang-bayan<br> kulturang pinaaawit ng  pasyon at pagsasabuhay ng Poon<br> kulturang patuloy na sumisibol at ipinapupunla ng tradisyon:<br> pampamilya, pang-eskuwela,  pampolitika, panrehiyon at pambansa<br> na dinilig ng maraming pagpapaalala, paggabay at patnubay<br> at pinayaman ng makukulay na karanasan<br> kulturang inihain at tinanggap, sinunod at isinakatuparan<br> ito ang regalo ng kultura<br> regalo ng kasalukuyan. </p>
+							<p class="text-center">BUKAS, ang kulturang itinudla ng nakaraan<br> at inireregalo ng kasalukuyan ay bubuhayin ng kinabukasan<br> at mananatiling repleksyon ng kabutihan<br> kulturang gagalang sa mga bata't matanda<br> kulturang rerespeto sa mga babae't may kapasanan<br> kulturang luluklok ng pagbabayanihan at pagkakapatiran<br> kasaliw ng mga awiting bayan at katutubong sayaw<br> katali ng pagsasadula't pagbabalagtasan<br> diwang marangal ang ipupunla. kariringgan ng maraming wika<br> magkakapantay sa kalayaan at karapatan<br> magsasama-sama, magkakapit-bisig, magtutulung-tulungan<br> habang patuloy na humahakbang upang galugarin pa<br> ang kulturang pagyayamanin ng ating lahi<br> ng lahing magiting<br> ng lahing  kapuri-puri<br> ng lahing marangal. </p>
+							<p class="alammoba text-justify"><b>Alam mo ba na...</b><br>ang "Kultura: Pamana ng Nakaraan, Regalo ng Kasalukuyan at Buhay ng Kinabukasan" ay isang halimbawa ng tulang naglalarawan? Hindi lamang nauuri ang tula ayon sa anyo at kayarian nito.  Nauuri rin ang tula ayon sa layon.  May apat na uri ang tula ayon sa layon.  Isa na rito ay ang tulang naglalarawan na nagpapahayag ng pagpapahalaga o maaaring pagkamuhi ng makata o may-akda sa isang kalagayan, pook, o pangyayari. </p>
+						</div>
+					<!--END-->
+					<hr><!--DIVIDE CONTENT-->
+					<h3 class="text-center">Sitti Nurhaliza: Ginintuang Tinig at Puso ng Asya </h3>
+					<h5 class="text-center">ni Jan Henry M. Choa Jr. </h5>
+						<div class="content">
+							<p class="text-justify">Isa sa pinakamahusay na mang-aawit sa Asya si Sitti Nurhaliza mula sa bansang Malaysia. Nagkamit siya ng iba’t ibang parangal sa pag-awit hindi lamang sa kaniyang bansa kundi maging sa pang-internasyunal na patimpalak. Isa na rito ang titulong “Voice of Asia” nang makamit niya ang Grand Prix Champion mula sa Voice of Asia Singing Contest na ginanap sa Almaty, Kazakhstan.</p>
+							<p class="text-justify">Labing-anim na taong gulang siya nang pumasok sa larangan ng pagawit. Dahil sa likas na talento sa pag-awit, narating niya ang rurok ng tagumpay bilang multiple-platinum selling artists sa Malaysia. Sinundan ito ng mga di-mabilang na pagkilala mula sa mga prestihiyosong gawad-parangal tulad ng MTV Asia, Channel V, Anugerah Juara Lagu Malaysia.</p>
+							<p class="text-justify">Hindi lamang sa pag-awit nakilala si Sitti. Siya rin ay isang manunulat ng awit, record producer, presenter o modelo at mangangalakal. Sa katunayan, siya ay nagmamay-ari ng produktong Ctea, isang tsaa sa Malaysia. Mayroon din siyang sariling production company, Sitti Nurhaliza Production na nasa larangan ng entertainment.</p>
+							<p class="text-justify">Siya rin ay itinuturing na isa sa pinakamaimpluwensyang tao at pinakamayamang artista sa Malaysia.. Sa kabila ng pagiging sikat at mayaman ay hindi nalilimutan ni Sitti Nurhaliza ang magkawanggawa. Nakikibahagi at nakikiisa siya sa maraming gawaing-kawanggawa sa loob at labas ng Malaysia. Ito ay isa sa maganda niyang katangian. Marunong siyang tumulong sa kaniyang kapuwa bilang pagbabalik-biyaya  sa kaniyang mga tinatamasa.</p>
+							<p class="text-justify">Tunay na ipinagmamalaki si Sitti Nurhaliz ang kaniyang mga kababayan bilang Asyano na may sadyang husay sa pagkanta at may natatanging kontribusyon sa larangan ng musika. Ang kaniyang magandang tinig at mabuting kalooban bilang isang babaeng Muslim na mang-aawit ay isa lamang sa mga katangiang nagugustuhan ng kaniyang mga tagatangkilik. Isang idolo na may ginintuang tinig at ginintuang puso ng Asya.</p>
+							<p class="alammoba text-justify"><b>Alam mo ba na...</b><br>napatitingkad ang anumang akdang pampanitikan kapag wasto ang gamit ng mga salitang naglalarawan?  Nakapaglalarawan tayo ng tiyak at angkop kapag alam natin ang gamit ng mga salita.  Nakatutulong nang malaki sa pagbibigay ng hugis, kulay, anyo sa mga bagay na bumubuo sa ating kapaligiran ang sastong paggamit sa salitang naglalarawan.  Maaari ring tiyak na makapaglarawan sa katangian at ugali ng isang tao o hayod ang paggamit ng angkop na salitang naglalarawan.  Samakatuwid, nakatutulong nang malaki ang mga salitang naglalarawan upang bigyang katangian ang isang bagay o ugali maging sa damdamin at mga pangyayari sa ating kapaligiran.</p>
+						</div>
+					<hr>
+					<p class="alammoba text-justify">Ang wastong gamit ng mga salitang naglalarawan ay nakapagpapatingkad sa mga pahayag na bumubuo sa pagbibigay ng komentaryo, blog, o sa mga taludturan.</p>
+					<p class="text-justify">May mga salitang naglalarawan na maaaring gamitin sa tao na hindi naman maaari sa bagay.  May mga pangyayari rin naman na kapag ginamit na ang salita sa pagbuo ng taludtod ay nababago ang kahulugan o hindi gaanong napalilitaw ang nais ipakahulugan at hindi nagiging matimyas ang salita.  Halimbawa na lamang ay sa salitang matangkad na bagamat ito ay tumutukoy sa taas (height) ay hindi maaaring gamitin sa paglalarawan sa taas ng gusali.</p>
+					<p class="text-justify sampleP"><u>Mga Halimbawa:</u></p>
+						<ol>
+							<li><p class="text-justify"> Nakatatakot ang magpatayo ng mga <u>matatayog</u> na gusali sa lugar na may malambot na lupa tulad ng sa Baguio.</p></li>
+							<li><p class="text-justify"> <u>Matangkad</u> ang aking panganay na anak sa kaniyang edad na labing apat na taong gulang.</p></li>
+						</ol>
+					<p class="text-justify">Mapapansin na ang salitang “matatayog” at “matangkad” ay parehong tumutukoy sa taas (height) ngunit hindi maaaring mapagpalit ang gamit sapagkat hindi aakma ang nais na iparating. Hindi maaaring maging matangkad na gusali at matayog na anak.  Kapag ginamit ang matayog sa anak upang ilarawan ang taas nito makapagbibigay ng ibang paglalarawan sa anak.</p>
+				</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!--ARALIN 1.4-->
+		<div class="modal" id="aralin14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Aralin 1.4: Sanaysay ng Indonesia</h4>
+					</div>
+					<div class="modal-body">
+						<h3 class="text-center">Kay  Estella  Zeehandelaar </h3>
+						<h5 class="text-center">Salin ni Ruth Elynia S. Mabanglo </h5>
+						<h5 class="text-center">Mula sa Mga Liham ng Isang Prinsesang Javanese Japara, </h5>
+						<h5 class="text-center">Mayo 25, 1899 </h5>
+							<div class="content">
+								<p class="text-justify">Ibig na ibig kong makakilala ng isang “babaeng moderno,” iyong babaeng malaya, nakapagmamalaki’t makaakit ng aking loob! Iyong masaya, may tiwala sa sarili, masigla’t maagap na hinaharap ang buhay, puno ng tuwa at sigasig, pinagsisikapan hindi lamang ang sariling kapakanan at kundi maging ang kabutihan ng buong sangkatauhan.</p>
+								<p class="text-justify">Buong kasabikan kong sinasalubong ang pagdating ng bagong panahon; totoong sa puso’t isip ko’y hindi ako nabibilang sa daigdig ng mga Indian, kundi sa piling ng aking mga puting kapatid na babae na tumatanaw sa malayong Kanluran.</p>
+								<p class="text-justify">Kung pahihintulutan lamang ng mga batas ng aking bayan, wala akong ibig gawin kundi ang ipagkaloob ang sarili sa mga nagtratrabaho’t nagsisikap na bagong kababaihan ng Europe; subalit nakatali ako sa mga lumang tradisyong hindi maaaring suwayin. Balang-araw maaaring lumuwag ang tali at kami’y pawalan,ngunit lubhang malayo pa ang panahong iyon. Alam ko, maaaring dumating iyon, ngunit baka pagkatapos pa ng tatlo o apat na henerasyon. Alam mo ba kung paano mahalin ang bago at batang panahong ito ng buong puso’t kaluluwa kahit nakatali sa lahat ng batas, kaugalian at kumbensyon ng sariling bayan? Tuwirang sumasalungat sa kaunlarang hinahangad ko para sa aking mga kababayan ang lahat ng mga institusyon namin. Wala akong iniisip gabi’t araw kundi ang makagawa ng paraang malabanan ang mga lumang tradisyon namin. Alam kong para sa aking sarili’y magagawa kong iwasan o putulin ang mga ito, kaya lamang ay may mga buklod na matibay pa sa alinmang lumang tradisyon na pumipigil sa akin; at ito ang pagmamahal na inuukol ko sa mga pinagkakautangan ko ng buhay, mga taong nararapat kong pasalamatan sa lahat ng bagay. May karapatan ba akong wasakin ang puso ng mga taong walang naibigay sa akin kundi pagmamahal at kabutihan, mga taong nag-alaga sa akin ng buong pagsuyo?</p>
+								<p class="text-justify">Ngunit hindi lamang tinig nito ang umaabot sa akin; ang malayo, marikit at bagong-silang na Europe ay nagtutulak sa aking maghangad ng pagbabago sa kasalukuyang kalagayan. Kahit noong musmos pa ako’y may pang-akit na sa aking pandinig ang salitang “emansipasyon”; may isang naiibang kabuluhan ito, isang kahulugang hindi maaabot ng aking pangunawa. Gumigising ito para hangarin ang pagsasarili at kalayaan- isang paghahangad na makatayong mag-isa. Ang puso ko’y sinusugatan ng mga kondisyong nakapaligid sa akin at sa iba, buong lungkot na pinag-aalab ang mithiin kong magising ang aking bayan.</p>
+								<p class="text-justify">Patuloy na lumapit ang mga tinig na galing sa malayong lupain, umaabot sa akin, at sa kasiyahan ng ilang nagmamahal sa akin at sa kalungkutan ng iba, dala nito ang binhing sumupling sa aking puso, nag-ugat, sumibol hanggang sa lumakas at sumigla.</p>
+								<p class="text-justify">Ngayo’y kailangang sabihin ko ang ilang bagay ukol sa sarili upang magkakilala tayo. Panganay ako sa tatlong babaing anak ng Regent ng Japara. Ako’y may anim na kapatid na lalaki at babae. Ang lolo kong si Pangeran Ario Tjondronegoro ng Demak ay isang kilalang lider ng kilusang progresibo noong kapanahunan niya. Siya rin ang kaun-aunahang regent ng gitnang Java na nagbukas ng pinto para sa mga panauhin mula sa ibayong dagat-ang sibilisasyong Kanluran. Lahat ng mga anak niya’y may edukasyong European, at halos lahat ng iyon (na ang ilan ay patay na ngayon) ay umiibig o umibig sa kanlurang minana sa kanilang ama; at nagdulot naman ito sa mga anak nila ng uri ng pagpapalaking nagisnan nila mismo. Karamihan sa mga pinsan ko’t nakatatandang kapatid na lalaki ay nag-aral sa Hoogere-Burger School, ang pinakamataas na institusyon ng karunungang matatagpuan dito sa India. Ang bunso sa tatlong nakatatandang kapatid kong lalaki’y tatlong taon na ngayong nag-aaral sa Netherlands at naglilingkod din naman doon bilang sundalo ang dalawa pa. Samantala, kaming mga babae’y bahagya nang magkaroon ng pagkakataong makapagaral dahil na rin sa kahigpitan ng aming lumang tradisyon at kumbensyon. Labag sa aming kaugaliang pag-aralin ang mga babae, lalo’t kailangang lumabas ng bahay araw-araw para pumasok sa eskwela. Ipinagbabawal ng aming kaugalian na lumabas man lamang ng bahay ang babae. Hindi kami pinapayagang pumunta saan man, liban lamang kung sa paaralan, at ang tanging lugar na pagtuturong maipagmamalaki ng siyudad namin na bukas sa mga babae ay ang libreng grammar school ng mga European.</p>
+								<p class="text-justify">Nang tumuntong ako ng ikalabindalawang taong gulang, ako ay itinali sa bahay-kinailangang “ikahon” ako. Ikinulong ako at pinagbawalang makipag-uganayan sa mundong nasa labas ng bahay, ang mundong hindi ko na makikita marahil liban kung kasama ko na ang mapapangasawang estranghero, isang di-kilalang lalaking pinili ng mga magulang ko, ang lalaking ipinagkasundo sa akin nang di ko namamalayan. Noong bandang huli, nalaman kong tinangka ng mga kaibigan kong European na mabago ang pasyang ito ng mga magulang ko para sa akin, isang musmos pa na nagmamahal sa buhay, subalit wala silang nagawa. Hindi nahikayat ang mga magulang ko; nakulong ako nang tuluyan. Apat na mahahabang taon ang tinagal ko sa pagitan ng makapal na pader, at hindi ko nasilayan minsan man ang mundong nasa labas.</p>
+								<p class="text-justify">Hindi ko alam kung paano ko pinalipas ang mga oras. Ang tanging kaligayahang naiwan sa aki’y pagbabasa ng mga librong Dutch at ang pakikipagsulatan sa mga kaibigang Dutch na hindi naman ipinagbawal. Ito-ito lamang ang nag-iisang liwanag na nagpakulay sa hungkag at kainip-inip na panahong iyon, na kung inalis pa sa akin ay lalo nang nagging kaawa-awa ang kalagayan ko. Lalo sigurong nawalan ng kabuluhan ang buhay ko’t kaluluwa. Subalit dumating ang kaibigan ko’t tagapagligtas-ang Diwa ng panahon; umalingawngaw sa lahat ng dako ang mga yabag niya. Nayanig sa paglapit niya ang palalo’t matatag na balangkas ng mga lumang tradisyon. Nabuksan ang mga pintong mahigpit na nakasara, kusa ang iba, ang iba nama’y pilit at bahagya lamang ngunit bumukas pa rin at pinapasok ang mga  di-inanyayahang panauhin.</p>
+								<p class="text-justify">Sa wakas, nakita kong muli ang mundo sa labas nang ako’y maglabing-anim na taon. Salamat sa Diyos! Malalabasan ko ang aking kulungan nang Malaya at hindi nakatali sa isang kung sinong bridegroom. At mabilis pang sumunod ang mga pangyayari nagpabalik sa aming mga babae ng mga nawala naming kalayaan.</p>
+								<p class="text-justify">Nang sumunod na taon, sa oras ng pagtatalaga sa poder ng bata pang prinsesa (bilang Reyna Wilhemina ng Netherland), “opisyal” na inihandog sa amin ng mga magulang namin ang aming kalayaan. Sa kauna-unahang pagkakataon sa aming buhay, pinayagan kaming umalis sa bayan naming at pumunta sa siyudad na pinadarausan ng pagdiriwang para sa okasyong iyon. Anong dakila ng tagumpay iyon! Ang maipakita ng mga kabataang babaeng tulad namin ang sarili sa labas, na imposibleng mangyari noon. Nasindak ang “mundo” naging usap-usapan ang “krimeng” iyon na dito’y wala pang nakagagawa. Nagsaya ang aming mga kaibigang European, at para naman sa amin, walang reynang yayaman pa sa amin. Subalit hindi pa ako nasisiyahan. Lagi, ibig kong makarating sa malayo, mas malayo. Wala akong hangaring makipamista,o malibang. Hindi iyon ang dahilan ng paghahangad kong magkaroon ng kalayaan. Ibig kong malaya upang makatayo ng mag-isa, mag-aral, hindi para mapailalim sa sino man, at higit sa lahat, hindi para pagasawahin nang sapilitan.</p>
+								<p class="text-justify">Ngunit dapat tayong mag-asawa,dapat, dapat. Ang hindi pag-aasawa ang pinakamalaking kasalanang magagawa ng isang babaeng Muslim. Ito ang pinakamalaking maipagkakaloob ng isang katutubong babae sa kanyang pamilya.</p>
+								<p class="text-justify">At ang pag-aasawa para sa amin-mababaw pa ngang ekspresyon ang sabihing miserable. At paano nga ba hindi magkakaganoon, kung tila ginawa lamang para sa lalaki ang mga batas, kung pabor para sa lalaki at hindi para sa babae ang batas at kumbensyon; kung ang lahat ng kaluwaga’y para sa kanya lang.</p>
+								<p class="alammoba text-justify"><b>Alam mo ba na...</b><br>katulad ng ibang anyo ng panitikan, ang sanaysay  ay may mga uri rin?  Ito ay ang pormal at di-pormal.Impersonal ang tawag sa ibang aklat sa sanaysay na pormal.  Naghahatid ito ng mahahalagang kaalaman o impormasyon, kaisipan na makaagham at lohikal na pagkakasunod-sunod ng mga ideya.  Maingat na pinipili ang mga  ginagamit na salita at maanyo ang pagkakasulat.  Maaari ring maging pampanitikan ang pormal na  uri ng sanaysay. Maaari itong maging makahulugan, matalinhaga at matayutay.  Ang tono ng pormal na sanaysay ay seryoso at di nagbibiro. <br><br>Samantalang sa di-pormal na sanaysay, nagbibigay ito ng kasiyahan sa pamamagitan ng pagtalakay sa mga karaniwan at pang-araw-araw na paksa.  Pamilyar ang ganitong uri ng sanaysay.  Gumagamit ng mga salitang sinasambit sa araw-araw na pakikipag-usap lamang.  Palakaibigan ang tono sapagkat pumapanig sa damdamin at paniniwala ng may-akda ang pananaw nito.</p>
+							</div>
+							<hr>
+							<h3 class="text-center">Sanaysay 1</h3>
+							<h5 class="text-center">Kapag Lumaki Na </h5>
+								<div class="content">
+									<p class="text-justify">Pinalaki tayo sa kasinungalingan. Bata pa lang tayo, sinanay na tayo sa mga nilalang na hindi naman natin nakikita. kapre, tikbalang, manananggal, tiyanak, multo at mangkukulam. Mga lamang-lupa raw ang tawag dito. Nagtataka ako kung bakit hindi isinama ang kamote, sibuyas at luya. Mga lamang-lupa din naman iyon. </p>
+									<p class="text-justify">Kapag nagkakasakit tayo, ipinipilit ng Nanay na masarap ang lasa ng gamot para sa sakit mo. Kahit kalasa iyon ng tinta ng pentel pen o panis na mantika. Para mapainom ka, kailangang pasinungalingang pagkasarap-sarap ng gamot kahit pati sila kapag umiinom nito ay nagkakandangiwi na rin sa simangot. At may batok ka galing kay Tatay kapag nailuwa mo at naisuka. Sayang ang ipinambili ng gamot. </p>
+								</div>
+							<hr>
+							<h3 class="text-center">Sanaysay 2</h3>
+							<h5 class="text-center">Ang Kahalagahan ng <i>Recycling</i></h5>
+								<div class="content">
+									<p class="text-justify">Ang ating mundo ay nangangailangan ng balance upang mapanatili nito ang kaayusan ng ecosystem. Ang ecosystem na ito ang nagdidikta sa kaayusan o “pagiging balance” ng ating kapaligiran at nagiging dahilan ng balanseng pamumuhay ng lahat ng nilalang na nakatira dito sa ating planeta. Hindi lamang ang mga tao ang kasama sa usaping ito. Mahalaga ring malaman na ang mga hayop at halaman na kasama nating namumuhay rito ay nangangailangan din ng mabuting pamumuhay. Kung hindi mapananatili ang balanseng sistema nito, maaaring magdulot ito ng mga problema hindi lamang sa ating panahon kundi pati na rin sa mga panahong darating. Ayaw nating lahat na mangyari ito at magdusa ang lahat. Gusto nating magkaroon ng magandang sistema ang ating mundo upang tayong lahat na nabubuhay rito ay magkaroon ng maligaya at malinis na pamumuhay. Sa mga basurang itinatapon nang walang kontrol sa araw-araw, dahan-dahan nating sinisira ang ating kapaligiran lalo na ang mundong ating ginagalawan. Ngunit may panahon pa para magbago ang ating nakasanayan. Maaari pa nating gawan ng solusyon ang lumalalang problema sa basura lalo na sa ating lugar na kinabibilangan. Sa mga produktong na ating binibili sa araw-araw, maaari nating simulan ang recycle upang mapababa ang basura na likha ng mga ito. Ang mga produktong gawa sa papel halimbawa ay maaari pang i-recycle upang mabawasan kahit kaunti ang basurang maaari nitong malikha sa ating mundo. Kung hindi tayo kikilos sa ngayon, baka mahuli ang lahat. Ngayon na ang panahon upang maisaayos ang suliranin natin sa basura at maging maayos ang ating pamumuhay pati na rin ang pamumuhay ng mga darating na henerasyon.</p>
+								</div>
+							<hr>
+							<p class="alammoba text-justify"><b>Alam mo ba na...</b><br>sa isang sanaysay, makatutulong nang malaki sa pag-oorganisa ng ideya ang mga pang-ugnay.  Ang mga pang-ugnay ay nauuri rin bilang mga salitang pangkayarian.</p>
+							<p class="text-justify sampleP">Ang mga pang-ugnay ay ang sumusunod</p>
+							<ol>
+								<li><b>Pangatnig</b> (<i>conjunction</i>) -  mga salitang nag-uugnay ng dalawang salita, parirala o sugnay halimbawa:  tulad ng, kahit na, dahil sa, kasi, palibhasa, bukod-tangi at iba pa.</li>
+								<li><b>Pang-angkop</b> (<i>ligature</i>) - mga katagang nag-uugnay sa panuring at salitang tinuturingan halimbawa: na, ng at iba pa </li>  
+								<li><b>Pang-ukol</b> (<i>preposition</i>) -  mga salitang nag-uugnay sa isang pangngalan sa iba pang salita halimbawa: ang/si, ng/ni/kay, ayon sa/ayon kay, para sa/ para kay hinggil sa/hinggil kay at iba pa. </li>
+							</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 1.4-->
+		
+		<!--ARALIN 1.5-->
+		<div class="modal" id="aralin15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Aralin 1.5: Sanaysay ng Indonesia</h4>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 1.5-->
+		
+		<!--ARALIN 2.1-->
+		<div class="modal" id="aralin21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Aralin 2.1: Tanka at Haiku ng Hapon</h4>
+					</div>
+					<div class="modal-body">
+						<h3 class="text-center">Kaligirang Pangkasaysayan ng Tanka at Haiku </h3>
+						<h5 class="text-center">Isinalin sa Filipino ni M.O. Jocson</h5>
+							<div class="content">
+								<p class="text-justify">Ang Tanka at Haiku ay ilang anyo ng tula na pinahahalagahan ng panitikang Hapon. Ginawa ang Tanka noong ikawalo siglo at ang Haiku noong ika-15 siglo. Sa mga tulang ito layong pagsama-samahin ang mga ideya at imahe sa pamamagitan ng kakaunting salita lamang.</p>
+								<p class="text-justify">Ang pinakaunang Tanka ay kasama sa kalipunan ng mga tula na tinawag na Manyoshu o Collection of Ten Thousand Leaves. Antolohiya ito na naglalaman ng iba’t ibang anyo ng tula na karaniwang ipinahahayag at inaawit ng nakararami.</p>
+								<p class="text-justify">Sa panahong lumabas ang Manyoshu, kumawala sa makapangyarihang impluwensiya ng sinaunang panitikang Tsino ang mga manunulat na Hapon. Ang mga unang makatang Hapon ay sumusulat sa wikang Tsino sapagkat eksklusibo lamang ang wikang Hapon sa pagsasalita at wala pang sistema ng pagsulat.Sa pagitan ng ikalima hanggang ikawalo siglo, isang sistema ng pagsulat ng Hapon ang nilinang na mula sa karakter ng pagsulat sa Tsina upang ilarawan ang tunog ng Hapon. Tinawag na Kana ang ponemikong karakter na ito na ang ibig sabihin ay “ hiram na mga pangalan”.</p>
+								<p class="text-justify">Noong panahong nakumpleto na ang Manyoshu, nagsimulang pahalagahan ng mga makatang Hapon ang wika nila sa pamamagitan ng madamdaming pagpapahayag. Kung historikal ang pagbabatayan, ipinahahayag ng mga Hapon na ang Manyoshu ang simula ng panitikan nilang nakasulat  na matatawag nilang sariling-sarili nila.</p>
+								<p class="text-justify">Maiikling awitin ang ibig sabihin ng Tanka na puno ng damdamin. Bawat Tanka ay nagpapahayag ng emosyon o kaisipan. Karaniwang paksa naman ang pagbabago, pag-iisa, o pag-ibig. Tatlumpu’t  isa ang tiyak na bilang ng pantig na may limang taludtod ang tradisyunal na Tanka. Tatlo sa mga  taludtod ay may tig-7 bilang ng pantig samantalang tig-5 pantig naman ang dalawang taludtod. Nagiging daan ang Tanka upang magpahayag ng damdamin sa isa’t isa ang nagmamahalan (lalaki at babae). Ginagamit din sa paglalaro ng aristocrats ang Tanka, kung saan lilikha ng tatlong taludtod at dudugtungan naman ng ibang tao ng dalawang taludtod upang mabuo ang isang Tanka.</p>
+								<p class="text-justify">Gaya nga nang naipahayag na sa unang bahagi ng tekstong ito, noong ika-15 siglo, isinilang ang bagong anyo ng pagbuo ng tula ng mga Hapon.  Ang bagong anyo ng tula ay tinawag na Haiku.</p>
+								<p class="text-justify">Noong panahon ng pananakop ng mga Hapon sa Pilipinas lumaganap nang lubos ang Haiku. Binubuo ng labimpitong pantig na nahahati sa tatlong taludturan.</p>
+								<p class="text-justify">Ang pinakamahalaga sa Haiku ay ang pagbigkas ng taludtod na may wastong  antala o paghinto .Kiru ang tawag dito o sa Ingles ay  cutting. Ang kiru ay kahawig ng sesura sa ating panulaan. Ang Kireji  naman ang salitang paghihintuan o “cutting word”. Ito ay kadalasang matatagpuan sa dulo ng isa sa huling tatlong parirala ng bawat berso. Ang kinalalagyan ng salitang pinaghintuan ay maaaring makapagpahiwatig ng saglit na paghinto sa daloy ng kaisipan upang makapagbigay-daan na mapag-isipan ang kaugnayan ng naunang berso sa sinundang berso. Maaari rin namang makapagbigay - daan  ito sa   marangal na pagwawakas.</p>
+								<p class="text-justify">Ang mga salita na ginagamit ay maaaring sagisag ng isang kaisipan. Halimbawa ang  salitang kawazu ay  “palaka” na nagpapahiwatig ng tagsibol. Ang shigure  naman ay “ unang ulan sa pagsisimula ng taglamig”. Mahalagang maunawaan ng babasa ng Haiku at Tanka ang kultura at paniniwala ng mga Hapon upang lubos na mahalaw ang mensaheng nakapaloob sa tula.</p>
+						<h3 class="text-center">Estilo ng Pagkakasulat ng Tanka at Haiku</h3>
+								<p class="text-justify">Parehong anyo ng tula ang Tanka at Haiku ng mga Hapon. Maiikling awitin ang Tanka na binubuo ng tatlumpu’t isang pantig na may limang taludtod. Karaniwang hati ng pantig sa mga taludtod ay: 7-7-7-5-5, 5-7-5-7-7 o maaaring magkapalit-palit din na ang kabuuan ng pantig ay  tatlumpu’t isang pantig pa rin.</p>
+								<p class="text-justify">Samantala, ang Haiku ay mas pinaikli pa sa Tanka. May labimpitong bilang ang pantig na may tatlong taludtod.  Maaaring ang hati ng pantig sa mga taludtod ay: 5-7-5 o maaaring magkapalit-palit din na ang kabuuan ng pantig ay labimpito pa rin.</p>
+								<p class="text-justify">Karaniwang paksa ng Tanka ay pagbabago, pag-ibig, at pag-iisa. Ang paksang ginamit naman sa Haiku at tungokl sa kalikasan at pag-ibig. Parehong nagpapahayag ng masidhing damdamin ang Tanka at Haiku.
+								<p class="alammoba text-justify"><b>Alam mo ba na...</b><br>ang "Kultura: Pamana ng Nakaraan, Regalo ng Kasalukuyan at Buhay ng Kinabukasan" ay isang halimbawa ng tulang naglalarawan? Hindi lamang nauuri ang tula ayon sa anyo at kayarian nito.  Nauuri rin ang tula ayon sa layon.  May apat na uri ang tula ayon sa layon.  Isa na rito ay ang tulang naglalarawan na nagpapahayag ng pagpapahalaga o maaaring pagkamuhi ng makata o may-akda sa isang kalagayan, pook, o pangyayari. </p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 2.1-->
+		
+		<!--ARALIN 2.2-->
+		<div class="modal" id="aralin22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Aralin 2.2: Sanaysay ng Indonesia</h4>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 2.2-->
+		
+		<!--ARALIN 2.3-->
+		<div class="modal" id="aralin23" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Aralin 2.3: Sanaysay ng Taiwan</h4>
+					</div>
+					<div class="modal-body">
+						<h3 class="text-center">Ang Kababaihan ng Taiwan, Ngayon at Noong Nakaraang 50 Taon</h3>
+						<h5 class="text-center">isinalin sa Filipino ni Sheila C. Molina</h5>
+						<div class="content">
+							<p class="text-justify">Ang bilang ng populasyon ng  kababaihan sa mundo ay 51%  o  2% na mataas kaysa kalalakihan.  Maaaring isipin ng ilan na ang kababaihan ay nakakukuha ng parehong pagkakataon at karapatan gaya ng kalalakihan.  Ilang kababaihan lamang sa buong mundo ang nakakakuha ng pantay na karapatan at paggalang tulad sa kalalakihan.  Ang tungkulin at kalagayan ng kababaihan ay unti-unting nagbabago sa nakalipas na  50 taon.  Ito ay makikita sa dalawang kalagayan : una ang pagpapalit ng gampanin ng kababaihan at ang ikalawa ay ang pag-unlad ng kanilang karapatan at kalagayan.  Nakikita ito sa Taiwan.</p>
+							<p class="text-justify">Ang unang kalagayan  noong nakalipas na 50 taon, ang babae sa Taiwan ay katulad sa kasambahay o housekeeper.  Ang tanging tungkulin nila ay tapusin ang hindi mahahalagang gawaing-bahay na hindi natapos ng kanilang asawa.  Ang mga babae ay walang karapatang magdesisyon dahil sa kanilang mababang kalagayan sa tahanan.</p>
+							<p class="text-justify">Ngayon, nabago na ang tungkulin ng mga babae at ito ay lalong naging komplikado.  Sa bahay ng mga Taiwanese, sila pa rin ang may pananagutan sa mga gawaing-bahay.  Ngunit sa larangan ng trabaho, inaasahang magagawa nila kung ano ang nagagawa ng kalalakihan.  Sa madaling salita, dalawang mabibigat na tungkulin ang nakaatang sa kanilang balikat.</p>
+							<p class="text-justify">Ang ikalawang kalagayan ay pinatutunayan ng pagtaas ng kanilang sahod, pagkakataong makapag-aral, at mga batas na nangangalaga sa kanila.  Karamihan sa mga kompanya ay nagbibigay ng halaga sa kakayahan ng  babae at ang mga kinauukulan ay handang kumuha ng mga babaeng may kakayahan at masuwelduhan ng mataas.  Tumataas ang pagkakataon na umangat ang babae sa isang kumpanya at nakikita na ring may mga babaing namamahala.  Isa pa, tumaas ang pagkakataon para sa mga babae pagdating sa edukasyon.  Ayon sa isang estadistika mula sa gobyerno, higit na mataas ang bilang ng mga babaing nag-aaral sa kolehiyo kung ihahambing sa kalalakihan makalipas ang 50 taon.</p>
+							<p class="text-justify">At ang huling kalagayan ay ang pagbabago ng mga batas para sa pangangalaga sa kababaihan ay nakikita na rin.  Halimbawa, sa Accton Inc., isa sa nangungunang networking hardware manufacturer sa Taiwan,  ginawa nang isang taon ang maternity leave sa halip na 3 buwan lamang.  Ang gobyerno ng Taiwan ay gumagawa na ng batas sa pagkakaroon ng pantay na karapatan upang higit nilang mapangalagaan ang kababaihan.</p>
+							<p class="text-justify">Bilang pagwawakas, naiiba na ang gampanin ng mga babae at higit itong mapanghamon kung ihahambing noon.  Ang kanilang karapatan at kahalagahan ay binibigyan na ng pansin.  Ngunit hindi ito nangangahulugan na ang mga babae ay tumatanggap na ng pantay na posisyon at pangangalaga sa  lipunan.  Mayroon pa ring mga kompanya na hindi makatarungan ang pagtrato sa mga babaing lider nito.  Marami pa ring kalalakihan ang nagbibigay ng mabigat na tungkulin sa kanilang asawa sa tahanan.   Ito ay matuwid pa rin sa kanila.  Marami pa ring dapat  magbago sa kalagayan ng kababaihan sa Taiwan at malaki ang aking pag-asa na makita ang ganap at pantay na karapatan nila sa lipunan.</p>
+							<p class="alammoba text-justify"><b>Alam mo ba na...</b><br>Ang sanaysay ay isang matalinong pagkukuro ng sumulat tungkol sa isang paksa? Ito ay isang genre o sangay ng panitikan na nasusulat sa anyong tuluyan na maaaring tumalakay sa anumang isyu sa kapaligiran maging tao, hayop, pook, pangyayari, bagay, at guniguni.<br><br>Ayon kay Alejandro Abadilla, ang sanaysay ay pagsasalaysay ng isang sanay.  Kaya’t ang sinumang susulat nito ay nangangailangan na may malawak na karanasan, mapagmasid sa kapaligiran, palabasa,  o nagsasagawa ng pananaliksik tungkol sa paksang napiling isulat.  Nararapat na magpokus sa isang paksa lamang at maghanda ng balangkas upang magkaroon ng kaisahan ang daloy ng mga ideya.<br><br>Tinatawag na mananaysay ang manunulat ng sanaysay.  Kinakailangan ng masining na pag-aaral at kasanayan ng sinumang susulat nito.  Katunayan, kabilang sa matatawag na sanaysay ang mga akdang pandalub-aral gaya ng tesis, disertasyon, pamanahong papel at panunuri, at ang mga sulating pampamahayagan gaya ng tanging lathalain.</p>
+						<hr>
+						<p class="alammoba text-justify"><b>Pagbibigay Kapangyarihan sa  Kababaihang Pilipino<br> sa Pamamagitan ng Estadistikang Kasarian</b><br><br>“Babae, pasakop kayo sa inyong asawa,” isang pahayag na hinango sa Banal na Aklat at naging panuntunan ng balana rito sa daigdig sa lahat ng panahon.<br>Lahat ng bagay ay nagbabago kaya nga walang permanente sa mundo. Ang dating kiming tagasunod lamang ay natutong tumutol laban sa karahasan sapagkat hindi na matanggap ang dinaranas na kaapihan.  Kaniyang ipinaglaban ang sariling karapatan upang makapagpasiya sa sarili.  Lakas-loob din niyang hiningi ang karapatang maisatinig ang matagal nang nahimbing na pagnanasang maging katuwang hindi lamang sa tahanan kundi maging sa paghubog ng lipunan para sa isang maunlad, matahimik at kaaya-ayang kinabukasan.<br>Sa ngayon, ang  kababaihan ay unti-unting na ring napahalagahan.  Hindi man ito maituturing na ganap dahil sa patuloy na mga karahasang pantahanan na pawang mga kababaihan ang nagiging biktima. Ang sexual harassment na madalas ay daing ng mga kababaihan ay nagdaragdag sa mga suliraning pambansa.<br>Ang babae ay katuwang sa pamumuhay.  Hindi sila katulong na tagasunod sa lahat ng mga ipinag-uutos ng ilang nag-aastang “Panginoon”.  Sila’y karamay sa suliranin at kaagapay sa mga pangyayaring nagdudulot ng pait sa bawat miyembro ng pamilya.<br>Tunay na ang mga kababaihan ay hindi lamang kasama kundi kabahagi sa pagpapaunlad ng bayan sa lahat ng panahon.<br></p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 2.3-->
+		
+		<!--ARALIN 2.4-->
+		<div class="modal" id="aralin24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Aralin 2.4: Sanaysay ng Indonesia</h4>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 2.4-->
+		
+		<!--ARALIN 2.5-->
+		<div class="modal" id="aralin25" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Aralin 2.5: Sanaysay ng Indonesia</h4>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 2.5-->
+		
+		<!--ARALIN 3.1-->
+		<div class="modal" id="aralin313" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Aralin 3.1: Sanaysay ng Indonesia</h4>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 3.1-->
+		
+		<!--ARALIN 3.2-->
+		<div class="modal" id="aralin32" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title text-center" id="myModalLabel">Aralin 3.2: Parabula ng Kanlurang Asya</h4>
+					</div>
+					<div class="modal-body">
+						<div class="content">
+						<h4 class="modal-title text-center" id="myModalLabel">Ang Talinghaga Tungkol sa May-Ari ng Ubasan”</h4>
+						<h5 class="text-center">(Mateo 20: 1-16 sa Bagong Tipan)</h5>
+							<p class="text-justify">Ang kaharian ng langit ay maitutulad sa isang taong lumabas nang maagang-maaga upang humanap ng manggagawa para sa kanyang ubasan.Nang magkasundo na sila sa upa na isang salaping pilak sa maghapon, ang
+													mga manggagawa ay pinapupunta niya sa kanyang ubasan. Lumabas siyang
+													muli nang mag- ikasiyam ng umaga at nakakita siya ng iba pang tatayu-tayo
+													lamang sa palengke. Sinabi niya sa kanila, ‘ Pumunta din kayo at magtrabaho
+													sa aking ubasan, at bibigyan ko kayo ng karampatang upa. At pumunta nga
+													sila. Lumabas na naman siya nang mag-ikalabindalawa ng tanghali at nang
+													mag-ikatlo ng hapon, at sa ganoon din ang ginawa niya. Nang mag-ikalima
+													na ng hapon, siya’y lumabas muli at nakakita pa ng mga ibang wala ring
+													ginagawa. Sinabi niya sa kanila, “ Bakit tatayu-tayo lang kayo dito sa buong
+													maghapon?” Kasi po’y walang magbigay sa amin ng trabaho,’ sagot nila.
+													Kaya’t sinabi niya, ‘ Kung gayon, pumunta kayo at magtrabaho kayo sa aking
+													ubasan.’					
+<							</p>
+							<p class="text-justify">Nang gumagabi na, sinabi ng may-ari ng ubasan sa kanyang
+													katiwala, “Tawagin mo na ang mga manggagawa at bayaran mo sila
+													magmula sa huli hanggang sa unang nagtrabaho. Ang mga nagsimula nang
+													mag-ikalima ng hapon ay tumanggap ng tig-iisang salaping pilak.” Nang
+													lumapit ang mga nauna, inakala nilang tatanggap sila nang higit doon; ngunit
+													ang bawat isa’y binayaran din ng tig-iisang salaping pilak. Nagreklamo ang
+													mga nagtrabaho sa may-ari ng ubasan. Sinabi nila, “Isang oras lamang
+													gumawa ang mga huling dumating, samantalang maghapon kaming
+													nagtrabaho at nagtiis sa nakapapasong init ng araw, bakit naman pinagparepareho
+													ninyo ang aming upa?”
+							</p>
+							<p class="text-justify">Sumagot ang may-ari ng ubasan sa isa sa kanila, “Kaibigan, hindi
+													kita dinadaya. Hindi ba’t nagkasundo tayo sa isang salaping pilak? Kunin mo
+													ang para sa iyo at umalis ka na. Ano sa iyo kung ibig kong bayaran ang
+													nahuli nang tulad ng ibinayad ko sa iyo?”
+							</p>
+							<p class="text-justify">“Wala ba akong karapatang gawin sa ari-arian ko ang aking maibigan.
+													Kayo ba’y naiinggit dahil ako’y nagmagandang-loob sa iba?”
+							</p>
+							<p class="text-justify">Ayon nga kay Hesus, “ Ang nahuhuli ay nauuna, at ang nauuna ay
+													mahuhuli.”
+							</p>
+							<p class="alammoba text-justify">Alam mo ba na...<br>ang parabula ay nagmula sa salitang Griyego na parabole na nagsasaad ng
+															dalawang bagay (na maaaring tao, hayop, lugar, pangyayari) para
+															paghambingin? Ito ay makatotohanang pangyayaring naganap noong
+															panahon ni Hesus batay sa nakasaad sa Banal na Aklat. Ang mga aral na
+															mapupulot dito ay nagsisilbing patnubay sa marangal na pamumuhay ng
+															mga tao. Ang mga mensahe ng parabula ay isinulat sa patalinghagang
+															pahayag. Ang parabula ay di lamang lumilinang ng mabuting asal na dapat
+															nating taglayin kundi binubuo rin nito ang ating moral at espirituwal na
+															pagkatao.
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 3.2-->
+		
+		<!--ARALIN 3.3-->
+		<div class="modal" id="aralin33" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title text-center" id="myModalLabel">Aralin 3.3: Elehiya ng Bhutan</h4>
+					</div>
+					<div class="modal-body">
+					<div class="content">
+					<h4 class="modal-title text-center" id="myModalLabel">Elehiya sa Kamatayan ni Kuya Bhutan</h4>
+						<h5 class="modal-title text-center"> Isinalin sa Filipino ni Pat V. Villafuerte</h5><br>
+						<p class="text-justify">Hindi napapanahon!
+												<br>Sa edad na dalawpu’t isa, isinugo ang buhay
+												<br>Ang kanyang malungkot na paglalakbay na hindi na matanaw
+												<br>Una sa dami ng aking kilala taglay ang di- mabigkas na pangarap
+												<br>Di maipakitang pagmamahal
+												<br>At kahit pagkaraan ng maraming pagsubok
+												<br>Sa gitna ng nagaganap na usok sa umaga
+												<br>Maniwala’t dili panghihina at pagbagsak!
+						</p>
+						<p class="text-justify">Ano ang naiwan!
+												<br>Mga naikuwadrong larawang guhit, poster at larawan,
+												<br>Aklat, talaarawan at iba pa.
+												<br>Wala nang dapat ipagbunyi
+												<br>Ang masaklap na pangyayari, nagwakas na
+												<br>Sa pamamagitan ng luha naglandas ang hangganan, gaya ng paggunita
+												<br>Ang maamong mukha, ang matamis na tinig, ang halakhak
+												<br>At ang ligayang di- malilimutan.
+						</p>
+						<p class="text-justify">Walang katapusang pagdarasal
+												<br>Kasama ng lungkot, luha at pighati
+												<br>Bilang paggalang sa kanyang kinahinatnan
+												<br>Mula sa maraming taon ng paghihirap
+												<br>Sa pag-aaral at paghahanap ng magpapaaral
+												<br>Mga mata’y nawalan ng luha, ang lakas ay nawala
+												<br>O’ ano ang naganap,
+												<br>Ang buhay ay saglit na nawala
+						</p>
+						<p class="text-justify">Pema, ang immortal na pangalan
+												<br>Mula sa nilisang tahanan
+												<br>Walang imahe, walang anino at walang katawan
+												<br>Ang lahat ay nagluksa, ang burol ay bumaba, ang bukid ay nadaanan
+												<br>ng unos
+												<br>Malungkot na lumisan ang tag-araw
+												<br>Kasama ang pagmamahal na inialay
+												<br>Ang isang anak ng aking ina ay hindi na makikita
+												<br>Ang masayang panahon ng pangarap.
+
+						</p>
+						<p class="alammoba text-justify">Alam mo ba…<br>
+														ang elehiya ay isang tulang liriko na naglalarawan ng pagbubulay-bulay o
+														guniguni na nagpapakita ng masidhing damdamin patungkol sa alala ng
+														isang mahal sa buhay ?<br>
+														May katangian ang elehiya. Ito’y tula ng pananangis, pag-alaala at
+														pagpaparangal sa mahal sa buhay na ang himig ay matimpi at mapagmunimuni
+														at di- masintahin.
+						</p>
+					</div>							
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 3.3-->
+		
+		<!--ARALIN 3.4-->
+		<div class="modal" id="aralin34" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title text-center	" id="myModalLabel">Aralin 3.4: Sanaysay ng Israel</h4>
+					</div>
+					<div class="modal-body">
+						<div class="content">
+						<h4 class="modal-title text-center	" id="myModalLabel">Hindi Ako Magiging Adik</h4>
+						<h4 class="modal-title text-center" id="myModalLabel">ni Manny Ledesma</h4><br>
+							<p class="text-justify">Walang may gustong pag-isipang siya'y kriminal. Walang may gustong
+													makulong. Wala ring may gustong mamatay nang bata pa o kaya'y mawalan
+													nang buong pamilya. Ngunit sa isang sarbey noong nakaraang taon,
+													lumalabas na higit na 50 bahagdan ng mga mag-aaral sa senior ay nagsimula
+													nang landasin ang mga daang patungo sa mga nabanggit. Tumikim na sila ng
+													bawal na gamot.
+							</p>
+							<p class="text-justify">Marahil, hindi nga mawawasak nang biglaan ng droga ang buhay mo
+													kung paunti-unti mo lamang tinitikman ito. (Ngunit may mga taong
+													nagkukumbinasyon ng droga sa isang maramihang gamit, at ito'y
+													nakamamatay agad.) Sa paggamit ng illegal na droga, inilalantad mo ang
+													iyong sarili sa mga panganib. Malapit ang aksidente sa mga taong nasa
+													impluwensiya nito dahil nawawala sila sa tamang wisyo at tamang
+													pagpapasiya.
+							</p>
+							<p class="text-justify">
+								Panganib din ang sakit na maaaring maidulot ng maling paggamit ng
+								mga gamot maski ito'y legal, gaya ng mga cough syrups. Mapanganib ding
+								masangkot sa iba't ibang bayolenteng kaguluhang dulot ng mga nagbebenta
+								ng bawal na gamot.	
+							</p>
+							<p class="text-justify">
+								Ang mga nabanggit ay mga kagyat na panganib na maaaring sumapit
+								sa isang nagdodroga. Mayroon ding mga panganib na pangmatagalan ang
+								epekto. Sa palagiang paggamit ay nagiging adik ka na sa gamot, at di mo
+								namamalayan ay lulong ka na. Sa pagkalulong, ang tanging nagiging pokus
+								na lamang ng iyong buhay ay pagnanais na magkaroon lamang ng
+								magandang pakiramdam.	
+							</p>
+							<p class="text-justify">
+								Nakakatakot ang mga epektong nabanggit. Ngunit mas nakakatakot ay
+								ang pagkawala ng iyong integridad o karangalan. Kapag sinabi mong, "okey
+								lang na nagdodroga ako, kasi iyon din naman ang gawa ng mga kaibigan ko
+								e," ang tunay na sinasabi mo ay "wala na akong pakialam sa kinabukasan
+								ko." Kapag nagkaganito, ay menos ka na bilang tao.
+							</p>
+							<p class="text-justify">
+								Ang posisyon ko sa isyung ito ay malinaw. 'Ayoko ng droga." Madaling
+								kapasiyahan ito. Madaling matandaan. At walang malabo rito. Pinatataas nito
+								ang pagtingin ko sa aking sarili dahil batid kong nakatanaw ako sa aking
+								kinabukasan.
+							</p>
+							<p class="text-justify">
+								Lahat ng nabanggit ko tungkol sa panganib na dulot ng droga ay
+								narinig na rin ninyo. Hindi na ito bago. Alam naman ito ng lahat. Ngunit, sa
+								kabila ng kaalamang ito, isang bagong henerasyon ng mga kabataan ang
+								gumagamit ng bawal na gamot. Nangamamatay pa ang ilan. At umaakyat pa
+								ang bilang ng mga biktima. Dati-rati mga 40.7 bahagdan lamang ng mga
+								kabataan ang sumusubok, ngayon ay lagpas pa sa 50 bahagdan. Bakit?
+							</p>
+							<p class="text-justify">
+							Sasabihin nila mahirap tanggihan ang barkada. Totoo naman. Sa
+							sulsol ng mga kaibigan, napapatikim ang isang kabataan. Mahirap humindi sa
+							kanila. Mahirap.
+							</p>
+							<p class="text-justify">
+								Sasabihin nila mahirap tanggihan ang barkada. Totoo naman. Sa
+								sulsol ng mga kaibigan, napapatikim ang isang kabataan. Mahirap humindi sa
+								kanila. Mahirap matawag na "iba". Mahirap ma-out sa grupo., Mahirap
+								makantiyawan ng ganito't ganoon.
+							</p>
+							<p class="text-justify">
+								Ngunit isipin natin. Ang kantiyaw ng mga kaibigan ay hindi magandang
+								dahilan upang magdroga. Kinakaibigan tayo ng ating mga kaibigan dahil sa
+								ating taglay na ugali at pagkatao, hindi dahil sa dapat makita rin sa atin kung
+								ano ang ginagawa nila. Hindi tayo salamin ninuman. At ang kaibigan,
+								sinasabi nang tuwiran kung ano ang maganda o hindi maganda sa atin. Hindi
+								natin kailangan maging salamin sa kanila at sila sa atin.
+							</p>
+							<p class="text-justify">
+								Kapag nahaharap sa pagpapasiya o pamimili, may mga kabataang
+								magsasabing, "bayaan mo 'yang bukas, matagal pa 'yon." Malaking kamalian
+								ito. Kahit sabihin mong hindi darating ang kinabukasan, darating at darating
+								iyan. At kapag nariyan na ang bukas, kung masaya ka o hindi ay depende sa
+								kung ano ang ginawa mo ngayon.
+							</p>
+							<p class="text-justify">
+								May mga magsasabi pang, "magiging adik sila, hindi ako!". Kahit na
+								ikaw pa ang pinakaguwapo, malinis at alertong tao sa ngayon, maaaring ikaw
+								ay maging palaboy sa bandang huli kung magpapabitag ka sa bawal na
+								gamot. Isipin na lamang ninyo. LAHAT NG TAONG NASIRA ANG BUHAY SA
+								DROGA AY NAG-ISIP NA HINDI MASISIRA NG DROGA ANG BUHAY NIYA.
+								Palagi nilang sinasabi, 'DI AKO SIRA PARA SIRAIN ANG BUHAY KO." Iyan
+								sa simula. Sinasabi nila iyan sa una ngunit hindi sila naprotektahan ng mga
+								pahayag nilang ito nang simulan nila ang paggamit.
+							</p>
+							<p class="text-justify">
+								Sa pagtanda ko at kapag ako'y nagkapamilya, ibig ko ang
+								pinakamainam para sa kanila. Hindi ko nanaisin na sila'y mapahamak.
+							</p>
+							<p class="text-justify">
+								Sisikapin at gagawin kong modelo ang aking sarili. Kung isang araw at
+								tatanugnin nila ako kung sumubok ba ako ng droga noong aking kabataan,
+								ibig kong makasagot nang may pagmamalaki - HINDI.
+							</p>
+							<p class="text-justify">
+								Sa bawat taon libo-libong kabataan ang pumipiling gumamit ng illegal
+								na droga. Hindi ko na daragdagan pa ang bilang na iyan. Magiging malayo
+								ako sa droga. Hindi ako magiging adik!!.
+							</p>
+							<p class="text-justify">
+								Pauunlarin natin ang dati mo ng alam tungkol sa sanaysay sa
+								pamamagitan ng mga babasahin at kawili-wiling gawain na natitiyak kong
+								kalulugdan mo.
+							</p><hr>
+						<h5 class="text-center">Usok at Salamin: Ang Tagapaglingkod at ang Pinaglilingkuran</h5>
+						<h5 class="text-center">Isinulat ni Gordon Fillman</h5>
+						<h5 class="text-center">Isinalin ni Pat V. Villafuerte</h5>
+						<p class="text-justify">
+								Ilang taon na ang lumipas, banal na araw noon sa Herusalem,
+								nahirapan ako sa pinakamagulo kong karanasan sa mga kasapi ng mga
+								piling Israeli Ashkenazic (may karanasang Europeo).
+						</p>
+						<p class="text-justify">
+								Naninirahan ako noon sa isang maganda, luma at mabuhay na lugar
+								kasama ang mga kapitbahay kong Kurdish, Persian, Iraqi, Amerikano at
+								Ashkenazic Israeli Jews. Isang araw, isang kilala sa akademya at ang
+								mapayapang paggalaw ang tinigilan ng kaniyang sasakyan habang ako’y
+								pauwi sa aking bahay mula sa kabayanan, at ako’y kaniyang inalok ng sakay.
+								Habang ako’y kaniyang ipinagmamaneho sa aming magandang lansangan,
+								inilarawan ko ang kapalaran sa pagkakaroon ng kapitbahay mula sa iba’t
+								ibang lugar. “Ugh”, bulalas niya nang kami ay dumating sa mga Persians,
+								“Mga Persian: sila ang pinakamasama.” Ang malamig kong pakli sa kaniya ay
+								“Anong kaimpyernuhan ang pinagsasabi mo?” “Ay, naku,” dugtong niya,
+								“Lahat ay nakakaalam na sila ang pinakamasama.”
+						</p>
+						<p class="text-justify">
+								Hindi pa ako nakikipagbalitaan sa mga kakilalang ito ilang taon na ang
+								nakakalipas. Inilarawan ko sa aking isipan kung gaano siya naguluhan sa
+								kinalabasan ng botohan ng mga Israelitas. Ipinagtataka ko kung mayroon
+								siyang palatandaan tungkol sa gawain na siya at ang kanilang mga
+								kasamang Ashkenoisie ay may bahagi sa pagbubunyag nito.
+						</p>
+						<p class="text-justify">
+								Matapos ang botohan, isang malaking bilang ng tagapanood na Afro-
+								Asian Jews ang masiglang sumagot kay Netanyahu. Sobrang galit ang mga
+								nakikinig sa kaniya kasama si Perez, na si Netanyahu ay pamamahalaan sila,
+								upang ang kanilang kawalang-galang ay mawala.
+						</p>
+						<p class="text-justify">
+								Ang hinanakit kay Perez ay nagmungkahi ng hinanakit sa klase
+								sapagkat siya ay inaakalang kumakatawan sa mga sekular, cosmopolitan,
+								mapayapang mamamayan sa mundo na nangangahulugan na magtatanggol
+								ng proseso ng kapayapaan sa Israel.
+						</p>
+						<p class="text-justify">
+								Ang hinanakit kay Perez ay nagmungkahi ng hinanakit sa klase
+								sapagkat siya ay inaakalang kumakatawan sa mga sekular, cosmopolitan,
+								mapayapang mamamayan sa mundo na nangangahulugan na magtatanggol
+								ng proseso ng kapayapaan sa Israel.
+						</p>
+						<p class="text-justify">
+								Sa mga nangunang tagapag-isip ng mga Ionist ay hindi man lang
+								umasa na ang mga Europeong Hudyo ay magkukulang ng bilang laban sa
+								mga Aprikano at Asyano, ni hindi sila gumawa na tila pang-unawa, na sila ay
+								magsimulang magkulang ng bilang laban sa mga Afro-Asians, na ang
+								edukasyon, klase at paksa tungkol sa relihiyon ay maaaring mag-udyok ng
+								relasyong magkalaban na ang salitang maganda lamang sa pandinig at mga
+								kamalian ay mabawasan.
+						</p>
+						<p class="text-justify">
+								Ang Ashkenazim ay kinakatawan ng mga nakapag-aral na Israelitas.
+								Mayroon … ako’y nakatitiyak, walang sadyang patakaran ng pagtatanggal,
+								ngunit tulad ng karamihang paaralan sa Israel, ang edukasyon ay
+								napangingibabawan ng mga matataas at panggitnang uri ng Ashkenazim.
+								May lalabas na paboritismo sa paghahanap ng mabuting paaralan at
+								pagtatanggap ng mga tao sa pamantasan at programang propesyonal. Ito’y
+								hindi pagsasabi na ang tagumpay ay hindi lubos na mahalaga sa
+								pagpapasiyang ito, ngunit sinong maayos ng mga trabaho, pook, paaralang
+								institusyon ang nagbibigay ng pondo sa iba’t ibang kahanga-hangang
+								tagumpay? Higit sa lahat ang mga Ashkenazim.
+						</p>
+						<p class="text-justify">
+								Ang Afro-Asian ( a.k.a Sephardic, Oriental, Eastern, at Mizrachi ) Jews
+									ay sa pinakabahagi, kaakit-akit na bourgeoisie at manggagawa, uri ng tao na
+									nagbibigay ng pangangailangan ng kanilang grupo at nagsisilbi rin upang ang
+									buhay ay maging komportable para sa mga nakatataas at nasa gitnang klase
+									ng mamamayan. Na may kaunti at mahalagang pagtutol, partikular na sa
+									pagtatayo ng mga industriya, Ashkenazic ang pinaka-bourgeoisie at ang
+									tagapaglingkod. Tulad sa lipunan, ang ikinagagalit ng mga tagapaglingkod
+									tungo sa pinagsisilbihan ay pinapasakitan ang mga nahuhuli at sila’y
+									nawawalan o nasisiraan ng loob. Ito’y tulad ng masasabing, kung ako’y
+									komportable, bakit ang mga taong nagsisilbi sa akin ay hindi bagay hangaan
+									at pasalamatan? Ang pinaglilingkuran sa U.S. – Jewish at walang ibang kilos.
+						</p>
+							<p class="text-justify">
+								Sa Israel, ang pinaglilingkuran ay mahilig ding maging mataas na
+								konsumer. Ito’y napapalagay na ang mataas na consumer ay gulat sapagkat
+								sila’y kadalasang nasasakop at maaaring kahit galitin, ng mga katamtaman at
+								mababang konsumer. Bilang pagbaling ng mga Israelitas sa mga estilo ng
+								U.S. at ang sukatan ng paggawa (ang orihinal na bilihan sa Israel, naitayo
+								ilan taon pa lang ang nakakalipas, tila dumanas ng cell division countless
+								time, bagay na tunay na tumatakip sa kaayusan ng Israel), ang matataas na
+								konsumer ay ipinagmamalaki ang kanilang kayamanan sa mga katamtaman
+								at mababang antas ng uri ng sistema na ang agwat ng mayaman sa mahirap
+								ay mabilis na gumagawa sa U.S.
+						</p>
+						<p class="text-justify">
+							Ang mga pinaglilingkuran ay mahilig ding maging sekular at
+							magpasakit sa harap ng mga relihiyosong mga tagasubaybay. Kahit na
+							karamihan sa mga Afro-Asian Jews ay hindi gaanong relihiyoso, ang inuuna
+							nilang kultura ay hindi sila binibigyang konsepto, gawing mag-isa ang
+							pagsasanay ng serkularismo. Ang Hudismo ay hindi relihiyon sa kanila, ni
+							ngayon, bagkus, ito’y bahagi ng kanilang buong buhay.
+						</p>
+						<p class="text-justify">
+							Noong si Paula Ben-Gurion, asawa ng Unang Kataas-taasang Ministro
+							ng Israel silang kapwa mabagsik na sekular – ay tinanong kung ano ang
+							pakiramdam ng bumili ng kosher meat, ito’y hindi nakagugulo sa kaniya.
+							Simple niyang gawin sa sandaling umuwi siya. Sa magandang sagot, ngunit
+							nakagugulo sa mga Jews mula Aprika at Asya na iniisip lamang ito bilang
+							kalapastanganan. Alinsunod sa pagsusuot ng yarmulke sa Wailing Wall, si
+							Netanyahu tulad ni Begin, bago siya nagawa niyang magdala ng pagkakaisa
+							kasama ng mga may pagkerelihiyosong mga tagapaglingkod.
+						</p>
+						<p class="text-justify">
+							Posibleng ang malaking pakinabang ng mga botanteng Jews ay
+							nakapagbigay kay Netanyuha (55% ng botanteng Israeli Jews-ed.) ay hindi
+							malaking pagtanggi sa proseso ng kapayapaan o pababain ito. Sa halip ang
+							may kalakihang seksyon ng populasyon ng mga Israeli Jewish ay
+							pinapantayan ang mga tumatangkilik sa kanila, ini-isteryotayp sila at umaasa
+							sa kanila upang matanggap ang kanilang gagampanan bilang tagapaglingkod
+							sa mga may tanging karapatan.
+						</p>
+						<p class="text-justify">
+							Ang galit sa uri ay madalas na nagpapagalaw sa politika sa mga
+							bansang class ridden. Ang pagsubok sa mga tao na naghahangad na makita
+							ang kalayaan at ang tunay na demokrasya sa Israel, sa U.S., Russia at saan
+							man ay ang kung paano dalhin ang mapayapang mga uri para intindihin ang
+							mga galit sa kanila at ang kanilang aktibong bahagi sa paninindigan nito. At
+							saka, ang pinakamalaking pagsubok sa lahat, ay kung kondesasyon, at
+							dominasyon sa sosyal na pagbubuo mula ng pangalan at interes ng bawat
+							isa. Inaasam ko ang mga araw ng mga guro / aktibista ay magsasabing.
+							“Mataas at katamtamang uri ng tao, maipagmataas at mapag-uri, iyan ang
+							pinakamasama”.
+						</p>
+						<p class="alammoba text-justify">
+						Alam mo ba na …<br>
+						ang mga elemento ng sanaysay ay:<br>
+						1. Paksa- pinag-uugatan ng anumang uri ng diskurso. Karaniwan itong
+						sumasagot sa tanong na "tungkol saan ang akda?" Ito ang pinakapayak na
+						antas ng mga pinag-uusapan. Ito rin ang sentro ng ideya ng buong akda.
+						Kinokontrol ng paksa ang manunulat kung hanggang saaan lamang ang
+						hangganan ng kaniyang isusulat.<br>
+						2. Tono- ang saloobin ng may-akda sa paksa. Sa pamamagitan ng mga
+						espesipikong wika na ginamit ng may-akda, mababatid kung sino ang target na
+						mambabasa. Maaaring ang tono o himig ay natutuwa, nasisiyahan, nagagalit,
+						sarkastiko, naiinis, nahihiya, at iba pa.<br>
+						3. Kaisipan- ang nais iparating ng manunulat sa mga mambabasa, dito
+						umiinog ang maliliit na himaymay ng akda. Inilalahad ang kaisipan ng isang
+						akda sa isang buong pangungusap. Ang kaisipan hindi tuwirang binabanggit
+						kundi ginagamitan ng pahi-watig ng may-akda para mailahad ito.
+						</p><hr>
+						<h5 class="text-center">Tilamsik ng Sining …. Kapayapaan</h5>
+						<h5 class="text-center">(bahagi lamang)</h5>
+						<h5 class="text-center">ni Magdalena O. Jocson</h5>
+						<p class="text-justify">
+						Pilipinas, mapalad ka sa muling pagsilang. Ang panahon ng
+						kababalaghan ay hindi pa lumilipas. Hindi ang kababalaghan ng
+						panandaliang lunas kundi ang kababalaghan ng masidhing pagbabagongbihis
+						na dumatal sa puso ng bawat Pilipino. Ang lahing kayumanggi ay may
+						bago nang pagkakilala sa sarili.
+						</p>
+						<p class="text-justify">
+						Sa bawat pag-aasam natin ng kapayapaan, maraming nagsisilbing
+						daan upang ganap na magkaroon ito ng katotohanan.<br>
+						Nariyan ang armas na pakikibaka, tilamsik ng panulat, maramdamin at
+						makabayang awitin, matatalim na pananalita na lubhang parang lason at
+						apoy na kumakalat sa buong sambayanan. Hindi pahuhuli ang maindayog at
+						makabuluhang pagsasayaw na sa bawat kampay at tikwas ng mga daliri sa
+						kamay at galaw ng buong katawan ay pilit na ipinararating ang diwang nais
+						ipahiwatig. Isama pa natin ang iba't ibang guhit sa kanbas, mga lilok mula sa
+						kahoy, mga maniking pilit na binubuhay sa pamamagitan ng mga hugis sa
+						metal at iba pa. Lahat ng binanggit ay nagsilbing tulay upang ang
+						kapayapaan mula sa magigiting nating mga bayani sa panahon ng mga
+						Raha, sa panahon ng mga propagandista at rebolusyunaryo at higit sa lahat
+						sa panahon ng SAMBAYANANG PILIPINO, hindi abot-tanaw lamang ang
+						pagkakamit ng kalayaan kundi isang nagpupumiglas na katotohanan na
+						mayayakap na natin siya.
+						</p>
+						<p class="text-justify">
+						Dalawang makasaysayang pangyayari ang nagpatunay na ang mga
+						Pilipino ay mga tao sa mundo na gumamit ng mga mapayapang paraan hindi
+						ang paggamit ng tabak o baril ang magiging kasagutan upang makamit ang
+						tinatawag na kalayaan. Makapangyarihang aspekto ang sining na
+						magpahatid ng adhikaing makamtan ang kapayapaan sa bagong siglo.<br>
+						Ayon nga kay Lord Macaulay, "Ang sining ay isang panggagagad."
+						May ibig na tuklasin. At ang ibig tuklasin nito ay ang bumabalot na GANDA sa
+						isang likha ng tao, na maghatid ng damdamin, kaalaman at kagandahangasal
+						ng isang tao. Papaano ba nakamit ng ating mga ninuno ang kapayapaan
+						sa bawat balangay na sinasakupan nila. Ito ay sa tulong ng sining. Ang
+						Umalohokan ang buong husay na naghahatid ng mga mensaheng kailangan
+						ng bawat mamamayang Pilipino. Siya ang isa sa nagbabadya ng
+						pagkakaroon ng panganib ng pagkawala ng kapayapaan. Maririnig din ang
+						tunog ng tambuli na isa sa mga etnikong instrumento ng ating bansa upang
+						bigyang babala ang mga mamamayan sa haharaping panganib. May
+						kasabihan ngang ang mga Pilipino ay inugoy sa duyan ng mga berso at ito ay
+						napatunayan sa pamamagitan ng mga awiting-bayan.<br>
+						Sa pag-aasam pa rin ng kapayapaan, ginamit ni Rizal at ng iba pang
+						propagandista tulad nina Marcelo H. del Pilar, Graciano Lopez Jaena ang
+						tilamsik ng kanilang panulat at tapang ng dila upang ipahayag ang tunay na
+						nararamdaman ng mga Pilipino sa pagtatamo ng kapayapaan na pilit na
+						sinasagka ng mga Insulares at Peninsulares.
+						</p>
+						<p class="text-justify">
+						Taliwas naman ang paniniwala ni Bonifacio na kailangan ang isang
+						armadong pakikibaka hindi lamang ang bagsik ng panulat upang makamit
+						ang tawag na kapayapaan. Kaya't sa pag-aalimpuyo ng kaniyang damdamin,
+						masining niyang isinulat at ipinarinig ang tula niya tungkol sa "Pag-ibig sa
+						Tinubuang Lupa" na gumising sa natutulog na damdamin ng mga Pilipino
+						noong panahong iyon.
+						</p>
+						<p class="text-justify">
+						Tila walang pagod ang sining na magbigkis sa pagtatamo ng
+						kapayapaan. Sa bawat tilamsik ng kanyang layunin na maisagawa ang isang
+						makabuluhang bagay, pilit na para siyang ibon na iigkas at hahawarin ang
+						lahat ng balakid sa kanyang landas tungo sa KAPAYAPAAN.<br>
+						Gayunpaman, taong 1986, ng ang mga mamamayang Pilipino ay
+						buong giting na nakipaglaban sa diktador. Napatalsik ang diktador at
+						nailuklok ang isang babae na siyang naging daan upang ang inaasam na
+						pagbabago sa ganap na kapayapaan ay makamit na.
+						</p>
+						<p class="text-justify">
+						Narinig natin ang maramdaming panawagan ng mga taong may
+						malaking malasakit upang iligtas ang bansa sa kumunoy ng pagkakadapa.
+						Mahuhusay na paraan ng pagsasalita ang maririnig sa radyo, napapanood sa
+						telebisyon, masasaksihan ng aktwal sa itinayong tanghalan sa
+						makasaysayang EDSA ang tamis ng bawat pananalita ng buong
+						SAMBAYANAN. Mga awit na punung-puno ng damdamin para sa bayan.
+						Ginampanan ito ng mga alagad sa sining mula artista sa pelikula, mga mangaawit,
+						ordinaryong mamamayan, elitista, masa, bata, matanda na buong
+						pagpupugay na ibinigay ang kakayahan nila sa pagnanasa ng pagkakaroon
+						ng kapayapaan. Nagtanghal din ng ilang madudulang bahagi ng kasaysayan
+						na pilit nating binabaka ngunit nagpapatunay naman ng ating kagitingan.
+						</p>
+						<p class= "text-justify">
+						Mula sa dahon ng People Power I, umusbong muli ang People Power
+						II. Muli, ang bida ay ang SAMBAYANANG PILIPINO. Sa pamamagitan ng
+						kanilang malikhaing pagtatanghal ng iba't ibang uri ng sining, muling nagtali
+						ang pusod ng bawat mamamayan na muling nangulila sa tawag ng
+						KAPAYAPAAN. Nanguna ang ilan nating mga artista sa pelikula, artista sa
+						pulitika, artista ng tahanan, artista ng paaralan, artista ng kalsada, artista ng
+						simbahan at artista ng SAMBAYANAN na hadlangan sa ikalawang
+						pagkakataon ang sinumang pilit na pinapatay ang kalayaan at kapayapaan
+						ng bansa. Nagkaroon ng kaganapan ang Vox populi, Vox Dei. Ang tinig ng
+						Diyos ay ang tinig ng bayan.
+						</p>
+						<p class= "text-justify">
+						Huwag tayong malungkot at mangamba, kapayapaan ay nakangiti sa
+						Perlas ng Dagat Silangan. At sa bawat tilamsik ng sining, sandata itong
+						nagbabantay upang ang kapayapaan sa kasalukuyan at sa darating pang
+						mga taon ay hindi na maaagaw at pagsasamantalahan ng mga makasariling
+						mamamayan nito.
+						</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 3.4-->
+		
+		<!--ARALIN 3.5-->
+		<div class="modal" id="aralin35" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Aralin 3.5: Nobela ng Saudi Arabia</h4>
+					</div>
+					<div class="modal-body">
+						<div class="content">
+								<h4 class="modal-title text-center" id="myModalLabel">Isang Libo’t Isang Gabi (Thousand and One Nights)</h4>
+						<h4 class="text-center" id="myModalLabel">Nobela- Saudi Arabia</h4>
+						<h4 class="text-center" id="myModalLabel">Isinalin sa Filipino ni:Julieta U. Rivera</h4><br>
+							<p class="text-justify">
+								Isang babaing mangangalakal ang nakipag-isang dibdib sa
+								isang lalaking mahilig maglakbay sa buong mundo. Malimit siyang
+								iniiwanan nang matagal ng kaniyang asawa. Dahil sa katagalan nang
+								di pag-uwi ng lalaki, nakadama siya ng kalungkutan at pagkabagot.
+								Umibig siya sa isang lalaking mas bata sa kanya.<br>
+								Isang araw, isang lalaki ang nagsampa ng reklamo laban sa lalaking
+								kanyang inibig at ipinakulong siya. Nang malaman ng babae ang
+								tungkol dito, agad siyang nagbihis nang pinakamaganda niyang damit
+								at pumunta sa hepe ng pulisya. Bumati siya at sinabi:”Kapatid ko ang
+								lalaking ipinakulong ninyo, inaway nang hindi namin nakikilala, subalit
+								nagsinungaling ang lalaking tumestigo laban sa kanya. Nagkakamali
+								kayo sa pagkabilanggo sa kaniya, wala na akong kasama at wala nang
+								susuporta sa akin, kaya maawa na kayo, pakawalan n’yo siya.”<br>
+								Nang marinig ng pulis ang kaniyang pagmamakaawa, at makita
+								ang kaniyang ayos, umibig ito sa kaniya. Sinabi nito “pumunta ka sa
+								aking tahanan hanggang sa mailabas ko ang iyong kapatid; tutulungan
+								ko siya at pagkatapos ay ilayo mo na siya.”<br>
+								“Diyos ko po”, sagot niya “Hindi ako pumupunta sa bahay ng
+								isang lalaking estranghero sa akin” sabi ng babae. “Kung ganoon,
+								hindi ko siya pakakawalan maliban kung sasama ka sa akin at
+								payagan mo akong gawin ang gusto kong gawin”, sabi ng pulis.
+								Sumagot siya, ”ikaw na lamang ang pumunta sa aking tahanan kahit
+								maghapon at magdamag kung talagang kinakailangan.” sabi ng
+								babae.<br>
+								“Saan ang iyong tahanan?”, tanong nito. At itinuro ng babae ang
+								bahay at nagbigay ng oras para sa pagpunta.<br>
+
+								Humingi rin siya ng tulong sa Cadi.” Diyos ko! Cadi. “Oo,”sagot
+								nito at siya’y nagpatuloy. “Pag-aralan mo ang kaso ko at
+								gagantimpalaan ka ng Diyos.” Sinabi nito,” Sino ang may kagagawan
+								nito?” Sumagot siya. “Mayroon akong kapatid, kaisa-isa kong kapatid.
+								Naparito ako dahil sa kanya, sapagkat ikinulong siya ng pulis at
+								pinaratangang isang kriminal. Nagsinungaling laban sa kaniya at
+								sinabing ito’y masamang tao, kaya nakikiusap ako, tulungan n’yo
+								siya.” Nang sulyapan siya ng Cadi, umibig din ito sa kaniya.”Pumunta
+								ka sa aking tahanan para makasama ko at sasabihin ko sa pulis na
+								palayain ang iyong kapatid. Kapag nalaman ko kung magkano ang
+								kabayaran para sa kaniyang kalayaan, babayaran ko ng sarili kong
+								pera upang ako’y mapaligaya mo, sapagkat napakalambing ng iyong
+								tinig.” At Sinabi niya. “Kung magiging mabait ka sa akin” sumagot ang
+								Cadi.” Kung hindi ka papayag, makaaalis ka na at huwag mo akong
+								sisisihin.” Muli siyang sumagot. “Kung talagang iyan ang gusto mo,
+								mas maganda at pribado sa aking tahanan kaysa sa inyo na maraming
+								katulong ang makaiistorbo sa atin. Saka isa pa, hindi naman ako
+								masamang babae, subalit kailangan ko lang itong gawin.” “Saan ang
+								iyong tahanan?,” tanong ng Cadi. Sumagot siya: “Sa ganitong lugar.”
+								Sinabi niya ang takdang araw at oras ng kaniyang pagpunta.
+								Pumunta rin siya at humingi ng tulong sa Vizier na palayain ang
+								kaniyang kapatid sapagkat lubha niya itong kailangan. Subalit may
+								binigay rin itong kondisyon. “Payagan mo akong gawin ang gusto kong
+								gawin sa iyo at palalayain ko ang iyong kapatid.” Sumagot siya.” Kung
+								talagang gusto mo, doon na lamang sa aming tahanan, tayo lang
+								doon, hindi naman kalayuan ang aking bahay. Para maayos ko naman
+								ang aking sarili.” “Saan ang bahay mo?” tanong nito.“ Sa ganitong
+								lugar.” At nagtakda ang babae ng oras at araw na gaya ng dalawang
+								nauna.<br>
+								Mula rito ay pumunta siya sa hari. Isinalaysay rin niya ang
+								pangyayari at humingi rin siya ng tulong upang mapakawalan ang
+								kanyang sinasabing kapatid.” Sino ang nagpakulong sa kaniya?”
+								tanong nito. “ Ang hepe ng pulisya.” Ang kaniyang sagot. Nang marinig
+								ng hari ang nakakahabag na salaysay sa pagkakakulong ng kapatid,
+								bumukal sa puso nito ang awa at pagmamahal. Sinabi nito na sumama
+								sa kaniyang tinutuluyan at upang matulungan siyang palayain ang
+								kapatid. Subalit kaniyang sinabi, “ O mahal na hari, madali lang para
+
+								sa iyo ang lahat. Wala akong magagawa kapag iyong ginusto. Subalit
+								malaking karangalan kung pupunta ka sa aking tahanan. Siya’y
+								pumayag. Sinabi ng babae ang lugar at oras ng kanilang pagtatagpo
+								na gaya ng oras sa sinabi niya sa unang tatlong lalaki.<br>
+								Umalis siya pagkatapos at humanap ng isang karpintero at
+								sinabi nito: “Ipaggawa mo ako ng isang cabinet na may apat na
+								compartment, magkakapatong, may pinto ang bawat isa at
+								masasaraduhan. Malaman ko lang kung magkano at babayaran ko.”
+								Sumagot ang karpintero, “ Apat na dinaryo ang halaga nito, subalit
+								hindi ko na ito pababayaran kung papayagan mo ako sa aking
+								kahilingan.” “Kung kinakailangan”, sagot ng babae “ papayag ako
+								subalit gawin mo nang lima ang compartment ng cabinet na
+								ipinagagawa ko sa iyo.” At sinabi nito kung kailan ihahatid ang cabinet
+								sa kaniyang tahanan. Sinabi ng karpintero,” “Mabuti, sige maupo ka na
+								lamang at gagawin ko ngayon din ang iyong cabinet.” Pagkatapos na
+								magawa, inutusan niya ang karpintero na dalahin sa bahay ang
+								cabinet. Ipinuwesto niya ito sa sala. Pagkatapos, kumuha ng apat na
+								damit at may iba-ibang kulay. Naghanda na rin siya ng makakain,
+								karne, inumin, prutas, mga bulaklak at pabango.<br>
+								Dumating ang araw na ibinigay niya sa lahat ng hiningian niya
+								ng tulong. Isinuot niya ang kaniyang pinakamahal na damit, naglagay
+								ng mga adorno sa sarili, nagpabango at nilagyan ng mamahaling
+								karpet at naghintay sa kahit sino ang maunang dumating.<br>
+								Si Cadi ang unang dumating. Nang makita niya ito, tumayo siya
+								at humalik sa paanan ni Cadi. Hawak ang kamay, inaya niya itong
+								maupo sa karpet. Nang sisimulan na nito ang kaniyang pakay, sinabi
+								ng babae,” Alisin mo muna ang iyong kasuotan at ang iyong turban.
+								Isuot mo ang dilaw na roba at bonnet na ito habang inihahanda ko ang
+								makakain at maiinom natin, pagkatapos, pwede mo nang gawin ang
+								nais mo.” Habang isinusuot niya ang roba at bonnet, may kumatok sa
+								pinto.” Sino ang kumakatok” tanong niya. “ “Ang aking asawa”, ang
+								kanyang tugon. “ Ano ang aking gagawin, saan ako pupunta?” tanong
+								ni Cadi. “ Huwag kang matakot, sabi ng babae, itatago kita sa cabinet
+								na ito. “ Gawin mo kung ano ang dapat “ sagot ni Cadi. Kaya’t ipinasok
+								niya ito sa pinakaibabang compartment at isinara ang pinto.<br>
+
+								Pumunta siya sa pintuan at tiningnan kung sino ang kumakatok.
+								Ang hepe ng pulisya. Pinatuloy niya ito agad. “ Ariin mong iyo ang
+								lugar na ito at ako’y iyong alipin. Buong araw sa akin ka kaya’t alisin
+								mo na ang iyong suot at ipalit mo ang pulang roba na ito.” Subalit bago
+								nito magawa ang kanyang pakay,sinabi nito, “ Ako’y iyong-iyo at
+								walang iistorbo sa atin, kung mabait kang talaga, gumawa ka muna ng
+								kautusan na nagpapalaya sa aking kapatid para naman mapanatag
+								ang aking kalooban.” “Masusunod”, sabi nito. At gumawa na nga ng
+								kautusan ang pulis na nakasaad ang agarang pagpapalaya sa
+								kanyang kapatid. Nang sisimulan na niya ang kaniyang pakay, biglang
+								may kumatok sa pinto. “ Sino iyon?” tanong ng pulis. “Ang aking
+								asawa” sagot ng babae. “ Ano ang gagawin ko?” Ang muli niyang
+								tanong.” Pumasok ka sa cabinet na ito, pag-alis niya saka ka
+								lumabas.” At ipinasok niya ito sa pangalawang compartment sa ilalim
+								at sinarhan ang pinto.<br>
+								Pumunta uli ang babae sa pintuan upang muling tingnan kung
+									sino ang kumakatok, si Vizier. Sinabihan din niya ito na tanggalin ang
+									mabigat na damit at turban at magsuot ng mas magaan. Isinuot niya
+									ang bughaw na damit at ang kaniyang pulang bonnet at pati na rin ang
+									kaniyang robang gagamitin upang maginhawa sa pagtulog. Nagsimula
+									na ang pakay ni Vizier, nang biglang may kumatok. Tinanong din niya
+									kung sino ito at sinabi ng babae na ito ay ang kaniyang asawa. Nalito
+									ang lalaki at nagtanong kung ano ang kaniyang dapat gawin kaya’t
+									sinabi sa kaniyang magtago sa loob ng cabinet sa ikatlong
+									compartment.Tulad ng nauna, isinara din niya ang pinto ng cabinet.<br>
+									Pumunta siya sa pinto at pinagbuksan ang kumakatok. Ito ay
+									ang hari. Pagkatapos na imungkahi nito ang pagpapalit ng damit
+									,mayamaya pa nagkakapalagayang loob na sila. Sinimulang gawin ng
+									hari ang kaniyang ninanais, nakiusap ang babae na tumigil muna at
+									nangakong paliligayahin niya ito sa silid pagkatapos ng kaniyang
+									sasabihin.” Kahit ano ang iyong kahilingan” sagot niya. “ “Alisin mo ang
+									iyong roba at turban”. Mahal ang kaniyang damit. Nagkakahalaga ito
+									ng isang libong dinaryo. Nang alisin niya ito, ipinalit ang roba na
+									nagkakahalaga ng sampung dinaryo lamang. Ang lahat ng kanilang
+									pinag-uusapan ay naririnig lamang ng tatlong lalaking nakatago sa
+									tatlong compartment ng cabinet subalit hindi sila makapagsalita. Nang
+									simulan ng hari ang kaniyang nais sa babae, sinabi niya,” Mayroon
+									sana akong ipakikiusap sa iyo.” Habang sila’y nag-uusap, may
+									kumatok muli sa pintuan.Tinanong nito kung sino ang kumakatok. Muli
+									niyang sinabi na ito ang kaniyang asawa. Sinabi nito na paalisin ang
+									asawa o siya, ang hari, ang magpapaalis dito. Subalit sinabi niya na
+									maging matiyaga. Kaya’t pinapasok niya ito sa pang- apat na
+									compartment ng cabinet. At isinara ang pinto.<br>
+									Lumabas siya upang patuluyin ang kumakatok. Ito ang
+									karpintero. Tinanong ng babae.” Anong klaseng cabinet ba itong
+									ginawa mo?” “ Bakit, anong masama sa ginawa ko?” Sumagot siya, “
+									Masyadong makipot ang ibabaw na compartment.” “Hindi.” “Anong
+									hindi?” Subukin mo ngang pumasok at hindi ka kakasya riyan.”
+									Pumasok nga ang karpintero sa ikalimang compartment. At
+									sinaraduhan ito ng babae.<br>
+									Agad niyang dinala ang sulat sa hepe ng pulisya. Agad namang
+									pinalaya ang kaniyang mangingibig. Hindi nila malaman ang kanilang
+									gagawin. Napagpasyahan nilang magpakalayu-layo at lumipat ng
+									syudad sapagkat hindi na sila makapananatili sa lugar na
+									iyon.Gumayak sila at tumakas sakay ng isang kamelyo.<br>
+									Samantala, nanatili ang limang lalaking nakakulong sa
+									compartment ng cabinet. Sa loob ng tatlong araw na walang pagkain
+									at walang tubig. Hindi nakatiis ang karpintero, kinatok niya ang
+									compartment ng hari, kinatok naman ng hari ang compartment ni
+									Vizier, kinatok naman ni Vizier ang compartment ng pulis at ng pulis sa
+									compartment ni Cadi. Sumigaw ang Cadi na nagsasabing bakit ba sila
+									nagsasakitan gayong lahat naman sila ay nakakulong. Nagkarinigan
+									silang lima. Napagtanto nila na sila ay napagkaisahan ng babae. At
+									habang sila-sila ay nagkukuwentuhan ng mga pangyayari, nagtataka
+									ang kanilang mga kapitbahay sapagkat may ingay ay wala naman
+									silang makitang tao sa loob. Kaya’t napagpasyahan nilang wasakin
+									ang pinto at pasukin ang bahay.<br>
+
+									Nakita nila ang cabinet na yari sa kahoy.Nakarinig sila ng
+									nagsasalita kaya’t tinanong nila kung may genie sa loob nito. Sinabi ng
+									isa na sunugin ang cabinet. Sumigaw ang Cadi na huwag silang
+									sunugin. Nagkunwari siyang genie, nagsalita ng mensahe galing sa
+									Qur’an. Pinalapit nito ang mga tao sa cabinet.<br>
+									Lumapit sila sa cabinet at nagsimulang magsalaysay ang mga
+									nakakulong. Tinanong nila kung sinong may kagagawan ng lahat ng
+									ito. Ikinuwento nila lahat-lahat nang nangyari. Nang makita nila ang
+									kanilang mga hitsura at pananamit, nagtawanan na lamang sila.
+									Lumabas sila ng bahay na tinatakpan ang kanilang mga mukha upang
+									di makilala at makaiwas sa tsismis ng mga kapitbahay.
+							</p><hr>
+							<h5>Mga Patak ng Luha<br>
+								Halaw sa Taare Zameen Par (“Every Child is Special”)<br>
+								Bollywood Film_ India<br>
+								Halaw at Isinulat sa Filipino ni Julieta U. Rivera<br></h5>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END OF ARALIN 3.5-->
+	</body>
+</html>

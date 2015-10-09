@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Panitikang Asyano</title>
+		<link href="images/logo.png" rel="icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			body{
+				background: url(images/bg1.jpg) no-repeat center center fixed; 
+				background-size: cover;
+				height: 100%;
+				width: 100%;
+			}
+			html, body{
+				width: 100%;
+				height: 100%;
+				font-family: 'Open Sans', sans-serif;
+			}
+			h1{
+				font-size: 24px;
+			}
+			
+			.trivia {
+			font-size: 12px; text-transform: none; font-weight:normal;
+			}
+			
+			h2{
+				font-size: 20px;
+			}
+			
+			h3{
+				font-size: 18px;
+			}
+			
+			h4{
+				font-size: 16px;
+			}
+			
+			h5{
+				font-size: 14px;
+			}
+			
+			h6{
+				font-size: 12;
+			}
+			
+			#banner{
+				background: rgb(87, 187, 137);
+				height: auto;
+				width: 100%;
+				color: white;
+			}
+			
+			.btn-primary {
+				color: #2e6da4;
+				background-color: white;
+				border-color: #2e6da4;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				font-size: 12px;
+			}
+			
+			p {
+				text-indent: 50px;
+				text-align: center;
+				font-size: 12px;
+			}
+			
+			li{
+				font-size: 12px;
+			}
+			
+			.content{
+				margin-left: auto;
+				margin-right: auto:
+				display: auto;
+			}
+			
+			.alammoba{
+				border: 2px solid black;
+				padding: 5px;
+				text-indent: 0px;
+			}
+			
+			.accordTitle{
+				background-color: #2e6da4;
+				color: white;
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0px 10px 3px rgb(77, 166, 122);
+				background-color: rgb(87, 187, 137);
+			}
+			
+			.accordTitle:hover{
+				background-color: white;
+				color: rgb(87, 187, 137);
+			}
+			
+			button{
+				width: 90%;
+				height: auto;
+			}
+			
+			#footer{
+				background: rgb(87, 187, 137);
+				height: auto;
+				color: white;
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				}
+
+			#footerglyph{
+				font-size: 1.5em;
+				text-align:center;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				text-indent: 0px;
+			}
+			
+			#accordion{
+				margin-bottom: auto;
+				margin-left: auto;
+				display: block;
+				}
+			.sampleP{
+				text-indent: 0px;
+			}
+			
+			.subtitle{
+				font-size: 12px;
+			}
+			
+			#lastBtn{
+				margin-bottom: 60px;
+				background-image: url(images/saudi.jpg);
+			}
+			
+			#mod3{
+				margin-bottom: 70px;
+			}
+			
+			#aralin31{
+				margin-top: -60px;
+				background-image: url(images/Hindu.jpg);
+			}
+			
+			.go-top {
+				position: fixed;
+				bottom: 2em;
+				right: 2em;
+				text-decoration: none;
+				color: white;
+				font-size: 12px;
+				padding: 1em;
+				display: none;
+				background-color: gray;
+				border-radius: 5px;
+				margin-bottom: 30px;
+			}
+			
+			.modal-header {
+				min-height: 16.43px;
+				padding: 15px;
+				border-bottom: 1px solid #e5e5e5;
+				background: rgb(87, 187, 137);
+				color: white;
+			}
+			
+			.flag{
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-brand {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-nav>li>a {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-toggle {
+				border-color: white;
+			}
+			
+			.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+				color: rgb(87, 187, 137);
+				background-color: white;
+			}
+
+			.titleS{
+				color: #fff;
+				background: rgba(0, 0, 0, 0.5);
+				padding: 20px 15px;
+				font-size: 18px;
+				border: none;
+				text-transform: uppercase;
+				margin-left: margin;
+				width: 100%;
+				border-radius: 5px;
+				text-align: center;
+			}
+			
+			.btnCircle{
+				text-align: center;
+				border: 1px solid white;
+				width: 125px;
+				height: 125px;
+				border-radius: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				font-weight: bold;
+				color: white;
+				padding: 10px;
+			}
+			
+			.glyph{
+				font-size: 3em;
+				margin-top: 15px;
+			}
+			
+			.divbg{
+				background: rgba(0, 0, 0, 0.5);
+				border: none;
+				margin-left: margin;
+				width: 100%;
+				border-radius: 5px;
+			}
+			
+			.btnCircle:hover{
+				background-color: rgb(87, 187, 137);
+				opacity: 0.5;
+			}
+			
+			
+			.pages{
+					font-family: serif;
+                    font-size: 130%;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+				}
+			
+                #menu{
+                    font-family: serif;
+                    font-size: 130%;   
+                }
+                
+				.buttons{
+					background-color: orange;
+					width: 70%;
+					height: 5%;
+					text-align: center;
+					padding: 10px;
+					color: white;
+					box-shadow: 5px 5px 5px #888888;
+					border: 2px solid;
+				}
+				
+				.buttons:hover{
+					background-color: #FFCCCC;
+				}
+				
+				
+				.divChoices{
+					background-color: orange;
+					width: 70%;
+					height: 5%;
+					text-align: center;
+					padding: 5px;
+					color: white;
+					box-shadow: 5px 5px 5px #888888;
+					border: 2px solid;
+				}
+				
+				.divChoices:hover{
+					background-color: #FFCCCC;
+				}
+				
+				.btnAlign{
+					vertical-align: middle;
+				}
+				
+				.rightAns{
+					-webkit-animation: myAnimation 5s;
+				}
+				
+				@-webkit-keyframes myAnimation{
+					0%(background-color: black; width: 75%; height: 10%);
+					25%(background-color: orange; width: 70%; height: 5%);
+					50%(background-color: black; width: 75%; height: 10%);
+					75%(background-color: orange; width: 70%; height: 5%);
+					100%(background-color: black; width: 75%; height: 10%);
+				}
+				
+				.headerres{
+					border:1px solid; 
+					display:inline-block;
+					background-color: orange;
+					padding: 5px;
+					color: white;
+					box-shadow: 5px 5px 5px #888888;	
+					text-align: left;
+					width: 50%;
+					height: 5%;
+				}
+				
+				.item{
+					display:inline-block;
+					padding: 5px;
+					box-shadow: 5px 5px 5px #888888;	
+					text-align: right;
+					width: 20%;
+					height: 5%;
+				}
+				
+				.aboutcontent{
+					background-color: orange;
+					width: 90%;
+					height: 5%;
+					text-align: center;
+					padding: 10px;
+					color: white;
+					box-shadow: 5px 5px 5px #888888;
+					border: 2px solid;
+				}
+		</style>
+		<script>
+			$(document).ready(function(){				
+				$('#footerinfo').hide(500);
+		
+				$('#footerglyph').click(function(){
+					$('#footerinfo').slideToggle(500);
+				});
+				
+				// Show or hide the sticky footer button
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 200) {
+						$('.go-top').fadeIn(200);
+					} else {
+						$('.go-top').fadeOut(200);
+					}
+				});
+				
+				// Animate the scroll to top
+				$('.go-top').click(function(event) {
+					event.preventDefault();
+					
+					$('html, body').animate({scrollTop: 0}, 300);
+				});
+				
+				$(function() {
+				  $('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					  var target = $(this.hash);
+					  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					  if (target.length) {
+						$('html,body').animate({
+						  scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					  }
+					}
+				  });
+				});	
+				
+				function newpage() {
+					window.location = newLocation;
+				}
+				goExam();
+				$('#btnBack').click(function(){
+							event.preventDefault();
+							newLocation = 'quizzes.html';
+							$('body').fadeOut(500, newpage);
+						});
+			});
+		var questions = [
+					
+				["Ang TalinghagaTungkol sa May-Ari ng Ubasan ay hango sa ________", "Mateo 20: 1-16 sa BagongTipan", "Mateo 20: 1-17sa BagongTipan", "Mateo 20: 1-18sa BagongTipan", "A"],
+				["_______________ ay nagmula sa salitang Griyego na parabole na nagsasaad ng dalawang bagay (na maaaring tao, hayop, lugar, pangyayari) para paghambingin?", " Maikling Kwento", "Parabula", "Sanaysay", "B"],
+				["Ang_______ ay isang tulang liriko na naglalarawan ng pagbubulay-bulay o guniguni na nagpapakita ng masidhing damdamin patungkol sa alala ng isang mahal sa buhay ?", "Tula", "Elehiya", "Parabula", "B"],
+				["Elehiya sa Kamatayan ni Kuya Bhutan ay isinalin ni", "Pat V. Villafuerte", "M.O Jocson", "Wala sa nabanggit", "A"],
+				["Hindi Ako Magiging Adik ay sinulat ni _________?", "Pat V. Villafuerte", "M.O Jocson", ". Manny Ladesma","C"],
+				["Ayon sa survey noong nakaraang taon.  Higit na 50 bahagdan ang tumitikim ng ____________.", "Marijuana", "Rugby", "Bawal na gamot", "C"],
+				["Kadalasang dahilan ng paggamit ng bawal na gamot ay ang ___________.", "Takot", "Presyur sa pamilya", "sulsol ng mga kaibigan", "C"],						
+				["Usok at Salamin: Ang Tagapaglingkod at ang Pinaglilingkuran Isinulat ni", "Gordon Fillman", "Pat V. Villafuerte", "Manny Ladesma", "A"],
+				["Kapital ng Israel", "Jakarta", "Herusalem", "Kuala Lumpur", "B"],
+				["Ang __________ ay kinakatawan ng mga nakapag-aral na Israelitas", "Ashkenazim", "Jews", "Persians", "A"],
+				["Uri ng tao na nagbibigay ng pangangailangan ng kanilang grupo at nagsisilbi rin upang ang buhay ay maging komportable para sa mga nakatataas at nasa gitnang klase ng mamamayan.", "Jews", "Afro-Asian", "Ashkenazim", "B"],
+				["Pinag-uugatan ng anumang uri ng diskurso. Karaniwan itong sumasagot sa tanong na \"tungkol saan ang akda?\"", "Payak", "Tono", "Kaisipan", "A"],
+				["Ang saloobin ng may-akda sa paksa. Sa pamamagitan ng mga espesipikong wika na ginamit ng may-akda, mababatid kung sino ang target na mambabasa.", "Payak", "Tono", "Kaisipan", "B"],
+				[".Ang nais iparating ng manunulat sa mga mambabasa, ditto umiinog ang maliliit na himaymay ng akda.", "Payak", "Tono", "Kaisipan", "C"],
+				["Tinatawag na perlas ng dagat silangan.", "Malaysia", "Israel", "Pilipinas", "C"],
+				["Ang tinig ng Diyos ay ang tinig ng bayan.", "Vox populi", "Vox Dei", "Vox populi Vox Dei", "C"],
+				["Isang Libo’t Isang Gabi ay nobela mula sa___________", "Israel", "Pilipinas", "Saudi Arabia", "C"],
+				["Taare Zameen Par ay mula sa ____________?", "India", "Saudi Arabia", "Israel", "A"],
+				["Ishaan Nandkishore Awasthi ay isang batang may sakit na ________?", "Autism", "Dyslexia", "Neumonia", "B"],
+				["Ang taong nakaunawa kay Ishaan ay ang kanyang ________________.", "Magulang", "Guro", "Kaibigan", "B"],
+				["Si Ishaan ay may sakit subali tsya ay magaling sa ________.", "Pagsulat", "Pagguhit", "Pagbabasa", "B"],
+				["Ang _______________ kasama ang maraming tradisyon na kung saan ay malapit na kaugnayan at ibahagi ang mga karaniwang tema ngunit hindi bumubuo ng isang pinagisang hanay ng mga paniniwala o gawi.", "Hindu", "Hinduism", "Buddhism", "B"],
+				["Ang tawag sa mga  taongnaninirahan sa Bhutan.", "Bhutans", "Bhutanians", "Bhutanese", "C"],
+				["Ang Israel ay gumagawa ng _____ ng kanilang pagkain.", "90%", "92%", " 93%", "C"],
+				["Isa sa pinakamalaking bansa na walang ilog.", "Israel", "Lebanon ", "Saudi Arabia ", "A"],
+				["Ano ang ibig sabihin ng pahayag na “ Banal na araw noon sa Herusalem”.  ", "Pista ng Pangilin ", "Araw ng mga Santo", "Mahal na Araw", "C"],
+				["Malungkot na lumisan ang tag-araw sakaniyang buhay. Ang ibig sabihin ng  lumisan ay____.   ", "lumayo", "humiwalay", "umalis ", "C"],
+				["Ang paratang sa kaniya ay isang kamalian. Ano ang kahulugan ng salitang paratang?", "bintang", "akala ", "maltrato", "A"],
+				["“Nahagip ng kaniyang espada ang tenga at ilong ng higante.” Ano ang kahulugan  ng salitang nahagip?", "nasagasaan", "nadaplisan", "natamaan", "B"],
+				["Ang ebidensiyang inihain laban sa kanya ay walang bias. Ang salitang ebidensiya  ay nangangahulugang ____.", "papeles", "patunay", "paniwala", "B"],
+			];
+			
+				var pos=0, test, test_status, question, choice, choices, chA, chB, chC, chD, correct = 0, ans, val;
+				//goes to exam page
+				function _(x){
+					return document.getElementById(x);
+				}
+				
+				function goExam(){
+					
+                    
+					//displays result if it has reached 50 questions
+					if(pos > 29){
+						$('#questdiv').fadeOut(500).hide();
+						$('#result').fadeIn();
+						document.getElementById("myScore").innerHTML = correct;
+						
+						if(correct< 18)
+						{
+							document.getElementById("verdict").innerHTML = "Sorry, you failed...";
+							window.location = "#result";
+						}
+						else
+						{
+							document.getElementById("verdict").innerHTML = "Congratulations! You passed...";
+							window.location = "#result";
+						}
+						pos=0;
+						correct=0;
+						return false;
+					}
+					
+					
+					_("test_status").innerHTML = "Tanong bilang " + (pos+1) + " ng 30" ;
+					//retrieves elements in multi-dimensional array and displays it on element
+					question = questions[pos][0];
+					chA = questions[pos][1];
+					chB = questions[pos][2];
+					chC = questions[pos][3];
+					chD = questions[pos][4];
+					
+					_("quest").innerHTML = question;
+					_("choiceA").innerHTML = chA;
+					_("choiceB").innerHTML = chB;
+					_("choiceC").innerHTML = chC;
+					
+					window.location = "#exam";
+				}
+				//checks if answer is correct and adds to score
+				function checkAnswer() {
+				
+					document.getElementById('choiceA').onclick = function() {
+						ans = "A";
+						
+						if(ans == questions[pos][4]){
+						correct++;
+						}
+						pos++;
+						goExam();
+					};
+					
+					document.getElementById('choiceB').onclick = function() {
+						ans = "B";
+						
+						if(ans == questions[pos][4]){
+						correct++;
+						}
+						pos++;
+						goExam();
+					};
+					
+					document.getElementById('choiceC').onclick = function() {
+						ans = "C";
+						
+						if(ans == questions[pos][4]){
+						correct++;
+						}
+						pos++;
+						goExam();
+
+					};
+				}
+				
+					
+					function stop() {
+						correct=0;
+						pos=0;
+					}
+		</script>
+	</head>
+	
+	<body>
+		<div class="container" id="questdiv">
+		<button class="btn" id="btnBack" style="width: auto; color: white; float: left; background-color: transparent; background-image: none; border: 1px solid transparent; margin-top: 20px;"><span class="glyphicon glyphicon-arrow-left"></span></button>
+			<div class="divbg"><h1 class="text-center" style="font-size: 36px;font-family: cursive;color: white;">Panitikang Asyano Quiz</h1></div>
+			<div id="exam" class="pages" style="margin-top: -50px;">
+				<br><br>
+				<div data-role="content" align="center">
+				<div class="divbg"><h3 id="test_status" style="color: white;font-weight: bold;"></h3>
+					<h5 id="quest" style="color: white;font-weight: bold;"></h5>
+				</div>
+					<div class="btnAlign">
+						<div style="padding: 2%"></div>
+						<div id="choiceA" class="divChoices" name="choices" value="A" onclick="checkAnswer() " ></div><br>
+						<div id="choiceB" class="divChoices" name="choices" value="B" onclick="checkAnswer() " ></div><br>
+						<div id="choiceC" class="divChoices" name="choices" value="C" onclick="checkAnswer() " ></div><br>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div data-role="page" id="result" class="pages" style="display: none;">
+				<br><br>
+				<div data-role="content" align="center">
+				<br><br>
+					<div>
+						<div class="headerres">Bilang ng tanong</div>
+						<div class="item">30</div>
+					</div>  
+					
+					<div>
+						<div class="headerres">Total</div>
+						<div class="item">30</div>
+					</div>  
+					
+					<div>
+						<div class="headerres">Pasadong Iskor</div>
+						<div class="item">18</div>
+					</div>  
+					
+					<div>
+						<div class="headerres">Nakuhang Iskor</div>
+						<div class="item" id="myScore"></div>
+					</div>  
+					
+					<h2 id="verdict"></h2>
+					<a href="main.html"><button class="btn btn-primary">Go Back to Menu</button></a>
+				</div>
+			</div>
+		</div>
+			<a href="#" class="go-top"><span class="glyphicon glyphicon-arrow-up" style="font-size: 1em;"></span></a>
+			<div class="container" id="footer">
+				<p><span class="glyphicon glyphicon-info-sign" id="footerglyph"></span></p>
+				<h6 class="text-center" id="footerinfo">Department of Education -Instructional Materials Council Secretariat (DepEd-IMCS) <br><span class="glyphicon glyphicon-phone" id="phone"></span> (02) 634 - 1054 or 634 - 107 <br><span class="glyphicon glyphicon-envelope" id="mail"></span> imcsetd@yahoo.com </h6></h6>
+			</div>
+		</div>
+	</body>
+</html>

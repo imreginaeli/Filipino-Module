@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Panitikang Asyano</title>
+		<link href="images/logo.png" rel="icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			html, body{
+				width: 100%;
+				height: 100%;
+				font-family: 'Open Sans', sans-serif;
+			}
+			h1{
+				font-size: 24px;
+			}
+			
+			.trivia {
+			font-size: 12px; text-transform: none; font-weight:normal;
+			}
+			
+			h2{
+				font-size: 20px;
+			}
+			
+			h3{
+				font-size: 18px;
+			}
+			
+			h4{
+				font-size: 16px;
+			}
+			
+			h5{
+				font-size: 14px;
+			}
+			
+			h6{
+				font-size: 12;
+			}
+			
+			#banner{
+				background: rgb(87, 187, 137);
+				height: auto;
+				width: 100%;
+				color: white;
+			}
+			
+			.btn-primary {
+				color: #2e6da4;
+				background-color: white;
+				border-color: #2e6da4;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				font-size: 12px;
+			}
+			
+			p {
+				text-indent: 50px;
+				text-align: center;
+				font-size: 12px;
+			}
+			
+			li{
+				font-size: 12px;
+			}
+			
+			.content{
+				margin-left: auto;
+				margin-right: auto:
+				display: auto;
+			}
+			
+			.alammoba{
+				border: 2px solid black;
+				padding: 5px;
+				text-indent: 0px;
+			}
+			
+			.accordTitle{
+				background-color: #2e6da4;
+				color: white;
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0px 10px 3px rgb(77, 166, 122);
+				background-color: rgb(87, 187, 137);
+			}
+			
+			.accordTitle:hover{
+				background-color: white;
+				color: rgb(87, 187, 137);
+			}
+			
+			button{
+				width: 90%;
+				height: auto;
+			}
+			
+			#footer{
+				background: rgb(87, 187, 137);
+				height: auto;
+				color: white;
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				}
+
+			#footerglyph{
+				font-size: 1.5em;
+				text-align:center;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				text-indent: 0px;
+			}
+			
+			#accordion{
+				margin-bottom: auto;
+				margin-left: auto;
+				display: block;
+				}
+			.sampleP{
+				text-indent: 0px;
+			}
+			
+			.subtitle{
+				font-size: 12px;
+			}
+			
+			#lastBtn{
+				margin-bottom: 60px;
+			}
+			
+			#mod3{
+				margin-bottom: 70px;
+			}
+			
+			.go-top {
+				position: fixed;
+				bottom: 2em;
+				right: 2em;
+				text-decoration: none;
+				color: white;
+				font-size: 12px;
+				padding: 1em;
+				display: none;
+				background-color: gray;
+				border-radius: 5px;
+				margin-bottom: 30px;
+			}
+			
+			.modal-header {
+				min-height: 16.43px;
+				padding: 15px;
+				border-bottom: 1px solid #e5e5e5;
+				background: rgb(87, 187, 137);
+				color: white;
+			}
+			.titleS{
+				color: #fff;
+				background: rgba(0, 0, 0, 0.5);
+				padding: 20px 15px;
+				font-size: 18px;
+				border: none;
+				text-transform: uppercase;
+				margin-left: margin;
+				width: 100%;
+				border-radius: 5px;
+				text-align: center;
+			}
+			
+			@media (max-width: 768px)
+			{
+				.flag{
+				    width: 100%;
+					margin-left: auto;
+					margin-right: auto;
+					display: block;
+					height: 200px;
+					border-radius: 0px;
+					color: rgb(87, 187, 137);
+					font-size: 22px;
+					font-weight: bold;
+					border: none;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+			}
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$('body').css('display', 'none');
+				$('body').fadeIn(500);
+				
+				$('#footerinfo').hide(500);
+		
+				$('#footerglyph').click(function(){
+					$('#footerinfo').slideToggle(500);
+				});
+				
+				// Show or hide the sticky footer button
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 200) {
+						$('.go-top').fadeIn(200);
+					} else {
+						$('.go-top').fadeOut(200);
+					}
+				});
+				
+				// Animate the scroll to top
+				$('.go-top').click(function(event) {
+					event.preventDefault();
+					
+					$('html, body').animate({scrollTop: 0}, 300);
+				});
+				
+				$(function() {
+				  $('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					  var target = $(this.hash);
+					  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					  if (target.length) {
+						$('html,body').animate({
+						  scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					  }
+					}
+				  });
+				});	
+				
+				function newpage() {
+					window.location = newLocation;
+				}
+				
+				$('#btnBack').click(function(){
+					event.preventDefault();
+					newLocation = 'main.html';
+					$('body').fadeOut(500, newpage);
+				});
+				
+				$('#q1').click(function(){
+					event.preventDefault();
+					newLocation = 'quizfil9.html';
+					$('body').fadeOut(500, newpage);
+				});
+				
+				$('#q2').click(function(){
+					event.preventDefault();
+					newLocation = 'quizfil9mod2.html';
+					$('body').fadeOut(500, newpage);
+				});
+				
+				$('#q3').click(function(){
+					event.preventDefault();
+					newLocation = 'quizfil9mod3.html';
+					$('body').fadeOut(500, newpage);
+				});
+				
+				$('#q4').click(function(){
+					event.preventDefault();
+					newLocation = 'quizfillast.html';
+					$('body').fadeOut(500, newpage);
+				});
+				
+				$('#lastBtn').click(function(){
+					event.preventDefault();
+					newLocation = 'quizelfili.html';
+					$('body').fadeOut(500, newpage);
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-inverse" id="banner">
+		  <div class="container">
+			<div class="navbar-header">
+				<button class="btn" id="btnBack" style="width: auto; color: white; float: left; background-color: transparent; background-image: none; border: 1px solid transparent; margin-top: 8px;"><span class="glyphicon glyphicon-arrow-left"></span></button>
+			  <p style="text-indent: 0px;text-align: center;font-size: 20px;margin-top: 10px;">Mga Pagsasanay</p>
+			</div>
+		  </div>
+		</nav>
+		
+		<div class="container">
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle" id="q1" style="margin-top: 0px; text-align: center">Filipino 9: <br><span class="subtitle">Modyul 1</span></h3>
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle" style="text-align: center" id="q2">Filipino 9: <br><span class="subtitle">Modyul 2</h3>
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle"  style="text-align: center" id="q3">Filipino 9: <br><span class="subtitle">Modyul 3</h3>
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle"  style="text-align: center" id="q4">Filipino 10: <br><span class="subtitle">Modyul1</h3>
+			<!-- Button trigger modal -->
+			<h3 class="accordTitle" id="lastBtn" style="text-align: center">El Filibusterismo</h3>
+		</div>
+			<a href="#" class="go-top"><span class="glyphicon glyphicon-arrow-up" style="font-size: 1em;"></span></a>
+		<div class="container" id="footer">
+				<p><span class="glyphicon glyphicon-info-sign" id="footerglyph"></span></p>
+					<h6 class="text-center" id="footerinfo">Department of Education -Instructional Materials Council Secretariat (DepEd-IMCS) <br><span class="glyphicon glyphicon-phone" id="phone"></span> (02) 634 - 1054 or 634 - 107 <br><span class="glyphicon glyphicon-envelope" id="mail"></span> imcsetd@yahoo.com </h6></h6>
+			</div>
+		</div>
+	
+	</body>
+</html>

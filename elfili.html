@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>EL FIlibusterismo</title>
+		<link href="images/logo.png" rel="icon">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			html, body{
+				width: 100%;
+				height: 100%;
+				font-family: 'Open Sans', sans-serif;
+			}
+			h1{
+				font-size: 24px;
+			}
+			
+			.trivia {
+			font-size: 12px; text-transform: none; font-weight:normal;
+			}
+			
+			h2{
+				font-size: 20px;
+			}
+			
+			h3{
+				font-size: 18px;
+			}
+			
+			h4{
+				font-size: 16px;
+			}
+			
+			h5{
+				font-size: 14px;
+			}
+			
+			h6{
+				font-size: 12;
+			}
+			
+			#banner{
+				background: rgb(87, 187, 137);
+				height: auto;
+				width: 100%;
+				color: white;
+			}
+			
+			.btn-primary {
+				color: #2e6da4;
+				background-color: white;
+				border-color: #2e6da4;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				font-size: 12px;
+			}
+			
+			p {
+				text-indent: 50px;
+				text-align: center;
+				font-size: 12px;
+			}
+			
+			li{
+				font-size: 12px;
+			}
+			
+			.content{
+				margin-left: auto;
+				margin-right: auto:
+				display: auto;
+			}
+			
+			.alammoba{
+				border: 2px solid black;
+				padding: 5px;
+				text-indent: 0px;
+			}
+			
+			.accordTitle{
+				background-color: #2e6da4;
+				color: white;
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0px 10px 3px rgb(77, 166, 122);
+				background-color: rgb(87, 187, 137);
+			}
+			
+			.accordTitle:hover{
+				background-color: white;
+				color: rgb(87, 187, 137);
+			}
+			
+			button{
+				width: 90%;
+				height: auto;
+			}
+			
+			#footer{
+				background: rgb(87, 187, 137);
+				height: auto;
+				color: white;
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				}
+
+			#footerglyph{
+				font-size: 1.5em;
+				text-align:center;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				text-indent: 0px;
+			}
+			
+			#accordion{
+				margin-bottom: auto;
+				margin-left: auto;
+				display: block;
+				}
+			.sampleP{
+				text-indent: 0px;
+			}
+			
+			.subtitle{
+				font-size: 12px;
+			}
+			
+			#lastBtn{
+				margin-bottom: 60px;
+				background-image: url(images/saudi.jpg);
+			}
+
+			#aralin31{
+				margin-top: -60px;
+				background-image: url(images/Hindu.jpg);
+			}
+			
+			.go-top {
+				position: fixed;
+				bottom: 2em;
+				right: 2em;
+				text-decoration: none;
+				color: white;
+				font-size: 12px;
+				padding: 1em;
+				display: none;
+				background-color: gray;
+				border-radius: 5px;
+				margin-bottom: 30px;
+			}
+			
+			.modal-header {
+				min-height: 16.43px;
+				padding: 15px;
+				border-bottom: 1px solid #e5e5e5;
+				background: rgb(87, 187, 137);
+				color: white;
+			}
+			
+			.flag{
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-brand {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-nav>li>a {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-toggle {
+				border-color: white;
+			}
+			
+			.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+				color: white;
+			}
+			
+			.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+				color: rgb(87, 187, 137);
+				background-color: white;
+			}
+			
+			#btnAralin11{
+				background-image: url(images/singapore.jpg);
+			}
+			
+			#btnAralin12{
+				background-image: url(images/thailand.jpg);
+			}
+			
+			#btnAralin13{
+				background-image: url(images/phil.jpg);
+			}
+			
+			#btnAralin14{
+				background-image: url(images/Indonesia.jpg);
+			}
+			
+			#btnAralin15{
+				background-image: url(images/phil.jpg);
+			}
+			
+			#btnAralin21{
+				background-image: url(images/Japan.jpg);
+			}
+			
+			#btnAralin22{
+				background-image: url(images/korea.jpg);
+			}
+			
+			#btnAralin23{
+				background-image: url(images/taiwan.jpg);
+			}
+			
+			#btnAralin24{
+				background-image: url(images/china.jpg);
+			}
+			
+			#btnAralin25{
+				background-image: url(images/korea.jpg);
+			}
+			
+			#btnAralin32{
+				background-image: url(images/kanluran.jpg);
+			}
+			
+			#btnAralin33{
+				background-image: url(images/Bhutan.jpg);
+			}
+			
+			#btnAralin34{
+				background-image: url(images/israel.jpg);
+			}
+			
+			.titleS{
+				color: #fff;
+				background: rgba(0, 0, 0, 0.5);
+				padding: 20px 15px;
+				font-size: 18px;
+				border: none;
+				text-transform: uppercase;
+				margin-left: margin;
+				width: 100%;
+				border-radius: 5px;
+				text-align: center;
+			}
+			
+			#withbg{
+				background-image: url('images/elfili.jpg');
+				background-attachment: fixed;
+				background-size: cover;
+				height: 100%;
+			}
+			
+			.parimg{
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				width: 100%;
+			}
+			@media (max-width: 768px)
+			{
+				.flag{
+				    width: 100%;
+					margin-left: auto;
+					margin-right: auto;
+					display: block;
+					height: 200px;
+					border-radius: 0px;
+					color: rgb(87, 187, 137);
+					font-size: 22px;
+					font-weight: bold;
+					border: none;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+			}
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$('body').css('display', 'none');
+				$('body').fadeIn(500);
+				$('#mod1div, #mod2div, #mod3div').hide();
+				$('#mod1').click(function(){
+					$('#mod1div').slideToggle(500);
+					$('#mod2div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#mod2').click(function(){
+					$('#mod2div').slideToggle(500);
+					$('#mod1div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#mod3').click(function(){
+					$('#mod3div').slideToggle(500);
+					$('#mod1div').slideUp(500);
+					$('#mod2div').slideUp(500);
+				});
+				
+				$('#limod1').click(function(){
+					$('#mod1div').slideDown(500);
+					$('#mod2div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#limod2').click(function(){
+					$('#mod2div').slideDown(500);
+					$('#mod1div').slideUp(500);
+					$('#mod3div').slideUp(500);
+				});
+				
+				$('#limod3').click(function(){
+					$('#mod3div').slideDown(500);
+					$('#mod1div').slideUp(500);
+					$('#mod2div').slideUp(500);
+				});
+				
+				$('#footerinfo').hide(500);
+		
+				$('#footerglyph').click(function(){
+					$('#footerinfo').slideToggle(500);
+				});
+				
+				// Show or hide the sticky footer button
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 200) {
+						$('.go-top').fadeIn(200);
+					} else {
+						$('.go-top').fadeOut(200);
+					}
+				});
+				
+				// Animate the scroll to top
+				$('.go-top').click(function(event) {
+					event.preventDefault();
+					
+					$('html, body').animate({scrollTop: 0}, 300);
+				});
+				
+				$(function() {
+				  $('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					  var target = $(this.hash);
+					  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					  if (target.length) {
+						$('html,body').animate({
+						  scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					  }
+					}
+				  });
+				});	
+				
+				function newpage() {
+					window.location = newLocation;
+				}
+				
+				$('#btnBack').click(function(){
+					event.preventDefault();
+					newLocation = 'main.html';
+					$('body').fadeOut(500, newpage);
+				});
+			});
+		</script>
+	</head>
+	
+	<body id="withbg">
+		<nav class="navbar navbar-inverse" id="banner">
+		  <div class="container">
+			<div class="navbar-header">
+				<button class="btn" id="btnBack" style="width: auto; color: white; float: left; background-color: transparent; background-image: none; border: 1px solid transparent; margin-top: 8px;"><span class="glyphicon glyphicon-arrow-left"></span></button>
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="width: 45px;">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			  </button>
+			  <p style="text-indent: 40px;text-align: center;font-size: 20px;margin-top: 10px;">El FIlibusterismo</p>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<a href="#mod1" style="text-decoration: none; color: white;"><li style="text-indent: 10px;">Kabanata I - Kabanata X</li></a>
+					<a href="#mod11" style="text-decoration: none; color: white;"><li style="text-indent: 10px;">Kabanata XI - Kabanata XX</li></a>
+					<a href="#mod21" style="text-decoration: none; color: white;"><li style="text-indent: 10px;">Kabanata XXI - Kabanata XXX</li></a>
+					<a href="#mod31" style="text-decoration: none; color: white;"><li style="text-indent: 10px;">Kabanata XXXI - Kabanata IX</li></a>
+				</ul>
+			</div>
+		  </div>
+		</nav>
+		
+		<div class="container">
+			<div id="accordion">
+				<h3 class="text-center accordTitle" id="mod1" data-toggle="modal" data-target="#fi1"><strong>Kabanata I</strong><br> <span class="subtitle">Sa Ibabaw ng Kubyerta</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi2"><strong>Kabanata II</strong><br> <span class="subtitle">Sa Ilalim ng Kubyerta</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi3"><strong>Kabanata III</strong><br> <span class="subtitle">Ang mga Alamat</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi4"><strong>Kabanata IV</strong><br> <span class="subtitle">Kabesang Tales</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi5"><strong>Kabanata V</strong><br> <span class="subtitle">Ang Noche Buena ng Isang Kutsero</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi6"><strong>Kabanata VI</strong><br> <span class="subtitle">Si Basilio</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi7"><strong>Kabanata VII</strong><br> <span class="subtitle">Si Simoun</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi8"><strong>Kabanata VIII</strong><br> <span class="subtitle">Maligayang Pasko</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi9"><strong>Kabanata IX</strong><br> <span class="subtitle">Ang mga Pilato</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi10"><strong>Kabanata X</strong><br> <span class="subtitle">Kayamanan at Karalitaan</span></h3>
+				<h3 class="text-center accordTitle" id="mod11" data-toggle="modal" data-target="#fi11"><strong>Kabanata XI</strong><br> <span class="subtitle">Los Baños</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi12"><strong>Kabanata XII</strong><br> <span class="subtitle">Placido Penitente</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi13"><strong>Kabanata XIII</strong><br> <span class="subtitle">Ang Klase sa Pisika</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi14"><strong>Kabanata XIV</strong><br> <span class="subtitle">Sa Bahay ng mga Mag-aaral</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi15"><strong>Kabanata XV</strong><br> <span class="subtitle">Si Ginoong Pasta</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi16"><strong>Kabanata XVI</strong><br> <span class="subtitle">Ang Kasawian ng Isang Intsik</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi17"><strong>Kabanata XVII</strong><br> <span class="subtitle">Ang Perya sa Quiapo</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi18"><strong>Kabanata XVIII</strong><br> <span class="subtitle">Ang mga Kadayaan</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi19"><strong>Kabanata XIX</strong><br> <span class="subtitle">Ang Mitsa</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi20"><strong>Kabanata XX</strong><br> <span class="subtitle">Si Don Custodio</span></h3>
+				<h3 class="text-center accordTitle" id="mod21" data-toggle="modal" data-target="#fi21"><strong>Kabanata XXI</strong><br> <span class="subtitle">Mga Anyo ng Taga-Maynila</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi22"><strong>Kabanata XXII</strong><br> <span class="subtitle">Ang Palabas</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi23"><strong>Kabanata XXIII</strong><br> <span class="subtitle">Isang Bangkay</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi24"><strong>Kabanata XXIV</strong><br> <span class="subtitle">Mga Pangarap</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi25"><strong>Kabanata XXV</strong><br> <span class="subtitle">Tawanan at Iyakan</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi26"><strong>Kabanata XXVI</strong><br> <span class="subtitle">Mga Paskil</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi27"><strong>Kabanata XXVII</strong><br> <span class="subtitle">Ang Prayle at ang Estudyante</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi28"><strong>Kabanata XXVIII</strong><br> <span class="subtitle">Pagkatakot</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi29"><strong>Kabanata XXIX</strong><br> <span class="subtitle">Ang Huling Pati-ukol kay Kapitan Tiyago</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi30"><strong>Kabanata XXX</strong><br> <span class="subtitle">Si Huli</span></h3>
+				<h3 class="text-center accordTitle" id="mod31" data-toggle="modal" data-target="#fi31"><strong>Kabanata XXXI</strong><br> <span class="subtitle">Ang Mataas na Kawani</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi32"><strong>Kabanata XXXII</strong><br> <span class="subtitle">Ang Bunga ng mga Paskil</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi33"><strong>Kabanata XXXIII</strong><br> <span class="subtitle">Ang Huling Matuwid</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi34"><strong>Kabanata XXXIV</strong><br> <span class="subtitle">Ang Kasal ni Paulita</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi35"><strong>Kabanata XXXV</strong><br> <span class="subtitle">Ang Piging</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi36"><strong>Kabanata XXXVI</strong><br> <span class="subtitle">Mga Kapighatian ni Ben Zayb</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi37"><strong>Kabanata XXXVII</strong><br> <span class="subtitle">Ang Hiwagaan</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi38"><strong>Kabanata XXXVIII</strong><br> <span class="subtitle">Kasawiang-palad</span></h3>
+				<h3 class="text-center accordTitle" id="mod64" data-toggle="modal" data-target="#fi39" style="margin-bottom: 70px;"><strong>Kabanata XXXIX</strong><br> <span class="subtitle">Katapusang Kabanata</span></h3>
+			</div>
+		</div>
+		
+		
+		<a href="#" class="go-top"><span class="glyphicon glyphicon-arrow-up" style="font-size: 1em;"></span></a>
+		<div class="container" id="footer">
+				<p><span class="glyphicon glyphicon-info-sign" id="footerglyph"></span></p>
+					<h6 class="text-center" id="footerinfo">Department of Education -Instructional Materials Council Secretariat (DepEd-IMCS) <br><span class="glyphicon glyphicon-phone" id="phone"></span> (02) 634 - 1054 or 634 - 107 <br><span class="glyphicon glyphicon-envelope" id="mail"></span> imcsetd@yahoo.com </h6></h6>
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal" id="fi1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata I: Sa Ibabaw ng Kubyerta</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Umaga ng Disyembre. Sa Ilog Pasig ay sumasalunga ang Bapor Tabo. Lulan nito sa kubyerta sina Don Custodio, Ben Zayb, P. Irene, P. Salvi, Donya Victorina, Kap. Heneral at Simoun.</p>
+					<p class="text-justify">Napag-usapan ang pagpapalalim ng ilog Pasig. Mungkahi ni Don Custodio: mag-alaga ng itik. Ani Simoun namang kilalang tagapayo ng Kap. Heneral: Gumawa ng tuwid na kanal na mag-uugnay sa lawa ng Laguna at sa look ng Maynila. Nagkasagutan sila ni Don Custodio at ng ilang pari. Ayaw ni Donya Victorina na matuloy ang pag-aalaga ng pato dahil darami ang balot na pinandidirihan niya.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata II: Sa Ilalim ng Kubyerta</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Tinungo ni Simoun ang ibaba ng kubyerta. Masikip sa pasahero ang ilalim ng kubyerta. Naroon ang dalawang (2) estudyate na pinakukundanganan ng iba-si Basilio na nag-aaral ng medisina at mahusay ng manggamot at isang katatapos pa lamang sa Ateneo, isang makata, si Isagani. Kausap sila Kap. Basilio. Napag-usapan si Kap. Tiyago. Pinauwi raw siya, ani na naging tagapayo ng kapitan nitong mga huling araw. Napaling ang usapan sa paaralang balak ng mga estudyante ukol sa pagtuturo ng mga Kastila. Hindi raw ito magtatagumpay ayon kay Kap. Basilio. Magtatagumpay, ayon sa dalawang binata. Lumayo ang matandang Basilio. Napag-usapan si Paulita Gomez, ang kasintahan ni Isagani at tukod ng ganda, mayaman at may pinag-aralan kaya nga lamang ay tiya si Donya Victorina. Ipinahahanap ni Donya Victorina kay Isagani ang asawa , si De Espadaña, na sa bahay pa ni Padre Florentino, amain ng binata, nagtatago.</p>
+					<p class="text-justify">Dumating si Simoun at kinausap ng magkabigan. Ipinakilala ni Basilio kay Simoun si Isagani. Sinabi ni Simoun na di niya nadadalaw ang lalawigan nina Basilio sapagka’t ang lalawigan nina Basilio sapagka’t ang lalawigang ito’y mahirap at di makabibili ng alahas. Matigas na tumutol Si Isagani at anya: Hindi kami namimili ng alahas dahil di namin kailangan. Napangiti si Simoun. Nasabi raw niyang dukha ang lalawigan, dahil ang mga pari sa simbahan ay Pilipino.</p>
+					<p class="text-justify">Nag-anyaya si Simoun sa pag-inom ng serbesa. Tumanggi ang dalawa. Ayon kay Simoun, Sinabi ni Padre Camorra na kaya tamad ang mga Pilipino ay dahil pala-inom ng tubig at di ng serbesa. Mabilis na tumugon si Basilio; Sabihin ninyo kay Padre Camorra na kung siya ay iinom ng tubig sa halip ng serbesa, marahil ay mawawala ang sanhi ng mga usap-usapan. At dagdag ni Isagani: lumuluhod sa alak at sa serbesa na pumapatay ng apoy; na kapag pinainit ay sumusulak; nagiging malawak na dagatan at gumugunaw ng santinakpan. Hindi niya pinakinggan ang pagsingkil ni Basilio.</p>
+					<p class="text-justify">Itinanong ni Simoun kung ano ang itutugon niya sakaling itanong ni Padre Camorra kung kailan magiging sulak at malawak na karagatan ang tubig. Tugon ni Isagani: Kapag pinainit ng apoy; sa sandaling ang mumunting ilog na watak-watak ay magkakasamasama sa kailalimang hinuhukay ng tao. Binigkas ni Basilio ang isang tula ni Isagani na rin ukol sa pagtutulong ng apoy at tubig sa pagpapatakbo sa makina (steam engine). Pangarap daw ayon kay Simoun dahil ang makina ay hahanapin pa.</p>
+					<p class="text-justify">Nang umalis si Simoun saka lamang nakilala nang lubusan ni Isagani ang mag-aalahas na tinawag na Kardinal Moreno. May dumating na utusan. Ipinatawag ni Padre Florentino ang pamangkin. Nguni’t nakita ng kapitan si Padre Florentino at ito’y inanyayahang pumanhik sa ibabaw ng kubyerta.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata III: Ang mga Alamat</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Dinatnan ni Padre Florentino na nagtatawanan na ang nangasa kubyerta. Nagdaraingan ang mga prayle sa pagkamulat ng mga Pilipino at pag-uusig sa mga bayarin sa simbahan. Dumating si Simoun. Sayang daw at di nakita ni Simoun ang mga dinaanan ng bapor. Kung wala raw alamat ay walang kuwenta sa kanya ang alinmang pook ayon kay Simoun. Isinalaysay ng kapitan ang alamat ng Malapad-na-bato. Ito raw ay banal sa mga katutubo noong una bilang tahanan ng mga espiritu. Nang panahanan daw ng mga tulisan ay nawala ang takot sa espiritu, nasalin sa mga tulisan.</p>
+					<p class="text-justify">Sinabi ng Kapitan na may isa pang alamat na ukol kay Donya Geronima. Si Padre Florentino ang nahingang magkuwento. May magkasintahan daw sa Espanya. Naging arsobispo sa Maynila ang lalaki. Nagbabalatkayo ang babae. Naparito at hinihiling sa arsobispo na sundin nito ang pangako pakasal sila. Iba ang naisip ng arsobispo. Itinira ang babae sa isang yungib na malapit sa Ilog Pasig.</p>
+					<p class="text-justify">Nagandahan si Ben Zayb sa alamat. Nainggit si Donya Victorina na ibig ding manirahan sa kuweba. Tinanong ni Simoun si Padre Salvi. Sa inyong palagay, hindi ba higit na mainam ay ilagay sa isang beateryo tulad ni Sta. Clara? Hindi raw siya makakahatol sa mga ginawa ng isang arsobispo, ayon kay padre Salvi. At upang mabago ang paksa ay isinalaysay ang alamat ni San Nicolas na nagligtas sa isang Intsik sa pagkamatay sa mga buwayang naging bato nang dasalan ng intsik ang santo</p>
+					<p class="text-justify">Nang datnan nila ang lawa ay nagtanong si Ben Zayb sa Kapitan kung saan sa lawa napatay ang isang Guevarra, Navarra o Ibarra.</p>
+					<p class="text-justify">Itinuro ng Kapitan. Naghanap si Donya Victorina ng bakas ng pagkamatay ng tubig labingtatalong taon matapos mangyari iyon. Nakasama raw ng ama ang bangkay ng anak, ani Padre Sibyla. Iyon daw ang pinakamurang libing, ayon kay Ben Zayb. Nagtawanan ng iba! Si Simoun ay namumutla at walang kibo. Ipinalagay ng Kapitan na si Simoun ay nahilo dahil sa paglalakabay</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata IV: Kabesang Tales</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Si Tandang Selong umampon kay Basilio sa gubat ay matanda na. Ang ama ng dalagang si Lucia, si Kabesang Tales, na anak ni Tandang Selo, ay isa nang kabesa de baranggay. Yumaman ito dahil sa tiyaga. Nakisama muna sa isang namumuhunan sa bukid. Nang makaipon ng kaunti ay naghawaan ng gubat na nang ipagtanong niya ay walang may-ari, ar ginawa niyang tubuhan. Inisip niyang pag-aralin na sa kolehiyo si Huli upang mapantay kay Basilio na kasintahn nito. Nang ang bukid ay umunlad ito ay inangkin ng mga prayle. Pinabuwis si Kabesang Tales. Tinaasan nang tinaasan ang pabuwis. Di na nakaya ni Kabesang Tales. Nakipag-asunto sa mga prayle</p>
+					<p class="text-justify">Matigas ang sabi ni Kabesang Tales. Ipinakita ng mga prayle ang kanilang titulo sa lupa. Wala. Naging kawali si Tano. Di ibinayad ng kapalit ang anak. Anya: Binungkal ko’t tinamnan ang lupang ito, namatay at nalibing dito ang aking asawa’t anak na dalaga {si Lucia} sa pagtulong sa akin kaya’t di ko maibibigay ang lupang ito kundi sa sino mang didilig muna rito ng kanyang dugo at maglilibing muna ng kanyang asawa’t mga anak. At anya pa rin ukol sa pagiging kawal ni Tano, ako’y bumabayad sa abogado. Kung mananalo ako sa asunto ay alam ko na ang aking gagawin upang siya’y mapabalik; nguni’t kung ako’y matalo, di ko na kailangan ang anak.</p>
+					<p class="text-justify">Tinanuran ni Kabesang Tales ang kanyang bukid. Lagi siyang may pasang baril. Di makapasok doon ang sino man dahil balita si Kabesang Tales sa pagbaril. Nagdala siya ng gulok. Balita sa arnis ang kabesa. Ipinagbawal ang gulok. Nagdala siya ng palakol. Si Kabesang Tales ay nahulog sa kamay ng mga tulisan at ipinatubos. Isinanla ni Huli ang kanyang mga hiyas liban sa isang locket o agnos na bigay sa kanya ni Basilio. Hindi rin nakasapat ang panubos. Ipinasyang mangutang kay Hermana Penchang at maglingkod dito bilang utusan. Noon ay bisperas ng Pasko. Kinabukasan. Araw ng Pasko ay maglilingkod na siyang alila. Masalimuot ang naging panaginip ni Huli nang gabing iyon.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata V: Ang Noche Buena ng Isang Kutsero</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Gabi na’t inilalakad na ang prusisyong pang-noche buena nang dumating si Basilio sa San Diego. Naabala sila sa daan dahil nalimutan ng kutsero ang sedula nito at ito’y kinakailangang bugbugin muna ng mga guwardiya sibil.</p>
+					<p class="text-justify">Idinaan ang imahen ni Metusalem, ang pinaka-matandang taong nabuhay sa mundo. Kasunod na idinaan ang mga imahen ng tatlong Haring Mago. Nakapagpaalaala kay Sinang ang itim na Haring Melchor. Itinanong kay Basilio kung nakawala na ang kanang paa ni Bernardo Carpio na naipit sa kabundukan ng San Mateo. Kasunod sa prusisyon ang mga batang malulngkot sa pag-ilaw. Si San Jose naman. Kasunod naman ay mga batang may mga parol. Nasa dulo ng prusisyon ang Birhen.</p>
+					<p class="text-justify">Natapos ang prusisyon. Napuna ng mga sibil na walang ilaw an parol ng karitela. Pinarusahan uli ng mga sibil ang kutsroong si Sinong. Naglakad na lamang si Basilio.</p>
+					<p class="text-justify">Tanging bahay ni Kap. Basilio ang tila masaya sa mga nadaraanan ni Basilio. May mga manok na pinapatay. Nasilip ni Basilio na ang Kapitan ay nakikipag-usap sa kura, sa alperes, at kay Simoun.. nagkakaunawaan na tayo, G. Simuon, ani Kapitan Basilio, Tutungo tayo sa Tiani upang tingnan ang inyong mga alahas. Nagbilin ng isang kairel sa relo ang alperes. Isang pares na hikaw naman ang ipinakikibili’ ng kura. (Bakit kaya hikaw?)</p>
+					<p class="text-justify">Nasabi ni Basilio s sarili na si Simuon ay may kasindak-sindak na pagkatao. Ang lahat ay nakapaghahanap-buhay sa bayang ito maliban sa amin.</p>
+					<p class="text-justify">Sa bahay ni Kap. Tiyago ay iginagalang si Basilio, lalo na ng matandang utusan, nang makitang tumistis ng isang maysakit si Basilio na parang walang ano man.</p>
+					<p class="text-justify">Ibinigay ng mga utusan ang mga ulat. Mga kalabaw na namatay, mga katulong na napipiit at namatay ang matandang nagtatanod sa gubat. Nanghinayang si Basilio nang mabatid na sa katandaan namatay ang matanda.. Ibig niyang makatistis ng tao. Ang huling balita’y ukol sa pagkadukot ng mgs tulisan kay Kab. Tales. Di nakakain ng hapunan si Basilio.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata VI: Si Basilio</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Nang tumutunog ang mga batingaw ng noche buena si Basilio ay palihim na nagtungo sa gubat. Paliit ang buwan. Kaya’t paaninaw na tinungo ni Basilio ang libing ng kanyang ina. Ipinagdasal ang kaluluwa ng ina at gunita ng nakaraang may 13 taon.</p>
+					<p class="text-justify">Namatayan ang kanyang ina. May dumating na lalaking sugatan. Pinahakot siya ng kahoy na ipansusunog sa bangkay ng ina at ng sugatang lalaki. May dumating pang isang lalaki. Tumulong ito sa pagtatalsakan ng kahoy at paglilibing sa kanyang ina.</p>
+					<p class="text-justify">Umalis siya sa gubat. Lummuwas ng Maynila. Maysakit at gulanit ang damit. Ninais nang pasagasa sa mga karuwahe dahil sa hirap at gutom. Natagpuan niya sina Kap. Tiyago na katatpos dalhin sa beateryo si Maria Clara. Kinuha siyang katulong o utusan. Ping-aral sa Letran. Unang taon: wala siyang nabibigkas kundi ang pangalan niya at ang salitang adsum o narito po. Minaliit siya dahil sa luma at gulanit na suot. Gayunman ay lagi siyang nagsasaulo ng leksiyon. At nang matuos niyang sa tatlo o apat na paraan sa kanyang klase ay may 40 lamang ang nagtatanong di na sumama ang loob niya. Nang magsulit, natugon niya ang tanong sa kanya at ang marka niya para sa unang taon ay aprovado. Ang siyam niyang kasamahan sa pagsusulit ay nangag-ulit na lahat.</p>
+					<p class="text-justify">Ikatlong taon. Naisipan ng professor na Dominiko ang pagtanong kay Basilio na akala niya’y tanga upang magpatawa sa klase. Natugon ni Basilio ang tanong. Parang loro siya sa pagsagot. Noo’y di na tinanong si Basilio. Bakit pa tatanugin ito’y di naman nakapag-papatawa sa klase? Nawalan ng sigla sa pag-aaral si Basilio. Nguni’t isang professor niya ang nasiyahang tumanggap ng hamon ng mga kadete sa isang pasyalan at nagyakag ng mga estudyante niya na inilaban niya sa mga kadete sable laban sa baston. Namayani si Basilio sa labanan. Nakilala ng professor. Nang magtapos: sobresaliente at may mga medalya pa.</p>
+					<p class="text-justify">Muhi si Kap. Tiyago sa mga prayle mula nang magmongha si Maria Clara. Pinalipat si Basilio sa Ateneo Municipal. Malaki ang natutuhan ni Basilio. Nagsulit siya sa pagkabatsilyer. Ipinagmalaki siya ng kanyang mga profesor. Nakasulit siya at kumuha ng medisina. Pagkatapos, naging matiyaga at masigasig sa pag-aaral si Basilio. Kaya di pa man nakakatapos ay nakapanggamot na siya. At huling taon na ng pag-aaral ni Basilio. Pagkatapos niya’y pakaksal na sila ni Huli.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata VII: Si Simoun</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Pauwi na sana si Basilio nang may marinig siyang mga yabag at liwanag na palapit. Nangubli siyan sa puno ng baliti. Sa kabila ng puno tumigil ang dumating. Nakilala ito ni Basilio-ang mag-aalahas nang mag-alis ito ng salamin. Nangsimulang maghukay si Simoun sa tulong ng isang asarol. Naalaala si Basilio. Ito ang taong tumulong sa paglilibing sa kanyang ina at sa pagsunog sa isa pang lalaking doon namatay. Nag-isip si Basilio. Sino sa dalawang lalaking ito ang namatay o ang buhay na nagbubuhay Simoun- ang si Ibarra?</p>
+					<p class="text-justify">Napakita na kay Simoun si Basilio at nag handog ng pagtulong bilang ganti sa tulong na ipanagkaloob nito nam ay 13 ton na ang nakalilipas. Tinitutukan ni Simoun ng baril si Basilio. Sino ako sa palagay mo? tanong ng mag-aalahas. Tugon ni Basilio. Kayo po’y isang taong mahal sa akin, kayo’y ipinalalagay ng lahat, matangi sa akin, na patay na at ang mga kasawian sa buhay ay madalas kong ikinalulungkot. Lumapit si Simoun sa binata. Aniya: Basilio, ika’y naghahawak ng isang lihim na maaring magpangayaya sa akin, at ngayo’y natuklasan mo pa ang isa na kung mabubunyag ay ikasisira ng aking mga balak. At sinabi ni Simoun na dapat ay patayin na niya si Basilio upang iligtas ang kanyang layunin. "Gayunman, hindi ko marahil pagsisihan na ika’y di ko patayin. Gaya ko rin ay may dapat kang ipakipagtuos sa lipunan. Ikaw at ako ay uhaw sa katarungan Dapat tayong magtulungan. </p>
+					<p class="text-justify">At inamin ni Simoun na siya nga si Ibarra. Isinalaysay nito ang pagkakapaglibot sa buong daigdig upang magpakayaman. Nagbalik upang ibagsak ang pamahalaang marumi sukdang ipagdanak ng dugo. Siya raw ay sadyang nagpapalala sa pag-iimbot at pagmamalabis ng taong pamahalaan at simbahan upang gisingin ang damdamin ng bayan sa paghihimagsik.</p>
+					<p class="text-justify">Nguni’t sinuwatan niya sina Basilio at mga kasamahan na nagbabalak magtayo ng paaralan ng Wikang Kastila at humihinging gawing lalawigan ng Espanya ang pilipinas at bigyan ng pantay na karapatan ang mga Kastila at Pilipino. Ito raw ay magbibigay daan sa Pilipinas sa pagiging bayang walang sariling pagkukuro, walang kalayaan at pati kapintasan ay hiram dahil sa pagpipilit manghiram ng wika. Ibig raw nina Basilio na matulad ang Pilipinas sa mga bansang magugulo sa Timog Amerika (South Amerika).</p>
+					<p class="text-justify">Ayon kay Basilio ang kastila ay isang wikang magbubuklod-buklod sa mga pulo ng Pilipinas.</p>
+					<p class="text-justify">Ito’y pinabulaan ni Simoun. Anya: Ang kastila kailanman ay di magiging wikang pangkalahatan sa bayang ito ; sapagka’t sa mga kulubot ng kanyang isip at sa pintig ng kanyang puso ay wala ang mga akmang pananalita sa wikang iyan. Iilan lamang daw ang nakapagsasalita ng Kastila. At ang iilang ito ay mawawalan ng sariling kakayahan, magpapailalim sa ibang utak, paaalipin. Tinuligsa ni Simoun ang mga pangkat na naghahangad luminang sa wikang Kastila at di sa kaalamang magsalita o sumulat sa sarili nilang wika. Tinuligsa rin niya ang mga nagpapanggap na di sila maalam magsalita at umunawa ng sariling wika.</p>
+					<p class="text-justify">Mabuti, ani Simoun, at hangal ang pamahalaang Kastila na ayaw magpaturo ng wika nito sa mga nasasakupang di tulad ng Rusya at Alemanya. Ani Simoun: Kayo’y nakalilimot na habang ang isang bayan ay may sariling wika, napananatili rin nito ang kanyang paglaya. Ang wika ay isang pag-iisip ng bayan .</p>
+					<p class="text-justify">Inihimutok ni Simoun na ang kilusan ng kabataan sa pagpapaturo ng Kastila ay ipinagdurusa ng kanyang loob. Naniniwala siyang matapat sa kabataang ito ang paniniwala na sa kapakanan ng bayan ang kanilang ginagawa. Ninais niyang kausapin sina Isagani at Macaraeg. Nguni’t baka di siya pakinggan ng mga ito. Naisip rin niyang pagpapatayin ang mga ito.</p>
+					<p class="text-justify">Nagpatuloy si Simoun ukol sa kilusang ibinunsod ng kabataan Bukod sa isang pag-aaksaya ng panahon ay nilinlang ninyo ang bayan sa pag-asa sa wala at tinutulungan ninyong magyuko ng ulo sa mga mapangamkam. Ayaw silang matulad kayo sa mga Kastila? Napakabuti! Paunlarin ninyo ang katutubong ugali. Ayaw kayong bigyan ng kinatawan sa Kortes? Mabuti. Ano ang magagawa ng isang tinig sa karamihan? Habang nagmamaramot sila sa pagbibigay ng karapatan sa inyo lalong malaki ang matatamo ninyo pagkatapos upang ibagsak sila at gantihan ng sama ang sama. Ayaw ituro sa inyo ang kanilang wika, paunlarin ang isang katutubong wikain nang mawala ang pagtatangi-tangi at magkaroon ng mga layuning pambansa. Huwag hayaang magpalagay ang Kastila na sila ang panginoon dito at sila’y bahagi ng bayang ito kundi manlulupig at dayuhan. Sa gayo’y matatamo ninyo ang paglaya. Iyan ang dahilan at binayaan ko kayong mabuhay! </p>
+					<p class="text-justify">Nakahinga si Basilio. Aniya’y di siya pulitiko. Lumagda siya sa kahilingan ukol sa paaralan dahil inaakala niyang iyo’y mabuti. Sa panggagamot daw siya nakaukol. </p>
+					<p class="text-justify">Sa kasalukukuyang kalagayan daw ay di makapanggagamot nang mahusay si Basilio ayon kay Simoun. Ang sakit ng bayan ay siyang higit nangangailangan ng kagamutan. Walang halaga ang buhay na di nauukol sa isang layuning dakila, parang isang bato sa linang sa halip maging sangkap sa isang gusali. </p>
+					<p class="text-justify">Ani Basilio pinili niya ang siyensiya para makapaglingkod sa bayan. Nauwi sa kadakilaan ng karunungan ang pag-uusap. Ang karunungan ay panghabangpanahon, makatao at pandaigdig. Sa loob ng ilang daantaon, kapag ang sangkatauhan ay tumalino na, kung wala nang lahi-lahi, lahat ng bayan ay malaya at wala nang mang-aalipin at napaaalipin, iisa na ang katarungan at lahat ng tao’y mamamayan na ng daigdig at ang tanging layunin ng tao ay pagkakamit ng karunungan, ang salitang kagitingan at pag-ibig sa bayan ituturing na panatisismo o kabaliwan at ikabibilanggo ng nagsasabibig nito. </p>
+					<p class="text-justify">Napailing si Simoun. Upang makaabot daw sa kalagayang sinabi ni Basilio ang daigdig kailangan munang lumaya ang mga tao at ito ay nangangailangan namang pagpapadanak ng dugo upang ang mga sinisikil ay makalaya sa mapaniil. Pangarap lamang daw ang kay Basilio. Ang kadakilaan ng tao ay di magagawa sa pagpapauna sa kanyang panahon kundi nasa pagtugon sa kanyang pangangailangan at hangarin sa pag-unlad.</p>
+					<p class="text-justify">Napuna ni Simoun na hindi naantig ang kalooban ni Basilio. Inulos niya ng tuya si Basilio. Sinabi ni Simoun na walang ginagawa si Basilio kundi tangisan ang bangkay ng ina na parang babae. Paano ako makapaghihiganti? tanong ni Basilio. Ako’y dudurugin lamang nila. Sinabi ni Simoun na tutulungan siya. Hindi na raw bubuhayin ng paghihiganti ang ina o kapatid niya, tugon si Basilio. Ano ang mapapala ko kung sila’y ipaghihiganti? .</p>
+					<p class="text-justify">Makatulong sa iba nang di magdanas ng gayon ding kasawian, tugon ni Basilio. Ang pagpapaumanhin ay di laging kabaitan, ito’y kasalanan kung nagbibigaay-daan sa pang-aapi. Walang mang-aalipin kung walang paaalipin. At ipinaalaala ni Simoun na sa pag-aaral ni Basilio ay maaaring danasin nito ang dinanas ni Ibarra. Nagtaka si Basilio. Siya na raw ang inapi ay siya pa ang kamumuhian. Likas sa tao ang mamuhi sa kanyang inaapi, ani Simoun. Nguni’t di ko sila pinakikialaman; pabayaan nila akong makagawa at mabuhay. Tugon ni Basilio na sinundan ni Simoun ng:</p>
+					<p class="text-justify">At magkaanak ng mababait na alipin Ang mga damdaming mabuti o masama ay namamana ng anak. Kayo ay walang hangad kundi isang munting tahanan, kaunting kaginhawahan, isang asawa; isang dakot na bigas; at iyan ang mithiin ng marami sa Pilipinas, at kung iyan ay ibigay sa inyo, ituturing ninyong kayo’y mapalad na. </p>
+					<p class="text-justify">Magmamadaling araw na. Matapos sabihing di niya pinagbabawalan si Basilio sa pagbubunyag ng kanyang lihim ay sinabing kung may kailangan si Basilio ay magsadya lamang ito sa kanyang tanggapan sa Escolta. Nagpasalamat si Basilio. Naiwan si Simoun na nag-iisip: Di kaya niya napaniwala si Basilio sa paghihiganti o may balak itong maghiganti nguni’t naglilihim lamang at nais sarilinin iyon o sadyang wala nang hangad maghiganti. Lalong nagtumining sa loob ni Simoun ang matinding nasa na makapaghiganti.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata VIII: Maligayang Pasko</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Hindi naghimala ang birhen. Di nagbigay ng karagdagang salaping kailangan ni Huli. Natuloy si Huli sa pagpapaupa kay Hermana Penchang. (Iyon ay araw ng Pasko). Sa sama ng loob ay napipi si Tandang Selo.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata IX: Ang mga Pilato</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Pinag-usapan sa bayan ang nangyari kay Tandang Selo at kung sino ang may kasalanan sa ipinagkagayon ng matanda.</p>
+					<p class="text-justify">Ang alperes o tenyente ng guardia sibil? Ano raw ang kasalanan niya? Kaya lamang daw niya sinamsam ang mga sandata ay utos sa kanya iyon, hindi upang bigyan ng pagkakataon ang mga tulisan upang madukot si Kabesang Tales. At di raw niya kasalanan kung di man matagpuan si Kabesang Tales.</p>
+					<p class="text-justify">Ang asenderong bagong gumagawa ng lupa ni Kabesang Tales? Paano raw niya isusuplong ang pagdadala ni Kabesang Tales ng armas e kung tingnan siya’y parang pinipili ang pinakamabuting patamaan sa kanya. Kung namalagi raw si Kabesang Tales sa bahay ay di sana nadukot ng mga tulisan.</p>
+					<p class="text-justify">Si Hermana Penchang na bagong panginoon ni Huli? Ang may sala raw ay si Tandang Selo na rin na may kasalanan dahil di marunong magdasal at di nagturo ng wastong pagdarasal sa mga kaanak na tulad ng ginagawa niya ngayon kay Huli na tinuturuan niya ng dasal at pinababasa niya ng aklat na. Tandang Basyong Makunat. Nang mabalitaang tutubusin ni Basilio ang kasintahan ay nagsabing si Basilio ay isang demonyong nag-aanyong estudyante na ibig magpahamak sa kaluluwa ng dalaga.</p>
+					<p class="text-justify">Nakauwi si Kabesang Tales sa tulong ng salaping napagbilhan ng mga alahas ni Huli at nautang ng dalaga kay Hermana Penchang. Nabatid niyang iba na ang gumagawa ng kanyang lupa, nagpaupang utusan si Huli, pipi ang amang si Tangdang Selo, at pinaalis siya sa kanyang bahay, sa atas ng hukuman at sa katuwaan ng mga kura at gugmawa ng lupa. Si Kabesang Tales ay naupo sa isang tabi at nanatiling walang kibo.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata X: Kayamanan at Karalitaan</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Sa bahay ni Kabesang Tales nakipanuluyan si Simoun. Ito’y nasa pagitan ng San Diego at Tiyani. Nagdarahop si Kabesang Tales ngunit dala nang lahat ni Simoun ang pagkain at ibang kailangan at dalawang kaban ng mga alahas.</p>
+					<p class="text-justify">Ipingmalaki ni Simoun ang kanyang rebolber kay Kabesang Tales. Nagdatingan ang mga mamimili ng alahas. Si Kapitan Basilio, ang anak na si Sinang at asawa nito, Si Hermana Penchang mamimili ng isang singsing na brilyante para sa birhen ng Antipolo. Binuksan ni Simoun ang dalawang maleta ng alahas. Mga alahas na may iba’t ibang uri, ayos, at kasaysayan.</p>
+					<p class="text-justify">Napatingin si Kabesang Tales sa mga alahas ni Simoun. Naisisp niyang parang sa tulong ng kayamanang iyon ay tinutudyo siya ni Simoun, nilalait ang kanyang kapahamakan. Sa bisperas pa naman ng araw ng kanyang pag-alis sa bahay niyang iyon isa lamang pinakamaliit sa mga brilyanteng iyon ay sapat nang pantubos kay Huli at makapagbigay ng kapanatagan sa matanda na niyang ama. Wala namimili isa man sa mga nagsitawad sa mga luma ang makasaysayang alahas ni Simoun.</p>
+					<p class="text-justify">Inilibas ni Simoun ang mga bagong hiyas. Dito namili sina Sinang at iba pa. Siya raw ay namimili rin ng alahas, ani si Simoun. Tinanong si Kabesang Tales kung may may ipabibili. Iminungkahi ni Sinang ang kuwintas. Tinawaran agad ni Simoun ng makilalang iyon nga ang kuwintas ng kasintahang nagmongha. Limandaang piso. O ipagpalit ng Kabesa sa alin mang hiyas na maibigan niya. Nag-isip si Kabesang Tales. Ani Hermana Penchang ay di dapat ipagbili iyon dahil minabitu pa ni Huli ang paalila kaysa ipagbili iyon. Isinangguni raw muna ni Kabesang Tales sa anak ang bagay na iyon. Tumango si Simoun.</p>
+					<p class="text-justify">Ngunit nang nasa labas na ng bahay ay natanaw ni Kabesang Tales ang prayle at ang bagong gumagawa ng lupa. Nangagtawanan pa iyon ng makita si Kabesang Tales. Tulad niya ay isang lalaking nakita ang kanyang asawa na kasama ang ibang lalaki at pumasok sa isang silid at nangagtatatwanang inaglahi ang kanyang pagkalalaki. Bumalik ng bahay si kabesang Tales. Sinabi kay Simoun na di niya nakausap ang anak.</p>
+					<p class="text-justify">Kinabukasan, wala si Kabesang Tales. Gayundin ang rebolber ng mag-aalahas-wala sa kaluban at ang naroroon ay isang sulat at kuwintas ni Maria Clara. Humingi ng paumanhin si Kabesang Tales sa pagkakahuha ng baril na kailangan daw niya sa pagsapi niya sa mgas tulisan. Pinagbilinan si Simoun na mag-ingat sa paglakad sapagkat pagnahulog ang mag-aalahas sa kamay ng mga tulisan ay mapapahamak ito. Ani Simoun-sa wakas ay natagpuan ko ang taong aking kailangan: Pangahas ngunit mabuti nga ito-marunong tumupad sa mga pangko.</p>
+					<p class="text-justify">Dinakip ng mg a guwardiya sibil si Tandang Selo. Natutuwa si Simoun. Tatlo ang pinatay ni Kabesang Tales ng gabing iyon. Ang prayle, ang lalaking gumagawa sa lupa, at ang asawa nito ay nagkaroon ng madugong pagkamatay-putol ang leeg at puno ng lupa ang bibig. Sa tabi ng bangkay ng babae ay may papel na kinasusulatan ng Tales na isinulat ng daliring isinawsaw sa dugo.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XI: Los Baños</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Ang Kap. Heneral ay nangaso sa Bosoboso. May kasama siyang banda ng musiko sapagka’t siya ang pangalawang patrono real ng Pilipinas o kinatawan ng patrono real ng hari. Walang nabaril na ibon o usa ang Kapitan heneral. Ibig na sanang pagbihisang- usa ang isang tao. Mabuti na raw iyon sapagka’t maawain siya sa hayop. Ang totoo’y natutuwa siya’t di makikita na di siya makatatama ng ibon o usang babarilin. Nagbalik sila sa Los Banos.</p>
+					<p class="text-justify">Noo’y ika-31 ng Disyembre.</p>
+					<p class="text-justify">Naglalaro ng tresilyo sa bahay-aliwan sa Los-Banos ang Kapitan Heneral, si Padre Sibyla at Padre Irene. Galit na galit naman si Padre Camorra. Hindi alam ng huli na kaya nagpapatalo ang dalawang kura ay sapagka’t nais nilang makalamang sa isa sa pakikipag-usap sa Kapitan ukol sa paaralan ng kastilang balak ng kabataan.</p>
+					<p class="text-justify">Samantalang nagsusugal ay pinag-aralan at pinasyahan ng Kapitan ang mga papeles ng pamamahala na inisa-isa ng kalihim pagpapalit ng tungkulin, pagbibigay ng biyaya, pagpapatapon at iba pa. Saka na ang ukol sa paaralan ng kastila. Naroon si Don Custodio at isang prayleng Dominiko- si Padre Fernandez.</p>
+					<p class="text-justify">Nagalit si Padre Camorra dahil sa isang sinadyang maling sugal ni Padre Irene na ikinapanalo ng Kapitan. Punyales, si Kristo na ang makipagsugal sa inyo! ani Padre Camorra at tumayo na.</p>
+					<p class="text-justify">Si Simoun ang pumalit kay Padre Camorra. Siya ay biniro ni Padre Irene na kanyang itaya ang kanyang mga brilyante. Pumayag si Simoun. Wala raw namang maitataya ang kura. Ani Simoun: Ako’y babayaran ninyo ng pangako. Kayo Padre Sibyla, sa bawat limang bilang ay mangangako na kayo’y di kikilala sa karalitaan, kababaang loob, at pagsunod sa kabutihang asal (magmamalabis siya sa maluhong pamumuhay at paggugol, di siya magpapakita ng awa sa mga dukha, at di siya susunod sa mga tuntunin ng kabutihang asal.); at kayo, Padre Irene, sasabihin lamang ninyo na lilimutin ninyo ang kalinisang ugali, ang awa sa kapuwa, at iba pa. Sa maliit na hinihingi ko’y kapalit ang aking mga brilyante. At ito (tinapik pa ang Kapitan Heneral), sa limang bilang ay isang vale na limang araw sa piitan (karapatan ni Simoun na mapabilanggo sa isang tao nang limang araw); isang pag-papapiit sa limang buwan; isang utos na pagpapatapon na walang nakasulat na pangalan; karapatan sa isang madaliang utos na pagpapabaril sa iasng taong pipiliin ko at iba pa.</p>
+					<p class="text-justify">Sa kakaibang kundisyong ito ng pagsusugal ay napalapit sina Don Custodio , Padre Fernandez at ang Mataas na Kawani. Ang huli ay nagtanong kung ano ang mapapala ni Simoun sa kanyang mga hiling.</p>
+					<p class="text-justify">Para raw luminis ang bayan at maalis na lahat ang masasamang damo, tugon ni Simoun.</p>
+					<p class="text-justify">Ipinalalagay ng nangakarinig na ang gayong kaisipan ni Simoun ay gawa ng pagkaharang sa kanya ng mga tulisan. Sinabi naman ni Simoun na nang pigilan siya ng mga tulisan ay walang kinuha sa kanya kundi ang 2 niyang rebolber at mga bala. Kinumusta pa raw ang heneral. Marami raw baril ang tulisan . Anang heneral ay ipagbabawal niya ang mga sandata. Ani Simoun: Huwag. Ang mga tulisan ay marangal; sila ang tanging marangal na kumikita ng ikabubuhay nila. Halimbawa, pawawalan ba ninyo ako nang di man lang kukunin ang aking mga alahas ? Ang kasamaan ay wala sa mga tulisan sa bundok nasa mga tulisan sa bayan at siyudad.</p>
+					<p class="text-justify">Gaya ninyo, ani Padre Sibylang nakatawa.</p>
+					<p class="text-justify">Gaya natin , ganti ni Simoun, Tayo nga lamang ay mga di-hayagang tulisan.</p>
+					<p class="text-justify">Ika-11:30 na. Itinigil ng heneral ang laro at parunggitan. May kalahating oras pa’t manananghali na marami pa tayong suliraning pag-uusapan.</p>
+					<p class="text-justify">Ipinasiya ng heneral na ipagbawal ang armas de salon (sandatang pampalamuti sa salas). Tumutol ang Mataas na Kawani. Wala raw bansa sa daigdig na nagbabawal niyon. Manok lang daw ang kayang patayin niyon. Laging sinasalungat ang heneral ng Mataas na Kawani. Walang nangyari sa pagtutol ng huli. Nagbigay ng payo si Simoun. Huwag ipagbawal ang armas de salon liban sa iisang sukat na kasalukuyang nabibili noon. Ito ang nasunod.</p>
+					<p class="text-justify">Sunod na pinag-usapan ang suliranin ng paaralan sa Tiyani. Ang guro ay humihingi ng bahay-paaralan. Ani Padre Sibyla si Socrates ay nagturo sa plasa, si Plato sa ilalim ng mga kahoy at si Hesus ay sa mga bundok. Pilibustero raw ang guro sa Tiyani, ayon kay Padre Camorra. Ipinasiya ng heneral na pigilin sa pagtuturo ang guro. Tumutol ang Mataas na Kawani.</p>
+					<p class="text-justify">Anang heneral ay di dapat humusay pa sa Espanya ang mga paaralan pa sa Pilipinas. Sa susunod , dugtong pa nito, lahat ng daraing ay pipigilin sa tungkulin.</p>
+					<p class="text-justify">Ipinayo ni Don Custodio na gawing paaralan ang sabungan. Kung linggo at pista lang lang daw ginagamit at pinakamaayos na gusali, ang mga sabungan. Kung simpleng araw daw ay nakatiwangwang lamang.</p>
+					<p class="text-justify">Pinutol ng heneral ang pagtatalo. Pag-aaralan daw niya. Isinunod ang balak na paaralan ng kabataan ukol sa Wikang Kastila. Anim na buwan nang naghihintay ito ng pagpapasiya.</p>
+					<p class="text-justify">Tinanaong ng heneral ang kawani Sang-ayon ang tinanong. Pinuri ang balak ng kabataan. Tumutol sa balak si Padre Sibyla. Wala raw sa panahon at isang paghamak sa mga Dominiko. Ayon kay Simoun ay kahina-hinala ang balak. Iniisip ni Padre Irene na tagapagsalita ng kabataan para sa paaralan na wala nang pag-asa ang paaralan. Tutol si Simoun. Ipinasyang huwag nang magsalita.</p>
+					<p class="text-justify">Inisa-isa ang kabataang may panukala ng paaralan. Si Isagani raw ay mahilig sa pagbabago at pagsulong kaya’t mapanganib. Ipinagtanggol ni Padre Fernandez si Isagani. Ani Padre Camorra, ang binata ay bastos. Sa bapor da ay itinulak niya at siya’y itinulak din nito.</p>
+					<p class="text-justify">Inisa-isa ang kabataang may panukala ng paaralan. Si Isagani raw ay mahilig sa pagbabago at pagsulong kaya’t mapanganib. Ipinagtanggol ni Padre Fernandez si Isagani. Ani Padre Camorra, ang binata ay bastos. Sa bapor da ay itinulak niya at siya’y itinulak din nito.</p>
+					<p class="text-justify">Tumutol si Padre Camorra: Ang mga Indiyo ay di dapat matuto ng kastila at pagnatuto ay makikipagtalo sa mga kastila. </p>
+					<p class="text-justify">Ani Padre Sibyla: Hindi pinag-uusapan dito ang pagtuturo ng kastila: dito ay may isang lihim ng paghahamok ng mga estudyante at ng Unibersidad ng Sto. Tomas. Pag nasunod ang kanila, natalo kami (mga Dominiko), yayabang ang mga iyan at tuloy-tuloy na. Pagkatapos naming bumagsak, isusunod nila ang Pamahalaan. </p>
+					<p class="text-justify">Nagsalita si Padre Fernandez na isa ring Dominiko: Pulitikahin natin sila para di nila masabing tinalo nila tayo. Sa halip na labanan natin sila ay sang-ayunan natin at purihin sa balak nila. Bakit makikipagkagalit tayo sa Bayan; kakaunti tayo, marami sila. Kailangan natin sila, tayo’y di nila kailangan. Ngayo’y mahina ang bayan. Ngunit bukas-makalawa’y lalakas iyan. Matuwid ang mga kahilingan ng mga estudyante. Kikilala pa sila sa atin ng utang na loob. Gumaya tayo sa mga Hesuwita.</p>
+					<p class="text-justify">Lalong nagalit si Padre Sibyla nang mabanggit ang hesuwita. Nagsabad- sabaran ang magkakaharap at di naunawaan ang lahat. Pumasok ang kura sa Los Banos upang sabihing nakahanda na ang pananghalian. </p>
+					<p class="text-justify">Siyang pagbulong ng mga Kawani sa Heneral. Ang anak noong si Kab. Tales ay humihiling na palayain ang kanyang nuno na napipiit kapalit ng ama.</p>
+					<p class="text-justify">Kumatig si Padre Camorra sa pagpapalaya. Sumang-ayon ang Heneral.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XII: Placido Penitente</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Malungkot na patungo sa Unibersidad ng Santo Tomas si Placido Penitente sapagkat ibig na niyang tumigil ng pag-aaral tulad ng nasabi na niya sa 2 sulat niya sa ina. Pinakiusapan nga lamang siya ng ina na kahit batsilyer sa artes ay matapos niya.Nasa ikaapat na taon na siya.</p>
+					<p class="text-justify">Ang paghahangad ni Placido na magtigil ng pag-aaral ay palaisipan sa kanyang mga kababayang taga Tanawan. Siya ang pinakamatalino sa bantog na paaralan ni Padre Valerio roon. Hindi naman siya sugarol, walang kasintahang magyayayang pakasal, at laban sa mga aral ng Tandang Basyong Makunat, masalapi.</p>
+					<p class="text-justify">Nagulat pa si Placido nang makapasok na siya sa Magallanes (dating Sto.Domingo) at siya’y tapikin ni Juanito Palaez sa balikat. Si Palaez ay mapaghangin at paborito ng mga guro. Anak ng mestisong Kastila. Mayaman. May pagkakuba.</p>
+					<p class="text-justify">Kinumusta ni Juanito ang bakasyon ni Placido. Pagkatapos ay ibinalita ang pagbabakasyon niya sa Tiyani, kasama si Padre Camorra. Nangharana raw sila ng magagandang babae. Wala raw bahay na hindi nila napanhik. At may ibinulong kay Placido na ikinamangha tila ng huli. Tanga raw si Basilio sa pagkakaroon ng katipang tulad ni Huli. Pero susuko rin daw si Huli kay Padre Camorra.</p>
+					<p class="text-justify">Nagtanong ng leksyon si Palaez kay Penitente sapagkat noonh lamang papasok ang kuba. Pulos walang pasok noong nakaraang mga araw. May kaarawan ng guro, may pista ng santo, mayroong umambon.</p>
+					<p class="text-justify">Ang leksyon daw nila ay ukol sa mga salamin. Niyaya ni Pelaez si Penitente na maglakwatsa. Tumutol ang huli. Nagpatuloy sila ng paglakad. May naalala si Pelaez. Nang hingi ng abuloy para sa monumento ng isang paring Dominiko. Nagbigay si Placido para magtigil na si Pelaez at alam din ng Batangueno na nakatutulong ang gayong mga abuloy sa pagpasa ng estudyante. Malapit na sila sa Unibersidad. Naroon si isagani na nakikipagtalo ukol sa aralin. Ang ibang estudyante ay naniningin ng magagandang dalagang nagsisimba. Namutla at namula sa lugod si Isagani nang magkulusan ang mga mag-aaral at magtinginan sa isang bagong dating na victoria o karuwahe. Nakita niya si Paulita Gomez, ang kanyang katipan, na kasama si Donya Victorina. Si Donya Victorina ay ngumiti kay Juanito Pelaez. Si Tadeo na kaya lamang pumasok sa paaralan ay upang alamin kung may pasok at kung mayroon ay aalis at magdadahilang maysakit ngunit nakapapasa, sa anong himala ay napasunod kay Paulita sa simbahan.</p>
+					<p class="text-justify">Nagpasukan na sa paaralan ang mga estudyante. Nguni’t may tumawag kay Placido. Pinalagda si placido sa kasulatang tutol sa balak na paaralan ni Macaraig. Hindi lumagda si Placido. Walang panahong basahin ang kasulatan. Nalaala niya ang isang amain na nawalan ng mga pag-aari nang lumagda sa isang kasulatang di binasa. Nguni’t sa matagal na pagpipilitan ay nahuli sa klase si Placido Petinente. Pumasok parin si Placido. Hindi na patiyad. Pinatunog pa ang takong ng sapatos. Inakala niyang ang pagkakahuli niya ay pagkakataon na upang siya’y mapuna at makilala ng kanyang guro. Sila’y may mahigit na 150 sa klase. At siya nga’y napuna ng guro na lihim na nagbanta. Bastos magbabayad ka sa akin.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XIII: Ang Klase sa Pisika</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Isang silid na taluhaba ang silid ng klase. Ang upuan ay parang hagdan na tatlong baytang at nakapaligid sa 3 panig ng silid. Sa isang dulo ng silid ay ang hapag ng guro na sa likod ay ang pisarang may nakasulat na Viva! na naroon mula pa nang unang araw ng pasukan sa taong iyon. Walang palamuti ano man ang mga dingding na bato. May mga kasangkapan sa pisika nguni’t ito ay nakasusi sa isang aparador na may salamin at kung gamitin man ay ipinakikita lamang sa klase mula sa malayo tulad ng Santisimo ng Pare. Iyon ay ipinakikita lamang sa mga dayuhan upang di masabi ng mga ito na nahuhuli ang UST sa ibang bansa sa kahusayan sa pagtuturo at kaya lamang di natututo ang mga Pilipino ay dahil katutubo ang walang-katalinuhan.</p>
+					<p class="text-justify">Ang guro, si Padre Millon ay isang batang Dominikong napabantog sa pilosopiya sa Kolehiyo ng San Juan de Letran. Iyon ang una niyang pagtuturo ng pisika.</p>
+					<p class="text-justify">Unang tinanong sa klase ang isang antukin. Parang ponograpo itong tumugon ng isang isinaulong leksiyon na ukol sa salamin, bahagi nito, kauriang bubog o kalaing. Pinatigil ng guro ang estudyante. Pinilosopiya ang musika. Kung kalaing, metal at bubog daw ang salamin ano raw uri ang kahoy na may makintab na barnis o marmol na binuling maigi? Di tinugon ng estudyante ang tanong. Ipinagpatuloy ang isinaulong aralin na parang plakang natigil at muling pinaandar sa ponograpo. Pinatigil uli ang estudyante, muling tinanong sa sampay bakod na kastila.</p>
+					<p class="text-justify">Binulungan ito ni Pelaez. Mali ang idinikta. Sinunod nito. Natawa pati ang guro matapos insultuhin ang estudyante. Binigyan uli ng tanong sa bahagi ng salamin. Kung ano ang ibabaw ay siyang salamin, bale wala ang harapan; ang mahalaga’y ang nasa likuran. Di ba? Nalito ang estudyante. Lahat ay sumesenyas na sumang-ayon na siya at nadiktahan siya ni Pelaez nang Concedo, Padre, (sang-ayon Padre). Iyon ang itinugon ng estudyante.</p>
+					<p class="text-justify">Tanong uli ng prayle: Kung katkatin ang asoge sa likod at palitan ng bibingka, ano mayroon? </p>
+					<p class="text-justify">Bulong ni Pelaez: Bibingka!</p>
+					<p class="text-justify">Tinawag ng propesor si Pelaez. Tumayo ang tinawag. Napabubulong ito kay Placido. Sa katatapak sa paa ni Penitente ay napasigaw sa sakit ang tagadikta. Siya ang tinatanong ng propesor matapos na siya’y murahin at taguring espiritu sastre. Sinasabi ng aklat na ang mga salaming kalaing ay binubuo ng tanso o ng iba pang kalaing, totoo o hindi? tanong ng guro.</p>
+					<p class="text-justify">Ganyan ang sabi ng aklat, Padre, tugon ni Placido.</p>
+					<p class="text-justify">Ang salaming bubog ay binubuo ng isang patag na bubog na ang magkabilang mukha ay pinakintab ng maigi at ang isang mukha ay kinulapuan ng tinggang puti, tama?</p>
+					<p class="text-justify">Iyan ang sabi ng aklat,Padre?</p>
+					<p class="text-justify">Ang tinggang puti ba ay kalaing?</p>
+					<p class="text-justify">Sabi po ng aklat.</p>
+					<p class="text-justify">Ergo (samakatuwid), ang salaming bubog na may merkuryo, isang kalaing, ay salaming bubog-kalaing. Paano mo maipaliliwanag, espiritu sastre?</p>
+					<p class="text-justify">Nalito si Placido. Inulan ng mura si Placido. Nagtawanan ang klase. Itinanong ang pangalan ni Placido. Napalatak na patuya ang kura. Anito: Placido Penitente lalong angkop ang Placido suplado. Lalapatan kita ng penitencia. Hinanap sa mahabang talaan ang pangalan ni Placido. A labinlimang pagliban! I*sa lang at aalisin ka na sa klase.</p>
+					<p class="text-justify">Napatindig si Placido. Aapat daw ang liban niya at ikalima ang pagkahuli niya. Himig intsik na nanuya ang guro. Bihira akong bumasa ng talaan kaya’t sa bawat isang huli ay limang liban ang inilalagay ko. Makaikatlo kitang nahuli kaya’t labinlima. Kung ang limang liban mong inamin ang susundin ko, may utang ka pang 10. At bibigyan kita ng masamang marka sa masamang sagot mo ngayon.</p>
+					<p class="text-justify">Ngunit Padre, hindi dapat na ang isang wala sa klase ay makabigkas ng mali sa aralin, tanong ni Placido.</p>
+					<p class="text-justify">"A... pilosopong metapisiko! Hindi mo ba alam na maaaring ang lumiban sa klaseng iyon, saan man siya naroon, ay di rin nakaalam ng aralin? Pilisopastro!"
+panunuya pa ng Pari.</p>
+					<p class="text-justify">Nagpanting ang tainga ni Placido. Tama na, Padre. Maaring markahan ninyo ako nang ano mang marka nguni’t wala kayong karapatang umaglahi sa akin! Inyo na ang inyong klase! At ang estudyante ay umalis nang walang paalam.</p>
+					<p class="text-justify">Natigagal ang klase. Di nila akalaing magawa iyon ni Placido. Nagsermon ang pari. Nagsuwail daw si Placido sa mga tumataguyod sa paaralan ng kastila. Nagmura si Padre Millon hanggang sa tumugtog ang kampanilya. Naglabasan ang may 234 na estudyanteng di pumapasok nang walang nalaman at lumabas nang sa gayon ding kalagayan.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XIV: Sa Bahay ng mga Mag-aaral</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Malaki ang bahay na tinitirahan ng estudyanteng si Makaraig. Maluwag ang bahay na ito at puro binata ang nakatira na pawang nangangasera. Iba-iba ang kanilang edad at pag-uugali.</p>
+					<p class="text-justify">Si Makaraig ay isang mayamang mag-aaral ng abogasya at pinuno ng kilusan ukol sa isyu sa Akademya ng wikang kastila. Ang pangunahing estudyante na sina Isagani, Sandoval, Pecson at Pelaez ay inimbitahan ni Makaraig upang pag-usapan ang kanilang pakay. Mananalig sina Isagani at Sandoval na pagbibigyan hiling, samantalang nag-aalinlangan si Pecson. Si Sandoval ay larawan ng mga kastilang may malasakit at pagpapahalaga sa mga Pilipino.</p>
+					<p class="text-justify">May dalang magandang balita si Makaraig. Ibinalita nila na si Padre Irene ay ang nagtatanggol sa kanila laban sa mga sumalungat sa kanilang adhikain. Kailangan ng grupo ang pagkiling ni Don Custodio, isa sa mga kataas-taasang lipon ng paaralan sa kanilang panig. Dalawang paraan ang kanilang naisipupang pumanig sa kanila si Don Custodio, si G. Pasta isang manananggol at si Pepay na isang mananayaw na matalik na kaibigan ni Don Custodio. Napagkaisahan ng lahat na piliin ang manananggol upang maging marangal ang kapamaraanan.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XV: Si Ginoong Pasta</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Si Ginoong Pasta ay isang bantog na manananggol. Sinadya ito ni Isagani upang pakiusapan na kung maari ay mamagitan ng sang-ayon sa kanila kung sakaling sumangguni si Don Custodio. Ngunit nabigo siya dahil nagpasiya ang abogado na huwag nakialam dahil maselan ang usapan. Marami na siyang pag-aari kaya’t kailangang kumilos nang ayon sa batas. Ang ganting katwiran ni Isagani ay lubos na hinangaan ng abogado dahil sa katalinuhan at katayugan ng pag-iisip nito.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XVI: Ang Kasawian ng Isang Intsik</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Si Quiroga, isang negosyanteng Intsik na naghahangad magkaroon ng konsulado ang kanyang bansa ay naghandog ng isang hapunan. Dinaluhan ito ng mga tanyag na panauhin, mga kilalang mangangalakal, mga prayle, mga militar, mga kawani ng pamahalaan, gayun din ang kanilang mga suki.</p>
+					<p class="text-justify">Dumating si Simoun at nang singilin niya si Quiroga sa utang na siyam na libong piso, sinabi nitong nalulugi siya. Inalok ni Simoun na bawasan ng dalawang libong piso ang utang ni Quiroga kung papaya gang intsik na itago sa kanilang bodega ang mga armas na dumating. Hindi raw dapat mangamba ang Intsik, sapagkat ang mga baril ay unti-unting ililipat sa ibang bahay na pagkatapos ay gaagawan ng pagsisiyasat at marami ang mabibilango. Siya ay lalakad sa mga mapipiit upang kumita. Napilitang sumang-ayon si Quiroga. Ang pangkat ni Don Custodio ay nag-uusap tungkol sa komisyong ipapadala sa India para pag-aralan ang paggawa ng sapatos para sa mga sundalo.Sa pulutong ng mga pari, ay pinag-uusapan nila ay tungkol sa ulong nagsasalita sa may perya sa Quiapo na pinamamahalaan ni Mr. Leeds.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XVII: Ang Perya sa Quiapo</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Maganda ang gabi. Ang perya’y punong-puno ng panonoorin at manonood. Ang 12 galing sa bahay ni Quiroga ay patungo sa kubol ni Mr. Leeds. Tuwang-tuwa si Padre Camorra sa dami ng magagandang dalagang nakikita lalo na nang makasalubong si Paulita na kasama nina Isagani at Donya Victorina. Punyales! Kailan pa ako magiging kura sa Quaipo, anang makamundong prayle at kinurot sa tiyan si Ben Zayb. Si Isagani nama’y inis sa bawa’t tumititig kay Paulita.</p>
+					<p class="text-justify">May pinasok na tindahan ng mga tau-tauhang kahoy ang pangkat nina Padre Camorra. Naghawigan sila-sila. Ang isa raw ay kahawig ni Zayb. Kahawig daw ni Padre Camorra ang isa. Marami ang lilok na anyong Prayle.</p>
+					<p class="text-justify">May isang kuwadrong tanso ng babaing pisak ang mata, gula-gulanit ang damit, nakalupasay at namimirinsa at namimirinsa ng lumang damit. Ayon kay Padre Camorra ay isang hanggal ang umisip ng larawang iyon. Sumagot si Ben Zayb na iyon ay ayon sa pamagat: la Prenza Filipina o prinsang ginagamit sa Pilipinas. Isa namang kuwadro ay naglalarawan ng isang lalaking nakagapos ang mga kamay at tinuturuan ng mga guwardiya sibil. Pamagat Ang Bayan na Akaba . Pinagtawanan din nila ito.</p>
+					<p class="text-justify">May nakitang larawan na kahawig ni Simoun. Hinanap nila ang mag-aalahas. Wala ito. Ayon kay Padre Camorra’y natakot na baka pagbayarin nila sa pagpasok sa paglabas ni Mr. Leeds. Ani Ben Zayb naman: Baka natakot na matuklasan natin ang lihim ng kanyang kaibigan si Mr. Leeds. Makikita ninyo’t ang lahat ay sa salamin lamang.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XVIII: Ang mga Kadayaan</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Sinalubong ni Mr. Leeds ang mga panauhin sa kanyang perya. Bago nagsimula ang palabas, nagsiyasat si Ben Zayk upang Makita ang salamin sa kanyang inaasahang matagpuan, ngunit wala siyang nakita. </p>
+					<p class="text-justify">Pumasok si Mr. Leeds sa isang pinto at may dalang kahong kahoy sa kanyang pagbabalik. Ipinaliwanag niya na ito ay natagpuan naiya sa isang libingang nasa-piramid ni Khufu, isang Paraon ng Ehipto. Ang kahon ay may lamang abo at kapirasong papiro na kinasusulatan ng dalawang salita. Sa pamamagitan ngpagbigkas ngunang salita ang abo ay nabubuhay at nakakausapang isang ulo at pagbanggit ng ikalawang salita ito ay babalik sa dating kinalalagyan nito.</p>
+					<p class="text-justify">Bumigkas ng isang salita si Mr. Leeds, lumabas ang isang ulo at sinsbi nitong siya si Imuthis. Siya ay umuwi sa sariling bayan pagkatapos ng pag-aaral at mahabang paglalakbay. Sa kanyang pagdaraan sa Babilonia ay nabati niya ang isang lihim na hindi ang tunay na Sumerdis ang namamahala doon kundi si Gautama, isang magnanakaw ng kapangyarihan at namamahala sa tulong ng pandaraya. Sa katakutang isumbong siya kay Cambises ay binalak ang ikakasawi ni Imuthus sa tulong ng mga saserdoteng Taga-Ehipto na siyang nakapangyayari noon sa kanilang bayan. Siya ayumibig sa isang anak ng pari at naging kaagaw niya rito ang pari sa Abidos. Nagpanukala ang pari ng kaguluhan at siya ang sinangkalan. Isinakdal siya at napiit, tumakas at napatay. Ayon sa ulo siya ay nabuhay muli upang ihayag ang gayong kataksilan. Titig na titig kay Padre Salvi ang espinghe habang nagsasalita ito. Dahil sa takot hinimatay ang prayle.</p>
+					<p class="text-justify">Kinabukasan nagpalabas ng utos ang gobernador na nagbabawal sa palabas ngunit wala na si Mr. Leeds, nagtungo ito sa Hongkong dala ang kanyang lihim.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi19" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XIX: Ang Mitsa</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Lumabas sa klase si Placido Penitente. Hindi na siya ang dating mapagtimpi. Galit na galit siya. Nais niyang gumawa ng isang libo`t isang paghihiganti. Parang ibinubulong ng kanyang budhi: Placido Penitente, ipakilala mong ikaw ay may karangalan, na ikaw ay matapang at maginoo. Taga-Batangas ka na ang paglait ay hinuhugasan ng dugo.</p>
+					<p class="text-justify">Nakitang nagdaan ang isang sasakyang kinalulunanan nina Padre Sibyla at Don Custodio. Nais niyang habulin ang kura at ihagis sa ilog.</p>
+					<p class="text-justify">Napadaan sa Escolta. May naraanang dalawang Agustino sa pinto ng basar ni Quiroga. Ibig pag-uundayan ng suntok. Nagpigil. May naraanang dalawang kadete na nakikipag-usp sa isang kawani. Sinagasa niya ito. Tumabi ang mga kadete. Inaalihan ng hamok si Placido.</p>
+					<p class="text-justify">Inakala na ni Placidong wala na siyang pagkakataong mag-aral. Aniya sa sarili. Hindi raw kami marunong maghiganti. Dumating na sana ang lintik at nang makita nila.</p>
+					<p class="text-justify">Naratnan ni Placido sa bahay na kanyang tinutuluyan ang kanyang ina si Kabesang Andang. Kararating nito mula sa Batangas. Sinabi ni Placido na di na siya mag-aaral. Naghinagpis ang ina. Nakiusap sa anak. Nagpaalam si Placido sa ina. Ginala nito ang Sibakong, Tundo, San Nicolas, Sto. Kristo. Mainit pa ang ulo. Nguni`t nakaramdam ng gutom. Naisipang umuwi. Inakalang wala na sa bahay ina`t nagtungo na sa kapitbahay upang makipangginggi. Mali siya. Naroon pa ang ina. Naghihintay.</p>
+					<p class="text-justify">Ipinakiusap daw ni Kabesang Andang sa prokurador ng Agustino na iayos ang suliranin ni Placido sa nakagalit na Dominiko. Ayaw ni Placido. Tatalon daw muna siya sa ilog Pasig o magtutulisan bago mag-aral na muli. Nagsermon uli ang ina ukol sa pagtitiis. Di na kumain muna, muling umalis ang binata. Nagtungo sa daungan ng mga bapor. Inisip niyang magtungo sa Hongkong, magpayaman at kalabanin ang mga prayle.</p>
+					<p class="text-justify">Ginabi siya sa paggagala. Walang natagpuang kaibigan. Napatungo siya sa perya. Nakita niya si Simoun. Sinabi niya dito ang nangyari sa kanya at ang hangad niyang pasa- Hongkong. Napatulog siya sa mag-aalaha.</p>
+					<p class="text-justify">Isinama ni Simoun si Placido sa kanyang karuwahe. Pag-karaan ng pagtakbo ipinatigil ang sasakyan. Bumaba sina Simoun at Placido. Nakita nina Placido sina Isagani at Paulita na namamasyal. Nainggit si Placido. Kinainisan sina Simoun at Isagani. Anya: Sa ganyan lamang mapapakinabangan. Nagpatuloy ng paglalakad sina Simoun at Placido hanggang sapitin nila ang isang bahay na munti pagawaan ng mga pulbura na pinangangasiwaan ng dating guro sa San Diego. Inatasan si Simoun na pakipagkitaan ng guro ang tenyente at ang kabo ng mga militar, gayundin si Kabesang Tales. Nagtanong ang guro sa di pa nila kahandaan. Ani Simoun: sapat na sina Kabesang Tales, ang mga naging kabinero at isang rehinameyento ng mga kawal. Kung ipagpapaliban ay baka patay na si Maria Clara. Tumalima ang dating guro.</p>
+					<p class="text-justify">Dalawang oras na nag-usap sa bahay ni Simoun ang magaalahas at ang binata bago umuwi sa kaserahan si Placido.</p>
+					<p class="text-justify">Nang mapag-isa ang mag-aalahas ay nagtalo ang loob ni Simoun. Sinurot siya ng budhi dahil bahagi siya ng kabulukang nais niyang puksain. Waring nakita niya ang anyo ng kanyang ama at ng kay Elias na tumututol sa kanyang ginawa. Ngunit umiling siya. Kung ako`y tumulad sa inyo ay patay na ako, aniya. Gumawa ako ng masama upang mabigyang daan ang mabuti. Nilalagnat noon si simoun.</p>
+					<p class="text-justify">Kinabukasan ay buong bait na nakikinig si Placido sa nangangaral na ina. Hindi tumututol sa mungkahi nito. Ipinayo na lamang sa ina na bumalik na sa lalawigan kaagad dahil kung malaman daw ng prokurador na naroon si Kabesang Andang ay hihingian pa ito ng regalo at pamisa.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi20" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XX: Si Don Custodio</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Ang usapin ukol sa akademya ng salitang kastila ay nasa mga kamay ni Don Custodio, na siyang pinagkatiwalaan lumutas sa suliraning ito.</p>
+					<p class="text-justify">Si Don Custodio de Salazar y Sanchez deMonteheredondo ay kilalang tanyag sabahagi ng lipunan sa Maynila at tinaguriang “Buena Tinta”. Siya ay nakapag-asawa ng isang mayaman at sa pamamagitan ng yaman ng asawa, nakapagnegosyosiya kahit kulang sa kaalaman sa mga tungkuling kanyang hinahawakan siya ay pinupuri dahil siya ay masipag.</p>
+					<p class="text-justify">Nang bumalik siya sa Espanya walang pumansin sa kanya dahil sa kakulangan niya sa pinag-aralan, kaya walapang isang taon nagbalik na siya sa Pilipinas at nagmagaling sa mga Pilipino sa kanyang kunwaring magandang karanasan sa Madrid.</p>
+					<p class="text-justify">Lumagay siya parang amo’t tagapagtanggol, ngunit siyay naniniwalang may ipinanganak upang mag-utos at ang iba’y upang sumunod. Ang Pilipino’y ipinanganak upang maging utusan, kaya’t kailangang pagsabihang lagi na ang mga ito’y sa gayon lamang ukol.</p>
+					<p class="text-justify">Sa loob ng labing limang araw, si Don Custodio ay bumuo ng pasiya ukol sa kasulatan at handa na niya itong ipaalam sa lahat.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXI: Mga Anyo ng Taga-Maynila</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Nang gabing iyon ay may pagtatanghal sa teatro de Variendades, ang Les Choches de Corneville ng bantog na mga Pranses. Ubos kaagad ang tiket, at mahabang-mahaba ang hanay ng nagsipasok.</p>
+					<p class="text-justify">Isang Kastila ang tanging walang bahala sa pagpasok sa dulaan. Ito’y si Camarroncocido na anyong pulubi o palaboy. May lumapit sa kanya na isang kayumangging lalaki na matanda at may amerikanang mahaba’t hanggang tuhod. Siya’y si Tiyo Kiko. Pinakitaan nito ng mga mamisong Mehikano si Camarroncocido. Iisa ang kanilang hanapbuhay: pagdidikit ng mga paskil.</p>
+					<p class="text-justify">Anim na piso ang iniupa ng mga Pranses kay Tiyo Kiko. Ani Camarroncocido: E, magkano naman ang ibinigay nila sa mga prayle? Dapat mong malaman na ang buong kikitain ng palabas ay mauuwi sa mga kumbento. </p>
+					<p class="text-justify">Ang palabas ay humati sa Maynila. Mayroong nagsitutol dito bilang masagwa at laban sa moralidad, tulad nina Don Custodio at ng mga prayle. Mayroon namang nagtanggol dito. Mga pinuno ng hukbo at mga marino, ang kawani, at maraming matataas na tao. Laban ang mga babaing may asawa o may kasintahan. Ang wala nama’y sang-ayon sa opera. Naging malaki at malaganap ang bulung-bulungan at kasamang nababanggit ang Kapitan Heneral, si Simoun, si Quiroga at mga artista.</p>
+					<p class="text-justify">Ani Camarroncocido kay Kiko: Ang kalahati ng mga nagsisipasok sa teatro ay manonood dahil sinasabi ng mga prayle na huwag manood: at ang palabas dahil ipinagbabawal ng mga prayle. Mabuti ang iyong mga paskil ngunit higit na mabisang pantawag ng tao ang pastoral o pagbabawal ng mga pari. </p>
+					<p class="text-justify">Nang makaalis si Tiyo Kiko ay may napansin si Camarroncocido na mga taong tila hindi sanay mag-amerikana at sa wari’y umiiwas mapuna. Anya: Mga sekretarya kaya o magnanakaw? Kinapa ang sariling mga bulsa. Walang laman. Ano sa akin sino man sila? anito at nagkibit-balikat. Isang kagawad ng hukbo ang kumausap sa mga di-kilalang tao na apat o lima sa bawat pulutong. Pagkatapos, ang kagawad ay lumapit sa karwahe at masiglang nakipag-usap sa taong lulan niyon si Simoun. May narinig ang palaboy na Kastila: Ang hudyat ay isang putok. At umalis ang karwahe. May binabalak! ani Camarroncocido.</p>
+					<p class="text-justify">Nagpatuloy ng lakad si Camarroncocido. Dalawang tao ang narinig niyang nag-uusap. Anang isa na may hawak na rosaryo at kalmen: Ang mga kura ay malakas kaysa Heneral. Ang heneral ay umaalis; ang mga ay naiiwan. At yayaman tayo. Ang hudyat ay isang putok.</p>
+					<p class="text-justify">Ani Camarroncocido: Doon ang heneral dito si Padre Salvi. Kaawa-awang bayan! Ngunit anio sa akin? </p>
+					<p class="text-justify">Sa labas ng dulaan ay naroon si Tadeo at isang kababayang baguhan sa lungsod. Niloloko ni Tadeo ang kababayang tanga sa pagsasasbi ng mgsa kahanga-hangang kasinungalingan. Maraming mga taong nagdaraan ang sinasabi ni Tadeo na mga kaibiga’t kakilala niyang malalaking tao kahi’t di totoo. Dumarating sina Paulita Gomez at ang tiyang si Donya Victorina. Nakilala ni Tadeo si Padre Irene na nakabalatkayo nguni’t di naitago ng tunay na katauhan dahil sa mahaba niyang ilong. Dumating din si Don Custodio.</p>
+					<p class="text-justify">Nang makita ni Tadeo na dumating sina Makaraig, Pecson, Sandoval at Isagani ay lumapit ito at bumati sa apat. May labis na tiket ang mga ito dahil di sumama sa kanila si Basilio. Inanyayahang pumasok si Tadeo. Di na naghintay ng ikalawang paanyaya si Tadeo. Iniwan ang taga-lalawigan na nag-iisa.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXII: Ang Palabas</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Maingay sa dulaan. Lampas na sa oras ay di pa nagsisimula ang palabas dahil wala pa ang Kapitan Heneral. May nagsisipadyak ng baston at sumisigaw na buksan na ang tabing. Maraming pabastos na paghanga sa mga babae na maririnig sa mga artilyero. Maraming tsismisan. Mausok. Maraming pagtatalo. May isang matigas ang ulo sa isang luklukang di kanya at ayaw ibigay iyon sa may-aring si Don Primitivo. Hindi ito napakiusapan ng tagapamahala. Nagsigawan ang mga artilyero. Ibibigay o hindi na oo na hindi! Nalibang ang mga tao. Ang mga tanod ay di makapangahas magpaalis sa nasa upuan ni Don Primitivo dahil sa ito ay isang mataas na tao sa pamahalaan.</p>
+					<p class="text-justify">Dumating ang Heneral. Tumugtog ng marcha real. Si Pepay ay nasa isang palko na handog ni Makaraig. Katapat ito ng palko ng mga estudyante. Si Don Custodio ay tinipan ni Pepay sa dulaan kaya’t di man ibig ay napilitan ang tagapagmungkahi na pasadulaan.</p>
+					<p class="text-justify">Masaya si Pepay. Masaya rin ang mga estudyante pati si Pecson. Si Isagani lang ang hindi dahil nakita niya sa dulaan si Paulita na kasama ni Pelaez na kanyang karibal.</p>
+					<p class="text-justify">Isang Pransesa ang umawit, si Gertude. Isang awit na puno ng tsismis ng linggo ang kanyang ipinaririnig. Tigas na kasasalin ni Tadeo sa Kastila ng mga salitang Pranses. Gayon din ang ginawa ni Juanito Pelaez kina Paulita at Donya Victorina. Karaniwan naman ay mali si Juanito. Umawit si Serpolette. May pumalakpak sa una. Nakilala ito ni Tadeo. Padre Irene na pinapag-espiya ni Padre Salvi sa kung sadyang masama nga ang palabas ng mga Pranses ay namukhaan ng mananayaw. Kakilala pala siya ni Serpolette sa Europa pa.</p>
+					<p class="text-justify">Isang babae ang dumating na kasama ang asawa. Ipinamalaki ang pagdating niya nang huli sa lahat. Nang makitang may palko pang walang laman ay inaway ng ginang ang asawa. Sinutsutan siya ng mga tao. Wikang paismid: Ang mga ungas! Akala mo’y marurunong ng Pranses. (Tama naman.)</p>
+					<p class="text-justify">Si Juanito’y nagpapanggap na maalam ng Pranses na di naman nalalayo sa Español. Kapag nagtawa ang mga tao’y nakikitawa siya. Kapag nagsiungol o nagsiubo, napapailing siya. Humanga sa kanya si Donya Victorina at hinangad pakasalan ang binatang kuba pag namatay si De Espadaña.</p>
+					<p class="text-justify">Inubo nang masasal si Juanito. Sinigawan siya. Paalisin ang tisiko. Nais awayin ito ni Pelaez. Nakilalang si Don Custodio iyon. Natakot ang binata. Kundi lamang kasama ko kayo anya kina Paulita. Lalong humanga si Donya Victorina kay Pelaez.</p>
+					<p class="text-justify">Ayon kay Ben Zayb, na isa sa mga nagsiganap ay hindi artista, di marunong umawit.</p>
+					<p class="text-justify">Napag-usapan ang di pagsipot ni Simoun sa dulaan.</p>
+					<p class="text-justify">Pinagtalunan ng mga estudyante ang kagandahan at kapangitan ng wikang Pranses . Dumating si Makaraig mula kay Pepay. Malungkot. Nag-usisa ang lahat. Napasiyahan na raw ang tungkol sa paaralan ayon kay Padre Irene. Sinang-ayunan nag paaralan. Ngunit ito’y ipaiilalim sa Unibersidad ng Sto. Tomas, sa pamamahala ng mga Dominikano.</p>
+					<p class="text-justify">Kung gayo’y mga kabesa de baranggay tayo, ani Tadeo. Hinagisan ni Pecson ng maruming medyas si Sandoval.</p>
+					<p class="text-justify">At ang masakit ayon kay Makaraig ay ipinayo pa ni Padre Irene na ipagdiwang ng mga estudyante ang tagumpay nila.</p>
+					<p class="text-justify">Ani Pecson: Sigi, magdiwang tayo sa isang pansiteryang paglilingkuran ng mga Intsik na hubad! Pinagtibay ang balak. Hindi na hinintay ng mga estudyante ang ikalawang yugto ng opereta. Nagsialis sila sa gitna ng alingasngas ng buong bulwagan.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+				<!-- Modal -->
+		<div class="modal" id="fi39" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXIX: Katapusang Kabanata</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+						<p class="text-justify">Malungkot na tumugtog ng kanyang armonyum si Padre Florentino. Kaaalis ni Don Tiburcio de Espadana na nag-akalang siya ang Kastilang tinutukoy sa telegrama na darakpin daw sa gabing iyon. Inakalang siya’y natunton na ni Donya Victorina.</p>		
+						<p class="text-justify">Ang telegrama ay pinabasa ng tenyente ng guwardiya sibil sa bayan kay Padre Florentino sa ngalan ng pagkakaibigan. Anang telegrama: “Espanyol escondido casa Padre Florentino cojera remitara vivo muerte”.</p>		
+						<p class="text-justify">Ang totoo, si Simoun ang Kastilang tinutukoy sa telegrama. Sugatang dumating doon si Simoun may dalawang araw na. Di man lamang siya inusisa ay tinanggap siya ng pari. Hindi pa nakabalita ang pari ng nangyari sa Maynila. Inakala ng pari na dahil wala na ang Kapitan Heneral ay may nagtangkang maghiganti kay Simoun. Ang sugat niya’y buhat daw sa kawalang-ingat, ayon sa mag-aalahas. Nagkasiya ang pari sa mga palagay. At nakatulong ang hinala ng pari na si Simoun ay tumakas samga kawal na tumutugis nang tanggapin nito ang telegrama.</p>		
+						<p class="text-justify">Si Simoun ay tumangging paggamot pa sa mediko sa kabesera. Pumayag siyang paalaga kay Dr. de Espadana lamang. Malubha ang mga sugat ni Simoun.</p>		
+						<p class="text-justify">Tumigil sa pagtugtog si Padre Florentino. Iniisip ng pari ang kahulugan ng pakutyang ngiti ni Simoun nang mabatid nito ang tungkol sa telegrama at sa ikawalo ng gabi ang dating mga darakip. Naisip ni Padre Florentino na isang taong palalo si Simoun. Dati’y makapangyarihan, ngayo’y kahabag-habag. Nguni’t bakit sa kanya pinili ni Simoun na makituloy? At darakpin na lamang nang patay o buhay ay nakukuha pang ngumiti nang pakutya. Inisip ni Padre Florentino kung paano maililigtas ng isang paring Pilipino si Simoun gayong noong kapanahunan nito ay humamak sa kanyang pagkamahabang-uri ng pagkapari at pagka-indiyo.</p>		
+						<p class="text-justify">Di pinansin ni Simoun ang pakisuyo ni Padre Florentino may dalawang buwan ang nakalilipas upang tulungang makalaya si Isagani sa piitan. Si Simoun ang gumawa ng mga kaparaanan upang mapadali ang pagaasawa ni Paulita kay Juanito na lubos na ipinagdamdam ni Isagani at ikinalalayo nito sa mga kapwa tao. Nilimot ni Padre Florentino ang lahat. Wala siyang inisip kundi ang pagliligtas kay Simoun. Nguni’t parang walang pagnanasang mailigtas ni Simoun ang sarili.</p>		
+						<p class="text-justify">Pumasok si Padre Florentino sa silid ni Simoun. Wala nang mapangutyang anyo sa mukha ni Simoun. Waring isang lihim na sakit ang noon ay tinitiis ng mag-aalahas.</p>		
+						<p class="text-justify">Napaghulo ng pari na uminom ng lason si Simoun. Nabaghan ang pari.</p>		
+						<p class="text-justify">Tinangka ni Padre Forentino na ihanap ng lunas si Simoun. Pasigaw na sinabi ng mag-aalahas na huwag na silang mag-aksaya ng panahon dahil mamatay siyang dala niya ang kanyang lihim. Ang pari ay lumuhod sa kanyang reclinatorio (luhuran sa pagdarasal) at nanalangin sa paanan ng imahen ni Hesukristo at pagkatapos ay buong kabanalang kanyang inilapit ang isang silyon sa maysakit, at tumalagang makinig.</p>		
+						<p class="text-justify">Ipinagtapat ni Simoun ang tunay niyang pangalan. Halos nasindak ang pari. Malungkot na ngumiti ang maysakit. Tinakpan ng pari ng panyo ang mukha at tumungo upang makinig. Isinalaysay ni Simoun ang kanyang buhay. Labintatlong taon siya sa Europa. Nagbalik siyang puno ng pangarap at pag-asa.Pinatawad ang mga nagkasala sa kanyang ama pabayaan lamang siyang mabuhay nang payapa. Ngunit mahiwagang mga kamay ang nagtulak sa kanya sa isang kaguluhang gawa-gawa at ang lahat ay nawala sa kanya.: pangalan, yaman, pag-ibig, kinabukasan, kalayaan at naligtas lamang siya sa kamatayan sa tulong ng isang kaibigan. Tinika niyang maghiganti. Nangibang bansa siya dala ang bahagi ng kayamanan ng kanyang magulang at siya’y nangangalakal. Nakilahok siya sa himagsikan sa Kuba. Nakilala niya roon ang kapitan heneral na noon ay kumandante pa lamang. Pinautang siya. Naging kaibigan matalik dahil sa kawalanghiyaan ng kapitan na si Simoun ang nakaalam. Sa tulong ng salapi ay nakuha niyang maging kapitan heneral ang kaibigan at naging sunud-sunuran sa kanya dahil sa katakawan sa salapi.Inupatan niya ang kapitan sa paggawa ng maraming kabuktutan.</p>		
+						<p class="text-justify">Mahaba ang pagtatapat ni Simoun at gabi na nang matapos. Sandaling naghari ang katahimikan. Inihingi ng tawad ng pari ang mga pagkukulang ni Simoun at hiniling niya kay Simoun na igalang ang kalooban ng Diyos Mahinahong nagtanong si Simoun kung bakit hindi siya tinulungan ng Diyos sa kanyang layunin. Ang sagot ng pari ay dahil masama ang kanyang pamamaraan.Hindi maililigtas ng krimen at kasamaan ang mga dinumihan ng krimen at kasamaan.Ang poot ay walang nalilikha kundi mga panakot ; ang krimen ay mga salarin ang nalilikha. Pag-ibig lamang ang nakagagawa ng mga bagay na dakila. Ang katubusan ay kabutihan; ang kabutihan ay pagpapasakit, ang pagpapasakit ay pag-ibig.</p>		
+						<p class="text-justify">Tinanggap ni Simoun ang lahat na sinabi ng pari. Inamin niyang siya ay nagkamali. ngunit naitanong niya ng dahil ba sa magkakamaling iyon ay ipagkait na ng Diyos ang kalayaan ng isang bayan at ililigtas ang napakaraming higit pang salarin kaysa sa kanya. Ang matatapat at mababait ay nararapat na magtiis nang ang mga adhika nila ay makilala at lumaganap.Ang nararapat na gawin ay magtiis at gumawa ang tugon ng pari.</p>		
+						<p class="text-justify">Napailing si Simoun. Ang magtiis at gumawa ay madaling sabihin sa mga hindi pa nakaranas ng pagtitiis at paggawa. Anong klaseng Diyos ang humingi ng ganoon kalaking pagpapasakit. Sinabi ng pari ay ito raw ang isang Diyos na makatarungan.Diyos na nagpaparusa sa kakulangan natin ng pananalig at sa mga gawa nating masama.Pinabayaan natin ang kasamaan kaya’t katulong tayo sa paglikha nito. Ang kalayaan ay di natin dapat tuklasin sa tulong ng patalim. Tuklasin natin ito sa tulong ng nagpapataas ng uri ng katwiran at karangalan ng tao.. Gumawa tayo ng mabuti , tapat at marangal hanggang mamatay tayo dahil sa kalayaan.</p>		
+						<p class="text-justify">Pinisil ni Simoun ang kamay ng pari. Naghari ang katahimikan. Dalawang pisil pa. Nagbuntunghininga si Simoun. Higit na mahabang katahimikan.</p>		
+						<p class="text-justify">Nang mapunang hindi umiimik ang maysakit ay pabulong na nagwika si Padre Florentino; “Nasaan ang kabataang naglalaan ng magagandang sandali, ng kanilang mga pangarap at kasiglahan alang-alang sa ikabubuti ng kanilang bayan ? Saan naroon ang handang magpakamatay upang hugasan ng dugo ang napakaraming pagkakasala? Upang karapatdapat ang pagpapakasakit ito’y kailangang malinis at busilak. Nasaan ang kabataang may lakas na tumanan na sa aming mga ugat, ng kalinisan ng diwa na narumihan na sa amin, ng apoy ng sigla na patay na sa aming puso? O kabataan, kayo’y aming hinihintay!”</p>		
+						<p class="text-justify">Nangilid ang luha sa mga mata ng pari. Binitawan ang kamay ni Simoun. Lumapit sa durungawan. May kumatok na utusang nagtanong kung magsisindi na ng ilawan. Sa tulong ng isang lampara ay tinanglawan si Simoun. Hinipo ito; nabatid na ito ay patay na.Lumuhod at nanalangin si Padre Florentino.</p>		
+						<p class="text-justify">Tinawag ang mga utusan, pinaluhod at pinagdasal. Umalis sa silid si Padre Florentino Kinuha ang takbang bakal ni Simoun. Dinala ito sa talampas na laging inuupuan ni Isagani upang sisirin ng tingin ang kalaliman ng dagat. Doon ay inihagis ng pari ang mga takba ng brilyante at alahas ni Simoun. Nilulon ng dagat ang kayamanang yaon.</p>		
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi38" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXVIII: Kasawiang-palad</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Buong Luzon halos ang nilaganapan ni Matanglawin sa kanyang panunulisan. Siya’y pumatay sa hukom pamayapa sa Tiyani, nanunog, nangulimbat. Ngayo’y sa Batangas, bukas ay sa Kabite, di maglilipat-araw ay sa Tayabas, pagkatapos ay sa Panggasinan o sa Albay. Laging naliligtasan ni Matanglawin ang mga habol sa kanya. At sa kawalangkaya ng mga sibil sa dumakip sa mga tulisan ay mga magsasakang walang sala ang kanilang dinarakip.</p>
+					<p class="text-justify">May anim o pitong magsasaka ang dinakip ng mga sibil matapos ang isang pagsalakay ni Kabesang Tales. Abut-siko at kabit-kabit ang gapos ng mga ito na inilakad nang tanghaling tapat sa kainitan ng Mayo walang sombrero at nakayapak. Ang pawis nila’t alikabok ay nagpuputik sa kanilang mukha ang magkahalong poot at kawalang pag-asa.</p>
+					<p class="text-justify">Ni hindi nila mapahid ang mahapding pawis na sumisigid sa kanilang mga mata. Kung may isang nabubuwal sa hapo at gutom ay hinahagupit silang lahat at ang nabuwal ay makakaladkad sa kanilang pagtakbo. Sumisigaw ang nabuwal na patayin na siya. Umiiyak. Parang bata. Isinusumpa ang oras ng kanyang pagsilang.</p>
+					<p class="text-justify">Nilalait pa sila ng mga guwardiya sibil. Nguni’t may isang sibil na tutol sa gayong pagmamalupit. Nang di makatiis ay sumisigaw na rin ito sa mapagparusa: Hoy, Mautang, bayaan mo silang magsilakad nang payapa! </p>
+					<p class="text-justify">Nagpakikilalang bago ka nga lamang Carolino patuya pang tugon ni Mautang. Ano ba ang ginagawa ninyo sa mga bihag ng digma? </p>
+					<p class="text-justify">Pinakukundanganan namin. Tugon ni Carolino:</p>
+					<p class="text-justify">Mangyari’y kaaway na nagsilaban ang mga iyon ang mga ito’y mga kababayan natin! ganti ng mapagpahirap. At bumubulong kay Carolina: Ginaganyan natin iyan upang lumaban o tumakas at nang barilin na lamang natin. </p>
+					<p class="text-justify">Isang bilanggo ang sinumpong ng pagdumi o pag-ihi marahil at nakiusap na payagan muna siyang makatigil nang sandali. Di siya pinayagan. Mapanganib daw ang lugal na iyon. Naliligid sila ng bundok.</p>
+					<p class="text-justify">Higit kang malupit pa kaysa mga Kastila, anang bihag.</p>
+					<p class="text-justify">Isang putok nang narinig. Gumulong-gulong si Mautang tutop ang dibdib na nilabasan ng dugo sa bibig</p>
+					<p class="text-justify">Alto! Sigaw ng kabong putlang-putla. (matatapang lamang sa walang laban). Isang putok pa at ang kabo naman ang tinamaan sa bisig at namaluktot sa sakit.</p>
+					<p class="text-justify">Itinuro ng kabo ang mga bilanggo. Fuego! sigaw niya. At ang mga bihag ay pinagbabaril. Saka pa lamang lumaban ng putukan sa mga nasa batuhan sa bundok. Ang mga nasa batuhan ay tinayang may tatatlong riple lamang. Lumusob ang mga sibil. Ang unang umakyat patungo sa pinangungublihan ng mga di kilalang kalaban ay gumulong-gulong na pababa.</p>
+					<p class="text-justify">Hala, Carolino! Nahan ang mabuti mong pagpapatama! pasigaw na wika ng kabo.</p>
+					<p class="text-justify">Isang lalaki ang biglang lumitaw sa ibabaw ng isang talampas. Nagwawasiwas ito ng baril.</p>
+					<p class="text-justify">Paputukan! sigaw ng kabo kasabay sa pagmumura.</p>
+					<p class="text-justify">Tatlong kawal ang nangagputok. Patuloy na may isinisigaw ang lalaki. Hindi siya mauunawaan.</p>
+					<p class="text-justify">Natigilan si Carolino. Parang nakilala niya iyon. Tinutukan siya ng baril ng kabo. Ipinagbabaril sa kanya ang lalaki. Tumalima si Carolino. Gumulong at nawala sa talampas ang lalaki. May isinigaw ito. Natulig si Carolino.</p>
+					<p class="text-justify">Parang nagsitalilis ang mga nagtatago sa itaas. Lumusob ang mga sibil. Isa pang lalaki ang lumitaw, sa talampas. Iniamba ng lalaki ang sibat. Pinaputukan siya ng mga kawal. Nabulid ang lalaki.</p>
+					<p class="text-justify">Ang unang umabot sa kaitaasan ay may dinatnang matandang lalaking naghihingalo. Binayuneta ito. Di man lamang kumurap ang matanda. Nakatingin kay Carolino. Nakaturo ang daliri sa likod ng talampas.</p>
+					<p class="text-justify">Gulila’t at putlang-putla si Carolino. Nakilala niyang ang matanda’y ang ingkong niyang si Tandang Selo. Nakita niyang ang mga nanlalalim na mata ng matanda ay mga salamin ng matinding hinanakit. At nang mamatay ito ay patuloy na may itinuturo sa likod ng talampas.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi37" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXVII: Ang Hiwagaan</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Nabatid din ng madla, sa likod ng pagpigil sa balita, ang mga pagbabangon at mga supot ng pulbura . Ito ang naging paksa ng usapan ng lahat - palihim nga lamang. Si Chikoy kasi, payat na platero. Ay nagdala ng hikaw para kay Paulita nang tinatanggal na ang mga palamuti at mga hapag sa bahay ni Kapitan Tiyago at nakita niya mismo ang suput-supot na pulbura sa ilalim ng mesa, sa silong, sa bubungan, sa likod ng mga upuan.</p>
+					<p class="text-justify">Ayon daw kay G. Pasta ay iisa ang maaring gumawa ng gayon-isang kaaway ni Don Timoteo o kaagaw ni Juanito.</p>
+					<p class="text-justify">Naroon sa bahay ng mga platero si Isagani. Anang may-aring si Kapitan Loleng ay magtago si Isagani.</p>
+					<p class="text-justify">Ngumiti lamang si Isagani.</p>
+					<p class="text-justify">Nagpatuloy si Chikoy. Dumating daw ang mga sibil. Wala namang mapgbintangan. Si Don Timoteo lamang daw at si Simoun ang nangasiwa sa pag-aayos ng bahay na iyon. Pinaalis daw ang lahat ng mga di kailangan sa imbestigasyon.</p>
+					<p class="text-justify">Naku, kung may isa man lang daw na nanigarilyo sa mga trabahador, sasabog ang buong daan ng Anlogue. Kung sumabog daw ang mga pulbura ang noong gabi.</p>
+					<p class="text-justify">Nangatakot ang mga babae. Naghulaan kung sino ang pinaghihinulaan. Mga prayle. Si Quiroga. Isang estudyante. Si Makaraig. At tumingin si Kapitan Toringgoy kay Isagani. Ani Chikoy: ayon sa ilang kawani, si Simoun. Nagtaka ang lahat.</p>
+					<p class="text-justify">Naalala ni Momoy, isang dumalo sa piging, ang pagalis ni Simoun sa bahay bago magsimula ang hapunan.</p>
+					<p class="text-justify">Si Simoun daw ay nawawala, patuloy ni Chikoy. Kasalukuyang ito’y pinaghahanap ng mga sibil. Lalong nabuo sa isip ng mga kababaihan ang pagiging demonyo ni Simoun na nagkakatawang-tao.</p>
+					<p class="text-justify">Naalala uli ni Momoy ang pagkakaagaw sa ilawan ni Simoun na nuo’y namamatayan ng ningas. Nagpayo’t dito sa silid ni Isagani.Nagpatuloy si Chikoy.Tinataya raw ng mga maykapangyarihan na ang ilawan ay siyang magpapasiklab sa pulbura.</p>
+					<p class="text-justify">Nahintakutang gayon na lamang si Momoy. Nguni’t nang makita ang kasintahang si Siensa na nakatingin sa kanya ay nagtapang-tapangang nagsabi: Masama ng ginawa ng magnanakaw. Mamatay sanang lahat! Nag-antanda sa takot ang lahat ng matanda at babae. Lumapit si Momoy kay Isagani.</p>
+					<p class="text-justify">Hindi nga mabuting kumuha ng di kanya. Ani Isagani na mahiwang nakangiti. Kung nalaman lamang ng magnanakaw na iyon kung ano ang nilalayon .kung siya ana ay nakapag-isip-isip tiyak na di niya gagawin ang gayon. Pantayan man ng kahit ano . Hindi ako tatayo s kanyang kalagayan! </p>
+					<p class="text-justify">Saka nagpaalam si Isagani. Ngunit upang hindi na bumalik pa sa kanyang amain.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi36" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXVI: Mga Kapighatian ni Ben Zayb</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Mula sa bahay ni Kapitan Tiyago ay patakbong tinungo ni Ben Zayb ang kanyang tanggapan upang sulatin ang pangyayari. Pinalabas niyang bayani ang Kapitan Heneral, sina Padre Irene, Don Custodio at Padre Salvi. Ang lathalain ay isa ring paghahangad ng mabuting pagyao at paglalakbay ng Heneral.</p>
+					<p class="text-justify">Ngunit ang kanyang isinulat ay ibinalik sa kanya ng patnugot ng pahayagan. Ipinagbawal ng Heneral ang pagbanggit ng ano mang ukol sa pangyayari.</p>
+					<p class="text-justify">Dumating ang balita mula sa Pasig. Nilusob dawn g maraming tulisan ang bahay-pahingahan ng mga prayle at nakatangay ng may dalawang libong piso. Malubha ang isang prayle at dalawang utusan. Gumalaw ang guni-guni ni Ben Zayb. Gagawin niyang bayani ang kura na sa pagtatangol ay nagkasira-sira ang isang silyang ginamit laban sa mga tulisan.</p>
+					<p class="text-justify">Nagtungo siya sa Pasig. Natagpuan niyang ang nasugatan ay si Padre Camorra. Doon siya pinapagtika sa kasalanang ginawa sa Tiyani. May isang maliit na sugat sa kamay at may pasa sa ulo. Tatlo ang mga magnanakaw na may taglay ng gulok. Limampung piso ang nanakaw. Ayon kay Ben Zayb ay hindi tama ang salaysay ni Padre Camorra. Kailangan daw gawing marami ang mga tulisan.</p>
+					<p class="text-justify">May nadakip sa mga tulisan. Sila raw ay inanyayahang sumama sa pangkat nina Matanglawin upang sumalakay sa kumbento at mga bahay ng mayayaman. Pangungunahan sila ng isang Kastila na mataas, kayumanggi, puti ang buhok at ang pasabi’y kumikilos sa utos ng Kapitan Heneral na kaibigan niyang matalik. Katulong pa raw nila ang mga artilyero. Wala raw dapat ikatakot. Ang hudyat daw ay isang malakas na putok. Walang putok. Inakala ng mga tulisan na sila ay nilinlang. Nagsiurong ang ilan Ang iba’y nagsibalik sa bundok. Balak nilang maghiganti sa Kastila na makalawa nang lumoko sa kanila. Ang tatlong tulisan ay nagpasiyang manloob.</p>
+					<p class="text-justify">Ayaw paniwalaan ang mga tulisan sa paglalarawang si Simoun ang puno nila. Nguni’t si Simoun ay di matagpuan sa bahay niya . Maraming bala at pulbura roon. Si Don Custodio ay naghanda ng habla laban kay Simoun. Mabilis na kumalat ang balita ukol sa mag-aalahas. Marami ang di makapaniwala.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi35" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXV: Ang Piging</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Ikapito ng gabi nang magsisimulang dumating ang mga may paanyaya. Una ang maliliit. Sunod ang palaki sa katayuan sa tungkulin at sa kabuhayan. Lahat ay pinagpupugayan ni Don Timoteo.</p>
+					<p class="text-justify">Dumating ang bagong kasal. Kasama si Donya Victoria. Batian. Kamayan. Naroon na sina Padre Salvi nguni’t wala pa ang Heneral. Nais tumungo ni Don Timoteo sa palikuran nguni’t di siya makaalis at wala pa ang Heneral. May pumintas sa mga kromo sa pader. Nagalit si Don Timoteo. Iyon saw ang pinakamahal na mabibili sa Maynila. Sisisngilin daw niya ang utang ng namintas kinabukasan.</p>
+					<p class="text-justify">Dumating na rin ang heneral. Nawal ang mga dinaramdam ni Don Timoteo. May nagsabi na ang araw ng kapitan dahil natititigan na tio nang harap-harapan.</p>
+					<p class="text-justify">Si Basilio ay nasa harap ng bahay at pinapanood ang mga nagdaratingan. Naawa siya sa mga inakala niyang mga walang malay na mamamatay roon. Naiisip na bigyan ng babala ang mga iyon. Nguni’t siyang pagdating ng sasakyan nina Padre Slavi at Padre Irene. Nagbago siya ng isip.</p>
+					<p class="text-justify">Hindi ako dapat magmalabis sa pagtitiwalang inilagak sa akin. Ako’y may utang na loob sa kanya; sa kanila’y wala. Siya ang humukay ng libingan ng aking ina na pinatay nila. Ako’y nagpakabuti; pinagsikapan kong magpatawad, ano ang ginawa sa akin? Mangamatay na nga sial na ang aming pagtitiis, nasabi ni Basilio.</p>
+					<p class="text-justify">Nakita niya si Simoun, dala ang ilawan. Waring kakila-kilabot ang anyo ni Simoun na naliligid ng apoy. Parang nag-alinlangan sa pagpanhik sa hagdan si Simoun. Nguni’t nagtuloy rin ito. Nang dumating ang Kapitan Heneral ay sandaling nakipag-usap dito at sa ibang naroon ang mag-aalahas. Saka ito nawala sa paningin ni Basilio.</p>
+					<p class="text-justify">Namayani na naman ang kabutihang-loob ni Basilio. Nalimot ang ina, ang kapatid, si Huli, ang sariling kaapihan. Ninais na iligtas ang nangasabahy. Nguni’t hinadlangan siya ng mga tanod dahil sa marusing niyang anyo. Namutla si Simoun nang makita si Basilio na iniwan ng tanod-pinto upang magpugay sa mag-aalahas. Matigas ang mukha ni Simoun na tumuloy sa sasakyan at nag-utos. Sa Eskolta. Matulin! </p>
+					<p class="text-justify">Mabilis ding lumayo si Basilio. Nguni’t may nakita siyang isang lalaking tatanaw-tanaw sa bahay. Si Isagani! Niyaya niya itong lumayo. Marahang itinulak ni Isagani ang kaibigan. Nagpilit si Basilio. Bakit ako lalayo Bukas ay hindi na siya ang dati. May hapdi ang tinig ni Isagani. Ipinaliwanag ni Basilio ang ukol sa ilawan. Hinila niya si Isagani. Tumutol ito. Mabilis na lumayo si Basilio.</p>
+					<p class="text-justify">Nakita ni Isagani na nagtungo sa kainan ang mga tao. Naisip niyang sasabog ang bahay kasama si Paulita. Mabilis na nagpasya ito.</p>
+					<p class="text-justify">Sa loob ay nagkatagpo ang nagpipiging ng isang kaputol na papel na ganito ang nakasulat.</p>
+					<p class="text-justify">MANE THACEL PHARES</p>
+					<p class="text-justify">JUAN CRISOSTOMO IBARRA</p>
+					<p class="text-justify">Isa raw biro iyon, ani Don Custodio. Patay na raw si Ibarra. Nang makita ni Padre Salvi ang papel at sulat ay namutla ito. Sinabi nitong iyon nga ang lagda ni Ibarra. Saka nahilig sa sandigan ng silya ang kura nanlambot sa takot. </p>
+					<p class="text-justify">Nagkatinginang takot na takot ang lahat. Tatawag sana ng mga kawal ang Kapitan Heneral. Walng nakita kundi mga utusang di niya kilala. Nagkunwang hindi takot. Magpapatuloy tayo sa pagkain, aniya. Huwag intindihin ang isang pagbibiro. </p>
+					<p class="text-justify">Nguni’t nagsalita si Don Custodio. Ipinalagay kong ang kahulugan ng sulat ay papatayin tayo ngayong gabi .</p>
+					<p class="text-justify">Di nakakibo ang lahat. May nagsabi. Baka lasunin tayo. Binitiwan ang mga kubyertos. Lumabo ng ilawan.</p>
+					<p class="text-justify">Iminungkahi ng Kapitan Heneral kay Padre Irene na itaas ng huli ang mitsa ng ilawan. Biglang may mabilis na pimasok, tinabig ang utusang humadlang, kinuha ang ilawan, itinakbo sa asotea at itinapon sa ilog, May humingi ng rebolber, may magnanakaw raw. Ang anino ay tumalon sa rin sa ilog.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi34" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXIV: Ang Kasal ni Paulita</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Nasa sa daan si Basilio. Ika-8 ng gabi. Makikituloy sana siya kina Isagani nguni’t hindi umuwi ang kaibigan sa buong araw na iyon. Dalawang oras na lamang at sasabog na ang ilawan ni Simoun. Maraming dadanak na dugo. Marami ang mamamatay. Sinalat ni Basilio ang kanyang rebolber at mga bala. Naalala niya ang babala ni Simoun na siya ay lumayo sa daang Anloague.</p>
+					<p class="text-justify">Naghinala si Basilio. Ang bahay ni Kapitan Tiyago ay nasa daang iyon.May binanggit na kasayahan si Simoun. Sa bahay na iyon idaraos ang piging sa kasal nina Paulita at Juanito. nakita niyang dumating ang sasakyan ng bagong kasal. Nahabag si Basilio kay Isagani. Naisip niyang yakaginng sumama sa kanya si Isagani.Siya rin ang tumugon. Hindi papayag si Isagani sa gayong madugong pagpatay sa marami. Hindi pa nararanasan nito ang nangyari sa kanya.</p>
+					<p class="text-justify">Nagunita niya ang pagkabilanggo, ang kabiguan sa pag-aaral,ang nangyari kay Huli. Muling hinaplos ang puluhan ng rebolber at ninasang dumating na sana ang sandaling hinihintay. Nakita niyang dumating si Simoun. Si Sinong ang kutsero ni Simoun. Sumunod ang sasakyan ni Simoun sa mga bagong kasal.</p>
+					<p class="text-justify">Nagtungo si Basilio sa Anloague. Doon ang tungo halos ng lahat – sa bahy ni Kapitan Tiyago. Ang Kapitan Heneral ang ninong at dadalo sa hapunan, dala ang isang tanging ilawang handog naman ni Simoun.</p>
+					<p class="text-justify">Ang mga dingding ng bahay ay dinikitan ng magagarang papel ar magagarang aranya at mga bulaklak ang palamuti. Mga angkat ang alpombra. Kurtinang pulang pelus na nabuburdahan ng ginto at may unang titik ng pangalan ng mag-asawa. May tinuhog na artipisyal na bulaklak ng suha. Magarang- magara ang bahay na iyon. Parang hapag ng mga diyoses ang pagdarausan ng hapunan. Ang mesa para sa mga dakilang panauhin at mga diyus-diyusan ay sa asotea nakalagay. Pipito ang doon ay luluklok.Naroon ang pinakamasarap at pinakamamahaling alak. Ubos-kaya si Don Timoteo.Kung sinabi lamang ng Heneral na ibig nitong makain ng tao, gagawin iyon ni Don Timoteo.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi33" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXIII: Ang Huling Matuwid</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Araw ng pag-alis ni Simoun. Sasama na siya sa Kapitan Heneral. Nakahanda na ang kanyang dadalhingmga alahas at lahat na. Paniwala ng marami na hindi makapangahas magpaiwan si Smoun. Maring paghigantihan siya ng mga galit sa kanya o pag-uusigin siya ng kahaliling Heneral.</p>
+					<p class="text-justify">Nagkulong si Simoun sa kanyang silid. Wala raw dapat tanggapin kundi si Basilio. Dumating ang binata. Pinatuloy siya sa utusan Kay laki ng ipinagbago ni Basilio. Payat na payat, gusot ang buhok at walang ayos ang pananamit. Wala ang dating kaamuan sa kanyang mga mata.Matalim na ang mga iyon. Para siyang bangkay na nabuhay. Maging si Simoun ay nagulumihan sa anyo ng kababayan. Sinabi ni Basilio kay Simoun na siya ay naging masama na anak at kapatid na nilimot niya ang pagkapatay ng kapatid kaya siya ay pinarusahan ng Diyos. Siya ngayon ay nakahanda ng gumanti ng samasama. Sinabi niya na ang pag-iwas niya sa gulo na tulad ng pakikiisa kay Simoun ay nagbunga lamang ng kanyang pagkabilanggo Sasanib na raw siya kay Simoun.</p>
+					<p class="text-justify">Noon lamang nagsalita si Simoun . Nasa sa panig daw pala niyang talaga ang katwiran. Ang kanyang usapin ay siyang usapin ng mga sawimpalad na tulad ni Basilio.</p>
+					<p class="text-justify">Tumindig si Basilio na maaliwalas na ang mukha. Sinabi niyang matutuloy na ang himagsikan dahil hindi na siya nag-aatubili. Sinabi ni Simoun na ang mga ating mapayapa at ayaw ng gulo ang siyang nagtulak sa kanya upang ipagtuloy ang kanyang mga balak. Kung noon sana’y nagkatulungan na ang mga nasa sa mataas na lipunan at ang mga nasa ibaba ang gawain sana ay mapagkawanggawa at hindi madugo at buktot.Sa mga imbi niya natagpuan ang kanyang mga katulong. Kung sila man ay hindi makagawa ng makinis na estatuwa sapat nang simulan nila ang paglilok at bahala na ang mga susunod sa kanila.</p>
+					<p class="text-justify">Di maunawaan ni Basilio si Simoun. Nagtuloy sila sa laboratoryo. Sa mesa roon ay may isang kakaibang ilawan. Ang pinakalalagyan ay anyong Granada, may bitak at naiino pa ang mga tila buto nito. Tinanggal ni Simoun ang mitsa. Bakal na may dalawang sentimetro ang kapal na sisidlan na may isang litrong gas. Binuhusan ito ni Simoun ng likido. Nabasa ni Basilio ang nakatitik sa lalagyan ng likido – nitroglisirina.</p>
+					<p class="text-justify">Tumango si Simoun. Ipinaliwanag niya na ang granada ay hindi isang payak na dinamita. Iyon daw ang mga tinipon na luha ng mga api na siyang panglaban nila sa lakas at dahas. Noon lamang nakakita ng dinamita si Basilio. Hindi makakibo ang estudyante. Tinurnilyuhan ni Simoun ang isang masalimuot na kasangkapang inilagay sa ilawan.Sinabi ni Simoun na ang ilawan ay gagamitin sa isang pista. Pagkaraan ng 20 minuto ang liwang nito’y mangungulimlim at kapag ginalaw ang mitsa ay sasabog ang Granada kasunod ang mga supot ng pulbura sa kainan at walang makaliligtas sa mga bisita ng kapistahan.</p>
+					<p class="text-justify">Nabigo ang pagkakagulong katulong sana ang mga artilyero dahil sa kawalan ng pangangasiwa.Ngayon kailangan niya si Basilio upang mangunguna sa labanan. . Kukunin nila sa tindahan ni Quiroga ang mga baril at patayin ang lahat ng kalaban at ayaw sumama at patayin. Hindi na sinuri ni Basilio ang narinig. Binulag na siya ng tatlo’t kalahating buwang pagkabilanggo.Nais niyang maghiganti.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi32" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXII: Ang Bunga ng mga Paskil</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Dahil sa mga nangyayari sa mga estudyante ang maraming magulang ay din a nagpaaral ng mga anak. Buti pa ang maglimayom o kaya’y masaka.</p>
+					<p class="text-justify">Marami ang di nakasulit sa eksaming ibinigay ng serbisyo sibil. Natuwa pa si Tadeo, sinigan ang kanyang mga aklat. Si Pelaez ay napatali sa negosyo ng ama. Napasa-Europa si Makaraig. Si Isagani’y sa aklat lamang ni Padre Fernandez nakasulit. Si Salvador ay nakapasa dahil sa kahusayang magtalumpati. Si Basilio lamng ang di nakakuha ng pagsusulit. Nasa bilangguan pa siya. Doon niya nabatid ang pagkawala ni Tandang Selo sa tulong ni Senong na kutsero na tanging dumadalaw sa bilanggong kanayon.</p>
+					<p class="text-justify">Si Simoun ay mabuti na’t ayon kay Ben Zayb ay di mag-uusig at sa halip ay madaraos ng isang pistang walang katulad bago umalis sa bayan.</p>
+					<p class="text-justify">Naipayo ni Ben Zayb na bilin ni Simoun ang bahay ni Kapitan Tiago na nabili ng ama ni Pelaez. Mula noo’y madalas si Simoun sa tindahan ng mga Pelaez na wika ng iba’y pinakisamahan na niya. At tumagal ang ilang linggo ay nabalitang ikakasal si Juanito kay Paulita.</p>
+					<p class="text-justify">Higit na magkabagay si Juanito at Paulita. Kapuwa walang isip at muning lampas sa pansariling kaligayahan kapwa anak-Maynila.</p>
+					<p class="text-justify">Hinintay-hintay ng buong Maynila ang piging sa kasal ng dalawa. Si Simoun daw ang mamamahala. Ito’y ganapin dalawang araw bago umalis ang Heneral. Ang mga taga-Maynila ay nakipag-agawan sa pakikipagkilalakay Simoun upang sila’y anyayahan sa piging.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi31" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXXI: Ang Mataas na Kawani</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Hindi man lamang nabalita sa mga pahayagan ang nangyari kay Huli. Nangakalaya ang mga estudyanye. Una’y si Makaraig. Pinakahuli si Isagani. Nabalita sa tulong ni Ben Zayb, ang pagiging mahabagin ng Heneral. Ang tanging di nakalaya ay si Basilio. </p>
+					<p class="text-justify">Ipinagtanggol ng Mataas na Kawani si Basilio. Mabuting bata raw at matatapos na ng panggagamot. Lalong napahamak si Basilio dahil lahat ng sabihin ng Kawani ay tinututulan ng Heneral. At kailangan daw magkaroon ng halimbawang di dapat tularan ang mga mahilig sa pagbabago. Si Basilio ay pinagbintangan ng Heneral na gumamit ng bawal na aklat sa medisina. Sinabi ng Kawani na dapat matakot ang Heneral sa bayan. Natawa ang Heneral wala raw siyang pakialam sa bayan dahil ang naghalan sa kanya ay ang bayang Espanya hindi ang bansang Pilipinas.</p>
+					<p class="text-justify">Kapag itinanggi sa isang bayan ang liwanag, tahanan, katarungan at kalayaan ituturing ng bayan na magnanakaw ang nagtanggi ng mga ito.</p>
+					<p class="text-justify">Nang nasa kanyang sasakyan na ang Mataas na Kawani ay nasabi niya sa kanyang kutserong katutubo: “Kapag dumating ang araw ng inyong pagsasarili ay alalahanin mong sa Espanya’y hindi nawalan ng mga pusong tumitibok dahil sa inyo”.</p>
+					<p class="text-justify">Makaraan ang dalawang oras ay nagbitiw sa tungkulin ang Kawani at nagsabing siya’y uuwi sa Espanya lulan ng kasunod na koreo (bapor).</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi30" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXX: Si Huli</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Nabalita sa San Diego ang pagkamatay ni Kapitan Tiyago at ang pagkadakip kay Basilio. Dinamdam ng bayan nang higit ang huli. Maari raw ipatapon o patayin ang binata. Enero rin daw nang bitayin ang tatlong martit sa Kabite. Mga pari na iyon, nabitay pa. Tiyak daw na bibitayin din si Basilio.</p>
+					<p class="text-justify">Nagkagayon daw si Basilio, ayon kay Hermana Penchang, dahil di nag-aagwa bendita sa Simbahan dahil narurumihan sa tubig. Hindi raw nakasasakit ang agwa bendita. Nakagagaling pa nga raw ito. May ilan pa ang nanisi rin sa binata.</p>
+					<p class="text-justify">Ngunit marami ang nagsasabing di dapat mangyari iyon kay Basilio.Tahimik ito. Naghihiganti raw lamang ang mga prayle dahil sa pagkakatubos ni Basilio kay Huli na anak ng tulisang si Tales.</p>
+					<p class="text-justify">Mabuti raw at pinaalis na niya si Huli, ani Hermana Penchang. Ayaw daw niyang magalit ang mga prayle sa kanya. Ang totoo’y di niya ibig ipatubos si Huli.</p>
+					<p class="text-justify">Si Hermana Bali ang nagbalita kay Huli ng tungkol kay Basilio. Hinimatay pa si Huli dala ng balita. Sa Pilipinas ay kailangan ang ninong sa ano mang pagkilos. Wala nang tagatangkilik si Basilio sa pagkamatay ni Kapitan Tiyago kaya’t tiyak na mabubulok sa bilangguan si Basilio o mabibitay wala mang kasalanan.</p>
+					<p class="text-justify">Naisip niyang tulungan si Basilio. At may kung anong nagbulong sa kanya na patulong kay Padre Camorra, ang nakapagpalaya kay Tandang Selo. Kung sabagay, nang pasalamatan niya ang kura ay di ito nasiyahan. Humingi ito ng “ pagpapasakit” pa. Mula noo’y iniwasan na ito ni Huli. Gayunman, may mga binatang binambo ni Padre Camorra nang mangharana ang mga iyon sa dalaga. May nangagsapantaha na ng di mabuti kay Huli ukol kay Padre Camorra.Pinarunggitan siya sa paglalakad niya.</p>
+					<p class="text-justify">Mula noo’y naging malungkutin si Huli. Minsa’y naitanong kay Hermana Bali kung nahuhulog sa impiyerno ang nagpapakamatay. Di natuloy ang balak niya. Natakot siya sa impiyerno.</p>
+					<p class="text-justify">Ipinayo ni Hermana Bali na magtanong sila sa tribunal. Kaunting pabagsak lang daw at papayuhan na sila nito. Ngunit ang tagasulat ay walang nagawa o naipayo kundi patunguhin ang dalawang babae sa hukom pamayapa. Sa wakas ay nagpayo ang hukom: “ Ang tanging makapagliligtas kay Basilio ay si Padre Camorra – kung iibigin niya”, sabay turo kay Huli.</p>
+					<p class="text-justify">Hindi kumibo si Huli. Inaakala ni Hermana Bali na tumpak ang payo. Ayaw ni Huli na magtuloy sila sa kumbento. Batid ni Hermana Bali ang dahilan. Si Padre Camorraay tinaguriang Si Kabayo – sadyang malikot sa babae.</p>
+					<p class="text-justify">Nakiusap si Huli na ang manang na lamang sana pumasakumbento. Wika ng hukom ay higit na mabisa ang pamanhik ng isang dalagang may mukhang sariwa kaysa mukha ng isang matanda. Nanaog ang dalawa. Nang nasa daan na’y ayaw na naman ni Huli. Ang pagpapakasakit na hinihingi ni Padre Camorra ay pinagbingihan ni Huli mangahulugan ng di kapatawaran ng sariling ama. Ngayon ba’y gagawin niya iyon dahil kay Basilio? Magiging isa siyang lusak. Maging si Basilio’y mandidiri sa kanya.</p>
+					<p class="text-justify">May ilang nagparunggit na di siya papatulan ng kura. Maraming dalaga sa bayan. Aanhin nito ang isang taganayon lamang. At babarilin si Basilio!</p>
+					<p class="text-justify">Binangungot si Huli nang gabing iyon. Dugo! Sindak! Mga putok. Nakita ang ama. Si Basilio’y naghihingalo.</p>
+					<p class="text-justify">Kinahapunan ng sumunod ng araw ay kumalat ang balitang may mga binaril na sa mga estudyante. Ipinasiya ni Huli na kinabukasan uli ay magsasadya na siya sa kumbento, mangyari na ang mangyari. Ngunit nang mag-uumaga na’y di rin siya nagtungo sa kumbento. Dumaan ang mga araw. Umasa si Huli sa isang himala. Gabi-gabi’y di siya pinatulog ng mga pangamba.</p>
+					<p class="text-justify">Sa wakas ay dumating ang balita mula sa Maynila na si Basilio na lamang ang nabibilanggo. Nakalaya ng lahat ang kasamahan. Ipatatapon na raw sa Carolinas si Basilio. Ito ang nag-udyok kay Huli na hanapin si Hermana Bali. Nagbihis ng pinakamahusay na damit.</p>
+					<p class="text-justify">Kinagabihan ay naging usap-usapan ang nangyari kay Huli nang hapong iyon. Tumalon sa bintana ng kumbento at patay na dinampot sa batong nakabunton sa ibaba. Si Hermana Bali ay patakbong bumaba sa pinto ng kumbento at nilibot ang daan at nagsisigaw at nagpupukpok sa pinto ng kumbento si Tandang Selo. Itinaboy ito ng palo at tulak.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi29" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXIX: Ang Huling Pati-ukol kay Kapitan Tiyago</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Marangal ang libing ni Kapitan Tiyago. Si Padre irene ang hinirang na tagapamahala at tagapagpatupad ng testamento ng kapitan. Paghahati-hatiin ang kanyang kayaman sa Sta. Clara, sa Papa, sa Arsobispo, at sa mga orden. P20.00 ay itinira para pangmatrikulang mga estudyante mahihirap. Iminungkahi ito ni Padre Irene para masabing tagatangkilik siya ng mga estudyante. Inalis ni kapitan Tiyago ang P25.00 pamana kay basilio dahil sa kawalang-utang na loob ngunit isinauli ni paddre Irene at siya raw ang magpapaluwal sa sariling bulsa.</p>
+					<p class="text-justify">Nang nakaburol si Kapitan Tiyago ay marami ang usap-usapan ukol sa kanya. Nakita raw ng mga mongha ang nagliliwag na kaluluwa ni Kapitan Tiyago. Iyon daw ang utang sa maraming pamisang nagawa ni Kapitan.</p>
+					<p class="text-justify">Naisip ng sakristan na ipanabing ang kaluluwa ni Kapitan Tiyago ay may hawak pang mangkok ng taho. May nangaghaka namang hamunin ni Kapitan Tiyago ng sabong si San Pedro. Pero paano magkakamatayan o magkakatalo mag manok na kaluluwa? Ayon kay Pilosopo Primotivo, di magkakatalo sagka’t ang pagkatalo’y kaugnay ng sama ng loob ay walang puwang sa langit.</p>
+					<p class="text-justify">Hinandugan ni Quiroga ng isang tabako si Don Primotivo. Saka nagtanong nang malumanay: Sigulo puede de contalata aliedo galela con kilisto, a? Cuando muele, mia contalista, ja? May nagtalo sa damit na isusuot kay KapitanTiyago. Abito? Mayroon nito si kapitan tinong. Lumang-luma at binayaran niya ng P36.00. Ipagkakaloob niya ito sa mahal na kaibigan. Tumutol ang sastre.Prak daw ang kailangan nakaprak ang kaluluwang nakita ng mga mongha. May yari na ang sastre na P32.00 ang halaga, dahil suki niya ang namatay. Lumang damit ang ipinasuot ni Padre Irene. Hindi raw mahalaga sa langit ang damit. </p>
+					<p class="text-justify">Tatlong prayle ang dapit sa libing ni Kapitan. Maraming kamanyang nang sinunog at gayundin ang iwinisik na agua bendita.</p>
+					<p class="text-justify">Si Donya Patrocinio na matandang kaagaw ni Kapitan Tiyago sa pagpapataasan ng ihi sa pagkabanal ay nagnais mamatay na kinabukasan upang malibing siya ng lalong dakila at kahanga-hanga.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi28" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXVIII: Pagkatakot</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Ipinangalandakan ni Ben Zayb sa El Grito na tama siya sa madalas niyang sabihing nakasasama sa Pilipinas ang pagtutuo sa kabataan. Ito’y pinatunayan ng mga paskil.</p>	
+					<p class="text-justify">Naging takot ang lahat mula sa Heneral hanggang sa mga intsik. Ang mga prayle ay di nakasipot sa basar ni Quiroga. Ang intsik man ay nag-ayos ng tindahan na madaling maisara kung sakali. Inisip ni Quiroga na magtungo kay Simoun at isangguni kung panahon na upang gamitin ang mga baril at pulbura’t bala na ipinatago nito sa kanya. Ayon sa himatong ni Simoun iyon ay palihim na ilalagay sa mga bahay-bahay at saka magpapahalughog ang pamahalaan. Daami ang madarakip at mabibilanggo. Maami, lalo sa mayayaman, ang patutulong sa kanila ni Simoun at iyon ay mangangahulugan ng malaking salapi. Nguni’t di niya nakausap si Simoun. Ipinasabi lamang na huwag galawin ni Quiroga ang anuman sa kinalalagyan.</p>	
+					<p class="text-justify">Nagtungo si Quiroga kay Don Custodio upang isangguni kung dapat sandatahan ng intsik ang sariling tahanan. Ayaw ring tumanggap si Don Custodio ng sinuman. Kay Ben Zayb nagtungo ang intsik. Nang makita niya na nakapatong sa mga papeles ng manunulat ang dalawang rebolber, kaagad nagpaalam ang intsik. Umuwi ,nahiga at nagdahilang maysakit.</p>	
+					<p class="text-justify">Kinahapunan ay kumalat pa ang balitang may panayam ang mga estudyante at mga tulisan sa San Mateo; niyari daw ang balak na paglusob sa lungsod sa isang Pansiterya; may bapor pandigma aw ang mga Aleman sa look, katulong ng mga estudyante; may mga estudyante pa aw na nagtungo sa Malakanyang upang magpahayag ng pagkamaka-Kastila ngunit nahulihan sila ng armas kaya’t pinagpipit; naligtas daw ang Heneral dahil noo’y nakikipanayam sa mga puno ng orden o provincial sa Pilipinas.</p>	
+					<p class="text-justify">May nagpanukalang magpabaril kaagad ng isang dosenang pilibusterilyo upang matigil ang gulo. Anang isa’y sapat nang palakarin sa mga lansangan ang mga kawal na kabayuhan at may hilang kanyon at ang lahat ay magsisipanhik ng bahay upang manahimik. Anang isa naman, pagpapatayin ang mayayaman at linisin ang bayan.</p>	
+					<p class="text-justify">Kina Kapitan Tiyago. Una’y ibinilanggo na si Basilio at naghaluhog sa mga kasulatan ng binata. Nayanig ang kahinahunan ni Kapitan Tiyago. Saka ngayo’y dumating si Padre Irene at nagbabalita ng kung anu-anong mga nakatatakot. Nanginig sa takot ang matanda. Nakadilat ang mata na napakapit sa kura. Nagpilit bumangon. Nguni’t di nakaya. Bumagsak na bumubula ang bibig. Patay na. Nasindak ang kura. Tumakbo. Nakahawak sa kanya ang patay na nakaladkad niya hanggang sa gitna ng silid.</p>	
+					<p class="text-justify">Kinagabihan. Sa isang binyagan ay may nagsabog ng kuwalta. Nag-agawan ang mga bata. Nagkaingay sa may pinto ng simbahan. Isang opisyal ang nagdaan. Nabigla ito sa pag-aakalang gawa iyon ng mgs pilibusterilyo. Hinabol ng sable ang mga batang nagsipasok sa simbahan. Nagtakbuhan ang mga tao. Nagsimula na raw ang himagsikan.</p>	
+					<p class="text-justify">Dalawang tao ang nahuling nagbabaon ng sandata sa silong ng isang bahay na tabla. Hinabol ng mga tao ang dalawa upang ibigay sa pamahalaan. Di ito nangahuli. Ang mga baril ay lumang eskopeta na maari pang makasugat sa gagamit.</p>	
+					<p class="text-justify">Isang beterano ang napatay dahil pinagkamalan ng isang kawani na yaon ay estudyante. Isang bingi ang sinino sa Dulumbayan. Hindi ito sumagot. Binaril. Patay!</p>	
+					<p class="text-justify">Sa isang tindahan ay si Tadeo kaagad ang ipinakibalitaan. Binaril na raw, anang pinagtanungan. Napadaing ang babae. Malaki raw ang utang ni Tadeo sa kanya. Anang kausap ay baka raw madamay pa kay Tadeo ang may tindahan. Natahimik ang babae.</p>	
+					<p class="text-justify">Luku-luko raw si Isagani. Kusa pa raw nagpadakip. Babarilin daw malamang. Walang anuman daw sa kanya’t walang utang sa kanya si Isagani, anang ginang na may tindahan. Ano raw kaya ang gagawin ni Paulita. Baka raw pakasal sa iba, anang tumugon. Halos lahat ng bahay ay may mga nagrurosaryo.</p>	
+					<p class="text-justify">Sa tirahan nina Placido Penitente, hindi naniniwala ang platero sa mga paskil. Gawa lang daw iyon ni Padre Salvi. Ayon naman sa isa’y si Quiroga ang may gawa. May ibig daw ipasok na kontrabando si Quiroga at nasa look na sandaang libong pisong mehikano. Nagkaroon daw ng kaguluhan. Pinadulasan ang mga kawani sa adwana at nakalusot ang salapi.</p>	
+					<p class="text-justify">May narinig silang mga yabag. Natigil ang usapan kay Quiroga. Kunwa’y binanggit ng isa si San Pascual Bailon. Ang dumating ay si Placido . Kasama ang manggagawa ng kuwitis o pulbura si Simoun.</p>	
+					<p class="text-justify">Hindi raw nakausap ni Placido ang mga bilanggo.Tatlumpu raw. Ayon sa manggagawa ng pulbura ay magpupugutan ng ulo sa gabing iyon. Hindi raw mangyayari iyon, anang isa, dahil si Simoun na siyang madalas magpayo niyon ay maysakit. Nagkapalitan ng tingin ang dalawang bagong dating.</p>	
+					<p class="text-justify">Nang gabing iyon ay pinalitan ang mga tanod sa pinto ng siyudad. Ipinalit ay mga artilyerong Kastila. Kinabukasan ay nakatagpo sa Luneta, malapit sa pinto, ng bangkay ng isang dalagitang kayumanggi. Halos hubad. Ngunit nakita man iyon ni Ben Zayb ay di na nabalita.</p>	
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi27" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXVII: Ang Prayle at ang Estudyante</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Si Isagani ay ipinatawag ni Padre Fernandez na isang katedratiko. Labis na iginagalang ito ng binata.</p>
+					<p class="text-justify">Ayon sa pari narinig nito si Isagani sa pagtatalumpati ng binata. Itinata-nong ng kura kung kasama si Isagani sa hapunan. Pinuri rin ang pagkakaroon ni Isagani ng paninindigan . Pinaupo ang binata. Nguni’t nanatiling nakatayo si Isagni. Patuloy na nagsalita ang pari. May mga dalawang libong estudyante na raw ang naturuan niya o sinikap niyang turuang mabuti at karamiha’y pumupula at lumalalos sa mga prayle nguni’t walang makapagsalita nang tapatan o harapan.</p>
+					<p class="text-justify">Ayon kay Isagani ay di kasalanan iyon na kabataan na pag nagsalita laban sa maykapangyarihan ay kaagad nang sinasabing pilibustero at alam ng pai ang ibinubunga ng gayong paratang. “Baliw ang sino mang magsabi nang malakas sa kanyang iniisip sapagka’t siya’y magtitiis ng pag-uusig,” ani Isagani.</p>
+					<p class="text-justify">Sinabi ng prayle na di niya inuusig si Isagani at malaya itong nakapagsasalita ng anuman sa kanyang klase. Sa halip ay paborito pa niya si Isagani.</p>
+					<p class="text-justify">Pangiting nagpasalamat ang binata. Sinabi niyang itinatangi rin niya ang katedratiko. “Nguni’t di tayo maguusap dito ng ukol sa ating sarili kaya’t ipinakikiusap ko sa aking katedratiko na ibahin na ang paksa.”</p>
+					<p class="text-justify">Maaari raw si Padre Fernandez ay gayon nga nguni’t di raw gaya ng katedratiko ang ibang prayleng Domoniko. At tiniyak ni Isagani ang mga sakit sa pagtuturo ng mga prayle. “Binabawasan hangga’t maaari ang pagbibigay ng mga kaalaman sa pagpatay sa sigla at sigasig ng magaaral. Walang inihahasiksa amin kundi mga kaisipang luma, mga lisyang simulaing kasalungat ng pagkakasulong. Parang mga bilanggong gobyerno ang mga estudyante. Salat na salat ang mga ito sa natututuhan tulad ng pagkasalat ng bilanggo sa pagkaing inirarasyon ng nakasubasta sa pagpapakain”. At sinabi ni Isagani na parang may sabuwatan ang pamahalaan at ang mga Pilipino upang manatili sa kamangmangan ang mga ito.</p>
+					<p class="text-justify">Napakagat-labi si Padre Fernandez. Sinabi nitong lampas na sa guhit ng pag-uusap ang mga paratang ni Isagani.</p>
+					<p class="text-justify">“Hindi, Padre,” ganti ni Isagani. “Ang mga prayle sa lahat ng orden ay naging mga kontratista ng karunungan at sila ang nagsasabi mismo na kami ay hindi nararapat matuto pagka’t baling araw ay magpapahayag kami ng paglaya. Ito’y pagtanggi na ang bilanggo ay pakanin pa upang di na makalabas sa bilangguan. Ang kalayaan ay katambal ng tao at, gayundin, ng talino at katarungan. Ang pagtanggi ng mga prayle na maging amin iyan ang dahilan ng kawalan naming ng kasiyahan”.</p>
+					<p class="text-justify">“Ang karunungan ay hindi ipinagkakaloob kundi sa karapat-dapat lamang,” anang Pari. “Ipagkaloob iyan sa mga walang tibay ng loob at kapos sa wastong asal ay taliwas sa layunin niyon”.</p>
+					<p class="text-justify">Tinutulan ito ni Isagani. Hindi raw totoo iyon. “Kung ano kami ay kayo ang may gawa. Ang bayang inaalipin ay natutong magkunwari; ang paghaharian ay lumikha ng mga alipin. Ipagpalagay natin, kahit di totoo, na ang mga estudyante ay mgawalang dakilang asal at katibayanng loob. Sino ang may kasalanan? Kami o kayong nagturo sa amin sa loob ng may tatlong siglo? Kung pagkatapos ng panahong iyon ay walang nayari ang manggagawa ng palayok kundi mga sira siya’y napakatanga marahil.”</p>
+					<p class="text-justify">“O masama at marumi ang putik na ginagamit?”</p>
+					<p class="text-justify">“Kung gayo’y higit pang napakahangal gayong alam na palang masama at marumi ang putik ay bakit nagpapatuloy pa sa pagsasayang ng panahon, at di lamang hangal, kundi manlilinlang at magnanakaw pa dahil alam nang walang ibubunga ang ginagawa niya’y patuloy pa sa pagtangap kabayaran….. at di lamang hangal , mandaraya at magnanakaw kundi isa pang talipandas dahil ayaw nilang subukin ang kakayahan ng iba sa paggawa ng magiging kapakipakinabang.”</p>
+					<p class="text-justify">Nakilala ni Padre Fernandez ang kanyang kagipitan. Noon lamang siya nakaranas niyon—pagkatalo sa isang estudyanteng Pilipino lamang. Anang kura: “Kinapopootan ng bayan ang sundalo na dumakip at hindi ang hukom na nagpanaog ng hatol na pagkabilanggo… Kami’y napapagitna sa dalawang sibat sa inyo at sa pamahalaan . Kung ano ang utos sa amin ay siya naming sinusunod. Ang nag-uutos sa pagpapaputok ay masasabung siya na ring naglalagay ng balas a kanyon”.</p>
+					<p class="text-justify">Pinulaan ni Isagani ang pagtatago ni Padre Fernandez sa likod ng pamahalaan. Nangatwiran ang katedratiko. “Ang ibig kong sabihi’y may mga batas na mabuti ang layon nguni’t masama ang ibinubunga. Upang maiwasan ang isang pagdaraya ay nagpapatibay ng maraming panugpo na pinaglalaruan lamang ng mga mamamayan. Maglagda kayo ng isang batas, kahit sa Espanya, at pag-aralan ng mga tao kung paano ito madaraya. Nguni’t nalalayo tayo tayo sa paksa… Kaya sasabihin kong ang masamang ugali ninyo ay di dapat isisi sa amin ni sa Pamahalaan kundi sa masamang pagkakatatag n gaming kapisanan. Ang naghahangad magpatotoo ng lahat ay wala isa mang napatutunayan. Ang mga kapisanan ay nawalan ng pg-iingatdahil sa umaapaw na kasaganaan”.</p>
+					<p class="text-justify">“Opo, may pumipilit na sila’y mag-aral. Katungkulan ng bawat tao na hanapin ang kanilang kaganapan ng pagkatao. Katutubo sa tao na linangin ang kanyang talino at lalong matindi ang nais na ito rito dahil ito’y hinahadlangan.Ang bumubuhay sa pamahalaan ay humihingi sa pamahalaan ng liwanag upang lalong makatulong sa bansa. Pamahalaan na rin at ang mga prayle na rin ang pumipilit na kaming mga indiyo ay maghanap ng karunungan dahil sa inyong pag-aglahi sa amin sa kawalangpinag-aralan at kamangmangan. Kami’y inyong hinuhubaran at pagkarapos ay pinagtatawanan ninyo an gaming kahihiyan”.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi26" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXVI: Mga Paskil</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Maagang nagbangon si Basilio upang magtungo sa ospital. Nais niyang pakialaman ang kanyang linsensiyatura sa Unibersidad pagkatapos madalaw ang may sakit. Uutang siya kay Makaraig ng perang gugugulin. Ang naimpok niya ay naipanubos kay Huli.</p>
+					<p class="text-justify">Sa tapat ng San Juan de Letran ay may nagtanong sa kanya ukol sa pagbabangon. Iniugnay niya sa isip ang pagkakatungo sa kanya ni Simoun. Marami raw nadadamay na mga estudyante ayon sa nagbabalita. Nagpatuloy sa paglalakad si Basilio.</p>
+					<p class="text-justify">Nakasalubong niya ang isang katedratiko na malapit ang loob sa kanya. Itinanong kung nasa piging ng mga estudyante si Basilio. Mabuti raw at wala. Nang malamang kasapi si Basilio sa kapisanan ay pinayuhan nitop ang binata na umuwi na’t sirain niya ang lahat ng kasukatang magdadawit sa kanya. Nabanggit ni Basilio si Simoun. Wala raw kinalaman dahil nahihiga ang mag-aalahas dahil sa sinugatan ng kung sino. Dito’y may ibang mga kamay na nakapangingilabot, anang katedratiko.</p>
+					<p class="text-justify">Itinanong ni Basilio kung may kasangkot na tulisan. Wala raw. Panay raw mga estudyante. Nagkatagpo raw sa unibersidad ng mga paskil o mga paskin (posters) na mapanghimagsik.</p>
+					<p class="text-justify">May nasalubong silang isa pang katedratiko na kakilala ni Basilio,. Ang una: Nangangamoy na si Kapitan Tiyago. Nilalapitan na siya ng mga uwak at buwitre.</p>
+					<p class="text-justify">Nagpatuloy si Basilio sa paglalakad. Mga karagdagang balita. Marami raw estudyante ang papupugutan ng ulo, ipabibilanggo, ibabagsak sa pag-aaral.</p>
+					<p class="text-justify">Nagunita ni Basilio ang sinabi ni Simoun. Sa oras na kayo’y itiwalag nila di kayo makatatapos sa inyong karera. Pinaghinalaan ni Basilio na may kinalaman si Simoun sa mga paskil.</p>
+					<p class="text-justify">Nakita niya si Sandoval. Tinawag ito. Naging bingi ito sa tawag niya.</p>
+					<p class="text-justify">Tuwang-tuwa si Tadeo. Wala na raw klase. Ibibilanggo raw lahat ang kasama sa kapisanan ng mga estudyante. Tuwang-tuwa pa rin ito dahil wal ng klase.</p>
+					<p class="text-justify">Si Pelaez naman ay parang baliw na paulit-ulit ang pagsasabi: Wala-wala akong kinalaman, wala akong kinalaman ; ikaw ang saksi ko Basili, na sinabi kong isang quijoterias ang lahat</p>
+					<p class="text-justify">Mabilis tumalilis si Juanito nang makita ang isang tanod na palapit sa kanila.</p>
+					<p class="text-justify">Natanaw ni Basilio si Isagani. Namumutla ang huli ngunit pinagpupuyusan ng kalooban.</p>
+					<p class="text-justify">Nakapagtataka, mga ginoo, na walang kakuwenta-kuwentang mga bagay ay nagkakagulo tayo na parang mga mayang paking na itinaboy ng tau-tauhang panakot. Ito lang ba ang pangyayari na ang kabataan ay mabibilanggo dahil sa kalayaan? Nasaan ang mga binitay, ang mga pinagbabaril? Bakit tayo magsisiurong ngayon?</p>
+					<p class="text-justify">May nagtanong: Sino ba ang ungas na sumulat naiyon?</p>
+					<p class="text-justify">Walang halaga ang kung sino ang sumulat. Tungkulin nilang ( mga kura ) alamin niyon. Nguni’t di tayo dapat patangay sa kaguluhang ito kung saan naroon ang panganib ay doon tayo dumako dahil naroon ang karangalan. Kung nasasabi sa paskil ay kaayon ng ating kalooban, sino man ang sumulat noon ay dapat nating pasalamatan. Kung hindi naman ay sapat nang tutulan natin at tanggihan, ani Isagani.</p>
+					<p class="text-justify">Tumalikod si Basilio. Di siya sang-ayon sa sinabi ng kaibigan. Tutungo siya kay Makaraig upang mangutang. Di niya alintana ang mahiwagang senyas ng mga kalapit bahay ni Makaraig.</p>
+					<p class="text-justify">Napadubo siya at napaharap sa dalawang tanod na beterana. Anya: Naparito ako upang makipagkita ako sa kaibigan kong si Makaraig. Nagkatinginan ang dalawang tanod.</p>
+					<p class="text-justify">Dumating si Makaraig at ang kabo at dalawang kawal. Nagtaka si Makaraig kay Basilio. Anito: Marangal na pagkatao! Sa panahon ng kapayapaan ay umiwas kayo sa amin ..</p>
+					<p class="text-justify">Inusig ng kabo si Basilio. Dinakip rin ito nang pakilala kung sino Pati ba ako? tanong ni Basilio. Nagatawa si Makaraig. Huwag kayong mag-alala. Mabuti’t ng maibalita ko sa inyo ang ukol sa hapunan kagabi samantalang nasa sasakyan tayo.</p>
+					<p class="text-justify">Sa sasakyan ay ipinagtapat ni Basilio ang kanyang pagsasadya kay Makarai. Sinabi ni Makaraig na ma-aasahan siya ni Basilio at sa magtatapos raw ng madodoktor ay aanyayahan pa nila ang mga kawal na dumakip sa kanila.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi25" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXV: Tawanan at Iyakan</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Idinaos ang piging ng mga estudyante sa Panciteris Macanista de Buen Gusto. Labing–apat sila, kasama si Sandoval. Pinakyaw nilang lahat ang mesa. Ani ng isang paskin: “Luwalhati kay Don Custodio sa kaitaasan at Pansit sa lupa sa mga Binatang may Magagandang Kalooban!” </p>
+					<p class="text-justify">Matatlim ang mga salita ng mga estudyante. Naghalakhakan sila’y pilit at may tunog ng paghihinakit.</p>
+					<p class="text-justify">Dumating si Isagani. Si Pelaez na lang ang kulang. Ani Tadeo sana’y si Basilio na ang inanyayahan nila sa halip ng impormal na si Juanito. At malala-sing pa raw sana nila si Basilio upang mapagtapat ng mga lihim ukol daw sa nawawalang bata at sa isang mongha.</p>
+					<p class="text-justify">Nagkainan. Inihandog nila ang pansit-langlang klay Don Custodio. Ang sopas ay tinaguriang sopas ng panukala;lumpiang intsik ay inalay kay Padre Irene ; ang torta’y inukol sa prayle (torta de Frailes). Tumutol si Isagani. May isa raw prayleng di dapat isama sa panunumpa. Tumutol din si Tadeo. Kahabag-habag daw na inihambing ang alimasag sa mga prayle; ang pansit gisado ay inukol sa pamahalaan at sa bayan. Ayon kay Makaraig, ang pansit ay katutubong lutuing Pilipino. May ibig mag-alay ng pansitkay Quiroga na isa raw sa apat na kapangyarihan sa Pilipinas. Anang isa naman ay sa Eminencia Negra (Simoun) raw dapat ialay ang pansit.</p>
+					<p class="text-justify">Pinapagtalumpati si Tadeo. Di ito nakahanda. Nagsimula ito kahit papaano. Sinigawan siya ng mga kasamahan . Gaya daw ang binigkas ni Tadeo. Naghingian ng pagkain. Nahilingan ng talumpati si Pecson. Inatake ni Pecson ang mga prayle. Mula raw sa kamusmusan hanggang sa libingan ay prayle ang kasama natin.</p>
+					<p class="text-justify">May nakakita sa utusan ni Padre Sibyla, ang biserektor sa Unibersidad. Sumakay ito sa karuwahe ni Simoun. Nagtiktik ito sa mga estudyante. Ani Makaraig: “Ang busabos ng bise-rektor na pinglilingkuran ng panginoon ng Heneral!”</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXIV: Mga Pangarap</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Mag-uusap sina Isagani at Paulita sa Luneta. Handang-handa si Isagani sa pagbabagsak ng kanyang galit sa gabi. Pany raw ang tingin ni Isagani sa mga Pransesa. Kaya raw siya sumama kay Juanito ay para nga magkita sila ni Isagani. Si Donya Victorina raw ang may ibig kay Pelaez. Nagkatawanan ang dalawa.</p>
+					<p class="text-justify">Nagkapalitan sila ng mga pagtanaw sa kinabukasan. Nais ni Isagani na sa nayon manirahan. Pinakaiibig raw niya ang kanyang bayang iyon. Bago raw niyanakita si Paulita, ang bayang iyon ang tangi niyang kaligayahan at magandang-maganda para sa kanya. Nguni’t nang makilala niya si Paulita ay naging parang may kulang sa kanya ang bayang iyon at Natiyak niyang ang kulang ay si Paulita</p>
+					<p class="text-justify">Nguni’t ayaw ni Paulita na tumungo roon. Ayaw niyang magdaan sa mga bundok na malimatik. Ang ibig niyang paglalakbay ya sa pamamagitan ng tren.</p>
+					<p class="text-justify">Pinaghambing ni Isaganisa isip ang pansin ng mga taong pamahalaan sanagkaramdam na si Simoun at ang mga sugatang kawal na galling sa digma. Sa huli’y ni walang pumapansin. Nguni’t kay Simoun ay nabahala ang marami. Iba na raw ang mayaman, ayon sa binata. Ang bayang nasa isip niya ay di lamang Pilipinas kundi pati ang Espanya.</p>
+					<p class="text-justify">Dumating sina Paulita. Nginitian nito si Isagani. Nangiti na rin ang binataat napawi ang lahat ng kanyang mga hinanakit sa dalaga. Nalubos na sana ang kanyang tuwa nangitanong sa kanya ni Donya Victorina kung nakit ang binata ang pinaghahanap na asawang Kastila. Ipinagkaila ng binata na alam niya dahil sa kanilang bayan sa nayon (kay Padre Florentino) nag-tatago si De Espadana. Sinabi ng donya na nais niyang mag-asawa uli. Nagtanong pa ang donya kumg ano’t pakasal siya kay Pelaez. Ang pilyong Isagani naman ay namuri pa sa kinaiinisan niyangkamagaral. Pinagbigyan ng donya ang pamangkin at binatang kausap. Kung matutuloy ng naman si Paulita kay Isagani, magiging sarili niya si Juanito.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+		
+		<!-- Modal -->
+		<div class="modal" id="fi23" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: auto;"><span class="glyphicon glyphicon-remove"></span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Kabanata XXIII: Isang Bangkay</h4>
+				</div>
+				<div class="modal-body">
+					<h4><strong>Buod</strong></h4>
+					<p class="text-justify">Nang gabing iyon, ikapito, ay makalawang umalis at dumating si Simoun sa bahay na may iba’t ibang taong kasama. Nakita siya ni Makaraig nang mag-iikawalo sa may daang Ospital, malapit sa kumbento ng Sta. Clara. Nakita siya ni Camarroncocido sa may dulaan nang mag-iikasiyam na may kausap na tila estudyante.</p>
+					<p class="text-justify">Si Basilio ay dir in nanonood. Nagrerepaso siya sa bahay. Hindi na nag-sasama sa mga kamag-aaral mula nang tubusin si Huli sa pagkakaalila. Pinag-aralang mabuti ang pagpapagaling kay Kapitan Tiyago na noon ay lalong naging mahirao pakiba-gayan. Kung minsan ay mahal na mahal nito si Basilio at kung minsa’y nilalait. Pabigat nang pabigat ang karamdaman nito.</p>
+					<p class="text-justify">Ang pagbabawas sa paghitit ni Kapitan Tiyago ay isinasagawa ni Basilio ngunit kung nasa lalawigan o nasa paaralan siya’y may nagbibigay ng labis na apyan sa matanda. Si Simoun at si Padre Irene lang naman ay walang itinatagubilin kay Basilio kundi ang pagalingin ang maysakit, pagtiisan ito sa pag-aalaga.</p>
+					<p class="text-justify">Sa pagrerepaso ni Basilio ay dumating si Simoun. Mula nang magkita sila sa San Diego ay noon lamang sila nagkaharap. Kinumusta ni Simoun ang maysakit. Malubha, ani Basilio. Malala na raw ang kalat ng lason sa katawan. Tulad daw ng Pilipinas, ani Simoun.</p>
+					<p class="text-justify">Hinimok ni Simoun si Basilio na makiisa sa himagsikan liban sa pama-halaang Kastila dahil ang hindi kakampi sa kanila ay ituturing na kaaway na dapat pata-yin. Inatasan ni Simoun si Basilio na itakas si Maria Clara mula sa kumbento ni Sta. Clara habang nagkakagulo ang buong lungsod.</p>
+					<p class="text-justify">Sinabi ni Basilio na huli na, dahil sa nagpakamatay na si Maria Clara. Naroon siya sa kumbento upang makibalita kaya niya nabatid. Nang bumalik siya ay nakita niya ang liham na padala ni Padre Salvi kay Padre Irene na siyang nagpabasa ni yon kay Kapitan Tiyago na nagpanangis nang mabatid na patay na si Maria Clara.</p>
+					<p class="text-justify">Litong-lito na patakbong nanaog ng bahay si Simoun. Nawala sa pag-aaral ang isip ni Basilio. Ang naglaro sa isip ay ang kahabag-habag na buhay nina Ibarra at Maria Clara.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!--End of Modal -->
+	</body>
+</html>
