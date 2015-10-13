@@ -388,6 +388,7 @@
 					window.location = newLocation;
 				}
 				goExam();
+				
 				$('#btnBack').click(function(){
 							event.preventDefault();
 							newLocation = 'quizzes.html';
@@ -397,21 +398,21 @@
 		var questions = [
 					
 				["Ang Ama ay isinalin ni ____________", "Mauro R. Avena", "Dr. Romulo N. Peralta", "Pat V. Villafuerte", "A"],
-				["Anong emosyon ang nangingibabaw sa paghihintay ng mga anak sa kanilang ama?", " Takot", " Takot at Pananabik", "Takot at lungkot", "B"],
+				["Anong emosyon ang nangingibabaw sa paghihintay ng mga anak sa kanilang ama?", " Takot", "Takot at Pananabik", "Takot at lungkot", "B"],
 				["Ano ang dahilan ng mga bata sa pagkatakot nito sa kanilang ama.", "Ang takot ay sa alaala ng isang lasing na suntok sa bibig", "Sinasaktan ang kanilang ina.", "Wala sa nabanggit", "A"],
 				["Ilan ang anak ng nasabing ama?", "6", "3", "1", "A"],
-				["Ano ang karaniwang iniuuwi ng ama ng pinagpapartehan ng mga magkakapatid?", "Saging", "Isang supot ng pansit.", "Kanin at ulam","B"],
-				["Ilang beses nangyare na sinorpresa ng ama ang kaniyang mga anak.", "3", "2", "1", "B"],
-				["Kapag umuuwi ang ama na lasing sino ang kapatid na inilalayo ng mga magkakapatid?", "Elisa", "Mui mui", "Jun jun", "B"],						
-				["Ano ang nagudyok sa ama na maging isang mabuting ama sa kanyang mga anak?", "ang pagkatakot ng kanyang mga anak", "Ang pagkalasing", "Ang pagkamatay ng anak niyang si muimui", "C"],
-				["Alin sa katangian ng ama ang totoo?", "Mabait.", "Strikto sa mga anak", "Madamdamin", "A"],
-				["Bukod sa pansit ano pa ang iniuwi ng ama para sa kanyang mga anak.", "Tsokolate", "Biskwit", "Parehong nabanggit", "C"],
-				["Ang anim na sabado ng beyblade ay sinulat ni._____.", "Pat V. Villafuerte", "Ferdinand Pisigan Jarin", "Elisa Elamparo", "B"],
-				["Kailan ipagdiriwang ang kaarawan ni Rebo?", "Huwebes", "Biyernes", "Sabado", "C"],
+				["Ano ang karaniwang iniuuwi ng ama na pinagpapartehan ng mga magkakapatid?", "Saging", "Isang supot ng pansit.", "Kanin at ulam","B"],
+				["Ilang beses nangyari na sinorpresa ng ama ang kaniyang mga anak?", "3", "2", "1", "B"],
+				["Kapag umuuwi ang ama na lasing, sino ang kapatid na inilalayo ng mga magkakapatid?", "Elisa", "Mui mui", "Jun jun", "B"],						
+				["Ano ang nag-udyok sa ama na maging isang mabuting ama sa kanyang mga anak?", "Sng pagkatakot ng kanyang mga anak", "Ang pagkalasing", "Ang pagkamatay ng anak niyang si Mui Mui", "C"],
+				["Alin sa katangian ng ama ang totoo?", "Mabait", "Strikto sa mga anak", "Madamdamin", "A"],
+				["Bukod sa pansit, ano pa ang iniuwi ng ama para sa kanyang mga anak?", "Tsokolate", "Biskwit", "Parehong nabanggit", "C"],
+				["Ang anim na sabado ng beyblade ay sinulat ni _____.", "Pat V. Villafuerte", "Ferdinand Pisigan Jarin", "Elisa Elamparo", "B"],
+				["Kailan ipinagdiriwang ang kaarawan ni Rebo?", "Huwebes", "Biyernes", "Sabado", "C"],
 				["Anong paboritong laruan ni Rebo?", "Helicopter", "Stuffed toys", "Beyblade", "C"],
 				["Ang subalit, datapwat at ngunit ay halimbawa ng", "sugnay", "pangatnig", "payak", "B"],
 				["__________ matalino siya, wala naman siyang kaibigan.", "saka", "datapwat", "subalit", "B"],
-				["Siya ay matalino _______ mapagbigay pa", "at", "ngunit", "saka", "C"],
+				["Siya ay matalino _______ mapagbigay pa.", "at", "ngunit", "saka", "C"],
 				["Ginagamit pantuwang", "ngunit", "samantala", "subalit", "B"],
 				["Panapos na pangatnig", "Huli sa lahat", "Huling huli", "Sa wakas", "C"],
 				["Ginagamit na pananhi", "Kaya", "Dahil sa", "Lahat ng nabanggit", "C"],
@@ -420,11 +421,11 @@
 				["Ang _____________ ay nagsasaad kung kalian ginanap, ginaganap, o gaganapin ang pangyayari o kilos.", "Pandiwa", "Pang-uri", "Pang-abay pamanahon", "C"],
 				["Ang kung, kapag, sa,mula ,umpisa ay halimbawa ng ____________", "Walang pananda", "May pananda", "Nagsasaad ng dalas", "B"],
 				["Ang \"Kultura: Pamana ng Nakaraan, Regalo ng Kasalukuyan at Buhay ng Kinabukasan\" ay isang halimbawa ng ___________?", "Tulang naglalarawan", "Tulang nagsasalaysay", "Tulang naghahambing", "A"],
-				["Si Sitti Nurhaliza ay mahusay na mang-aawit mula sa _________", "Pilipinas", "India", "Malaysia", "C"],
-				["Ang ____________ ay naglalarawan ng tao, bagay, hayop o pangyayari.", "pandiwa", "pang-abay", "pang-uri", "C"],
-				["Mga salitang nag-uugnay ng dalawang salita, parirala o sugnay halimbawa: tulad ng, kahit na, dahil sa, kasi, palibhasa, bukod-tangi at iba pa. ", "pang-angkop", "pangatnig", "pang-ukol", "B"],
-				["Mga katagang nag-uugnay sa panuring at salitangt inuturingan halimbawa: na, ng at iba pa", "pang-angkop", "pangatnig", "pang-ukol", "A"],
-				["Mga salitang nag-uugnay sa isang pangngalan sa iba pang salita halimbawa: ang/si, ng/ni/kay, ayonsa/ayon kay, para sa/ para kay hinggilsa/hinggil kay at iba pa.", "pang-angkop", "pangatnig", "pang-ukol", "C"],
+				["Si Sitti Nurhaliza ay mahusay na mang-aawit mula sa _________.", "Pilipinas", "India", "Malaysia", "C"],
+				["Ang ____________ ay naglalarawan ng tao, bagay, hayop o pangyayari.", "Pandiwa", "Pang-abay", "Pang-uri", "C"],
+				["Mga salitang nag-uugnay ng dalawang salita, parirala o sugnay, halimbawa: tulad ng, kahit na, dahil sa, kasi, palibhasa, bukod-tangi at iba pa. ", "Pang-angkop", "Pangatnig", "Pang-ukol", "B"],
+				["Mga katagang nag-uugnay sa panuring at salitang inuturingan, halimbawa: na, ng at iba pa.", "Pang-angkop", "Pangatnig", "Pang-ukol", "A"],
+				["Mga salitang nag-uugnay sa isang pangngalan sa iba pang salita, halimbawa: ang/si, ng/ni/kay, ayonsa/ayon kay, para sa/ para kay hinggilsa/hinggil kay at iba pa.", "Pang-angkop", "Pangatnig", "Pang-ukol", "C"],
 				["Nakatatakot ang magpatayo ng mga _____________ na gusali sa lugar na may malambot na lupa tulad ng sa Baguio.", "Matayog", "Matatayog", "Matibay", "B"],
 			];
 			
@@ -435,13 +436,14 @@
 				}
 				
 				function goExam(){
-					$('.divChoices').css('background-color', 'orange');
+					
                     
 					//displays result if it has reached 50 questions
 					if(pos > 29){
 						$('#questdiv').fadeOut(500).hide();
 						$('#result').fadeIn();
-
+						document.getElementById("myScore").innerHTML = correct;
+						
 						if(correct< 18)
 						{
 							document.getElementById("verdict").innerHTML = "Sorry, you failed...";
@@ -518,8 +520,8 @@
 	
 	<body>
 		<div class="container" id="questdiv">
-			<button class="btn" id="btnBack" style="width: auto; color: white; float: left; background-color: transparent; background-image: none; border: 1px solid transparent; margin-top: 20px;"><span class="glyphicon glyphicon-arrow-left"></span></button>
-			<div class="divbg"><h1 class="text-center" style="font-size: 36px;font-family: cursive;color: white;">Panitikang Asyano Quiz</h1></div>
+		<button class="btn" id="btnBack" style="width: auto; color: white; float: left; background-color: transparent; background-image: none; border: 1px solid transparent; margin-top: 20px;"><span class="glyphicon glyphicon-arrow-left"></span></button>
+			<div class="divbg"><h1 class="text-center" style="font-size: 36px;font-family: cursive;color: white;">Filipino 9: Modyul 1 Quiz</h1></div>
 			<div id="exam" class="pages" style="margin-top: -50px;">
 				<br><br>
 				<div data-role="content" align="center">
@@ -547,7 +549,7 @@
 					</div>  
 					
 					<div>
-						<div class="headerres">Total</div>
+						<div class="headerres">Kabuuan<div>
 						<div class="item">30</div>
 					</div>  
 					
